@@ -214,6 +214,15 @@
   .whatsapp-card p{ font-size:14.5px; line-height:1.6; color:rgba(250,246,236,0.72); }
   .wa-icon{ width:22px; height:22px; }
 
+  .reviews-link{
+    display:inline-block; margin-top:8px; font-size:14px; color:var(--gold-light);
+  }
+
+  .map-embed{ grid-column:1 / -1; margin-top:8px; }
+  .map-embed iframe{
+    width:100%; height:280px; border:1px solid var(--line-on-dark); border-radius:4px; display:block;
+  }
+
   /* ---------- Footer ---------- */
   footer{ background:var(--marine); border-top:1px solid rgba(250,246,236,0.12); }
   footer .wrap{
@@ -355,6 +364,7 @@
         <div class="infoblock">
           <div class="label" id="labelDireccion">Adreça</div>
           <a class="value" href="https://www.google.com/maps/search/?api=1&query=Carrer%20de%20la%20Llibertat%2010%2C%2008860%20Castelldefels" target="_blank" rel="noopener">Carrer de la Llibertat, 10 · 08860 Castelldefels &nbsp;↗</a>
+          <a class="value reviews-link" id="reviewsLink" href="https://share.google/4iYkjqqurM3KNHHqT" target="_blank" rel="noopener">Veure ressenyes a Google &nbsp;↗</a>
         </div>
 
         <div class="infoblock">
@@ -382,6 +392,10 @@
         <h3 id="waCardTitle">Escriu-nos i prepara la teva comanda</h3>
         <p id="waCardBody">Explica'ns quin peix o marisc necessites i com el vols preparat. Et confirmem la disponibilitat i quedem per WhatsApp si el reculls a la botiga o te'l portem a casa, i a quina hora.</p>
         <a class="btn btn-outline-dark" id="waCardBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener">Obrir el xat de WhatsApp</a>
+      </div>
+
+      <div class="map-embed">
+        <iframe src="https://maps.google.com/maps?q=Carrer%20de%20la%20Llibertat%2010%2C%2008860%20Castelldefels&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peixateria La Dorada · Carrer de la Llibertat, 10, Castelldefels"></iframe>
       </div>
     </div>
   </section>
@@ -421,7 +435,7 @@
       feat3Title:"Tracte expert", feat3Body:"Preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash; tal com ho faríem al taulell.",
       contactEyebrow:"Visita'ns", contactH2:"Horari i ubicació",
       contactLead:"Som al bell mig de Castelldefels. Si prefereixes passar directament per la peixateria, aquí tens el nostre horari i com arribar-hi.",
-      labelDireccion:"Adreça", labelTelefono:"Telèfon / WhatsApp",
+      labelDireccion:"Adreça", labelTelefono:"Telèfon / WhatsApp", reviewsLinkLabel:"Veure ressenyes a Google \u00a0↗",
       labelReparto:"Repartiment a domicili", valueReparto:"Fem lliurament a domicili a Castelldefels, concertant l'horari amb tu per WhatsApp.",
       labelHorario:"Horari",
       hoursDay1:"De dimarts a divendres", hoursTime1:"8:30–14:00 i 17:00–20:00",
@@ -450,7 +464,7 @@
       feat3Title:"Trato experto", feat3Body:"Preparado a tu gusto &mdash;limpio, en filetes, en rodajas o entero&mdash; tal y como lo haríamos en el mostrador.",
       contactEyebrow:"Visítanos", contactH2:"Horario y ubicación",
       contactLead:"Estamos en pleno centro de Castelldefels. Si prefieres pasar directamente por la pescadería, aquí tienes nuestro horario y cómo llegar.",
-      labelDireccion:"Dirección", labelTelefono:"Teléfono / WhatsApp",
+      labelDireccion:"Dirección", labelTelefono:"Teléfono / WhatsApp", reviewsLinkLabel:"Ver reseñas en Google \u00a0↗",
       labelReparto:"Reparto a domicilio", valueReparto:"Hacemos entrega a domicilio en Castelldefels, concertando el horario contigo por WhatsApp.",
       labelHorario:"Horario",
       hoursDay1:"De martes a viernes", hoursTime1:"8:30–14:00 y 17:00–20:00",
@@ -503,6 +517,7 @@
     setText('contactLead', t.contactLead);
     setText('labelDireccion', t.labelDireccion);
     setText('labelTelefono', t.labelTelefono);
+    setText('reviewsLink', t.reviewsLinkLabel);
     setText('labelReparto', t.labelReparto);
     setText('valueReparto', t.valueReparto);
     setText('labelHorario', t.labelHorario);
