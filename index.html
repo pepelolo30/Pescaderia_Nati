@@ -94,6 +94,29 @@
   .btn-outline-dark:hover{ background:rgba(217,184,118,0.1); }
   .btn-sm{ padding:8px 14px; font-size:13px; }
 
+  /* ---------- Language switch ---------- */
+  .topbar-right{ display:flex; align-items:center; gap:22px; }
+  .lang-switch{
+    display:flex; align-items:center; gap:3px; padding:3px;
+    border:1px solid var(--line); border-radius:20px; background:var(--paper);
+    flex:none;
+  }
+  .lang-btn{
+    display:flex; align-items:center; gap:6px;
+    border:none; background:transparent; padding:5px 10px 5px 6px; border-radius:16px;
+    cursor:pointer; opacity:0.8; transition:opacity .15s ease, background .15s ease;
+  }
+  .lang-btn:hover{ opacity:1; }
+  .lang-btn[aria-pressed="true"]{ opacity:1; background:var(--cream-2); }
+  .lang-btn .flag{
+    width:20px; height:14px; display:block; border-radius:2px; flex:none;
+    box-shadow:0 0 0 1px rgba(43,38,32,0.25);
+  }
+  .lang-btn .code{
+    font-size:11px; font-weight:800; letter-spacing:0.04em; color:var(--ink-soft);
+  }
+  .lang-btn[aria-pressed="true"] .code{ color:var(--ink); }
+
   /* ---------- Hero ---------- */
   .hero{ position:relative; overflow:hidden; border-bottom:1px solid var(--line); }
   .hero-grid{
@@ -227,13 +250,24 @@
     <a class="brandmark" href="#inici">
       <span>La Dorada</span>
     </a>
-    <nav class="primary">
-      <a href="#historia">La nostra història</a>
-      <a href="#com-ho-fem">Com ho fem</a>
-      <a href="#visitans">Horari i ubicació</a>
-      <a class="btn btn-gold btn-sm" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener">Demanar per WhatsApp</a>
-    </nav>
-    <a class="btn btn-outline btn-sm" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener" style="display:none" id="mobileWaTop">WhatsApp</a>
+    <div class="topbar-right">
+      <nav class="primary">
+        <a id="navHistoria" href="#historia">La nostra història</a>
+        <a id="navComo" href="#com-ho-fem">Com ho fem</a>
+        <a id="navHorario" href="#visitans">Horari i ubicació</a>
+        <a class="btn btn-gold btn-sm" id="navOrderBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener">Demanar per WhatsApp</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Canviar idioma">
+        <button type="button" class="lang-btn" id="langCa" data-lang="ca" aria-pressed="true" title="Veure en català">
+          <svg class="flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#FCDD09"/><rect y="1.56" width="20" height="1.56" fill="#DA121A"/><rect y="4.67" width="20" height="1.56" fill="#DA121A"/><rect y="7.78" width="20" height="1.56" fill="#DA121A"/><rect y="10.89" width="20" height="1.56" fill="#DA121A"/></svg>
+          <span class="code">CAT</span>
+        </button>
+        <button type="button" class="lang-btn" id="langEs" data-lang="es" aria-pressed="false" title="Ver en castellano">
+          <svg class="flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#AA151B"/><rect y="3.5" width="20" height="7" fill="#F1BF00"/></svg>
+          <span class="code">ES</span>
+        </button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -242,12 +276,12 @@
     <div class="scale-field"></div>
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Peixateria La Dorada · Castelldefels · Des del 1995</p>
-        <h1>La frescor de sempre,<br>a un WhatsApp de distància</h1>
-        <p class="hero-lead">Seleccionem la millor captura del dia a la llotja cada matí. Ara també ens pots encarregar el peix per WhatsApp, a punt per cuinar i preparat tal com el demanaries al taulell: el reculls a la botiga o te'l portem a casa, concertant l'horari amb tu.</p>
+        <p class="eyebrow" id="eyebrowHero">Peixateria La Dorada · Castelldefels · Des del 1995</p>
+        <h1 id="heroTitle">La frescor de sempre,<br>a un WhatsApp de distància</h1>
+        <p class="hero-lead" id="heroLead">Seleccionem la millor captura del dia a la llotja cada matí. Ara també ens pots encarregar el peix per WhatsApp, a punt per cuinar i preparat tal com el demanaries al taulell: el reculls a la botiga o te'l portem a casa, concertant l'horari amb tu.</p>
         <div class="hero-actions">
-          <a class="btn btn-gold" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener">Demanar per WhatsApp</a>
-          <a class="btn btn-outline" href="#visitans">Horari i ubicació</a>
+          <a class="btn btn-gold" id="heroOrderBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener">Demanar per WhatsApp</a>
+          <a class="btn btn-outline" id="heroHoursBtn" href="#visitans">Horari i ubicació</a>
         </div>
         <div class="status-badge" id="statusBadge">
           <span class="status-dot" id="statusDot"></span>
@@ -264,13 +298,13 @@
 
   <section class="story" id="historia">
     <div class="wrap story-grid">
-      <div class="story-quote">
+      <div class="story-quote" id="storyQuote">
         &ldquo;La qualitat de veritat no s'improvisa: es tria cada matí.&rdquo;
       </div>
       <div class="story-body">
-        <p>A la Peixateria La Dorada sabem que el bon peix no s'improvisa. Des del <strong>1995</strong>, el nostre compromís ha estat el mateix: seleccionar minuciosament la millor captura del dia per portar a la teva taula un producte excepcional, amb el gust i la frescor que cada vegada costa més de trobar. Per a nosaltres, vendre peix no és només un ofici, és una passió per oferir-te el millor de la zona.</p>
-        <p>T'ho volem posar més fàcil sense renunciar a l'exigència de sempre. Per això hem obert un canal directe per WhatsApp: ens expliques què necessites i te'l deixem preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash;. El reculls a la botiga o, si ho prefereixes, te l'acostem a casa concertant l'horari de lliurament amb tu. El mateix tracte del taulell, amb la comoditat de demanar-ho des d'on siguis.</p>
-        <p>Més de tres dècades guanyant-nos la confiança dels nostres clients, peça a peça. Et convidem a provar la comoditat de demanar per WhatsApp i comprovar per què, a La Dorada, el peix té un altre gust.</p>
+        <p id="storyP1">A la Peixateria La Dorada sabem que el bon peix no s'improvisa. Des del <strong>1995</strong>, el nostre compromís ha estat el mateix: seleccionar minuciosament la millor captura del dia per portar a la teva taula un producte excepcional, amb el gust i la frescor que cada vegada costa més de trobar. Per a nosaltres, vendre peix no és només un ofici, és una passió per oferir-te el millor de la zona.</p>
+        <p id="storyP2">T'ho volem posar més fàcil sense renunciar a l'exigència de sempre. Per això hem obert un canal directe per WhatsApp: ens expliques què necessites i te'l deixem preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash;. El reculls a la botiga o, si ho prefereixes, te l'acostem a casa concertant l'horari de lliurament amb tu. El mateix tracte del taulell, amb la comoditat de demanar-ho des d'on siguis.</p>
+        <p id="storyP3">Més de tres dècades guanyant-nos la confiança dels nostres clients, peça a peça. Et convidem a provar la comoditat de demanar per WhatsApp i comprovar per què, a La Dorada, el peix té un altre gust.</p>
       </div>
     </div>
   </section>
@@ -278,8 +312,8 @@
   <section class="features" id="com-ho-fem">
     <div class="wrap">
       <div class="features-head">
-        <p class="eyebrow">Com ho fem</p>
-        <h2>El mateix ofici de sempre, amb un pas menys</h2>
+        <p class="eyebrow" id="featuresEyebrow">Com ho fem</p>
+        <h2 id="featuresH2">El mateix ofici de sempre, amb un pas menys</h2>
       </div>
       <div class="feature-row">
         <div class="feature">
@@ -288,24 +322,24 @@
             <circle cx="24" cy="15" r="1.1" fill="#A97E33" stroke="none"/>
             <path d="M6 17 3 12M6 17l-3 5"/>
           </svg>
-          <h3>Frescor garantida</h3>
-          <p>Selecció diària a la llotja: només comprem el que ens convenç, perquè arribi a casa teva amb el màxim gust i textura.</p>
+          <h3 id="feat1Title">Frescor garantida</h3>
+          <p id="feat1Body">Selecció diària a la llotja: només comprem el que ens convenç, perquè arribi a casa teva amb el màxim gust i textura.</p>
         </div>
         <div class="feature">
           <svg class="icon" viewBox="0 0 34 34" fill="none" stroke="#A97E33" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M8 24 5 27l0.8-4.2A10 10 0 1 1 12 26l-4 1Z"/>
             <path d="M12.5 15.5h9M12.5 19h6"/>
           </svg>
-          <h3>Recollida o a domicili</h3>
-          <p>Ens escrius quan et vagi bé i et confirmem el peix disponible. El reculls a la botiga o el portem a casa, concertant l'horari amb tu.</p>
+          <h3 id="feat2Title">Recollida o a domicili</h3>
+          <p id="feat2Body">Ens escrius quan et vagi bé i et confirmem el peix disponible. El reculls a la botiga o el portem a casa, concertant l'horari amb tu.</p>
         </div>
         <div class="feature">
           <svg class="icon" viewBox="0 0 34 34" fill="none" stroke="#A97E33" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M7 27 24 10l1.8 1.8L9.6 29 6 30l1-3.5Z"/>
             <path d="M20 14l3.5 3.5"/>
           </svg>
-          <h3>Tracte expert</h3>
-          <p>Preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash; tal com ho faríem al taulell.</p>
+          <h3 id="feat3Title">Tracte expert</h3>
+          <p id="feat3Body">Preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash; tal com ho faríem al taulell.</p>
         </div>
       </div>
     </div>
@@ -314,40 +348,40 @@
   <section class="contact" id="visitans">
     <div class="wrap contact-grid">
       <div>
-        <p class="eyebrow on-dark">Visita'ns</p>
-        <h2>Horari i ubicació</h2>
-        <p class="contact-lead">Som al bell mig de Castelldefels. Si prefereixes passar directament per la peixateria, aquí tens el nostre horari i com arribar-hi.</p>
+        <p class="eyebrow on-dark" id="contactEyebrow">Visita'ns</p>
+        <h2 id="contactH2">Horari i ubicació</h2>
+        <p class="contact-lead" id="contactLead">Som al bell mig de Castelldefels. Si prefereixes passar directament per la peixateria, aquí tens el nostre horari i com arribar-hi.</p>
 
         <div class="infoblock">
-          <div class="label">Adreça</div>
+          <div class="label" id="labelDireccion">Adreça</div>
           <a class="value" href="https://www.google.com/maps/search/?api=1&query=Carrer%20de%20la%20Llibertat%2010%2C%2008860%20Castelldefels" target="_blank" rel="noopener">Carrer de la Llibertat, 10 · 08860 Castelldefels &nbsp;↗</a>
         </div>
 
         <div class="infoblock">
-          <div class="label">Telèfon / WhatsApp</div>
+          <div class="label" id="labelTelefono">Telèfon / WhatsApp</div>
           <a class="value" href="tel:+34699088213">+34 699 08 82 13</a>
         </div>
 
         <div class="infoblock">
-          <div class="label">Repartiment a domicili</div>
-          <div class="value">Fem lliurament a domicili a Castelldefels, concertant l'horari amb tu per WhatsApp.</div>
+          <div class="label" id="labelReparto">Repartiment a domicili</div>
+          <div class="value" id="valueReparto">Fem lliurament a domicili a Castelldefels, concertant l'horari amb tu per WhatsApp.</div>
         </div>
 
         <div class="infoblock">
-          <div class="label">Horari</div>
+          <div class="label" id="labelHorario">Horari</div>
           <table class="hours">
-            <tr><td class="day">De dimarts a divendres</td><td class="time">8:30–14:00 i 17:00–20:00</td></tr>
-            <tr><td class="day">Dissabte</td><td class="time">8:30–14:00</td></tr>
-            <tr><td class="day">Diumenge i dilluns</td><td class="time">Tancat</td></tr>
+            <tr><td class="day" id="hoursDay1">De dimarts a divendres</td><td class="time" id="hoursTime1">8:30–14:00 i 17:00–20:00</td></tr>
+            <tr><td class="day" id="hoursDay2">Dissabte</td><td class="time" id="hoursTime2">8:30–14:00</td></tr>
+            <tr><td class="day" id="hoursDay3">Diumenge i dilluns</td><td class="time" id="hoursTime3">Tancat</td></tr>
           </table>
         </div>
       </div>
 
       <div class="whatsapp-card">
         <svg class="wa-icon" viewBox="0 0 24 24" fill="#D9B876"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.32A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18a7.94 7.94 0 0 1-4.06-1.11l-.29-.17-3.02.79.8-2.94-.19-.3A7.96 7.96 0 1 1 12 20Zm4.36-5.97c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/></svg>
-        <h3>Escriu-nos i prepara la teva comanda</h3>
-        <p>Explica'ns quin peix o marisc necessites i com el vols preparat. Et confirmem la disponibilitat i quedem per WhatsApp si el reculls a la botiga o te'l portem a casa, i a quina hora.</p>
-        <a class="btn btn-outline-dark" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener">Obrir el xat de WhatsApp</a>
+        <h3 id="waCardTitle">Escriu-nos i prepara la teva comanda</h3>
+        <p id="waCardBody">Explica'ns quin peix o marisc necessites i com el vols preparat. Et confirmem la disponibilitat i quedem per WhatsApp si el reculls a la botiga o te'l portem a casa, i a quina hora.</p>
+        <a class="btn btn-outline-dark" id="waCardBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener">Obrir el xat de WhatsApp</a>
       </div>
     </div>
   </section>
@@ -356,42 +390,168 @@
 <footer>
   <div class="wrap">
     <div class="foot-brand">
-      <span>Peixateria La Dorada · Castelldefels · Des del 1995</span>
+      <span id="footBrand">Peixateria La Dorada · Castelldefels · Des del 1995</span>
     </div>
     <div class="fineprint">Carrer de la Llibertat, 10 · 699 08 82 13</div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener" aria-label="Demanar per WhatsApp">
+<a class="wa-float" id="waFloatBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener" aria-label="Demanar per WhatsApp">
   <svg viewBox="0 0 24 24" fill="#14343A"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.32A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18a7.94 7.94 0 0 1-4.06-1.11l-.29-.17-3.02.79.8-2.94-.19-.3A7.96 7.96 0 1 1 12 20Zm4.36-5.97c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/></svg>
 </a>
 
 <script>
 (function(){
-  try{
-    var now = new Date();
-    var day = now.getDay(); // 0 Sun ... 6 Sat
-    var mins = now.getHours()*60 + now.getMinutes();
-    var t0830 = 8*60+30, t1400 = 14*60, t1700 = 17*60, t2000 = 20*60;
-    var open = false;
-    if(day>=2 && day<=5){ // Tue-Fri
-      open = (mins>=t0830 && mins<t1400) || (mins>=t1700 && mins<t2000);
-    } else if(day===6){ // Sat
-      open = (mins>=t0830 && mins<t1400);
+  var T = {
+    ca: {
+      navHistoria:"La nostra història", navComo:"Com ho fem", navHorario:"Horari i ubicació",
+      orderCta:"Demanar per WhatsApp", waCardBtnLabel:"Obrir el xat de WhatsApp", waFloatLabel:"Demanar per WhatsApp",
+      eyebrowHero:"Peixateria La Dorada · Castelldefels · Des del 1995",
+      heroTitle:"La frescor de sempre,<br>a un WhatsApp de distància",
+      heroLead:"Seleccionem la millor captura del dia a la llotja cada matí. Ara també ens pots encarregar el peix per WhatsApp, a punt per cuinar i preparat tal com el demanaries al taulell: el reculls a la botiga o te'l portem a casa, concertant l'horari amb tu.",
+      heroHoursBtn:"Horari i ubicació",
+      statusChecking:"Comprovant horari…", statusOpen:"Obert ara", statusClosed:"Tancat ara · consulta l'horari a sota",
+      storyQuote:"&ldquo;La qualitat de veritat no s'improvisa: es tria cada matí.&rdquo;",
+      storyP1:"A la Peixateria La Dorada sabem que el bon peix no s'improvisa. Des del <strong>1995</strong>, el nostre compromís ha estat el mateix: seleccionar minuciosament la millor captura del dia per portar a la teva taula un producte excepcional, amb el gust i la frescor que cada vegada costa més de trobar. Per a nosaltres, vendre peix no és només un ofici, és una passió per oferir-te el millor de la zona.",
+      storyP2:"T'ho volem posar més fàcil sense renunciar a l'exigència de sempre. Per això hem obert un canal directe per WhatsApp: ens expliques què necessites i te'l deixem preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash;. El reculls a la botiga o, si ho prefereixes, te l'acostem a casa concertant l'horari de lliurament amb tu. El mateix tracte del taulell, amb la comoditat de demanar-ho des d'on siguis.",
+      storyP3:"Més de tres dècades guanyant-nos la confiança dels nostres clients, peça a peça. Et convidem a provar la comoditat de demanar per WhatsApp i comprovar per què, a La Dorada, el peix té un altre gust.",
+      featuresEyebrow:"Com ho fem", featuresH2:"El mateix ofici de sempre, amb un pas menys",
+      feat1Title:"Frescor garantida", feat1Body:"Selecció diària a la llotja: només comprem el que ens convenç, perquè arribi a casa teva amb el màxim gust i textura.",
+      feat2Title:"Recollida o a domicili", feat2Body:"Ens escrius quan et vagi bé i et confirmem el peix disponible. El reculls a la botiga o el portem a casa, concertant l'horari amb tu.",
+      feat3Title:"Tracte expert", feat3Body:"Preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash; tal com ho faríem al taulell.",
+      contactEyebrow:"Visita'ns", contactH2:"Horari i ubicació",
+      contactLead:"Som al bell mig de Castelldefels. Si prefereixes passar directament per la peixateria, aquí tens el nostre horari i com arribar-hi.",
+      labelDireccion:"Adreça", labelTelefono:"Telèfon / WhatsApp",
+      labelReparto:"Repartiment a domicili", valueReparto:"Fem lliurament a domicili a Castelldefels, concertant l'horari amb tu per WhatsApp.",
+      labelHorario:"Horari",
+      hoursDay1:"De dimarts a divendres", hoursTime1:"8:30–14:00 i 17:00–20:00",
+      hoursDay2:"Dissabte", hoursTime2:"8:30–14:00",
+      hoursDay3:"Diumenge i dilluns", hoursTime3:"Tancat",
+      waCardTitle:"Escriu-nos i prepara la teva comanda",
+      waCardBody:"Explica'ns quin peix o marisc necessites i com el vols preparat. Et confirmem la disponibilitat i quedem per WhatsApp si el reculls a la botiga o te'l portem a casa, i a quina hora.",
+      footBrand:"Peixateria La Dorada · Castelldefels · Des del 1995",
+      waLink:"https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada."
+    },
+    es: {
+      navHistoria:"Nuestra historia", navComo:"Cómo lo hacemos", navHorario:"Horario y ubicación",
+      orderCta:"Pedir por WhatsApp", waCardBtnLabel:"Abrir el chat de WhatsApp", waFloatLabel:"Pedir por WhatsApp",
+      eyebrowHero:"Pescadería La Dorada · Castelldefels · Desde 1995",
+      heroTitle:"La frescura de siempre,<br>a un WhatsApp de distancia",
+      heroLead:"Seleccionamos la mejor captura del día en la lonja cada mañana. Ahora también puedes encargarnos el pescado por WhatsApp, listo para cocinar y preparado tal y como lo pedirías en el mostrador: lo recoges en tienda o te lo llevamos a casa, concertando el horario contigo.",
+      heroHoursBtn:"Horario y ubicación",
+      statusChecking:"Comprobando horario…", statusOpen:"Abierto ahora", statusClosed:"Cerrado ahora · consulta el horario abajo",
+      storyQuote:"&ldquo;La verdadera calidad no se improvisa: se elige cada mañana.&rdquo;",
+      storyP1:"En Pescadería La Dorada sabemos que el buen pescado no se improvisa. Desde <strong>1995</strong>, nuestro compromiso ha sido el mismo: seleccionar minuciosamente la mejor captura del día para llevar a tu mesa un producto excepcional, con el sabor y la frescura que cada vez cuesta más encontrar. Para nosotros, vender pescado no es solo un oficio, es una pasión por ofrecerte lo mejor de la zona.",
+      storyP2:"Queremos ponértelo más fácil sin renunciar a la exigencia de siempre. Por eso hemos abierto un canal directo por WhatsApp: nos cuentas qué necesitas y te lo dejamos preparado a tu gusto &mdash;limpio, en filetes, en rodajas o entero&mdash;. Lo recoges en tienda o, si lo prefieres, te lo acercamos a casa concertando el horario de entrega contigo. El mismo trato de mostrador, con la comodidad de pedirlo desde donde estés.",
+      storyP3:"Más de tres décadas ganándonos la confianza de nuestros clientes, pieza a pieza. Te invitamos a probar la comodidad de pedir por WhatsApp y comprobar por qué, en La Dorada, el pescado sabe de otra manera.",
+      featuresEyebrow:"Cómo lo hacemos", featuresH2:"El mismo oficio de siempre, con un paso menos",
+      feat1Title:"Frescura garantizada", feat1Body:"Selección diaria en lonja: solo compramos lo que nos convence, para que llegue a tu casa con el máximo sabor y textura.",
+      feat2Title:"Recogida o a domicilio", feat2Body:"Nos escribes cuando te venga bien y te confirmamos el pescado disponible. Lo recoges en tienda o lo llevamos a casa, concertando el horario contigo.",
+      feat3Title:"Trato experto", feat3Body:"Preparado a tu gusto &mdash;limpio, en filetes, en rodajas o entero&mdash; tal y como lo haríamos en el mostrador.",
+      contactEyebrow:"Visítanos", contactH2:"Horario y ubicación",
+      contactLead:"Estamos en pleno centro de Castelldefels. Si prefieres pasar directamente por la pescadería, aquí tienes nuestro horario y cómo llegar.",
+      labelDireccion:"Dirección", labelTelefono:"Teléfono / WhatsApp",
+      labelReparto:"Reparto a domicilio", valueReparto:"Hacemos entrega a domicilio en Castelldefels, concertando el horario contigo por WhatsApp.",
+      labelHorario:"Horario",
+      hoursDay1:"De martes a viernes", hoursTime1:"8:30–14:00 y 17:00–20:00",
+      hoursDay2:"Sábado", hoursTime2:"8:30–14:00",
+      hoursDay3:"Domingo y lunes", hoursTime3:"Cerrado",
+      waCardTitle:"Escríbenos y prepara tu pedido",
+      waCardBody:"Cuéntanos qué pescado o marisco necesitas y cómo lo quieres preparado. Te confirmamos la disponibilidad y quedamos por WhatsApp en si lo recoges en tienda o te lo llevamos a casa, y a qué hora.",
+      footBrand:"Pescadería La Dorada · Castelldefels · Desde 1995",
+      waLink:"https://wa.me/34699088213?text=Hola%2C%20querr%C3%ADa%20hacer%20un%20pedido%20en%20la%20Pescader%C3%ADa%20La%20Dorada."
     }
+  };
+
+  var isOpenNow = false;
+
+  function computeOpenNow(){
+    var now = new Date();
+    var day = now.getDay();
+    var mins = now.getHours()*60 + now.getMinutes();
+    var t0830=8*60+30, t1400=14*60, t1700=17*60, t2000=20*60;
+    if(day>=2 && day<=5){ return (mins>=t0830 && mins<t1400) || (mins>=t1700 && mins<t2000); }
+    if(day===6){ return (mins>=t0830 && mins<t1400); }
+    return false;
+  }
+
+  function setText(id, val){ var el=document.getElementById(id); if(el) el.textContent = val; }
+  function setHTML(id, val){ var el=document.getElementById(id); if(el) el.innerHTML = val; }
+
+  function applyLang(lang){
+    var t = T[lang] ? T[lang] : T.ca;
+    try{ document.documentElement.lang = lang; }catch(e){}
+
+    setText('navHistoria', t.navHistoria);
+    setText('navComo', t.navComo);
+    setText('navHorario', t.navHorario);
+    setText('eyebrowHero', t.eyebrowHero);
+    setHTML('heroTitle', t.heroTitle);
+    setText('heroLead', t.heroLead);
+    setText('heroHoursBtn', t.heroHoursBtn);
+    setHTML('storyQuote', t.storyQuote);
+    setHTML('storyP1', t.storyP1);
+    setHTML('storyP2', t.storyP2);
+    setHTML('storyP3', t.storyP3);
+    setText('featuresEyebrow', t.featuresEyebrow);
+    setText('featuresH2', t.featuresH2);
+    setText('feat1Title', t.feat1Title); setHTML('feat1Body', t.feat1Body);
+    setText('feat2Title', t.feat2Title); setHTML('feat2Body', t.feat2Body);
+    setText('feat3Title', t.feat3Title); setHTML('feat3Body', t.feat3Body);
+    setText('contactEyebrow', t.contactEyebrow);
+    setText('contactH2', t.contactH2);
+    setText('contactLead', t.contactLead);
+    setText('labelDireccion', t.labelDireccion);
+    setText('labelTelefono', t.labelTelefono);
+    setText('labelReparto', t.labelReparto);
+    setText('valueReparto', t.valueReparto);
+    setText('labelHorario', t.labelHorario);
+    setText('hoursDay1', t.hoursDay1); setText('hoursTime1', t.hoursTime1);
+    setText('hoursDay2', t.hoursDay2); setText('hoursTime2', t.hoursTime2);
+    setText('hoursDay3', t.hoursDay3); setText('hoursTime3', t.hoursTime3);
+    setText('waCardTitle', t.waCardTitle);
+    setText('waCardBody', t.waCardBody);
+    setText('footBrand', t.footBrand);
+
+    ['navOrderBtn','heroOrderBtn'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el){ el.textContent = t.orderCta; el.href = t.waLink; }
+    });
+    var waCardBtn = document.getElementById('waCardBtn');
+    if(waCardBtn){ waCardBtn.textContent = t.waCardBtnLabel; waCardBtn.href = t.waLink; }
+    var waFloat = document.getElementById('waFloatBtn');
+    if(waFloat){ waFloat.setAttribute('aria-label', t.waFloatLabel); waFloat.href = t.waLink; }
+
     var dot = document.getElementById('statusDot');
     var text = document.getElementById('statusText');
-    if(open){
-      dot.classList.add('open');
-      text.textContent = 'Obert ara';
-    } else {
-      dot.classList.add('closed');
-      text.textContent = "Tancat ara · consulta l'horari a sota";
+    if(dot && text){
+      dot.classList.remove('open','closed');
+      dot.classList.add(isOpenNow ? 'open' : 'closed');
+      text.textContent = isOpenNow ? t.statusOpen : t.statusClosed;
     }
-  }catch(e){
-    var el = document.getElementById('statusBadge');
-    if(el) el.style.display = 'none';
+
+    var caBtn = document.getElementById('langCa');
+    var esBtn = document.getElementById('langEs');
+    if(caBtn) caBtn.setAttribute('aria-pressed', lang==='ca' ? 'true':'false');
+    if(esBtn) esBtn.setAttribute('aria-pressed', lang==='es' ? 'true':'false');
+
+    try{ localStorage.setItem('ladorada-lang', lang); }catch(e){}
   }
+
+  try{ isOpenNow = computeOpenNow(); }catch(e){ isOpenNow = false; }
+
+  var startLang = 'ca';
+  try{
+    var saved = localStorage.getItem('ladorada-lang');
+    if(saved === 'ca' || saved === 'es') startLang = saved;
+  }catch(e){}
+
+  applyLang(startLang);
+
+  var caBtn = document.getElementById('langCa');
+  var esBtn = document.getElementById('langEs');
+  if(caBtn) caBtn.addEventListener('click', function(){ applyLang('ca'); });
+  if(esBtn) esBtn.addEventListener('click', function(){ applyLang('es'); });
 })();
 </script>
 
