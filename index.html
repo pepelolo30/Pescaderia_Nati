@@ -223,6 +223,15 @@
     width:100%; height:280px; border:1px solid var(--line-on-dark); border-radius:4px; display:block;
   }
 
+  .radio-card{
+    grid-column:1 / -1; margin-top:8px; background:var(--marine-2); border:1px solid var(--line-on-dark);
+    border-radius:4px; padding:24px 26px; display:flex; align-items:center; justify-content:space-between;
+    gap:22px; flex-wrap:wrap;
+  }
+  .radio-card-text h3{ font-family:"Lora", Georgia, serif; font-weight:500; font-size:18px; color:var(--paper); margin:0 0 4px; }
+  .radio-card-text p{ font-size:13.5px; line-height:1.5; color:rgba(250,246,236,0.72); margin:0; }
+  .radio-card audio{ height:36px; max-width:280px; width:100%; }
+
   /* ---------- Footer ---------- */
   footer{ background:var(--marine); border-top:1px solid rgba(250,246,236,0.12); }
   footer .wrap{
@@ -394,6 +403,16 @@
         <a class="btn btn-outline-dark" id="waCardBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener">Obrir el xat de WhatsApp</a>
       </div>
 
+      <div class="radio-card">
+        <div class="radio-card-text">
+          <h3 id="radioAdTitle">Ens has sentit a la ràdio?</h3>
+          <p id="radioAdBody">Escolta aquí el nostre anunci.</p>
+        </div>
+        <audio controls preload="none" src="anuncio.mp3">
+          El teu navegador no admet la reproducció d'àudio.
+        </audio>
+      </div>
+
       <div class="map-embed">
         <iframe src="https://maps.google.com/maps?q=Carrer%20de%20la%20Llibertat%2010%2C%2008860%20Castelldefels&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peixateria La Dorada · Carrer de la Llibertat, 10, Castelldefels"></iframe>
       </div>
@@ -443,6 +462,7 @@
       hoursDay3:"Diumenge i dilluns", hoursTime3:"Tancat",
       waCardTitle:"Escriu-nos i prepara la teva comanda",
       waCardBody:"Explica'ns quin peix o marisc necessites i com el vols preparat. Et confirmem la disponibilitat i quedem per WhatsApp si el reculls a la botiga o te'l portem a casa, i a quina hora.",
+      radioAdTitle:"Ens has sentit a la ràdio?", radioAdBody:"Escolta aquí el nostre anunci.",
       footBrand:"Peixateria La Dorada · Castelldefels · Des del 1995",
       waLink:"https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada."
     },
@@ -472,6 +492,7 @@
       hoursDay3:"Domingo y lunes", hoursTime3:"Cerrado",
       waCardTitle:"Escríbenos y prepara tu pedido",
       waCardBody:"Cuéntanos qué pescado o marisco necesitas y cómo lo quieres preparado. Te confirmamos la disponibilidad y quedamos por WhatsApp en si lo recoges en tienda o te lo llevamos a casa, y a qué hora.",
+      radioAdTitle:"¿Nos has oído en la radio?", radioAdBody:"Escucha aquí nuestro anuncio.",
       footBrand:"Pescadería La Dorada · Castelldefels · Desde 1995",
       waLink:"https://wa.me/34699088213?text=Hola%2C%20querr%C3%ADa%20hacer%20un%20pedido%20en%20la%20Pescader%C3%ADa%20La%20Dorada."
     }
@@ -526,6 +547,8 @@
     setText('hoursDay3', t.hoursDay3); setText('hoursTime3', t.hoursTime3);
     setText('waCardTitle', t.waCardTitle);
     setText('waCardBody', t.waCardBody);
+    setText('radioAdTitle', t.radioAdTitle);
+    setText('radioAdBody', t.radioAdBody);
     setText('footBrand', t.footBrand);
 
     ['navOrderBtn','heroOrderBtn'].forEach(function(id){
