@@ -125,6 +125,18 @@
   }
   .lang-btn[aria-pressed="true"] .code{ color:var(--ink); }
 
+  /* ---------- Promo banner ---------- */
+  .promo-banner{ background:var(--marine); color:var(--paper); border-bottom:1px solid rgba(217,184,118,0.35); }
+  .promo-inner{
+    display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;
+    text-align:center; padding:11px clamp(20px,5vw,56px);
+  }
+  .promo-message{ display:flex; flex-direction:column; align-items:center; gap:2px; }
+  .promo-badge{ font-size:20px; line-height:1; }
+  .promo-text{ font-size:14px; color:rgba(250,246,236,0.9); line-height:1.5; }
+  .promo-text strong{ color:var(--paper); }
+  .promo-number{ font-weight:800; color:var(--gold-light); font-size:15.5px; letter-spacing:0.03em; }
+
   /* ---------- Hero ---------- */
   .hero{ position:relative; overflow:hidden; border-bottom:1px solid var(--line); }
   .hero-grid{
@@ -304,6 +316,16 @@
   </div>
 </header>
 
+<div class="promo-banner" id="promoBanner">
+  <div class="wrap promo-inner">
+    <div class="promo-message">
+      <span class="promo-badge" aria-hidden="true">🎄</span>
+      <p class="promo-text" id="promoText">Ja tenim la <strong>Loteria de Nadal</strong>! i si toca?<br>Número <span class="promo-number">55160</span> disponible a la botiga.</p>
+    </div>
+    <a class="btn btn-gold btn-sm" id="promoBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20un%20d%C3%A8cim%20del%20n%C3%BAmero%2055160%20de%20la%20Loteria%20de%20Nadal." target="_blank" rel="noopener">Reservar per WhatsApp</a>
+  </div>
+</div>
+
 <main>
   <section class="hero" id="inici">
     <div class="scale-field"></div>
@@ -479,6 +501,9 @@
       waCardBody:"Explica'ns quin peix o marisc necessites i com el vols preparat. Et confirmem la disponibilitat i quedem per WhatsApp si el reculls a la botiga o te'l portem a casa, i a quina hora.",
       radioAdTitle:"Ens has sentit a la ràdio?", radioAdBody:"Escolta aquí el nostre anunci.",
       radioBtnLabel:"Escoltar l'anunci de ràdio",
+      promoText:"Ja tenim la <strong>Loteria de Nadal</strong>! i si toca?<br>Número <span class=\"promo-number\">55160</span> disponible a la botiga.",
+      promoBtnLabel:"Reservar per WhatsApp",
+      promoWaLink:"https://wa.me/34699088213?text=Hola%2C%20voldria%20un%20d%C3%A8cim%20del%20n%C3%BAmero%2055160%20de%20la%20Loteria%20de%20Nadal.",
       footBrand:"Peixateria La Dorada · Castelldefels · Des del 1995",
       waLink:"https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada."
     },
@@ -510,6 +535,9 @@
       waCardBody:"Cuéntanos qué pescado o marisco necesitas y cómo lo quieres preparado. Te confirmamos la disponibilidad y quedamos por WhatsApp en si lo recoges en tienda o te lo llevamos a casa, y a qué hora.",
       radioAdTitle:"¿Nos has oído en la radio?", radioAdBody:"Escucha aquí nuestro anuncio.",
       radioBtnLabel:"Escuchar el anuncio de radio",
+      promoText:"¡Ya tenemos la <strong>Lotería de Navidad</strong>! ¿y si toca?<br>Número <span class=\"promo-number\">55160</span> disponible en tienda.",
+      promoBtnLabel:"Reservar por WhatsApp",
+      promoWaLink:"https://wa.me/34699088213?text=Hola%2C%20querr%C3%ADa%20un%20d%C3%A9cimo%20del%20n%C3%BAmero%2055160%20de%20la%20Loter%C3%ADa%20de%20Navidad.",
       footBrand:"Pescadería La Dorada · Castelldefels · Desde 1995",
       waLink:"https://wa.me/34699088213?text=Hola%2C%20querr%C3%ADa%20hacer%20un%20pedido%20en%20la%20Pescader%C3%ADa%20La%20Dorada."
     }
@@ -568,6 +596,10 @@
     setText('radioAdBody', t.radioAdBody);
     var radioBtnEl = document.getElementById('radioBtn');
     if(radioBtnEl){ radioBtnEl.setAttribute('aria-label', t.radioBtnLabel); radioBtnEl.title = t.radioBtnLabel; }
+
+    setHTML('promoText', t.promoText);
+    var promoBtn = document.getElementById('promoBtn');
+    if(promoBtn){ promoBtn.textContent = t.promoBtnLabel; promoBtn.href = t.promoWaLink; }
     setText('footBrand', t.footBrand);
 
     ['navOrderBtn','heroOrderBtn'].forEach(function(id){
