@@ -70,6 +70,14 @@
     font-family:"Lora", Georgia, serif; font-weight:500; font-size:18px;
     letter-spacing:0.01em; color:var(--ink);
   }
+  .brand-group{ display:flex; align-items:center; gap:10px; }
+  .radio-btn{
+    display:flex; align-items:center; justify-content:center;
+    width:30px; height:30px; border-radius:50%; border:1px solid var(--line);
+    background:var(--paper); color:var(--ink-soft); cursor:pointer; padding:0; flex:none;
+  }
+  .radio-btn:hover{ border-color:var(--gold); color:var(--gold-deep); }
+  .radio-btn svg{ width:15px; height:15px; }
   nav.primary{ display:flex; align-items:center; gap:28px; }
   nav.primary a{
     font-size:14.5px; font-weight:600; text-decoration:none; color:var(--ink-soft);
@@ -265,9 +273,16 @@
 
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brandmark" href="#inici">
-      <span>La Dorada</span>
-    </a>
+    <div class="brand-group">
+      <a class="brandmark" href="#inici">
+        <span>La Dorada</span>
+      </a>
+      <button type="button" class="radio-btn" id="radioBtn" aria-label="Escoltar l'anunci de ràdio" title="Escoltar l'anunci de ràdio">
+        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" hidden><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      </button>
+      <audio id="headerRadioAudio" src="anuncio.mp3" preload="none" hidden></audio>
+    </div>
     <div class="topbar-right">
       <nav class="primary">
         <a id="navHistoria" href="#historia">La nostra història</a>
@@ -463,6 +478,7 @@
       waCardTitle:"Escriu-nos i prepara la teva comanda",
       waCardBody:"Explica'ns quin peix o marisc necessites i com el vols preparat. Et confirmem la disponibilitat i quedem per WhatsApp si el reculls a la botiga o te'l portem a casa, i a quina hora.",
       radioAdTitle:"Ens has sentit a la ràdio?", radioAdBody:"Escolta aquí el nostre anunci.",
+      radioBtnLabel:"Escoltar l'anunci de ràdio",
       footBrand:"Peixateria La Dorada · Castelldefels · Des del 1995",
       waLink:"https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada."
     },
@@ -493,6 +509,7 @@
       waCardTitle:"Escríbenos y prepara tu pedido",
       waCardBody:"Cuéntanos qué pescado o marisco necesitas y cómo lo quieres preparado. Te confirmamos la disponibilidad y quedamos por WhatsApp en si lo recoges en tienda o te lo llevamos a casa, y a qué hora.",
       radioAdTitle:"¿Nos has oído en la radio?", radioAdBody:"Escucha aquí nuestro anuncio.",
+      radioBtnLabel:"Escuchar el anuncio de radio",
       footBrand:"Pescadería La Dorada · Castelldefels · Desde 1995",
       waLink:"https://wa.me/34699088213?text=Hola%2C%20querr%C3%ADa%20hacer%20un%20pedido%20en%20la%20Pescader%C3%ADa%20La%20Dorada."
     }
@@ -549,6 +566,8 @@
     setText('waCardBody', t.waCardBody);
     setText('radioAdTitle', t.radioAdTitle);
     setText('radioAdBody', t.radioAdBody);
+    var radioBtnEl = document.getElementById('radioBtn');
+    if(radioBtnEl){ radioBtnEl.setAttribute('aria-label', t.radioBtnLabel); radioBtnEl.title = t.radioBtnLabel; }
     setText('footBrand', t.footBrand);
 
     ['navOrderBtn','heroOrderBtn'].forEach(function(id){
@@ -590,6 +609,19 @@
   var esBtn = document.getElementById('langEs');
   if(caBtn) caBtn.addEventListener('click', function(){ applyLang('ca'); });
   if(esBtn) esBtn.addEventListener('click', function(){ applyLang('es'); });
+
+  var radioBtn = document.getElementById('radioBtn');
+  var headerAudio = document.getElementById('headerRadioAudio');
+  if(radioBtn && headerAudio){
+    var iconPlay = radioBtn.querySelector('.icon-play');
+    var iconPause = radioBtn.querySelector('.icon-pause');
+    radioBtn.addEventListener('click', function(){
+      if(headerAudio.paused){ headerAudio.play(); } else { headerAudio.pause(); }
+    });
+    headerAudio.addEventListener('play', function(){ iconPlay.hidden = true; iconPause.hidden = false; });
+    headerAudio.addEventListener('pause', function(){ iconPlay.hidden = false; iconPause.hidden = true; });
+    headerAudio.addEventListener('ended', function(){ iconPlay.hidden = false; iconPause.hidden = true; });
+  }
 })();
 </script>
 
