@@ -20,7 +20,7 @@
 
   *{ box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
-  section[id]{ scroll-margin-top:60px; }
+  section[id]{ scroll-margin-top:108px; }
   body{
     margin:0;
     background:var(--cream);
@@ -87,8 +87,25 @@
   nav.primary a:hover{ color:var(--ink); border-bottom-color:var(--gold); }
   nav.primary a.btn-gold, nav.primary a.btn-gold:hover{ color:var(--paper); border-bottom:none; padding:8px 14px; }
   nav.primary a, .brandmark span{ white-space:nowrap; }
-  @media (max-width:1180px){ nav.primary{ gap:20px; } #navHorario{ display:none; } }
-  @media (max-width:1000px){ nav.primary a:not(.btn){ display:none; } }
+  .sections{ border-top:1px solid var(--line); }
+  .sections-inner{
+    position:relative; display:flex; gap:2px; overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch;
+    padding:0 clamp(12px,4vw,48px);
+    mask-image:linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 28px), transparent 100%);
+    -webkit-mask-image:linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 28px), transparent 100%);
+  }
+  .sections-inner::-webkit-scrollbar{ display:none; }
+  .sections-inner a:first-child{ margin-left:auto; }
+  .sections-inner a:last-child{ margin-right:auto; }
+  .sections a{
+    flex:none; padding:10px 12px 9px; font-size:14px; font-weight:600; white-space:nowrap;
+    color:var(--ink-soft); text-decoration:none; border-bottom:2px solid transparent;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .sections a:hover{ color:var(--ink); }
+  .sections a[aria-current="true"]{ color:var(--ink); border-bottom-color:var(--gold); }
+  .sections a:focus-visible{ outline:2px solid var(--gold); outline-offset:-2px; }
+  @media (max-width:560px){ nav.primary{ display:none; } .topbar-inner{ padding-top:9px; padding-bottom:9px; } .sections a{ font-size:13.5px; padding:9px 10px 8px; } }
   .btn{
     display:inline-flex; align-items:center; gap:8px;
     font-family:"Libre Franklin", sans-serif; font-weight:700; font-size:14.5px;
@@ -454,7 +471,6 @@
   .recipe .link-btn{ align-self:flex-start; text-align:left; }
 
   @media (max-width:860px){
-    nav.primary{ display:none; }
     .order-grid, .nadal-grid{ grid-template-columns:1fr; gap:28px; }
     .quotes{ grid-template-columns:1fr; }
     .recipes{ grid-template-columns:1fr 1fr; }
@@ -497,11 +513,6 @@
     </div>
     <div class="topbar-right">
       <nav class="primary">
-        <a href="#avui" data-t="navAvui">Avui tenim</a>
-        <a href="#taulell" data-t="navTaulell">El taulell</a>
-        <a href="#nadal" id="navNadal" data-t="navNadal">Nadal</a>
-        <a href="#opinions" data-t="navOpinions">Opinions</a>
-        <a id="navHorario" href="#visitans">Horari i ubicació</a>
         <a class="btn btn-gold btn-sm" href="#encarrec" data-t="navOrderBtn">Fer un encàrrec</a>
       </nav>
       <div class="lang-switch" role="group" aria-label="Canviar idioma">
@@ -520,6 +531,18 @@
       </div>
     </div>
   </div>
+  <nav class="sections" id="sectionNav" data-t-aria="navSections">
+    <div class="sections-inner">
+      <a href="#avui" data-sec="avui" data-t="navAvui">Avui tenim</a>
+      <a href="#nadal" data-sec="nadal receptes-nadal" id="navNadal" data-t="navNadal">Nadal</a>
+      <a href="#encarrec" data-sec="encarrec" data-t="navEncarrec">Encàrrec</a>
+      <a href="#taulell" data-sec="taulell" data-t="navTaulell">El taulell</a>
+      <a href="#opinions" data-sec="opinions" data-t="navOpinions">Opinions</a>
+      <a href="#cuina" data-sec="cuina" data-t="navCuina">Idees per cuinar</a>
+      <a href="#visitans" data-sec="visitans" id="navHorario">Horari i ubicació</a>
+      <a href="#historia" data-sec="historia com-ho-fem radio" data-t="navQuiSom">Qui som</a>
+    </div>
+  </nav>
 </header>
 
 <div class="promo-banner" id="promoBanner">
@@ -572,44 +595,6 @@
       </div>
     </div>
   </section>
-
-  <section class="section" id="taulell">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow" data-t="galEyebrow">El nostre taulell</p>
-        <h2 data-t="galH2">Producte de llotja, tal com el veuràs a la botiga</h2>
-        <p class="lead" data-t="galLead">Res d'imatges de catàleg: aquest és el peix i el marisc que preparem cada matí al carrer de la Llibertat.</p>
-      </div>
-      <figure class="gallery-banner">
-        <img src="img/taulell-1600.webp" srcset="img/taulell-900.webp 900w, img/taulell-1600.webp 1600w" sizes="(max-width:1120px) 100vw, 1008px" width="1600" height="800" loading="lazy" decoding="async" alt="" data-t-alt="cap0">
-        <figcaption data-t="cap0">El taulell, cada matí</figcaption>
-      </figure>
-      <div class="gallery" id="gallery">
-        <div class="tile tile-video" id="videoTile" role="button" tabindex="0" data-t-aria="videoAria">
-          <video id="taulellVideo" src="video/taulell.mp4" poster="img/seitons-480.webp" muted loop playsinline preload="none"></video>
-          <span class="badge" data-t="videoBadge">Vídeo</span>
-          <span class="cap" data-t="capVideo">Un passeig pel taulell</span>
-        </div>
-        <button type="button" class="tile" data-full="img/llobarro-escamarlans-800.webp" data-cap="cap1"><img src="img/llobarro-escamarlans-480.webp" srcset="img/llobarro-escamarlans-480.webp 480w, img/llobarro-escamarlans-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap1"><span class="cap" data-t="cap1">Escamarlans i llobarro</span></button>
-        <button type="button" class="tile" data-full="img/salmo-800.webp" data-cap="cap2"><img src="img/salmo-480.webp" srcset="img/salmo-480.webp 480w, img/salmo-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap2"><span class="cap" data-t="cap2">Salmó i tonyina vermella</span></button>
-        <button type="button" class="tile" data-full="img/remol-gamba-800.webp" data-cap="cap3"><img src="img/remol-gamba-480.webp" srcset="img/remol-gamba-480.webp 480w, img/remol-gamba-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap3"><span class="cap" data-t="cap3">Rèmol i gamba vermella</span></button>
-        <button type="button" class="tile" data-full="img/calamars-800.webp" data-cap="cap4"><img src="img/calamars-480.webp" srcset="img/calamars-480.webp 480w, img/calamars-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap4"><span class="cap" data-t="cap4">Calamars i llobarro</span></button>
-        <button type="button" class="tile" data-full="img/seitons-800.webp" data-cap="cap5"><img src="img/seitons-480.webp" srcset="img/seitons-480.webp 480w, img/seitons-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap5"><span class="cap" data-t="cap5">Seitons</span></button>
-        <button type="button" class="tile" data-full="img/rap-musclos-800.webp" data-cap="cap6"><img src="img/rap-musclos-480.webp" srcset="img/rap-musclos-480.webp 480w, img/rap-musclos-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap6"><span class="cap" data-t="cap6">Cua de rap i musclos</span></button>
-      </div>
-      <p class="gallery-note" data-t="galNote">Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.</p>
-    </div>
-  </section>
-
-  <dialog class="lightbox" id="lightbox">
-    <figure>
-      <img id="lbImg" src="" alt="">
-      <figcaption id="lbCap"></figcaption>
-    </figure>
-    <button type="button" class="lb-btn lb-close" id="lbClose" data-t-aria="lbClose">×</button>
-    <button type="button" class="lb-btn lb-prev" id="lbPrev" data-t-aria="lbPrev">‹</button>
-    <button type="button" class="lb-btn lb-next" id="lbNext" data-t-aria="lbNext">›</button>
-  </dialog>
 
   <section class="section nadal" id="nadal" hidden>
     <div class="wrap nadal-grid">
@@ -729,6 +714,44 @@
     </div>
   </section>
 
+  <section class="section" id="taulell">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-t="galEyebrow">El nostre taulell</p>
+        <h2 data-t="galH2">Producte de llotja, tal com el veuràs a la botiga</h2>
+        <p class="lead" data-t="galLead">Res d'imatges de catàleg: aquest és el peix i el marisc que preparem cada matí al carrer de la Llibertat.</p>
+      </div>
+      <figure class="gallery-banner">
+        <img src="img/taulell-1600.webp" srcset="img/taulell-900.webp 900w, img/taulell-1600.webp 1600w" sizes="(max-width:1120px) 100vw, 1008px" width="1600" height="800" loading="lazy" decoding="async" alt="" data-t-alt="cap0">
+        <figcaption data-t="cap0">El taulell, cada matí</figcaption>
+      </figure>
+      <div class="gallery" id="gallery">
+        <div class="tile tile-video" id="videoTile" role="button" tabindex="0" data-t-aria="videoAria">
+          <video id="taulellVideo" src="video/taulell.mp4" poster="img/seitons-480.webp" muted loop playsinline preload="none"></video>
+          <span class="badge" data-t="videoBadge">Vídeo</span>
+          <span class="cap" data-t="capVideo">Un passeig pel taulell</span>
+        </div>
+        <button type="button" class="tile" data-full="img/llobarro-escamarlans-800.webp" data-cap="cap1"><img src="img/llobarro-escamarlans-480.webp" srcset="img/llobarro-escamarlans-480.webp 480w, img/llobarro-escamarlans-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap1"><span class="cap" data-t="cap1">Escamarlans i llobarro</span></button>
+        <button type="button" class="tile" data-full="img/salmo-800.webp" data-cap="cap2"><img src="img/salmo-480.webp" srcset="img/salmo-480.webp 480w, img/salmo-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap2"><span class="cap" data-t="cap2">Salmó i tonyina vermella</span></button>
+        <button type="button" class="tile" data-full="img/remol-gamba-800.webp" data-cap="cap3"><img src="img/remol-gamba-480.webp" srcset="img/remol-gamba-480.webp 480w, img/remol-gamba-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap3"><span class="cap" data-t="cap3">Rèmol i gamba vermella</span></button>
+        <button type="button" class="tile" data-full="img/calamars-800.webp" data-cap="cap4"><img src="img/calamars-480.webp" srcset="img/calamars-480.webp 480w, img/calamars-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap4"><span class="cap" data-t="cap4">Calamars i llobarro</span></button>
+        <button type="button" class="tile" data-full="img/seitons-800.webp" data-cap="cap5"><img src="img/seitons-480.webp" srcset="img/seitons-480.webp 480w, img/seitons-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap5"><span class="cap" data-t="cap5">Seitons</span></button>
+        <button type="button" class="tile" data-full="img/rap-musclos-800.webp" data-cap="cap6"><img src="img/rap-musclos-480.webp" srcset="img/rap-musclos-480.webp 480w, img/rap-musclos-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap6"><span class="cap" data-t="cap6">Cua de rap i musclos</span></button>
+      </div>
+      <p class="gallery-note" data-t="galNote">Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.</p>
+    </div>
+  </section>
+
+  <dialog class="lightbox" id="lightbox">
+    <figure>
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button type="button" class="lb-btn lb-close" id="lbClose" data-t-aria="lbClose">×</button>
+    <button type="button" class="lb-btn lb-prev" id="lbPrev" data-t-aria="lbPrev">‹</button>
+    <button type="button" class="lb-btn lb-next" id="lbNext" data-t-aria="lbNext">›</button>
+  </dialog>
+
   <section class="section" id="opinions">
     <div class="wrap">
       <div class="section-head">
@@ -751,55 +774,6 @@
       <div class="opinions-actions">
         <a class="btn btn-outline" id="reviewsAllBtn" href="https://share.google/4iYkjqqurM3KNHHqT" target="_blank" rel="noopener" data-t="opAll">Llegir-les totes a Google ↗</a>
         <a class="btn btn-gold" id="reviewsWriteBtn" href="https://share.google/4iYkjqqurM3KNHHqT" target="_blank" rel="noopener" data-t="opWrite">Deixa'ns la teva opinió</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="story" id="historia">
-    <div class="wrap story-grid">
-      <div class="story-quote" id="storyQuote">
-        &ldquo;La qualitat de veritat no s'improvisa: es tria cada matí.&rdquo;
-      </div>
-      <div class="story-body">
-        <p id="storyP1">A la Peixateria La Dorada sabem que el bon peix no s'improvisa. Des del <strong>1995</strong>, el nostre compromís ha estat el mateix: seleccionar minuciosament la millor captura del dia per portar a la teva taula un producte excepcional, amb el gust i la frescor que cada vegada costa més de trobar. Per a nosaltres, vendre peix no és només un ofici, és una passió per oferir-te el millor de la zona.</p>
-        <p id="storyP2">T'ho volem posar més fàcil sense renunciar a l'exigència de sempre. Per això hem obert un canal directe per WhatsApp: ens expliques què necessites i te'l deixem preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash;. El reculls a la botiga o, si ho prefereixes, te l'acostem a casa concertant l'horari de lliurament amb tu. El mateix tracte del taulell, amb la comoditat de demanar-ho des d'on siguis.</p>
-        <p id="storyP3">Més de tres dècades guanyant-nos la confiança dels nostres clients, peça a peça. Et convidem a provar la comoditat de demanar per WhatsApp i comprovar per què, a La Dorada, el peix té un altre gust.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="features" id="com-ho-fem">
-    <div class="wrap">
-      <div class="features-head">
-        <p class="eyebrow" id="featuresEyebrow">Com ho fem</p>
-        <h2 id="featuresH2">El mateix ofici de sempre, amb un pas menys</h2>
-      </div>
-      <div class="feature-row">
-        <div class="feature">
-          <svg class="icon" viewBox="0 0 34 34" fill="none" stroke="#A97E33" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 17c4-6 10-9 16-6 3 1.5 5 4 6 6-1 2-3 4.5-6 6-6 3-12 0-16-6Z"/>
-            <circle cx="24" cy="15" r="1.1" fill="#A97E33" stroke="none"/>
-            <path d="M6 17 3 12M6 17l-3 5"/>
-          </svg>
-          <h3 id="feat1Title">Frescor garantida</h3>
-          <p id="feat1Body">Selecció diària a la llotja: només comprem el que ens convenç, perquè arribi a casa teva amb el màxim gust i textura.</p>
-        </div>
-        <div class="feature">
-          <svg class="icon" viewBox="0 0 34 34" fill="none" stroke="#A97E33" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 24 5 27l0.8-4.2A10 10 0 1 1 12 26l-4 1Z"/>
-            <path d="M12.5 15.5h9M12.5 19h6"/>
-          </svg>
-          <h3 id="feat2Title">Recollida o a domicili</h3>
-          <p id="feat2Body">Ens escrius quan et vagi bé i et confirmem el peix disponible. El reculls a la botiga o el portem a casa, concertant l'horari amb tu.</p>
-        </div>
-        <div class="feature">
-          <svg class="icon" viewBox="0 0 34 34" fill="none" stroke="#A97E33" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M7 27 24 10l1.8 1.8L9.6 29 6 30l1-3.5Z"/>
-            <path d="M20 14l3.5 3.5"/>
-          </svg>
-          <h3 id="feat3Title">Tracte expert</h3>
-          <p id="feat3Body">Preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash; tal com ho faríem al taulell.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -881,6 +855,63 @@
         <a class="btn btn-outline-dark" id="waCardBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20La%20Dorada." target="_blank" rel="noopener">Obrir el xat de WhatsApp</a>
       </div>
 
+      <div class="map-embed">
+        <iframe src="https://maps.google.com/maps?q=Carrer%20de%20la%20Llibertat%2010%2C%2008860%20Castelldefels&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peixateria La Dorada · Carrer de la Llibertat, 10, Castelldefels"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" id="historia">
+    <div class="wrap story-grid">
+      <div class="story-quote" id="storyQuote">
+        &ldquo;La qualitat de veritat no s'improvisa: es tria cada matí.&rdquo;
+      </div>
+      <div class="story-body">
+        <p id="storyP1">A la Peixateria La Dorada sabem que el bon peix no s'improvisa. Des del <strong>1995</strong>, el nostre compromís ha estat el mateix: seleccionar minuciosament la millor captura del dia per portar a la teva taula un producte excepcional, amb el gust i la frescor que cada vegada costa més de trobar. Per a nosaltres, vendre peix no és només un ofici, és una passió per oferir-te el millor de la zona.</p>
+        <p id="storyP2">T'ho volem posar més fàcil sense renunciar a l'exigència de sempre. Per això hem obert un canal directe per WhatsApp: ens expliques què necessites i te'l deixem preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash;. El reculls a la botiga o, si ho prefereixes, te l'acostem a casa concertant l'horari de lliurament amb tu. El mateix tracte del taulell, amb la comoditat de demanar-ho des d'on siguis.</p>
+        <p id="storyP3">Més de tres dècades guanyant-nos la confiança dels nostres clients, peça a peça. Et convidem a provar la comoditat de demanar per WhatsApp i comprovar per què, a La Dorada, el peix té un altre gust.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="com-ho-fem">
+    <div class="wrap">
+      <div class="features-head">
+        <p class="eyebrow" id="featuresEyebrow">Com ho fem</p>
+        <h2 id="featuresH2">El mateix ofici de sempre, amb un pas menys</h2>
+      </div>
+      <div class="feature-row">
+        <div class="feature">
+          <svg class="icon" viewBox="0 0 34 34" fill="none" stroke="#A97E33" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 17c4-6 10-9 16-6 3 1.5 5 4 6 6-1 2-3 4.5-6 6-6 3-12 0-16-6Z"/>
+            <circle cx="24" cy="15" r="1.1" fill="#A97E33" stroke="none"/>
+            <path d="M6 17 3 12M6 17l-3 5"/>
+          </svg>
+          <h3 id="feat1Title">Frescor garantida</h3>
+          <p id="feat1Body">Selecció diària a la llotja: només comprem el que ens convenç, perquè arribi a casa teva amb el màxim gust i textura.</p>
+        </div>
+        <div class="feature">
+          <svg class="icon" viewBox="0 0 34 34" fill="none" stroke="#A97E33" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 24 5 27l0.8-4.2A10 10 0 1 1 12 26l-4 1Z"/>
+            <path d="M12.5 15.5h9M12.5 19h6"/>
+          </svg>
+          <h3 id="feat2Title">Recollida o a domicili</h3>
+          <p id="feat2Body">Ens escrius quan et vagi bé i et confirmem el peix disponible. El reculls a la botiga o el portem a casa, concertant l'horari amb tu.</p>
+        </div>
+        <div class="feature">
+          <svg class="icon" viewBox="0 0 34 34" fill="none" stroke="#A97E33" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 27 24 10l1.8 1.8L9.6 29 6 30l1-3.5Z"/>
+            <path d="M20 14l3.5 3.5"/>
+          </svg>
+          <h3 id="feat3Title">Tracte expert</h3>
+          <p id="feat3Body">Preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash; tal com ho faríem al taulell.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="radio">
+    <div class="wrap" style="padding-bottom:clamp(40px,6vw,72px)">
       <div class="radio-card">
         <div class="radio-card-text">
           <h3 id="radioAdTitle">Ens has sentit a la ràdio?</h3>
@@ -889,10 +920,6 @@
         <audio controls preload="none" src="anuncio.mp3">
           El teu navegador no admet la reproducció d'àudio.
         </audio>
-      </div>
-
-      <div class="map-embed">
-        <iframe src="https://maps.google.com/maps?q=Carrer%20de%20la%20Llibertat%2010%2C%2008860%20Castelldefels&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peixateria La Dorada · Carrer de la Llibertat, 10, Castelldefels"></iframe>
       </div>
     </div>
   </section>
@@ -986,7 +1013,7 @@
 
   var X = {
     ca: {
-      navAvui:"Avui tenim", navTaulell:"El taulell", navNadal:"Nadal", navOpinions:"Opinions", navOrderBtn:"Fer un encàrrec",
+      navAvui:"Avui tenim", navTaulell:"El taulell", navEncarrec:"Encàrrec", navCuina:"Idees per cuinar", navQuiSom:"Qui som", navSections:"Seccions de la web", navNadal:"Nadal", navOpinions:"Opinions", navOrderBtn:"Fer un encàrrec",
       heroOrderBtn:"Encarrega-ho i no facis cua", heroRating:"4,9 · 39 ressenyes a Google",
       avuiEyebrow:"La pissarra del dia", avuiH2:"Avui tenim",
       avuiLead:"El que ha arribat de la llotja. Toca «El vull» i ho afegim al teu encàrrec.",
@@ -1038,7 +1065,7 @@
       r4Tag:"Base · 40 min", r4Title:"Fumet casolà", r4Body:"Amb caps i espines de peix de roca fas la base de l'arròs o la sopa. Demana'ns-les amb l'encàrrec.", r4Btn:"Afegir peix per a fumet →", r4Prod:"Peix de roca per a fumet"
     },
     es: {
-      navAvui:"Hoy tenemos", navTaulell:"El mostrador", navNadal:"Navidad", navOpinions:"Opiniones", navOrderBtn:"Hacer un encargo",
+      navAvui:"Hoy tenemos", navTaulell:"El mostrador", navEncarrec:"Encargo", navCuina:"Ideas para cocinar", navQuiSom:"Quiénes somos", navSections:"Secciones de la web", navNadal:"Navidad", navOpinions:"Opiniones", navOrderBtn:"Hacer un encargo",
       heroOrderBtn:"Encárgalo y no hagas cola", heroRating:"4,9 · 39 reseñas en Google",
       avuiEyebrow:"La pizarra del día", avuiH2:"Hoy tenemos",
       avuiLead:"Lo que ha llegado de la lonja. Toca «Lo quiero» y lo añadimos a tu encargo.",
@@ -1122,7 +1149,7 @@
       promoWaLink:"https://wa.me/34699088213?text=" + encodeURIComponent("Hi, I'd like a ticket (décimo) of number 55160 for the Christmas Lottery."),
       footBrand:"La Dorada Fishmonger · Castelldefels · Since 1995",
       waLink:"https://wa.me/34699088213?text=" + encodeURIComponent("Hi, I'd like to place an order at La Dorada fishmonger."),
-      navAvui:"Today's catch", navTaulell:"Our counter", navNadal:"Christmas", navOpinions:"Reviews", navOrderBtn:"Place an order",
+      navAvui:"Today's catch", navTaulell:"Our counter", navEncarrec:"Order", navCuina:"Cooking ideas", navQuiSom:"About us", navSections:"Page sections", navNadal:"Christmas", navOpinions:"Reviews", navOrderBtn:"Place an order",
       heroOrderBtn:"Order ahead, skip the queue", heroRating:"4.9 · 39 Google reviews",
       avuiEyebrow:"Today's board", avuiH2:"Today we have",
       avuiLead:"Fresh in from the fish market. Tap “I want it” and we'll add it to your order.",
@@ -1424,6 +1451,43 @@
   document.getElementById('nadalFlagWrap').hidden = !nadalVisible;
   document.getElementById('navNadal').hidden = !nadalVisible;
   document.getElementById('nadalBtn').addEventListener('click', function(){ document.getElementById('nadalFlag').checked = true; track('nadal/boto'); });
+
+  var secNav = document.getElementById('sectionNav');
+  if(secNav){
+    var secInner = secNav.querySelector('.sections-inner');
+    var secLinks = Array.prototype.slice.call(secNav.querySelectorAll('a[data-sec]'));
+    var secOwner = {};
+    secLinks.forEach(function(a){ a.getAttribute('data-sec').split(' ').forEach(function(id){ secOwner[id] = a; }); });
+    var secCurrent = null;
+    function setCurrent(a){
+      if(a === secCurrent) return;
+      if(secCurrent) secCurrent.removeAttribute('aria-current');
+      secCurrent = a;
+      if(!a) return;
+      a.setAttribute('aria-current', 'true');
+      var left = a.offsetLeft - (secInner.clientWidth - a.offsetWidth) / 2;
+      secInner.scrollTo({ left:Math.max(0, left), behavior:'smooth' });
+    }
+    function spy(){
+      var line = secNav.getBoundingClientRect().bottom + window.innerHeight * 0.25, found = null;
+      Object.keys(secOwner).forEach(function(id){
+        var el = document.getElementById(id);
+        if(!el || el.hidden) return;
+        var r = el.getBoundingClientRect();
+        if(r.top <= line && r.bottom > line) found = secOwner[id];
+      });
+      setCurrent(found);
+    }
+    var spyQueued = false;
+    window.addEventListener('scroll', function(){
+      if(spyQueued) return;
+      spyQueued = true;
+      requestAnimationFrame(function(){ spyQueued = false; spy(); });
+    }, { passive:true });
+    window.addEventListener('resize', spy);
+    secLinks.forEach(function(a){ a.addEventListener('click', function(){ track('menu/' + a.getAttribute('data-sec').split(' ')[0]); }); });
+    spy();
+  }
 
   var board = { date:null, items:[] };
 
