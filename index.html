@@ -1569,7 +1569,19 @@
       var fromTxt = boardFromTxt(res[1]);
       board = fromSheet && fromSheet.items.length ? fromSheet : fromTxt;
       renderBoard();
+      keepHashTarget();
     });
+  }
+
+  var userMoved = false;
+  ['wheel','touchmove','keydown','mousedown'].forEach(function(ev){
+    window.addEventListener(ev, function(){ userMoved = true; }, { passive:true, once:true });
+  });
+  function keepHashTarget(){
+    if(userMoved || !location.hash || location.hash === '#avui') return;
+    var target = null;
+    try{ target = document.querySelector(location.hash); }catch(e){}
+    if(target) target.scrollIntoView({ behavior:'instant', block:'start' });
   }
 
   function renderChips(t){
