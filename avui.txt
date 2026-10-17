@@ -9,3 +9,13 @@
 # Lluç de palangre | 18,90 €/kg | Ideal a la planxa
 # Gamba de Vilanova | 39,00 €/kg
 # Musclos | 4,50 €/kg | Nets i a punt
+
+data: 2026-10-17
+Llobarro | | Ideal a la sal o al forn
+Escamarlans | | Per a la planxa o un arròs
+Gamba vermella | | A la planxa, amb sal grossa
+Seitons | | Nets, per fregir o en vinagre
+Calamars | | A la romana o a la planxa
+Cua de rap | | Per a suquet o al forn
+Salmó | | A filets o a rodanxes
+Musclos | | Nets i a punt per al vapor
