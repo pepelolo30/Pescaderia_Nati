@@ -355,8 +355,60 @@
     background:var(--cream-2); padding:10px 12px; border-radius:3px;
   }
 
+  /* ---------- Taulell (galeria) ---------- */
+  .gallery-banner{
+    position:relative; margin:0 0 14px; border-radius:4px; overflow:hidden; background:var(--marine);
+    aspect-ratio:2 / 1;
+  }
+  .gallery-banner img{ width:100%; height:100%; object-fit:cover; }
+  .gallery-banner figcaption{
+    position:absolute; left:0; right:0; bottom:0; padding:60px clamp(18px,3vw,32px) clamp(16px,2.4vw,26px);
+    background:linear-gradient(to top, rgba(20,52,58,0.88), rgba(20,52,58,0));
+    font-family:"Lora", Georgia, serif; font-style:italic; font-size:clamp(20px,2.6vw,30px); color:var(--paper);
+  }
+  .gallery{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .tile{
+    position:relative; margin:0; border-radius:4px; overflow:hidden; background:var(--marine);
+    aspect-ratio:4 / 5; cursor:zoom-in; border:none; padding:0; display:block; width:100%; font:inherit;
+  }
+  .tile img, .tile video{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease; }
+  .tile:hover img, .tile:focus-visible img{ transform:scale(1.04); }
+  .tile:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+  .tile .cap{
+    position:absolute; left:0; right:0; bottom:0; padding:40px 14px 12px; text-align:left;
+    background:linear-gradient(to top, rgba(20,52,58,0.85), rgba(20,52,58,0));
+    font-family:"Lora", Georgia, serif; font-size:16px; color:var(--paper);
+  }
+  .tile-video{ grid-row:span 2; aspect-ratio:auto; cursor:pointer; }
+  .tile-video .badge{
+    position:absolute; top:12px; left:12px; display:flex; align-items:center; gap:6px;
+    background:rgba(20,52,58,0.75); color:var(--paper); font-size:12px; font-weight:700; letter-spacing:0.08em;
+    text-transform:uppercase; padding:5px 9px; border-radius:20px;
+  }
+  .tile-video .badge::before{ content:""; width:7px; height:7px; border-radius:50%; background:#D9534F; }
+  .gallery-note{ margin-top:14px; font-size:13px; color:var(--ink-soft); }
+
+  .lightbox{
+    border:none; padding:0; background:transparent; max-width:min(92vw,720px); max-height:92vh; overflow:visible;
+  }
+  .lightbox::backdrop{ background:rgba(16,30,33,0.92); }
+  .lightbox figure{ margin:0; }
+  .lightbox img{ max-width:100%; max-height:80vh; margin:0 auto; border-radius:4px; }
+  .lightbox figcaption{ text-align:center; color:var(--paper); font-family:"Lora", Georgia, serif; font-size:18px; margin-top:12px; }
+  .lb-btn{
+    position:fixed; width:46px; height:46px; border-radius:50%; border:1px solid var(--line-on-dark);
+    background:rgba(20,52,58,0.8); color:var(--paper); font-size:22px; line-height:1; cursor:pointer;
+  }
+  .lb-btn:hover{ border-color:var(--gold-light); color:var(--gold-light); }
+  .lb-close{ top:16px; right:16px; }
+  .lb-prev{ left:16px; top:50%; transform:translateY(-50%); }
+  .lb-next{ right:16px; top:50%; transform:translateY(-50%); }
+
   /* ---------- Nadal ---------- */
-  .nadal{ background:var(--marine-2); color:var(--paper); border-top:none; }
+  .nadal{
+    color:var(--paper); border-top:none;
+    background:linear-gradient(rgba(31,76,78,0.86), rgba(20,52,58,0.93)), url("img/llagostins-800.webp") center / cover no-repeat;
+  }
   .nadal .section-head h2{ color:var(--paper); }
   .nadal .section-head p.lead{ color:rgba(250,246,236,0.78); }
   .nadal-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center; }
@@ -408,6 +460,12 @@
     .recipes{ grid-template-columns:1fr 1fr; }
     .rating-line{ margin-left:0; display:flex; }
   }
+  @media (max-width:860px){
+    .gallery{ grid-template-columns:repeat(2,1fr); gap:10px; }
+    .tile-video{ grid-column:1 / -1; grid-row:auto; aspect-ratio:4 / 5; }
+    .gallery-banner{ aspect-ratio:3 / 2; }
+  }
+  @media (prefers-reduced-motion:reduce){ .tile img{ transition:none; } }
   @media (max-width:560px){
     .item-row{ grid-template-columns:1fr 1fr auto; }
     .item-row .item-name{ grid-column:1 / -1; }
@@ -440,6 +498,7 @@
     <div class="topbar-right">
       <nav class="primary">
         <a href="#avui" data-t="navAvui">Avui tenim</a>
+        <a href="#taulell" data-t="navTaulell">El taulell</a>
         <a href="#nadal" id="navNadal" data-t="navNadal">Nadal</a>
         <a href="#opinions" data-t="navOpinions">Opinions</a>
         <a id="navHorario" href="#visitans">Horari i ubicació</a>
@@ -513,6 +572,44 @@
       </div>
     </div>
   </section>
+
+  <section class="section" id="taulell">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-t="galEyebrow">El nostre taulell</p>
+        <h2 data-t="galH2">Producte de llotja, tal com el veuràs a la botiga</h2>
+        <p class="lead" data-t="galLead">Res d'imatges de catàleg: aquest és el peix i el marisc que preparem cada matí al carrer de la Llibertat.</p>
+      </div>
+      <figure class="gallery-banner">
+        <img src="img/taulell-1600.webp" srcset="img/taulell-900.webp 900w, img/taulell-1600.webp 1600w" sizes="(max-width:1120px) 100vw, 1008px" width="1600" height="800" loading="lazy" decoding="async" alt="" data-t-alt="cap0">
+        <figcaption data-t="cap0">El taulell, cada matí</figcaption>
+      </figure>
+      <div class="gallery" id="gallery">
+        <div class="tile tile-video" id="videoTile" role="button" tabindex="0" data-t-aria="videoAria">
+          <video id="taulellVideo" src="video/taulell.mp4" poster="img/seitons-480.webp" muted loop playsinline preload="none"></video>
+          <span class="badge" data-t="videoBadge">Vídeo</span>
+          <span class="cap" data-t="capVideo">Un passeig pel taulell</span>
+        </div>
+        <button type="button" class="tile" data-full="img/llobarro-escamarlans-800.webp" data-cap="cap1"><img src="img/llobarro-escamarlans-480.webp" srcset="img/llobarro-escamarlans-480.webp 480w, img/llobarro-escamarlans-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap1"><span class="cap" data-t="cap1">Escamarlans i llobarro</span></button>
+        <button type="button" class="tile" data-full="img/salmo-800.webp" data-cap="cap2"><img src="img/salmo-480.webp" srcset="img/salmo-480.webp 480w, img/salmo-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap2"><span class="cap" data-t="cap2">Salmó i tonyina vermella</span></button>
+        <button type="button" class="tile" data-full="img/remol-gamba-800.webp" data-cap="cap3"><img src="img/remol-gamba-480.webp" srcset="img/remol-gamba-480.webp 480w, img/remol-gamba-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap3"><span class="cap" data-t="cap3">Rèmol i gamba vermella</span></button>
+        <button type="button" class="tile" data-full="img/calamars-800.webp" data-cap="cap4"><img src="img/calamars-480.webp" srcset="img/calamars-480.webp 480w, img/calamars-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap4"><span class="cap" data-t="cap4">Calamars i llobarro</span></button>
+        <button type="button" class="tile" data-full="img/seitons-800.webp" data-cap="cap5"><img src="img/seitons-480.webp" srcset="img/seitons-480.webp 480w, img/seitons-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap5"><span class="cap" data-t="cap5">Seitons</span></button>
+        <button type="button" class="tile" data-full="img/rap-musclos-800.webp" data-cap="cap6"><img src="img/rap-musclos-480.webp" srcset="img/rap-musclos-480.webp 480w, img/rap-musclos-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap6"><span class="cap" data-t="cap6">Cua de rap i musclos</span></button>
+      </div>
+      <p class="gallery-note" data-t="galNote">Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.</p>
+    </div>
+  </section>
+
+  <dialog class="lightbox" id="lightbox">
+    <figure>
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button type="button" class="lb-btn lb-close" id="lbClose" data-t-aria="lbClose">×</button>
+    <button type="button" class="lb-btn lb-prev" id="lbPrev" data-t-aria="lbPrev">‹</button>
+    <button type="button" class="lb-btn lb-next" id="lbNext" data-t-aria="lbNext">›</button>
+  </dialog>
 
   <section class="section nadal" id="nadal" hidden>
     <div class="wrap nadal-grid">
@@ -887,7 +984,7 @@
 
   var X = {
     ca: {
-      navAvui:"Avui tenim", navNadal:"Nadal", navOpinions:"Opinions", navOrderBtn:"Fer un encàrrec",
+      navAvui:"Avui tenim", navTaulell:"El taulell", navNadal:"Nadal", navOpinions:"Opinions", navOrderBtn:"Fer un encàrrec",
       heroOrderBtn:"Encarrega-ho i no facis cua", heroRating:"4,9 · 39 ressenyes a Google",
       avuiEyebrow:"La pissarra del dia", avuiH2:"Avui tenim",
       avuiLead:"El que ha arribat de la llotja. Toca «El vull» i ho afegim al teu encàrrec.",
@@ -900,6 +997,12 @@
       nadalStep3:"Passes a recollir-ho a l'hora acordada, ja preparat.",
       nadalBtn:"Fer l'encàrrec de Nadal", nadalDeadline:"Encàrrecs fins al", nadalFlag:"És un encàrrec de Nadal",
       nadalProducts:["Llagostins","Gambes","Escamarlans","Navalles","Musclos","Ostres","Lluç","Rap","Besuc","Llobarro","Turbot"],
+      galEyebrow:"El nostre taulell", galH2:"Producte de llotja, tal com el veuràs a la botiga",
+      galLead:"Res d'imatges de catàleg: aquest és el peix i el marisc que preparem cada matí al carrer de la Llibertat.",
+      cap0:"El taulell, cada matí", capVideo:"Un passeig pel taulell", videoBadge:"Vídeo", videoAria:"Reproduir o aturar el vídeo del taulell",
+      cap1:"Escamarlans i llobarro", cap2:"Salmó i tonyina vermella", cap3:"Rèmol i gamba vermella", cap4:"Calamars i llobarro", cap5:"Seitons", cap6:"Cua de rap i musclos",
+      galNote:"Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.",
+      lbClose:"Tancar", lbPrev:"Foto anterior", lbNext:"Foto següent",
       rnEyebrow:"Receptes de Nadal", rnH2:"Idees per a la taula de les festes", rnLead:"Plats clàssics i fàcils perquè el producte llueixi. Toca el botó i ho afegim al teu encàrrec de Nadal.",
       n1Tag:"Entrant · 10 min", n1Title:"Llagostins bullits", n1Body:"Aigua amb molta sal (uns 60 g per litre). Quan bulli, tira-hi els llagostins i, quan torni a arrencar el bull, compta 1-2 minuts segons la mida. Passa'ls a aigua amb gel i sal perquè quedin ferms.", n1Btn:"Encarregar llagostins →", n1Prod:"Llagostins per bullir",
       n2Tag:"Forn · 45 min", n2Title:"Besuc al forn", n2Body:"Fes un llit de patata i ceba a rodanxes i enforna'l 20 minuts. Posa-hi el besuc a sobre amb uns talls de llimona i 20-25 minuts més a 180 °C. Acaba'l amb un sofregit d'all, bitxo i un raig de vinagre.", n2Btn:"Encarregar besuc per al forn →", n2Prod:"Besuc",
@@ -933,7 +1036,7 @@
       r4Tag:"Base · 40 min", r4Title:"Fumet casolà", r4Body:"Amb caps i espines de peix de roca fas la base de l'arròs o la sopa. Demana'ns-les amb l'encàrrec.", r4Btn:"Afegir peix per a fumet →", r4Prod:"Peix de roca per a fumet"
     },
     es: {
-      navAvui:"Hoy tenemos", navNadal:"Navidad", navOpinions:"Opiniones", navOrderBtn:"Hacer un encargo",
+      navAvui:"Hoy tenemos", navTaulell:"El mostrador", navNadal:"Navidad", navOpinions:"Opiniones", navOrderBtn:"Hacer un encargo",
       heroOrderBtn:"Encárgalo y no hagas cola", heroRating:"4,9 · 39 reseñas en Google",
       avuiEyebrow:"La pizarra del día", avuiH2:"Hoy tenemos",
       avuiLead:"Lo que ha llegado de la lonja. Toca «Lo quiero» y lo añadimos a tu encargo.",
@@ -946,6 +1049,12 @@
       nadalStep3:"Pasas a recogerlo a la hora acordada, ya preparado.",
       nadalBtn:"Hacer el encargo de Navidad", nadalDeadline:"Encargos hasta el", nadalFlag:"Es un encargo de Navidad",
       nadalProducts:["Langostinos","Gambas","Cigalas","Navajas","Mejillones","Ostras","Merluza","Rape","Besugo","Lubina","Rodaballo"],
+      galEyebrow:"Nuestro mostrador", galH2:"Producto de lonja, tal y como lo verás en la tienda",
+      galLead:"Nada de imágenes de catálogo: este es el pescado y el marisco que preparamos cada mañana en la calle Llibertat.",
+      cap0:"El mostrador, cada mañana", capVideo:"Un paseo por el mostrador", videoBadge:"Vídeo", videoAria:"Reproducir o pausar el vídeo del mostrador",
+      cap1:"Cigalas y lubina", cap2:"Salmón y atún rojo", cap3:"Rodaballo y gamba roja", cap4:"Calamares y lubina", cap5:"Boquerones", cap6:"Cola de rape y mejillones",
+      galNote:"Fotos reales de la tienda. Los precios de los carteles son los del día de la foto.",
+      lbClose:"Cerrar", lbPrev:"Foto anterior", lbNext:"Foto siguiente",
       rnEyebrow:"Recetas de Navidad", rnH2:"Ideas para la mesa de las fiestas", rnLead:"Platos clásicos y fáciles para que el producto luzca. Toca el botón y lo añadimos a tu encargo de Navidad.",
       n1Tag:"Entrante · 10 min", n1Title:"Langostinos cocidos", n1Body:"Agua con mucha sal (unos 60 g por litro). Cuando hierva, echa los langostinos y, cuando vuelva a romper el hervor, cuenta 1-2 minutos según el tamaño. Pásalos a agua con hielo y sal para que queden firmes.", n1Btn:"Encargar langostinos →", n1Prod:"Langostinos para cocer",
       n2Tag:"Horno · 45 min", n2Title:"Besugo al horno", n2Body:"Haz una cama de patata y cebolla en rodajas y hornéala 20 minutos. Pon el besugo encima con unos cortes de limón y 20-25 minutos más a 180 °C. Termínalo con un refrito de ajo, guindilla y un chorrito de vinagre.", n2Btn:"Encargar besugo para horno →", n2Prod:"Besugo",
@@ -1011,7 +1120,7 @@
       promoWaLink:"https://wa.me/34699088213?text=" + encodeURIComponent("Hi, I'd like a ticket (décimo) of number 55160 for the Christmas Lottery."),
       footBrand:"La Dorada Fishmonger · Castelldefels · Since 1995",
       waLink:"https://wa.me/34699088213?text=" + encodeURIComponent("Hi, I'd like to place an order at La Dorada fishmonger."),
-      navAvui:"Today's catch", navNadal:"Christmas", navOpinions:"Reviews", navOrderBtn:"Place an order",
+      navAvui:"Today's catch", navTaulell:"Our counter", navNadal:"Christmas", navOpinions:"Reviews", navOrderBtn:"Place an order",
       heroOrderBtn:"Order ahead, skip the queue", heroRating:"4.9 · 39 Google reviews",
       avuiEyebrow:"Today's board", avuiH2:"Today we have",
       avuiLead:"Fresh in from the fish market. Tap “I want it” and we'll add it to your order.",
@@ -1024,6 +1133,12 @@
       nadalStep3:"Pick it up at the agreed time, ready to go.",
       nadalBtn:"Place my Christmas order", nadalDeadline:"Orders until", nadalFlag:"This is a Christmas order",
       nadalProducts:["Prawns","Red prawns","Langoustines","Razor clams","Mussels","Oysters","Hake","Monkfish","Sea bream","Sea bass","Turbot"],
+      galEyebrow:"Our counter", galH2:"Fresh from the fish market, just as you'll see it in the shop",
+      galLead:"No stock photos: this is the fish and seafood we prepare every morning on Carrer de la Llibertat.",
+      cap0:"Our counter, every morning", capVideo:"A stroll along our counter", videoBadge:"Video", videoAria:"Play or pause the counter video",
+      cap1:"Langoustines and sea bass", cap2:"Salmon and bluefin tuna", cap3:"Turbot and red prawns", cap4:"Squid and sea bass", cap5:"Fresh anchovies", cap6:"Monkfish tail and mussels",
+      galNote:"Real photos from the shop. Prices on the labels are from the day the photo was taken.",
+      lbClose:"Close", lbPrev:"Previous photo", lbNext:"Next photo",
       rnEyebrow:"Christmas recipes", rnH2:"Ideas for your holiday table", rnLead:"Classic, easy dishes that let the produce shine. Tap the button and we'll add it to your Christmas order.",
       n1Tag:"Starter · 10 min", n1Title:"Boiled prawns", n1Body:"Very salty water (about 60 g per litre). When it boils, add the prawns and, once it comes back to the boil, count 1-2 minutes depending on size. Move them to iced salted water so they stay firm.", n1Btn:"Order prawns →", n1Prod:"Prawns for boiling",
       n2Tag:"Oven · 45 min", n2Title:"Baked sea bream", n2Body:"Make a bed of sliced potato and onion and bake it for 20 minutes. Lay the bream on top with a few lemon slices and give it 20-25 more minutes at 180 °C. Finish with garlic and chilli fried in oil with a dash of vinegar.", n2Btn:"Order bream for the oven →", n2Prod:"Sea bream (besugo)",
@@ -1073,6 +1188,59 @@
     root.querySelectorAll('[data-t]').forEach(function(el){ var v=t[el.getAttribute('data-t')]; if(typeof v==='string') el.innerHTML = v; });
     root.querySelectorAll('[data-t-ph]').forEach(function(el){ var v=t[el.getAttribute('data-t-ph')]; if(v) el.placeholder = v; });
     root.querySelectorAll('[data-t-aria]').forEach(function(el){ var v=t[el.getAttribute('data-t-aria')]; if(v){ el.setAttribute('aria-label', v); el.title = v; } });
+    root.querySelectorAll('[data-t-alt]').forEach(function(el){ var v=t[el.getAttribute('data-t-alt')]; if(v) el.alt = v; });
+  }
+
+  var lb = document.getElementById('lightbox');
+  var tiles = Array.prototype.slice.call(document.querySelectorAll('#gallery button.tile'));
+  var lbIndex = 0;
+  function showLb(i){
+    lbIndex = (i + tiles.length) % tiles.length;
+    var tile = tiles[lbIndex];
+    document.getElementById('lbImg').src = tile.getAttribute('data-full');
+    document.getElementById('lbImg').alt = T[curLang][tile.getAttribute('data-cap')];
+    document.getElementById('lbCap').textContent = T[curLang][tile.getAttribute('data-cap')];
+  }
+  if(lb && lb.showModal){
+    tiles.forEach(function(tile, i){
+      tile.addEventListener('click', function(){ showLb(i); lb.showModal(); track('galeria/' + tile.getAttribute('data-cap')); });
+    });
+    document.getElementById('lbClose').addEventListener('click', function(){ lb.close(); });
+    document.getElementById('lbPrev').addEventListener('click', function(){ showLb(lbIndex - 1); });
+    document.getElementById('lbNext').addEventListener('click', function(){ showLb(lbIndex + 1); });
+    lb.addEventListener('click', function(ev){ if(ev.target === lb) lb.close(); });
+    lb.addEventListener('keydown', function(ev){
+      if(ev.key === 'ArrowLeft') showLb(lbIndex - 1);
+      if(ev.key === 'ArrowRight') showLb(lbIndex + 1);
+    });
+    var touchX = null;
+    lb.addEventListener('touchstart', function(ev){ touchX = ev.touches[0].clientX; }, { passive:true });
+    lb.addEventListener('touchend', function(ev){
+      if(touchX === null) return;
+      var dx = ev.changedTouches[0].clientX - touchX;
+      if(Math.abs(dx) > 50) showLb(lbIndex + (dx < 0 ? 1 : -1));
+      touchX = null;
+    });
+  } else {
+    tiles.forEach(function(tile){ tile.addEventListener('click', function(){ window.open(tile.getAttribute('data-full'), '_blank'); }); });
+  }
+
+  var vid = document.getElementById('taulellVideo');
+  var vidTile = document.getElementById('videoTile');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vidPaused = reduceMotion;
+  function playVid(){ if(vid.paused){ var p = vid.play(); if(p && p.catch) p.catch(function(){}); } }
+  if(vid && vidTile){
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting && !vidPaused) playVid(); else if(!e.isIntersecting) vid.pause(); });
+      }, { threshold:0.4 }).observe(vidTile);
+    }
+    function toggleVid(){
+      if(vid.paused){ vidPaused = false; playVid(); track('galeria/video'); } else { vidPaused = true; vid.pause(); }
+    }
+    vidTile.addEventListener('click', toggleVid);
+    vidTile.addEventListener('keydown', function(ev){ if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); toggleVid(); } });
   }
 
   function pad(n){ return (n<10?'0':'')+n; }
