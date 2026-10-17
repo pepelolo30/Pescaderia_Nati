@@ -470,32 +470,65 @@
   .recipe p{ font-size:14.5px; line-height:1.6; color:var(--ink-soft); flex:1; }
   .recipe .link-btn{ align-self:flex-start; text-align:left; }
 
+  .more{ margin-top:22px; }
+  .more > summary{
+    list-style:none; cursor:pointer; display:inline-flex; align-items:center; gap:10px;
+    font-weight:700; font-size:14.5px; color:var(--gold-deep);
+    border:1px solid var(--gold); border-radius:3px; padding:10px 16px;
+  }
+  .more > summary::-webkit-details-marker{ display:none; }
+  .more > summary::after{ content:"+"; font-size:18px; line-height:1; }
+  .more[open] > summary::after{ content:"–"; }
+  .more > summary:hover{ background:rgba(169,126,51,0.08); }
+  .more-body{ margin-top:26px; }
+  .nadal .more > summary{ color:var(--gold-light); border-color:var(--line-on-dark); }
+  .nadal .more > summary:hover{ background:rgba(217,184,118,0.1); }
+  .nadal .more-body .section-head h2{ font-size:clamp(22px,2.4vw,28px); }
+  .nadal .recipe .link-btn{ color:var(--gold-deep); }
+
   @media (max-width:860px){
     .order-grid, .nadal-grid{ grid-template-columns:1fr; gap:28px; }
-    .quotes{ grid-template-columns:1fr; }
-    .recipes{ grid-template-columns:1fr 1fr; }
     .rating-line{ margin-left:0; display:flex; }
-  }
-  @media (max-width:860px){
-    .gallery{ grid-template-columns:repeat(2,1fr); gap:10px; }
-    .tile-video{ grid-column:1 / -1; grid-row:auto; aspect-ratio:4 / 5; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-visual{ order:-1; }
+    .hero-visual .plate{ max-width:200px; margin:0 auto; }
+    .story-grid{ grid-template-columns:1fr; gap:28px; }
+    .feature-row{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; gap:40px; }
     .gallery-banner{ aspect-ratio:3 / 2; }
+
+    .gallery, .quotes, .recipes{
+      display:flex; overflow-x:auto; gap:12px; scroll-snap-type:x mandatory; scrollbar-width:none;
+      margin-left:calc(-1 * clamp(20px,5vw,56px)); margin-right:calc(-1 * clamp(20px,5vw,56px));
+      padding:2px clamp(20px,5vw,56px) 6px; scroll-padding-left:clamp(20px,5vw,56px);
+      background:transparent; border:none; -webkit-overflow-scrolling:touch;
+    }
+    .gallery::-webkit-scrollbar, .quotes::-webkit-scrollbar, .recipes::-webkit-scrollbar{ display:none; }
+    .gallery > *, .quotes > *, .recipes > *{ flex:0 0 min(78%, 340px); scroll-snap-align:start; }
+    .gallery > .tile-video{ grid-row:auto; aspect-ratio:4 / 5; }
+    .recipe{ border:1px solid var(--line); border-radius:4px; }
+    p.swipe-hint{ display:block; }
   }
+  .swipe-hint{ display:none; margin-top:8px; font-size:12.5px; color:var(--ink-soft); }
+  .nadal .swipe-hint{ color:rgba(250,246,236,0.6); }
   @media (prefers-reduced-motion:reduce){ .tile img{ transition:none; } }
   @media (max-width:560px){
     .item-row{ grid-template-columns:1fr 1fr auto; }
     .item-row .item-name{ grid-column:1 / -1; }
     .two-col{ grid-template-columns:1fr; }
-    .recipes{ grid-template-columns:1fr; }
     .board-item{ flex-wrap:wrap; }
-  }
-  @media (max-width:860px){
-    .hero-grid{ grid-template-columns:1fr; }
-    .hero-visual{ order:-1; }
-    .hero-visual .plate{ max-width:260px; margin:0 auto; }
-    .story-grid{ grid-template-columns:1fr; gap:28px; }
-    .feature-row{ grid-template-columns:1fr; }
-    .contact-grid{ grid-template-columns:1fr; gap:40px; }
+    .section{ padding:44px 0; }
+    .story{ padding:44px 0; }
+    .features{ padding-bottom:44px; }
+    .contact .wrap{ padding-top:48px; padding-bottom:48px; }
+    .section-head, .features-head{ margin-bottom:22px; }
+    .hero-grid{ padding-top:28px; padding-bottom:40px; gap:20px; }
+    .hero-lead{ font-size:16px; margin-top:14px; }
+    .hero-actions{ margin-top:22px; }
+    .score{ margin-bottom:18px; }
+    .score-num{ font-size:44px; }
+    .map-embed iframe{ height:220px; }
+    .contact .whatsapp-card{ display:none; }
   }
 </style>
 
@@ -616,10 +649,10 @@
         <a class="btn btn-gold" href="#encarrec" id="nadalBtn" data-t="nadalBtn">Fer l'encàrrec de Nadal</a>
       </div>
     </div>
-  </section>
-
-  <section class="section" id="receptes-nadal" hidden>
     <div class="wrap">
+      <details class="more" id="receptes-nadal">
+        <summary data-t="rnToggle">Idees de receptes per a Nadal</summary>
+        <div class="more-body">
       <div class="section-head">
         <p class="eyebrow" data-t="rnEyebrow">Receptes de Nadal</p>
         <h2 data-t="rnH2">Idees per a la taula de les festes</h2>
@@ -651,6 +684,9 @@
           <button type="button" class="link-btn" data-order="n4" data-t="n4Btn">Encarregar navalles →</button>
         </div>
       </div>
+          <p class="swipe-hint" data-t="swipeHint">Llisca per veure'n més →</p>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -738,6 +774,7 @@
         <button type="button" class="tile" data-full="img/seitons-800.webp" data-cap="cap5"><img src="img/seitons-480.webp" srcset="img/seitons-480.webp 480w, img/seitons-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap5"><span class="cap" data-t="cap5">Seitons</span></button>
         <button type="button" class="tile" data-full="img/rap-musclos-800.webp" data-cap="cap6"><img src="img/rap-musclos-480.webp" srcset="img/rap-musclos-480.webp 480w, img/rap-musclos-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap6"><span class="cap" data-t="cap6">Cua de rap i musclos</span></button>
       </div>
+      <p class="swipe-hint" data-t="swipeHint">Llisca per veure'n més →</p>
       <p class="gallery-note" data-t="galNote">Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.</p>
     </div>
   </section>
@@ -771,6 +808,7 @@
         <div class="quote"><p>«Magnífica qualitat! I tracte excel·lent!»</p><span>Brugues P.</span></div>
         <div class="quote"><p>«Nice small fish shop, everything looks clean and fresh.»</p><span>George H.</span></div>
       </div>
+      <p class="swipe-hint" data-t="swipeHint">Llisca per veure'n més →</p>
       <div class="opinions-actions">
         <a class="btn btn-outline" id="reviewsAllBtn" href="https://share.google/4iYkjqqurM3KNHHqT" target="_blank" rel="noopener" data-t="opAll">Llegir-les totes a Google ↗</a>
         <a class="btn btn-gold" id="reviewsWriteBtn" href="https://share.google/4iYkjqqurM3KNHHqT" target="_blank" rel="noopener" data-t="opWrite">Deixa'ns la teva opinió</a>
@@ -810,6 +848,7 @@
           <button type="button" class="link-btn" data-order="r4" data-t="r4Btn">Afegir peix per a fumet →</button>
         </div>
       </div>
+      <p class="swipe-hint" data-t="swipeHint">Llisca per veure'n més →</p>
     </div>
   </section>
 
@@ -868,14 +907,17 @@
       </div>
       <div class="story-body">
         <p id="storyP1">A la Peixateria La Dorada sabem que el bon peix no s'improvisa. Des del <strong>1995</strong>, el nostre compromís ha estat el mateix: seleccionar minuciosament la millor captura del dia per portar a la teva taula un producte excepcional, amb el gust i la frescor que cada vegada costa més de trobar. Per a nosaltres, vendre peix no és només un ofici, és una passió per oferir-te el millor de la zona.</p>
-        <p id="storyP2">T'ho volem posar més fàcil sense renunciar a l'exigència de sempre. Per això hem obert un canal directe per WhatsApp: ens expliques què necessites i te'l deixem preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash;. El reculls a la botiga o, si ho prefereixes, te l'acostem a casa concertant l'horari de lliurament amb tu. El mateix tracte del taulell, amb la comoditat de demanar-ho des d'on siguis.</p>
-        <p id="storyP3">Més de tres dècades guanyant-nos la confiança dels nostres clients, peça a peça. Et convidem a provar la comoditat de demanar per WhatsApp i comprovar per què, a La Dorada, el peix té un altre gust.</p>
       </div>
     </div>
-  </section>
-
-  <section class="features" id="com-ho-fem">
     <div class="wrap">
+      <details class="more" id="com-ho-fem">
+        <summary data-t="storyMore">Llegir més sobre nosaltres</summary>
+        <div class="more-body">
+          <div class="story-body" style="max-width:68ch">
+        <p id="storyP2">T'ho volem posar més fàcil sense renunciar a l'exigència de sempre. Per això hem obert un canal directe per WhatsApp: ens expliques què necessites i te'l deixem preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash;. El reculls a la botiga o, si ho prefereixes, te l'acostem a casa concertant l'horari de lliurament amb tu. El mateix tracte del taulell, amb la comoditat de demanar-ho des d'on siguis.</p>
+        <p id="storyP3">Més de tres dècades guanyant-nos la confiança dels nostres clients, peça a peça. Et convidem a provar la comoditat de demanar per WhatsApp i comprovar per què, a La Dorada, el peix té un altre gust.</p>
+          </div>
+          <div style="margin-top:40px">
       <div class="features-head">
         <p class="eyebrow" id="featuresEyebrow">Com ho fem</p>
         <h2 id="featuresH2">El mateix ofici de sempre, amb un pas menys</h2>
@@ -907,6 +949,9 @@
           <p id="feat3Body">Preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash; tal com ho faríem al taulell.</p>
         </div>
       </div>
+          </div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -1013,7 +1058,7 @@
 
   var X = {
     ca: {
-      navAvui:"Avui tenim", navTaulell:"El taulell", navEncarrec:"Encàrrec", navCuina:"Idees per cuinar", navQuiSom:"Qui som", navSections:"Seccions de la web", navNadal:"Nadal", navOpinions:"Opinions", navOrderBtn:"Fer un encàrrec",
+      navAvui:"Avui tenim", navTaulell:"El taulell", navEncarrec:"Encàrrec", navCuina:"Idees per cuinar", swipeHint:"Llisca per veure'n més →", rnToggle:"Idees de receptes per a Nadal", storyMore:"Llegir més sobre nosaltres", navQuiSom:"Qui som", navSections:"Seccions de la web", navNadal:"Nadal", navOpinions:"Opinions", navOrderBtn:"Fer un encàrrec",
       heroOrderBtn:"Encarrega-ho i no facis cua", heroRating:"4,9 · 39 ressenyes a Google",
       avuiEyebrow:"La pissarra del dia", avuiH2:"Avui tenim",
       avuiLead:"El que ha arribat de la llotja. Toca «El vull» i ho afegim al teu encàrrec.",
@@ -1065,7 +1110,7 @@
       r4Tag:"Base · 40 min", r4Title:"Fumet casolà", r4Body:"Amb caps i espines de peix de roca fas la base de l'arròs o la sopa. Demana'ns-les amb l'encàrrec.", r4Btn:"Afegir peix per a fumet →", r4Prod:"Peix de roca per a fumet"
     },
     es: {
-      navAvui:"Hoy tenemos", navTaulell:"El mostrador", navEncarrec:"Encargo", navCuina:"Ideas para cocinar", navQuiSom:"Quiénes somos", navSections:"Secciones de la web", navNadal:"Navidad", navOpinions:"Opiniones", navOrderBtn:"Hacer un encargo",
+      navAvui:"Hoy tenemos", navTaulell:"El mostrador", navEncarrec:"Encargo", navCuina:"Ideas para cocinar", swipeHint:"Desliza para ver más →", rnToggle:"Ideas de recetas para Navidad", storyMore:"Leer más sobre nosotros", navQuiSom:"Quiénes somos", navSections:"Secciones de la web", navNadal:"Navidad", navOpinions:"Opiniones", navOrderBtn:"Hacer un encargo",
       heroOrderBtn:"Encárgalo y no hagas cola", heroRating:"4,9 · 39 reseñas en Google",
       avuiEyebrow:"La pizarra del día", avuiH2:"Hoy tenemos",
       avuiLead:"Lo que ha llegado de la lonja. Toca «Lo quiero» y lo añadimos a tu encargo.",
@@ -1149,7 +1194,7 @@
       promoWaLink:"https://wa.me/34699088213?text=" + encodeURIComponent("Hi, I'd like a ticket (décimo) of number 55160 for the Christmas Lottery."),
       footBrand:"La Dorada Fishmonger · Castelldefels · Since 1995",
       waLink:"https://wa.me/34699088213?text=" + encodeURIComponent("Hi, I'd like to place an order at La Dorada fishmonger."),
-      navAvui:"Today's catch", navTaulell:"Our counter", navEncarrec:"Order", navCuina:"Cooking ideas", navQuiSom:"About us", navSections:"Page sections", navNadal:"Christmas", navOpinions:"Reviews", navOrderBtn:"Place an order",
+      navAvui:"Today's catch", navTaulell:"Our counter", navEncarrec:"Order", navCuina:"Cooking ideas", swipeHint:"Swipe to see more →", rnToggle:"Christmas recipe ideas", storyMore:"Read more about us", navQuiSom:"About us", navSections:"Page sections", navNadal:"Christmas", navOpinions:"Reviews", navOrderBtn:"Place an order",
       heroOrderBtn:"Order ahead, skip the queue", heroRating:"4.9 · 39 Google reviews",
       avuiEyebrow:"Today's board", avuiH2:"Today we have",
       avuiLead:"Fresh in from the fish market. Tap “I want it” and we'll add it to your order.",
