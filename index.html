@@ -1182,7 +1182,7 @@
   var TANCAT = ['2026-12-08','2026-12-25','2026-12-26','2027-01-01','2027-01-06','2027-03-26','2027-03-29','2027-05-01','2027-06-24','2027-08-15','2027-09-11','2027-10-12','2027-11-01','2027-12-06','2027-12-08','2027-12-25','2027-12-26'];
   var ESPECIAL = { '2026-12-24':[[8*60+30, 14*60]], '2026-12-31':[[8*60+30, 14*60]] };
   var LOTERIA = { fins:'2026-12-22' };
-  var SHEET_ID = '18y7NFnHqWoSjEji1CBCMT-PoycN7sJjMlAGZQbw39bc';
+  var SHEET_ID = '';
   var PREPS = ['','net','filets','rodanxes','sencer','forn','sal','planxa','cru','sopa'];
   var curLang = 'ca';
 
@@ -1495,12 +1495,6 @@
     return b;
   }
 
-  function isFresh(b){
-    if(!b.date || !b.items.length) return false;
-    var today = new Date(); today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-    return (today - b.date) / 86400000 <= 2;
-  }
-
   function getText(url){ return fetch(url, { cache:'no-store' }).then(function(r){ return r.ok ? r.text() : ''; }).catch(function(){ return ''; }); }
 
   function loadBoard(){
@@ -1509,8 +1503,7 @@
     Promise.all([ sheetUrl ? getText(sheetUrl) : Promise.resolve(''), getText('avui.txt?v=' + Date.now()) ]).then(function(res){
       var fromSheet = res[0] && res[0].charAt(0) !== '<' ? boardFromSheet(res[0]) : null;
       var fromTxt = boardFromTxt(res[1]);
-      var pick = fromSheet && isFresh(fromSheet) ? fromSheet : (isFresh(fromTxt) ? fromTxt : { date:null, items:[] });
-      board = pick;
+      board = fromSheet && fromSheet.items.length ? fromSheet : fromTxt;
       renderBoard();
     });
   }
