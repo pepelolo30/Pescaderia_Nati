@@ -312,8 +312,8 @@
   /* ---------- Encàrrec ---------- */
   .order-grid{ display:grid; grid-template-columns:0.8fr 1.2fr; gap:48px; align-items:start; }
   .order-perks{ list-style:none; margin:22px 0 0; padding:0; }
-  .order-perks li{ display:flex; gap:10px; font-size:15px; line-height:1.55; color:var(--ink-soft); padding:7px 0; }
-  .order-perks li::before{ content:"✓"; color:var(--gold-deep); font-weight:800; }
+  .order-perks li{ position:relative; font-size:15px; line-height:1.55; color:var(--ink-soft); padding:7px 0 7px 22px; }
+  .order-perks li::before{ content:"✓"; position:absolute; left:0; top:7px; color:var(--gold-deep); font-weight:800; }
   .order-form{
     background:var(--paper); border:1px solid var(--line); border-radius:4px;
     padding:clamp(20px,3vw,30px); display:flex; flex-direction:column; gap:18px;
@@ -532,6 +532,42 @@
           <li data-t="nadalStep3">Passes a recollir-ho a l'hora acordada, ja preparat.</li>
         </ol>
         <a class="btn btn-gold" href="#encarrec" id="nadalBtn" data-t="nadalBtn">Fer l'encàrrec de Nadal</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="receptes-nadal" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-t="rnEyebrow">Receptes de Nadal</p>
+        <h2 data-t="rnH2">Idees per a la taula de les festes</h2>
+        <p class="lead" data-t="rnLead">Plats clàssics i fàcils perquè el producte llueixi. Toca el botó i ho afegim al teu encàrrec de Nadal.</p>
+      </div>
+      <div class="recipes">
+        <div class="recipe">
+          <span class="tag" data-t="n1Tag">Entrant · 10 min</span>
+          <h3 data-t="n1Title">Llagostins bullits</h3>
+          <p data-t="n1Body">Aigua amb molta sal (uns 60 g per litre). Quan bulli, tira-hi els llagostins i, quan torni a arrencar el bull, compta 1-2 minuts segons la mida. Passa'ls a aigua amb gel i sal perquè quedin ferms.</p>
+          <button type="button" class="link-btn" data-order="n1" data-t="n1Btn">Encarregar llagostins →</button>
+        </div>
+        <div class="recipe">
+          <span class="tag" data-t="n2Tag">Forn · 45 min</span>
+          <h3 data-t="n2Title">Besuc al forn</h3>
+          <p data-t="n2Body">Fes un llit de patata i ceba a rodanxes i enforna'l 20 minuts. Posa-hi el besuc a sobre amb uns talls de llimona i 20-25 minuts més a 180 °C. Acaba'l amb un sofregit d'all, bitxo i un raig de vinagre.</p>
+          <button type="button" class="link-btn" data-order="n2" data-t="n2Btn">Encarregar besuc per al forn →</button>
+        </div>
+        <div class="recipe">
+          <span class="tag" data-t="n3Tag">Principal · 40 min</span>
+          <h3 data-t="n3Title">Lluç farcit</h3>
+          <p data-t="n3Body">Farceix el lluç obert en llibre amb gambes, xampinyons i una mica de pa ratllat. Tanca'l, rega'l amb vi blanc i forn a 180 °C uns 20-25 minuts. Te'l deixem obert i sense espina.</p>
+          <button type="button" class="link-btn" data-order="n3" data-t="n3Btn">Encarregar lluç per farcir →</button>
+        </div>
+        <div class="recipe">
+          <span class="tag" data-t="n4Tag">Tapa · 5 min</span>
+          <h3 data-t="n4Title">Navalles a la planxa</h3>
+          <p data-t="n4Body">Renta-les bé, planxa molt calenta i fora quan s'obrin (1-2 minuts). Un raig d'oli amb all i julivert picats i a taula.</p>
+          <button type="button" class="link-btn" data-order="n4" data-t="n4Btn">Encarregar navalles →</button>
+        </div>
       </div>
     </div>
   </section>
@@ -864,7 +900,11 @@
       nadalStep3:"Passes a recollir-ho a l'hora acordada, ja preparat.",
       nadalBtn:"Fer l'encàrrec de Nadal", nadalDeadline:"Encàrrecs fins al", nadalFlag:"És un encàrrec de Nadal",
       nadalProducts:["Llagostins","Gambes","Escamarlans","Navalles","Musclos","Ostres","Lluç","Rap","Besuc","Llobarro","Turbot"],
-      orderEyebrow:"Encàrrec", orderH2:"<span style=\"white-space:nowrap\">Encarrega-ho</span> i no facis cua",
+      rnEyebrow:"Receptes de Nadal", rnH2:"Idees per a la taula de les festes", rnLead:"Plats clàssics i fàcils perquè el producte llueixi. Toca el botó i ho afegim al teu encàrrec de Nadal.",
+      n1Tag:"Entrant · 10 min", n1Title:"Llagostins bullits", n1Body:"Aigua amb molta sal (uns 60 g per litre). Quan bulli, tira-hi els llagostins i, quan torni a arrencar el bull, compta 1-2 minuts segons la mida. Passa'ls a aigua amb gel i sal perquè quedin ferms.", n1Btn:"Encarregar llagostins →", n1Prod:"Llagostins per bullir",
+      n2Tag:"Forn · 45 min", n2Title:"Besuc al forn", n2Body:"Fes un llit de patata i ceba a rodanxes i enforna'l 20 minuts. Posa-hi el besuc a sobre amb uns talls de llimona i 20-25 minuts més a 180 °C. Acaba'l amb un sofregit d'all, bitxo i un raig de vinagre.", n2Btn:"Encarregar besuc per al forn →", n2Prod:"Besuc",
+      n3Tag:"Principal · 40 min", n3Title:"Lluç farcit", n3Body:"Farceix el lluç obert en llibre amb gambes, xampinyons i una mica de pa ratllat. Tanca'l, rega'l amb vi blanc i forn a 180 °C uns 20-25 minuts. Te'l deixem obert i sense espina.", n3Btn:"Encarregar lluç per farcir →", n3Prod:"Lluç obert en llibre i sense espina, per farcir",
+      n4Tag:"Tapa · 5 min", n4Title:"Navalles a la planxa", n4Body:"Renta-les bé, planxa molt calenta i fora quan s'obrin (1-2 minuts). Un raig d'oli amb all i julivert picats i a taula.", n4Btn:"Encarregar navalles →", n4Prod:"Navalles",      orderEyebrow:"Encàrrec", orderH2:"<span style=\"white-space:nowrap\">Encarrega-ho</span> i no facis cua",
       orderLead:"Digues què vols, com t'ho preparem i quan passaràs. T'enviarem la confirmació per WhatsApp.",
       perk1:"Ho trobaràs net, a filets o a rodanxes, a punt per cuinar.",
       perk2:"Recollida sense esperes, fins i tot divendres i vigílies de festa.",
@@ -906,7 +946,11 @@
       nadalStep3:"Pasas a recogerlo a la hora acordada, ya preparado.",
       nadalBtn:"Hacer el encargo de Navidad", nadalDeadline:"Encargos hasta el", nadalFlag:"Es un encargo de Navidad",
       nadalProducts:["Langostinos","Gambas","Cigalas","Navajas","Mejillones","Ostras","Merluza","Rape","Besugo","Lubina","Rodaballo"],
-      orderEyebrow:"Encargo", orderH2:"Encárgalo y no hagas cola",
+      rnEyebrow:"Recetas de Navidad", rnH2:"Ideas para la mesa de las fiestas", rnLead:"Platos clásicos y fáciles para que el producto luzca. Toca el botón y lo añadimos a tu encargo de Navidad.",
+      n1Tag:"Entrante · 10 min", n1Title:"Langostinos cocidos", n1Body:"Agua con mucha sal (unos 60 g por litro). Cuando hierva, echa los langostinos y, cuando vuelva a romper el hervor, cuenta 1-2 minutos según el tamaño. Pásalos a agua con hielo y sal para que queden firmes.", n1Btn:"Encargar langostinos →", n1Prod:"Langostinos para cocer",
+      n2Tag:"Horno · 45 min", n2Title:"Besugo al horno", n2Body:"Haz una cama de patata y cebolla en rodajas y hornéala 20 minutos. Pon el besugo encima con unos cortes de limón y 20-25 minutos más a 180 °C. Termínalo con un refrito de ajo, guindilla y un chorrito de vinagre.", n2Btn:"Encargar besugo para horno →", n2Prod:"Besugo",
+      n3Tag:"Principal · 40 min", n3Title:"Merluza rellena", n3Body:"Rellena la merluza abierta en libro con gambas, champiñones y un poco de pan rallado. Ciérrala, riégala con vino blanco y al horno a 180 °C unos 20-25 minutos. Te la dejamos abierta y sin espina.", n3Btn:"Encargar merluza para rellenar →", n3Prod:"Merluza abierta en libro y sin espina, para rellenar",
+      n4Tag:"Tapa · 5 min", n4Title:"Navajas a la plancha", n4Body:"Lávalas bien, plancha muy caliente y fuera en cuanto se abran (1-2 minutos). Un chorrito de aceite con ajo y perejil picados y a la mesa.", n4Btn:"Encargar navajas →", n4Prod:"Navajas",      orderEyebrow:"Encargo", orderH2:"Encárgalo y no hagas cola",
       orderLead:"Dinos qué quieres, cómo te lo preparamos y cuándo pasarás. Te enviaremos la confirmación por WhatsApp.",
       perk1:"Lo encontrarás limpio, en filetes o en rodajas, listo para cocinar.",
       perk2:"Recogida sin esperas, incluso los viernes y vísperas de festivo.",
@@ -980,7 +1024,11 @@
       nadalStep3:"Pick it up at the agreed time, ready to go.",
       nadalBtn:"Place my Christmas order", nadalDeadline:"Orders until", nadalFlag:"This is a Christmas order",
       nadalProducts:["Prawns","Red prawns","Langoustines","Razor clams","Mussels","Oysters","Hake","Monkfish","Sea bream","Sea bass","Turbot"],
-      orderEyebrow:"Order ahead", orderH2:"Order ahead, skip the queue",
+      rnEyebrow:"Christmas recipes", rnH2:"Ideas for your holiday table", rnLead:"Classic, easy dishes that let the produce shine. Tap the button and we'll add it to your Christmas order.",
+      n1Tag:"Starter · 10 min", n1Title:"Boiled prawns", n1Body:"Very salty water (about 60 g per litre). When it boils, add the prawns and, once it comes back to the boil, count 1-2 minutes depending on size. Move them to iced salted water so they stay firm.", n1Btn:"Order prawns →", n1Prod:"Prawns for boiling",
+      n2Tag:"Oven · 45 min", n2Title:"Baked sea bream", n2Body:"Make a bed of sliced potato and onion and bake it for 20 minutes. Lay the bream on top with a few lemon slices and give it 20-25 more minutes at 180 °C. Finish with garlic and chilli fried in oil with a dash of vinegar.", n2Btn:"Order bream for the oven →", n2Prod:"Sea bream (besugo)",
+      n3Tag:"Main · 40 min", n3Title:"Stuffed hake", n3Body:"Fill a butterflied hake with prawns, mushrooms and a few breadcrumbs. Close it, splash with white wine and bake at 180 °C for 20-25 minutes. We'll butterfly and bone it for you.", n3Btn:"Order hake for stuffing →", n3Prod:"Hake, butterflied and boned, for stuffing",
+      n4Tag:"Tapa · 5 min", n4Title:"Grilled razor clams", n4Body:"Rinse them well, use a very hot griddle and take them off as soon as they open (1-2 minutes). Drizzle with oil, chopped garlic and parsley and serve.", n4Btn:"Order razor clams →", n4Prod:"Razor clams",      orderEyebrow:"Order ahead", orderH2:"Order ahead, skip the queue",
       orderLead:"Tell us what you want, how to prepare it and when you'll come by. We'll confirm on WhatsApp.",
       perk1:"Cleaned, filleted or in steaks, ready to cook.",
       perk2:"No waiting at pick-up, even on Fridays and before holidays.",
@@ -1181,13 +1229,14 @@
   document.querySelectorAll('[data-order]').forEach(function(btn){
     btn.addEventListener('click', function(){
       var k = btn.getAttribute('data-order');
-      var prep = { r1:'cru', r2:'sal', r3:'net', r4:'sopa' }[k];
-      addToOrder(T[curLang][k+'Prod'], prep);
+      var prep = { r1:'cru', r2:'sal', r3:'net', r4:'sopa', n1:'', n2:'forn', n3:'', n4:'' }[k];
+      addToOrder(T[curLang][k+'Prod'], prep, k.charAt(0)==='n');
     });
   });
 
   var nadalVisible = nadalSeason();
   document.getElementById('nadal').hidden = !nadalVisible;
+  document.getElementById('receptes-nadal').hidden = !nadalVisible;
   document.getElementById('nadalFlagWrap').hidden = !nadalVisible;
   document.getElementById('navNadal').hidden = !nadalVisible;
   document.getElementById('nadalBtn').addEventListener('click', function(){ document.getElementById('nadalFlag').checked = true; track('nadal/boto'); });
