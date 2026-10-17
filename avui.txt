@@ -1,7 +1,8 @@
 # PISSARRA "AVUI TENIM"
 # Una línia per producte:   Nom | preu | nota
 # El preu i la nota són opcionals. Les línies que comencen per # no surten a la web.
-# Canvia la data cada dia (any-mes-dia) perquè es vegi que està al dia.
+# Canvia la data cada dia (any-mes-dia). Si té més de 2 dies, la web amaga la pissarra.
+# La forma més còmoda és el full de Google "La Dorada - Pissarra Avui tenim": té prioritat sobre aquest arxiu.
 # Si no hi ha cap producte, la web mostra un missatge per preguntar per WhatsApp.
 #
 # Exemple:
