@@ -432,6 +432,7 @@
     background:rgba(44,29,20,0.8); color:var(--paper); font-size:22px; line-height:1; cursor:pointer;
   }
   .lb-btn:hover{ border-color:var(--gold-light); color:var(--gold-light); }
+  .lightbox.single .lb-prev, .lightbox.single .lb-next{ display:none; }
   .lb-close{ top:16px; right:16px; }
   .lb-prev{ left:16px; top:50%; transform:translateY(-50%); }
   .lb-next{ right:16px; top:50%; transform:translateY(-50%); }
@@ -470,6 +471,16 @@
   }
   .banner-lot strong{ color:var(--gold-light); letter-spacing:0.04em; }
   .banner-lot:hover{ border-color:var(--gold-light); }
+  .today-photos{ margin-top:18px; }
+  .today-title{ margin-bottom:10px; font-size:12.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-deep); }
+  .today-strip{ display:flex; gap:10px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; padding-bottom:4px; }
+  .today-strip::-webkit-scrollbar{ display:none; }
+  .today-strip button{
+    flex:0 0 150px; aspect-ratio:4 / 5; padding:0; border:none; border-radius:4px; overflow:hidden;
+    background:var(--marine); cursor:zoom-in; scroll-snap-align:start;
+  }
+  .today-strip img{ width:100%; height:100%; object-fit:cover; display:block; }
+  @media (max-width:560px){ .today-strip button{ flex-basis:42%; } }
   .canal-link{
     display:inline-flex; align-items:center; gap:8px; margin-top:14px; font-size:14.5px; font-weight:600;
     color:var(--gold-deep); text-decoration:none; border-bottom:1px solid var(--gold);
@@ -662,6 +673,10 @@
         <p class="board-date" id="boardDate" hidden></p>
         <ul class="board-list" id="boardList"></ul>
         <p class="board-empty" id="boardEmpty" data-t="avuiEmpty">Cada matí triem el millor de la llotja. Pregunta'ns per <a href="https://wa.me/34699088213" target="_blank" rel="noopener">WhatsApp</a> què ha arribat avui o fes directament el teu encàrrec.</p>
+      </div>
+      <div class="today-photos" id="todayPhotos" hidden>
+        <p class="today-title" id="todayTitle"></p>
+        <div class="today-strip" id="todayStrip"></div>
       </div>
       <a class="canal-link" id="canalLink" href="#" target="_blank" rel="noopener" hidden><span aria-hidden="true">📣</span> <span data-t="canalText">Rep cada matí el gènere del dia: apunta't al nostre canal de WhatsApp</span> ↗</a>
     </div>
@@ -1176,7 +1191,7 @@
       cap0:"El taulell, cada matí", capVideo:"Un passeig pel taulell", videoBadge:"Vídeo", videoAria:"Reproduir o aturar el vídeo del taulell",
       cap1:"Escamarlans i llobarro", cap2:"Salmó i tonyina vermella", cap3:"Rèmol i gamba vermella", cap4:"Calamars i llobarro", cap5:"Seitons", cap6:"Cua de rap i musclos",
       galNote:"Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.",
-      lbClose:"Tancar", lbPrev:"Foto anterior", lbNext:"Foto següent",
+      lbClose:"Tancar", lbPrev:"Foto anterior", lbNext:"Foto següent", todayPhotos:"Fotos d'avui", photosOf:"Fotos del",
       rnEyebrow:"Receptes de Nadal", rnH2:"Idees per a la taula de les festes", rnLead:"Plats clàssics i fàcils perquè el producte llueixi. Toca el botó i ho afegim al teu encàrrec de Nadal.",
       n1Tag:"Entrant · 10 min", n1Title:"Llagostins bullits", n1Body:"Aigua amb molta sal (uns 60 g per litre). Quan bulli, tira-hi els llagostins i, quan torni a arrencar el bull, compta 1-2 minuts segons la mida. Passa'ls a aigua amb gel i sal perquè quedin ferms.", n1Btn:"Encarregar llagostins →", n1Prod:"Llagostins per bullir",
       n2Tag:"Forn · 45 min", n2Title:"Besuc al forn", n2Body:"Fes un llit de patata i ceba a rodanxes i enforna'l 20 minuts. Posa-hi el besuc a sobre amb uns talls de llimona i 20-25 minuts més a 180 °C. Acaba'l amb un sofregit d'all, bitxo i un raig de vinagre.", n2Btn:"Encarregar besuc per al forn →", n2Prod:"Besuc",
@@ -1235,7 +1250,7 @@
       cap0:"El mostrador, cada mañana", capVideo:"Un paseo por el mostrador", videoBadge:"Vídeo", videoAria:"Reproducir o pausar el vídeo del mostrador",
       cap1:"Cigalas y lubina", cap2:"Salmón y atún rojo", cap3:"Rodaballo y gamba roja", cap4:"Calamares y lubina", cap5:"Boquerones", cap6:"Cola de rape y mejillones",
       galNote:"Fotos reales de la tienda. Los precios de los carteles son los del día de la foto.",
-      lbClose:"Cerrar", lbPrev:"Foto anterior", lbNext:"Foto siguiente",
+      lbClose:"Cerrar", lbPrev:"Foto anterior", lbNext:"Foto siguiente", todayPhotos:"Fotos de hoy", photosOf:"Fotos del",
       rnEyebrow:"Recetas de Navidad", rnH2:"Ideas para la mesa de las fiestas", rnLead:"Platos clásicos y fáciles para que el producto luzca. Toca el botón y lo añadimos a tu encargo de Navidad.",
       n1Tag:"Entrante · 10 min", n1Title:"Langostinos cocidos", n1Body:"Agua con mucha sal (unos 60 g por litro). Cuando hierva, echa los langostinos y, cuando vuelva a romper el hervor, cuenta 1-2 minutos según el tamaño. Pásalos a agua con hielo y sal para que queden firmes.", n1Btn:"Encargar langostinos →", n1Prod:"Langostinos para cocer",
       n2Tag:"Horno · 45 min", n2Title:"Besugo al horno", n2Body:"Haz una cama de patata y cebolla en rodajas y hornéala 20 minutos. Pon el besugo encima con unos cortes de limón y 20-25 minutos más a 180 °C. Termínalo con un refrito de ajo, guindilla y un chorrito de vinagre.", n2Btn:"Encargar besugo para horno →", n2Prod:"Besugo",
@@ -1326,7 +1341,7 @@
       cap0:"Our counter, every morning", capVideo:"A stroll along our counter", videoBadge:"Video", videoAria:"Play or pause the counter video",
       cap1:"Langoustines and sea bass", cap2:"Salmon and bluefin tuna", cap3:"Turbot and red prawns", cap4:"Squid and sea bass", cap5:"Fresh anchovies", cap6:"Monkfish tail and mussels",
       galNote:"Real photos from the shop. Prices on the labels are from the day the photo was taken.",
-      lbClose:"Close", lbPrev:"Previous photo", lbNext:"Next photo",
+      lbClose:"Close", lbPrev:"Previous photo", lbNext:"Next photo", todayPhotos:"Today's photos", photosOf:"Photos from",
       rnEyebrow:"Christmas recipes", rnH2:"Ideas for your holiday table", rnLead:"Classic, easy dishes that let the produce shine. Tap the button and we'll add it to your Christmas order.",
       n1Tag:"Starter · 10 min", n1Title:"Boiled prawns", n1Body:"Very salty water (about 60 g per litre). When it boils, add the prawns and, once it comes back to the boil, count 1-2 minutes depending on size. Move them to iced salted water so they stay firm.", n1Btn:"Order prawns →", n1Prod:"Prawns for boiling",
       n2Tag:"Oven · 45 min", n2Title:"Baked sea bream", n2Body:"Make a bed of sliced potato and onion and bake it for 20 minutes. Lay the bream on top with a few lemon slices and give it 20-25 more minutes at 180 °C. Finish with garlic and chilli fried in oil with a dash of vinegar.", n2Btn:"Order bream for the oven →", n2Prod:"Sea bream (besugo)",
@@ -1406,6 +1421,7 @@
       tile.addEventListener('click', function(){ showLb(i); lb.showModal(); track('galeria/' + tile.getAttribute('data-cap')); });
     });
     document.getElementById('lbClose').addEventListener('click', function(){ lb.close(); });
+    lb.addEventListener('close', function(){ lb.classList.remove('single'); });
     document.getElementById('lbPrev').addEventListener('click', function(){ showLb(lbIndex - 1); });
     document.getElementById('lbNext').addEventListener('click', function(){ showLb(lbIndex + 1); });
     lb.addEventListener('click', function(ev){ if(ev.target === lb) lb.close(); });
@@ -1850,6 +1866,7 @@
     renderChips(t);
     renderSpecialHours(t);
     renderBoard();
+    renderTodayPhotos();
     if(form){ if(nadalMode()) renderNadalDays(); fillTimes(); }
   }
 
@@ -1863,6 +1880,40 @@
   });
 
   loadBoard();
+
+  var todayPhotos = { data:null, fotos:[] };
+  function renderTodayPhotos(){
+    var wrap = document.getElementById('todayPhotos'), strip = document.getElementById('todayStrip'), t = T[curLang];
+    wrap.hidden = !todayPhotos.fotos.length;
+    if(!todayPhotos.fotos.length) return;
+    var d = todayPhotos.data;
+    var isToday = d && isoDate(d) === isoDate(new Date());
+    document.getElementById('todayTitle').textContent = isToday ? t.todayPhotos : (t.photosOf + ' ' + (d ? shortDate(d) : ''));
+    strip.innerHTML = '';
+    todayPhotos.fotos.forEach(function(f, i){
+      var b = document.createElement('button'); b.type = 'button';
+      var img = document.createElement('img'); img.src = f.petita; img.alt = t.todayPhotos + ' ' + (i + 1); img.loading = 'lazy'; img.decoding = 'async';
+      b.appendChild(img);
+      b.addEventListener('click', function(){
+        if(!lb || !lb.showModal){ window.open(f.gran, '_blank'); return; }
+        document.getElementById('lbImg').src = f.gran;
+        document.getElementById('lbImg').alt = img.alt;
+        document.getElementById('lbCap').textContent = document.getElementById('todayTitle').textContent;
+        lb.classList.add('single');
+        lb.showModal();
+        track('fotos-avui');
+      });
+      strip.appendChild(b);
+    });
+  }
+  if(window.fetch){
+    fetch('avui/fotos.json?v=' + Date.now(), { cache:'no-store' }).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
+      if(!j || !j.fotos) return;
+      todayPhotos = { data:parseIso(j.data), fotos:j.fotos.filter(function(f){ return f && f.petita && f.gran; }) };
+      renderTodayPhotos();
+      keepHashTarget();
+    }).catch(function(){});
+  }
 
   var isOpenNow = false;
 
