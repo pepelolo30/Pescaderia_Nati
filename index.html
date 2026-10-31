@@ -464,6 +464,17 @@
   .nadal-pickup ul{ list-style:none; margin:0; padding:0; }
   .nadal-pickup li{ padding:5px 0; font-size:15px; color:var(--paper); border-bottom:1px solid rgba(250,246,236,0.12); }
   .nadal-note{ font-size:14.5px; color:rgba(250,246,236,0.75); }
+  .banner-lot{
+    display:inline-flex; align-items:center; gap:6px; font-size:13.5px; text-decoration:none;
+    color:var(--paper); border:1px dashed var(--line-on-dark); border-radius:20px; padding:6px 12px;
+  }
+  .banner-lot strong{ color:var(--gold-light); letter-spacing:0.04em; }
+  .banner-lot:hover{ border-color:var(--gold-light); }
+  .canal-link{
+    display:inline-flex; align-items:center; gap:8px; margin-top:14px; font-size:14.5px; font-weight:600;
+    color:var(--gold-deep); text-decoration:none; border-bottom:1px solid var(--gold);
+  }
+  .canal-link:hover{ color:var(--ink); }
   .loteria{
     margin-top:24px; padding:14px 16px; border:1px dashed var(--line-on-dark); border-radius:4px;
     display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
@@ -596,6 +607,7 @@
       <a href="#taulell" data-sec="taulell" data-t="navTaulell">El taulell</a>
       <a href="#opinions" data-sec="opinions" data-t="navOpinions">Opinions</a>
       <a href="#cuina" data-sec="cuina" data-t="navCuina">Idees per cuinar</a>
+      <a href="#professionals" data-sec="professionals" data-t="navPro">Professionals</a>
       <a href="#visitans" data-sec="visitans" id="navHorario">Horari i ubicació</a>
       <a href="#historia" data-sec="historia com-ho-fem radio" data-t="navQuiSom">Qui som</a>
     </div>
@@ -606,9 +618,10 @@
   <div class="wrap promo-inner">
     <div class="promo-message">
       <span class="promo-badge" aria-hidden="true">🎄</span>
-      <p class="promo-text"><span data-t="bannerText">Reserva el teu <strong>marisc de Nadal</strong> i recull-lo sense cues.</span> <span id="bannerLimit"></span></p>
+      <p class="promo-text" id="bannerResv"><span data-t="bannerText">Reserva el teu <strong>marisc de Nadal</strong> i recull-lo sense cues.</span> <span id="bannerLimit"></span></p>
     </div>
     <a class="btn btn-gold btn-sm" href="#encarrec" id="bannerBtn" data-t="bannerBtn">Reservar</a>
+    <a class="banner-lot" id="bannerLot" href="https://wa.me/34699088213" target="_blank" rel="noopener"><span aria-hidden="true">🎟️</span> <span data-t="bannerLot">Loteria de Nadal:</span> <strong id="bannerLotNum"></strong></a>
   </div>
 </div>
 
@@ -650,6 +663,7 @@
         <ul class="board-list" id="boardList"></ul>
         <p class="board-empty" id="boardEmpty" data-t="avuiEmpty">Cada matí triem el millor de la llotja. Pregunta'ns per <a href="https://wa.me/34699088213" target="_blank" rel="noopener">WhatsApp</a> què ha arribat avui o fes directament el teu encàrrec.</p>
       </div>
+      <a class="canal-link" id="canalLink" href="#" target="_blank" rel="noopener" hidden><span aria-hidden="true">📣</span> <span data-t="canalText">Rep cada matí el gènere del dia: apunta't al nostre canal de WhatsApp</span> ↗</a>
     </div>
   </section>
 
@@ -887,6 +901,43 @@
     </div>
   </section>
 
+  <section class="section" id="professionals">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-t="proEyebrow">Per a professionals</p>
+        <h2 data-t="proH2">Peix de llotja per a bars i restaurants</h2>
+        <p class="lead" data-t="proLead">T'ho preparem tal com ho necessites a cuina, amb la regularitat que demana el teu negoci.</p>
+      </div>
+      <div class="recipes">
+        <div class="recipe">
+          <span class="tag" data-t="pro1Tag">Comandes</span>
+          <h3 data-t="pro1Title">Comandes periòdiques</h3>
+          <p data-t="pro1Body">Diàries o setmanals, fixes o segons el que hi hagi a la llotja. T'avisem del millor de cada dia.</p>
+        </div>
+        <div class="recipe">
+          <span class="tag" data-t="pro2Tag">Cuina</span>
+          <h3 data-t="pro2Title">Preparació a mida</h3>
+          <p data-t="pro2Body">Net, a filets, a porcions o tallat per a la teva carta, perquè a cuina no perdis temps.</p>
+        </div>
+        <div class="recipe">
+          <span class="tag" data-t="pro3Tag">Lliurament</span>
+          <h3 data-t="pro3Title">Repartiment al local</h3>
+          <p data-t="pro3Body">T'ho portem al restaurant a Castelldefels, a l'hora que et vagi bé.</p>
+        </div>
+        <div class="recipe">
+          <span class="tag" data-t="pro4Tag">Administració</span>
+          <h3 data-t="pro4Title">Factura per a cada comanda</h3>
+          <p data-t="pro4Body">A nom del teu negoci, perquè ho tinguis tot en ordre.</p>
+        </div>
+      </div>
+      <p class="swipe-hint" data-t="swipeHint">Llisca per veure'n més →</p>
+      <div class="opinions-actions">
+        <a class="btn btn-gold" id="proBtn" href="https://wa.me/34699088213" target="_blank" rel="noopener" data-t="proBtn">Parlem-ne per WhatsApp</a>
+      </div>
+      <p class="gallery-note" data-t="proNote">Condicions i preus per a professionals a consultar.</p>
+    </div>
+  </section>
+
   <section class="contact" id="visitans">
     <div class="wrap contact-grid">
       <div>
@@ -1109,6 +1160,14 @@
       nadalEyebrow:"Encàrrecs de Nadal", nadalH2:"Aquest Nadal, el marisc reservat i sense cues",
       nadalLead:"Els dies de festa el millor producte vola i la botiga s'omple. Fes l'encàrrec amb temps: t'ho tindrem preparat i només hauràs de passar a recollir-ho.",
       nadalStep1:"Tria què vols i el dia de recollida.", bannerText:"Reserva el teu <strong>marisc de Nadal</strong> i recull-lo sense cues.", bannerBtn:"Reservar", bannerLimit:"Reserves fins al", chipsTitle:"Què pots reservar", pickupTitle:"Dies i hores de recollida", pickupEmpty:"Aviat publicarem els dies i horaris de recollida de Nadal.", fNadalHint:"Encàrrec de Nadal: tria un dels dies de recollida.", nadalClosed:"Les reserves de Nadal ja estan tancades. Pots passar per la botiga o escriure'ns per WhatsApp.",
+      bannerLot:"Loteria de Nadal:", canalText:"Rep cada matí el gènere del dia: apunta't al nostre canal de WhatsApp", navPro:"Professionals",
+      proEyebrow:"Per a professionals", proH2:"Peix de llotja per a bars i restaurants", proLead:"T'ho preparem tal com ho necessites a cuina, amb la regularitat que demana el teu negoci.",
+      pro1Tag:"Comandes", pro1Title:"Comandes periòdiques", pro1Body:"Diàries o setmanals, fixes o segons el que hi hagi a la llotja. T'avisem del millor de cada dia.",
+      pro2Tag:"Cuina", pro2Title:"Preparació a mida", pro2Body:"Net, a filets, a porcions o tallat per a la teva carta, perquè a cuina no perdis temps.",
+      pro3Tag:"Lliurament", pro3Title:"Repartiment al local", pro3Body:"T'ho portem al restaurant a Castelldefels, a l'hora que et vagi bé.",
+      pro4Tag:"Administració", pro4Title:"Factura per a cada comanda", pro4Body:"A nom del teu negoci, perquè ho tinguis tot en ordre.",
+      proBtn:"Parlem-ne per WhatsApp", proNote:"Condicions i preus per a professionals a consultar.",
+      proMsg:"Hola! Tinc un bar/restaurant a Castelldefels i m'interessa ser client professional de la Peixateria Mulhacén.",
       nadalStep2:"T'ho confirmem per WhatsApp amb la disponibilitat.",
       nadalStep3:"Passes a recollir-ho a l'hora acordada, ja preparat.",
       nadalBtn:"Fer l'encàrrec de Nadal", nadalDeadline:"Encàrrecs fins al", nadalFlag:"És un encàrrec de Nadal",
@@ -1160,6 +1219,14 @@
       nadalEyebrow:"Encargos de Navidad", nadalH2:"Esta Navidad, el marisco reservado y sin colas",
       nadalLead:"En fiestas el mejor producto vuela y la tienda se llena. Haz el encargo con tiempo: te lo tendremos preparado y solo tendrás que pasar a recogerlo.",
       nadalStep1:"Elige qué quieres y el día de recogida.", bannerText:"Reserva tu <strong>marisco de Navidad</strong> y recógelo sin colas.", bannerBtn:"Reservar", bannerLimit:"Reservas hasta el", chipsTitle:"Qué puedes reservar", pickupTitle:"Días y horas de recogida", pickupEmpty:"Pronto publicaremos los días y horarios de recogida de Navidad.", fNadalHint:"Encargo de Navidad: elige uno de los días de recogida.", nadalClosed:"Las reservas de Navidad ya están cerradas. Puedes pasar por la tienda o escribirnos por WhatsApp.",
+      bannerLot:"Lotería de Navidad:", canalText:"Recibe cada mañana el género del día: únete a nuestro canal de WhatsApp", navPro:"Profesionales",
+      proEyebrow:"Para profesionales", proH2:"Pescado de lonja para bares y restaurantes", proLead:"Te lo preparamos tal y como lo necesitas en cocina, con la regularidad que pide tu negocio.",
+      pro1Tag:"Pedidos", pro1Title:"Pedidos periódicos", pro1Body:"Diarios o semanales, fijos o según lo que haya en la lonja. Te avisamos de lo mejor de cada día.",
+      pro2Tag:"Cocina", pro2Title:"Preparación a medida", pro2Body:"Limpio, en filetes, en porciones o cortado para tu carta, para que en cocina no pierdas tiempo.",
+      pro3Tag:"Entrega", pro3Title:"Reparto al local", pro3Body:"Te lo llevamos al restaurante en Castelldefels, a la hora que te venga bien.",
+      pro4Tag:"Administración", pro4Title:"Factura de cada pedido", pro4Body:"A nombre de tu negocio, para que lo tengas todo en orden.",
+      proBtn:"Hablemos por WhatsApp", proNote:"Condiciones y precios para profesionales a consultar.",
+      proMsg:"¡Hola! Tengo un bar/restaurante en Castelldefels y me interesa ser cliente profesional de la Pescadería Mulhacén.",
       nadalStep2:"Te lo confirmamos por WhatsApp con la disponibilidad.",
       nadalStep3:"Pasas a recogerlo a la hora acordada, ya preparado.",
       nadalBtn:"Hacer el encargo de Navidad", nadalDeadline:"Encargos hasta el", nadalFlag:"Es un encargo de Navidad",
@@ -1243,6 +1310,14 @@
       nadalEyebrow:"Christmas orders", nadalH2:"This Christmas, your seafood reserved and no queues",
       nadalLead:"During the holidays the best produce sells out and the shop gets packed. Order in advance: we'll have it ready and you'll just need to pick it up.",
       nadalStep1:"Choose what you want and your pick-up day.", bannerText:"Reserve your <strong>Christmas seafood</strong> and pick it up with no queues.", bannerBtn:"Reserve", bannerLimit:"Orders until", chipsTitle:"What you can reserve", pickupTitle:"Pick-up days and times", pickupEmpty:"We'll publish the Christmas pick-up days and times soon.", fNadalHint:"Christmas order: choose one of the pick-up days.", nadalClosed:"Christmas reservations are now closed. Drop by the shop or message us on WhatsApp.",
+      bannerLot:"Christmas Lottery:", canalText:"Get today's catch every morning: join our WhatsApp channel", navPro:"For restaurants",
+      proEyebrow:"For professionals", proH2:"Market-fresh fish for bars and restaurants", proLead:"We prepare it exactly as your kitchen needs it, as regularly as your business requires.",
+      pro1Tag:"Orders", pro1Title:"Regular orders", pro1Body:"Daily or weekly, fixed or based on what's at the fish market. We'll tell you the best of each day.",
+      pro2Tag:"Kitchen", pro2Title:"Prepared to order", pro2Body:"Cleaned, filleted, portioned or cut for your menu, so your kitchen saves time.",
+      pro3Tag:"Delivery", pro3Title:"Delivered to your venue", pro3Body:"We bring it to your restaurant in Castelldefels, at a time that suits you.",
+      pro4Tag:"Admin", pro4Title:"An invoice for every order", pro4Body:"In your business's name, so your accounts stay in order.",
+      proBtn:"Let's talk on WhatsApp", proNote:"Trade terms and prices on request.",
+      proMsg:"Hi! I run a bar/restaurant in Castelldefels and I'm interested in becoming a trade customer of Mulhacén fishmongers.",
       nadalStep2:"We confirm availability on WhatsApp.",
       nadalStep3:"Pick it up at the agreed time, ready to go.",
       nadalBtn:"Place my Christmas order", nadalDeadline:"Orders until", nadalFlag:"This is a Christmas order",
@@ -1579,7 +1654,13 @@
   document.getElementById('receptes-nadal').hidden = !nadalVisible;
   document.getElementById('navNadal').hidden = !nadalVisible;
   document.getElementById('nadalFlagWrap').hidden = !nadalOpen();
-  document.getElementById('nadalBanner').hidden = !nadalOpen();
+  var lotActive = !!LOTERIA.numero && !!LOTERIA.fins && isoDate(new Date()) <= LOTERIA.fins;
+  document.getElementById('nadalBanner').hidden = !nadalOpen() && !lotActive;
+  document.getElementById('bannerResv').hidden = !nadalOpen();
+  document.getElementById('bannerBtn').hidden = !nadalOpen();
+  document.getElementById('bannerLot').hidden = !lotActive;
+  document.getElementById('bannerLotNum').textContent = LOTERIA.numero;
+  if(CFG.canalWhatsApp){ var cl = document.getElementById('canalLink'); cl.href = CFG.canalWhatsApp; cl.hidden = false; }
   document.getElementById('nadalBtn').hidden = !nadalOpen();
   document.getElementById('loteriaBox').hidden = !LOTERIA.numero || !LOTERIA.fins || isoDate(new Date()) > LOTERIA.fins;
   function startNadalOrder(){ if(nadalOpen()){ document.getElementById('nadalFlag').checked = true; applyNadalMode(); } }
@@ -1775,6 +1856,8 @@
   document.addEventListener('click', function(ev){
     var a = ev.target.closest ? ev.target.closest('a[href*="wa.me"]') : null;
     if(a) track('whatsapp/' + (a.id || (a.closest('section') ? a.closest('section').id : 'enllac')));
+    var ca = ev.target.closest ? ev.target.closest('#canalLink') : null;
+    if(ca) track('canal-whatsapp');
     var ig = ev.target.closest ? ev.target.closest('a[href*="instagram.com"]') : null;
     if(ig) track('instagram/' + (ig.closest('section') ? ig.closest('section').id : 'peu'));
   });
@@ -1849,6 +1932,10 @@
     setHTML('promoText', t.promoText.replace(/\{num\}/g, LOTERIA.numero));
     var promoBtn = document.getElementById('promoBtn');
     if(promoBtn){ promoBtn.textContent = t.promoBtnLabel; promoBtn.href = t.promoWaLink.replace(/\{num\}|%7Bnum%7D/g, LOTERIA.numero); }
+    var bannerLot = document.getElementById('bannerLot');
+    if(bannerLot && promoBtn) bannerLot.href = promoBtn.href;
+    var proBtn = document.getElementById('proBtn');
+    if(proBtn) proBtn.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(t.proMsg);
     setText('footBrand', t.footBrand);
 
     ['navOrderBtn','heroOrderBtn'].forEach(function(id){

@@ -15,8 +15,11 @@ window.MULHACEN = {
   nadal: {
     mostrarDes: '2026-10-15',
     mostrarFins: '2027-01-06',
-    limitReserves: '',
-    recollida: {},
+    limitReserves: '2026-12-23',
+    recollida: {
+      '2026-12-24': ['08:30-14:00'],
+      '2026-12-31': ['08:30-14:00']
+    },
     productes: {
       ca: ['Llagostins', 'Gambes', 'Escamarlans', 'Navalles', 'Musclos', 'Ostres', 'Lluç', 'Rap', 'Besuc', 'Llobarro', 'Turbot'],
       es: ['Langostinos', 'Gambas', 'Cigalas', 'Navajas', 'Mejillones', 'Ostras', 'Merluza', 'Rape', 'Besugo', 'Lubina', 'Rodaballo'],
@@ -26,5 +29,7 @@ window.MULHACEN = {
 
   loteria: { numero: '55160', fins: '2026-12-22' },
 
-  pissarraFullGoogle: ''
+  pissarraFullGoogle: '',
+
+  canalWhatsApp: ''
 };
