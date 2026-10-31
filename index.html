@@ -460,6 +460,15 @@
     border:1px solid var(--gold-light); color:var(--gold-light); display:flex; align-items:center; justify-content:center;
     font-weight:700; font-size:14px;
   }
+  .nadal-sub{ margin-top:22px; margin-bottom:8px; font-size:12.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-light); }
+  .nadal-pickup ul{ list-style:none; margin:0; padding:0; }
+  .nadal-pickup li{ padding:5px 0; font-size:15px; color:var(--paper); border-bottom:1px solid rgba(250,246,236,0.12); }
+  .nadal-note{ font-size:14.5px; color:rgba(250,246,236,0.75); }
+  .loteria{
+    margin-top:24px; padding:14px 16px; border:1px dashed var(--line-on-dark); border-radius:4px;
+    display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+  }
+  .loteria .promo-text{ font-size:14px; }
   .nadal-deadline{ margin-top:6px; font-weight:700; color:var(--gold-light); font-size:15px; }
 
   /* ---------- Opinions ---------- */
@@ -593,13 +602,13 @@
   </nav>
 </header>
 
-<div class="promo-banner" id="promoBanner">
+<div class="promo-banner" id="nadalBanner" hidden>
   <div class="wrap promo-inner">
     <div class="promo-message">
       <span class="promo-badge" aria-hidden="true">🎄</span>
-      <p class="promo-text" id="promoText">Ja tenim la <strong>Loteria de Nadal</strong>! i si toca?<br>Número <span class="promo-number">55160</span> disponible a la botiga.</p>
+      <p class="promo-text"><span data-t="bannerText">Reserva el teu <strong>marisc de Nadal</strong> i recull-lo sense cues.</span> <span id="bannerLimit"></span></p>
     </div>
-    <a class="btn btn-gold btn-sm" id="promoBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20un%20d%C3%A8cim%20del%20n%C3%BAmero%2055160%20de%20la%20Loteria%20de%20Nadal." target="_blank" rel="noopener">Reservar per WhatsApp</a>
+    <a class="btn btn-gold btn-sm" href="#encarrec" id="bannerBtn" data-t="bannerBtn">Reservar</a>
   </div>
 </div>
 
@@ -623,7 +632,7 @@
       </div>
       <div class="hero-visual">
         <div class="plate">
-          <img class="logo-plate" src="img/mulhacen-logo.webp" width="609" height="393" alt="Mulhacén · Peixeters des de 1954">
+          <img class="logo-plate" src="img/mulhacen-logo.webp" width="609" height="393" alt="Mulhacén · Peixaters des del 1954">
         </div>
       </div>
     </div>
@@ -652,12 +661,22 @@
           <h2 data-t="nadalH2">Aquest Nadal, el marisc reservat i sense cues</h2>
           <p class="lead" data-t="nadalLead">Els dies de festa el millor producte vola i la botiga s'omple. Fes l'encàrrec amb temps: t'ho tindrem preparat i només hauràs de passar a recollir-ho.</p>
         </div>
+        <p class="nadal-sub" data-t="chipsTitle">Què pots reservar</p>
         <div class="chips" id="nadalChips"></div>
         <p class="nadal-deadline" id="nadalDeadline" hidden></p>
+        <div class="nadal-pickup">
+          <p class="nadal-sub" data-t="pickupTitle">Dies i hores de recollida</p>
+          <ul id="nadalPickupList"></ul>
+          <p class="nadal-note" id="nadalPickupEmpty" data-t="pickupEmpty">Aviat publicarem els dies i horaris de recollida de Nadal.</p>
+        </div>
+        <div class="loteria" id="loteriaBox" hidden>
+          <p class="promo-text" id="promoText"></p>
+          <a class="btn btn-outline-dark btn-sm" id="promoBtn" href="https://wa.me/34699088213" target="_blank" rel="noopener">Reservar per WhatsApp</a>
+        </div>
       </div>
       <div>
         <ol class="nadal-steps">
-          <li data-t="nadalStep1">Tria què vols i quin dia ho passes a recollir (per exemple, el 24 o el 31 de desembre).</li>
+          <li data-t="nadalStep1">Tria què vols i el dia de recollida.</li>
           <li data-t="nadalStep2">T'ho confirmem per WhatsApp amb la disponibilitat.</li>
           <li data-t="nadalStep3">Passes a recollir-ho a l'hora acordada, ja preparat.</li>
         </ol>
@@ -738,6 +757,7 @@
           <div>
             <label class="fl" for="fDate" data-t="fDate">Dia</label>
             <input type="date" id="fDate" required>
+            <select id="fNadalDay" data-t-aria="fDate" hidden></select>
           </div>
           <div>
             <label class="fl" for="fTime" data-t="fTime">Hora</label>
@@ -1004,6 +1024,7 @@
   <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.32A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18a7.94 7.94 0 0 1-4.06-1.11l-.29-.17-3.02.79.8-2.94-.19-.3A7.96 7.96 0 1 1 12 20Zm4.36-5.97c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/></svg>
 </a>
 
+<script src="config.js"></script>
 <script>
 (function(){
   var T = {
@@ -1035,9 +1056,9 @@
       waCardBody:"Explica'ns quin peix o marisc necessites i com el vols preparat. Et confirmem la disponibilitat i quedem per WhatsApp si el reculls a la botiga o te'l portem a casa, i a quina hora.",
       radioAdTitle:"Ens has sentit a la ràdio?", radioAdBody:"Escolta aquí el nostre anunci.",
       radioBtnLabel:"Escoltar l'anunci de ràdio",
-      promoText:"Ja tenim la <strong>Loteria de Nadal</strong>! i si toca?<br>Número <span class=\"promo-number\">55160</span> disponible a la botiga.",
+      promoText:"Ja tenim la <strong>Loteria de Nadal</strong>! i si toca?<br>Número <span class=\"promo-number\">{num}</span> disponible a la botiga.",
       promoBtnLabel:"Reservar per WhatsApp",
-      promoWaLink:"https://wa.me/34699088213?text=Hola%2C%20voldria%20un%20d%C3%A8cim%20del%20n%C3%BAmero%2055160%20de%20la%20Loteria%20de%20Nadal.",
+      promoWaLink:"https://wa.me/34699088213?text=Hola%2C%20voldria%20un%20d%C3%A8cim%20del%20n%C3%BAmero%20{num}%20de%20la%20Loteria%20de%20Nadal.",
       footBrand:"Peixateria Mulhacén · Castelldefels · Des del 1954",
       waLink:"https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20Mulhac%C3%A9n."
     },
@@ -1069,9 +1090,9 @@
       waCardBody:"Cuéntanos qué pescado o marisco necesitas y cómo lo quieres preparado. Te confirmamos la disponibilidad y quedamos por WhatsApp en si lo recoges en tienda o te lo llevamos a casa, y a qué hora.",
       radioAdTitle:"¿Nos has oído en la radio?", radioAdBody:"Escucha aquí nuestro anuncio.",
       radioBtnLabel:"Escuchar el anuncio de radio",
-      promoText:"¡Ya tenemos la <strong>Lotería de Navidad</strong>! ¿y si toca?<br>Número <span class=\"promo-number\">55160</span> disponible en tienda.",
+      promoText:"¡Ya tenemos la <strong>Lotería de Navidad</strong>! ¿y si toca?<br>Número <span class=\"promo-number\">{num}</span> disponible en tienda.",
       promoBtnLabel:"Reservar por WhatsApp",
-      promoWaLink:"https://wa.me/34699088213?text=Hola%2C%20querr%C3%ADa%20un%20d%C3%A9cimo%20del%20n%C3%BAmero%2055160%20de%20la%20Loter%C3%ADa%20de%20Navidad.",
+      promoWaLink:"https://wa.me/34699088213?text=Hola%2C%20querr%C3%ADa%20un%20d%C3%A9cimo%20del%20n%C3%BAmero%20{num}%20de%20la%20Loter%C3%ADa%20de%20Navidad.",
       footBrand:"Pescadería Mulhacén · Castelldefels · Desde 1954",
       waLink:"https://wa.me/34699088213?text=Hola%2C%20querr%C3%ADa%20hacer%20un%20pedido%20en%20la%20Pescader%C3%ADa%20Mulhac%C3%A9n."
     }
@@ -1087,11 +1108,10 @@
       avuiWant:"El vull", avuiUpdated:"Actualitzada el",
       nadalEyebrow:"Encàrrecs de Nadal", nadalH2:"Aquest Nadal, el marisc reservat i sense cues",
       nadalLead:"Els dies de festa el millor producte vola i la botiga s'omple. Fes l'encàrrec amb temps: t'ho tindrem preparat i només hauràs de passar a recollir-ho.",
-      nadalStep1:"Tria què vols i quin dia ho passes a recollir (per exemple, el 24 o el 31 de desembre).",
+      nadalStep1:"Tria què vols i el dia de recollida.", bannerText:"Reserva el teu <strong>marisc de Nadal</strong> i recull-lo sense cues.", bannerBtn:"Reservar", bannerLimit:"Reserves fins al", chipsTitle:"Què pots reservar", pickupTitle:"Dies i hores de recollida", pickupEmpty:"Aviat publicarem els dies i horaris de recollida de Nadal.", fNadalHint:"Encàrrec de Nadal: tria un dels dies de recollida.", nadalClosed:"Les reserves de Nadal ja estan tancades. Pots passar per la botiga o escriure'ns per WhatsApp.",
       nadalStep2:"T'ho confirmem per WhatsApp amb la disponibilitat.",
       nadalStep3:"Passes a recollir-ho a l'hora acordada, ja preparat.",
       nadalBtn:"Fer l'encàrrec de Nadal", nadalDeadline:"Encàrrecs fins al", nadalFlag:"És un encàrrec de Nadal",
-      nadalProducts:["Llagostins","Gambes","Escamarlans","Navalles","Musclos","Ostres","Lluç","Rap","Besuc","Llobarro","Turbot"],
       galEyebrow:"El nostre taulell", galH2:"Producte de llotja, tal com el veuràs a la botiga",
       galLead:"Res d'imatges de catàleg: aquest és el peix i el marisc que preparem cada matí al carrer de la Llibertat.",
       cap0:"El taulell, cada matí", capVideo:"Un passeig pel taulell", videoBadge:"Vídeo", videoAria:"Reproduir o aturar el vídeo del taulell",
@@ -1139,11 +1159,10 @@
       avuiWant:"Lo quiero", avuiUpdated:"Actualizada el",
       nadalEyebrow:"Encargos de Navidad", nadalH2:"Esta Navidad, el marisco reservado y sin colas",
       nadalLead:"En fiestas el mejor producto vuela y la tienda se llena. Haz el encargo con tiempo: te lo tendremos preparado y solo tendrás que pasar a recogerlo.",
-      nadalStep1:"Elige qué quieres y qué día pasas a recogerlo (por ejemplo, el 24 o el 31 de diciembre).",
+      nadalStep1:"Elige qué quieres y el día de recogida.", bannerText:"Reserva tu <strong>marisco de Navidad</strong> y recógelo sin colas.", bannerBtn:"Reservar", bannerLimit:"Reservas hasta el", chipsTitle:"Qué puedes reservar", pickupTitle:"Días y horas de recogida", pickupEmpty:"Pronto publicaremos los días y horarios de recogida de Navidad.", fNadalHint:"Encargo de Navidad: elige uno de los días de recogida.", nadalClosed:"Las reservas de Navidad ya están cerradas. Puedes pasar por la tienda o escribirnos por WhatsApp.",
       nadalStep2:"Te lo confirmamos por WhatsApp con la disponibilidad.",
       nadalStep3:"Pasas a recogerlo a la hora acordada, ya preparado.",
       nadalBtn:"Hacer el encargo de Navidad", nadalDeadline:"Encargos hasta el", nadalFlag:"Es un encargo de Navidad",
-      nadalProducts:["Langostinos","Gambas","Cigalas","Navajas","Mejillones","Ostras","Merluza","Rape","Besugo","Lubina","Rodaballo"],
       galEyebrow:"Nuestro mostrador", galH2:"Producto de lonja, tal y como lo verás en la tienda",
       galLead:"Nada de imágenes de catálogo: este es el pescado y el marisco que preparamos cada mañana en la calle Llibertat.",
       cap0:"El mostrador, cada mañana", capVideo:"Un paseo por el mostrador", videoBadge:"Vídeo", videoAria:"Reproducir o pausar el vídeo del mostrador",
@@ -1210,9 +1229,9 @@
       waCardBody:"Tell us what fish or seafood you need and how you'd like it prepared. We'll confirm availability and agree on WhatsApp whether you'll pick it up or we'll deliver it, and when.",
       radioAdTitle:"Heard us on the radio?", radioAdBody:"Listen to our ad here.",
       radioBtnLabel:"Play our radio ad",
-      promoText:"The <strong>Christmas Lottery</strong> is here! What if it wins?<br>Number <span class=\"promo-number\">55160</span> available in the shop.",
+      promoText:"The <strong>Christmas Lottery</strong> is here! What if it wins?<br>Number <span class=\"promo-number\">{num}</span> available in the shop.",
       promoBtnLabel:"Reserve on WhatsApp",
-      promoWaLink:"https://wa.me/34699088213?text=" + encodeURIComponent("Hi, I'd like a ticket (décimo) of number 55160 for the Christmas Lottery."),
+      promoWaLink:"https://wa.me/34699088213?text=" + encodeURIComponent("Hi, I'd like a ticket (décimo) of number {num} for the Christmas Lottery."),
       footBrand:"Mulhacén Fishmonger · Castelldefels · Since 1954",
       waLink:"https://wa.me/34699088213?text=" + encodeURIComponent("Hi, I'd like to place an order at Mulhacén fishmonger."),
       navAvui:"Today's catch", navTaulell:"Our counter", navEncarrec:"Order", navCuina:"Cooking ideas", swipeHint:"Swipe to see more →", rnToggle:"Christmas recipe ideas", storyMore:"Read more about us", navQuiSom:"About us", navSections:"Page sections", navNadal:"Christmas", navOpinions:"Reviews", navOrderBtn:"Place an order",
@@ -1223,11 +1242,10 @@
       avuiWant:"I want it", avuiUpdated:"Updated on",
       nadalEyebrow:"Christmas orders", nadalH2:"This Christmas, your seafood reserved and no queues",
       nadalLead:"During the holidays the best produce sells out and the shop gets packed. Order in advance: we'll have it ready and you'll just need to pick it up.",
-      nadalStep1:"Choose what you want and the day you'll pick it up (for example, 24 or 31 December).",
+      nadalStep1:"Choose what you want and your pick-up day.", bannerText:"Reserve your <strong>Christmas seafood</strong> and pick it up with no queues.", bannerBtn:"Reserve", bannerLimit:"Orders until", chipsTitle:"What you can reserve", pickupTitle:"Pick-up days and times", pickupEmpty:"We'll publish the Christmas pick-up days and times soon.", fNadalHint:"Christmas order: choose one of the pick-up days.", nadalClosed:"Christmas reservations are now closed. Drop by the shop or message us on WhatsApp.",
       nadalStep2:"We confirm availability on WhatsApp.",
       nadalStep3:"Pick it up at the agreed time, ready to go.",
       nadalBtn:"Place my Christmas order", nadalDeadline:"Orders until", nadalFlag:"This is a Christmas order",
-      nadalProducts:["Prawns","Red prawns","Langoustines","Razor clams","Mussels","Oysters","Hake","Monkfish","Sea bream","Sea bass","Turbot"],
       galEyebrow:"Our counter", galH2:"Fresh from the fish market, just as you'll see it in the shop",
       galLead:"No stock photos: this is the fish and seafood we prepare every morning on Carrer de la Llibertat.",
       cap0:"Our counter, every morning", capVideo:"A stroll along our counter", videoBadge:"Video", videoAria:"Play or pause the counter video",
@@ -1271,11 +1289,19 @@
   ['ca','es','en'].forEach(function(l){ for(var k in X[l]){ T[l][k] = X[l][k]; } });
 
   var WA_NUMBER = '34699088213';
-  var NADAL = { from:'10-15', to:'01-06', limit:'' };
-  var TANCAT = ['2026-12-08','2026-12-25','2026-12-26','2027-01-01','2027-01-06','2027-03-26','2027-03-29','2027-05-01','2027-06-24','2027-08-15','2027-09-11','2027-10-12','2027-11-01','2027-12-06','2027-12-08','2027-12-25','2027-12-26'];
-  var ESPECIAL = { '2026-12-24':[[8*60+30, 14*60]], '2026-12-31':[[8*60+30, 14*60]] };
-  var LOTERIA = { fins:'2026-12-22' };
-  var SHEET_ID = '';
+  var CFG = window.MULHACEN || {};
+  function toMin(s){ var p = String(s).trim().split(':'); return (+p[0]) * 60 + (+p[1] || 0); }
+  function toRanges(list){
+    return (list || []).map(function(r){ var p = String(r).split('-'); return [toMin(p[0]), toMin(p[1])]; })
+      .filter(function(r){ return r[1] > r[0]; });
+  }
+  function toRangeMap(obj){ var out = {}; Object.keys(obj || {}).forEach(function(k){ out[k] = toRanges(obj[k]); }); return out; }
+  var NC = CFG.nadal || {};
+  var NADAL = { des:NC.mostrarDes || '', fins:NC.mostrarFins || '', limit:NC.limitReserves || '', recollida:toRangeMap(NC.recollida), productes:NC.productes || {} };
+  var TANCAT = CFG.festius || [];
+  var ESPECIAL = toRangeMap(CFG.horariEspecial);
+  var LOTERIA = { numero:(CFG.loteria || {}).numero || '', fins:(CFG.loteria || {}).fins || '' };
+  var SHEET_ID = CFG.pissarraFullGoogle || '';
   var PREPS = ['','net','filets','rodanxes','sencer','forn','sal','planxa','cru','sopa'];
   var curLang = 'ca';
 
@@ -1348,12 +1374,22 @@
   function shortDate(d){ return pad(d.getDate())+'/'+pad(d.getMonth()+1); }
 
   function nadalSeason(){
-    var md = isoDate(new Date()).slice(5);
-    return md >= NADAL.from || md <= NADAL.to;
+    var today = isoDate(new Date());
+    return !!NADAL.des && !!NADAL.fins && today >= NADAL.des && today <= NADAL.fins;
+  }
+  function nadalOpen(){ return nadalSeason() && (!NADAL.limit || isoDate(new Date()) <= NADAL.limit); }
+  function nadalDays(){
+    var today = isoDate(new Date());
+    return Object.keys(NADAL.recollida).sort().filter(function(k){ return k >= today && NADAL.recollida[k].length; });
+  }
+  function nadalMode(){
+    var f = document.getElementById('nadalFlag');
+    return nadalOpen() && !!f && f.checked && nadalDays().length > 0;
   }
 
   function hoursFor(d){
     var k = isoDate(d);
+    if(nadalMode()) return NADAL.recollida[k] || [];
     if(TANCAT.indexOf(k) >= 0) return [];
     if(ESPECIAL[k]) return ESPECIAL[k];
     var day = d.getDay();
@@ -1409,7 +1445,7 @@
     for(var i=0; i<rows.length; i++){ if(!rows[i].querySelector('.item-name').value.trim()){ row = rows[i]; break; } }
     if(row){ row.querySelector('.item-name').value = name; if(prep) row.querySelector('.item-prep').value = prep; }
     else { row = addRow(name, prep); }
-    if(nadal){ document.getElementById('nadalFlag').checked = true; }
+    if(nadal && nadalOpen()){ document.getElementById('nadalFlag').checked = true; applyNadalMode(); }
     document.getElementById('encarrec').scrollIntoView({ behavior:'smooth', block:'start' });
     setTimeout(function(){ try{ row.querySelector('.item-qty').focus({ preventScroll:true }); }catch(e){} }, 500);
     track('afegir/' + name);
@@ -1428,9 +1464,36 @@
       var o = document.createElement('option'); o.value=''; o.textContent='—'; timeEl.appendChild(o);
       return;
     }
-    if(ESPECIAL[isoDate(d)]) dateHint.textContent = t.fSpecial + ' ' + fmtRanges(ESPECIAL[isoDate(d)]);
+    if(nadalMode()) dateHint.textContent = t.fNadalHint;
+    else if(ESPECIAL[isoDate(d)]) dateHint.textContent = t.fSpecial + ' ' + fmtRanges(ESPECIAL[isoDate(d)]);
     slots.forEach(function(m){ var o=document.createElement('option'); o.value=fmtMin(m); o.textContent=fmtMin(m); timeEl.appendChild(o); });
     if(prev && slots.map(fmtMin).indexOf(prev) >= 0) timeEl.value = prev;
+  }
+
+  var nadalDayEl = document.getElementById('fNadalDay');
+  function renderNadalDays(){
+    var t = T[curLang];
+    nadalDayEl.innerHTML = '';
+    nadalDays().forEach(function(k){
+      var d = parseIso(k), o = document.createElement('option');
+      o.value = k; o.textContent = t.days[d.getDay()] + ' ' + shortDate(d);
+      nadalDayEl.appendChild(o);
+    });
+    if(nadalDays().indexOf(dateEl.value) >= 0) nadalDayEl.value = dateEl.value;
+  }
+  function applyNadalMode(){
+    var on = nadalMode();
+    dateEl.hidden = on;
+    nadalDayEl.hidden = !on;
+    if(on){
+      renderNadalDays();
+      if(nadalDays().indexOf(dateEl.value) < 0) dateEl.value = nadalDays()[0];
+      nadalDayEl.value = dateEl.value;
+    } else {
+      var d = parseIso(dateEl.value);
+      if(!d || !slotsFor(d).length) dateEl.value = isoDate(nextOpenDate());
+    }
+    fillTimes();
   }
 
   function currentMode(){ var r = form.querySelector('input[name=mode]:checked'); return r ? r.value : 'pickup'; }
@@ -1478,6 +1541,8 @@
     dateEl.max = isoDate(new Date(today.getFullYear(), today.getMonth()+3, today.getDate()));
     dateEl.value = isoDate(nextOpenDate());
     dateEl.addEventListener('change', fillTimes);
+    nadalDayEl.addEventListener('change', function(){ dateEl.value = nadalDayEl.value; fillTimes(); });
+    document.getElementById('nadalFlag').addEventListener('change', applyNadalMode);
     document.getElementById('addItem').addEventListener('click', function(){ addRow().querySelector('.item-name').focus(); });
     form.querySelectorAll('input[name=mode]').forEach(function(r){
       r.addEventListener('change', function(){ document.getElementById('addrWrap').hidden = currentMode()!=='delivery'; });
@@ -1509,14 +1574,37 @@
     });
   });
 
-  document.getElementById('promoBanner').hidden = isoDate(new Date()) > LOTERIA.fins;
-
   var nadalVisible = nadalSeason();
   document.getElementById('nadal').hidden = !nadalVisible;
   document.getElementById('receptes-nadal').hidden = !nadalVisible;
-  document.getElementById('nadalFlagWrap').hidden = !nadalVisible;
   document.getElementById('navNadal').hidden = !nadalVisible;
-  document.getElementById('nadalBtn').addEventListener('click', function(){ document.getElementById('nadalFlag').checked = true; track('nadal/boto'); });
+  document.getElementById('nadalFlagWrap').hidden = !nadalOpen();
+  document.getElementById('nadalBanner').hidden = !nadalOpen();
+  document.getElementById('nadalBtn').hidden = !nadalOpen();
+  document.getElementById('loteriaBox').hidden = !LOTERIA.numero || !LOTERIA.fins || isoDate(new Date()) > LOTERIA.fins;
+  function startNadalOrder(){ if(nadalOpen()){ document.getElementById('nadalFlag').checked = true; applyNadalMode(); } }
+  document.getElementById('nadalBtn').addEventListener('click', function(){ startNadalOrder(); track('nadal/boto'); });
+  document.getElementById('bannerBtn').addEventListener('click', function(){ startNadalOrder(); track('nadal/banner'); });
+
+  function updateStructuredData(){
+    var el = document.querySelector('script[type="application/ld+json"]');
+    if(!el) return;
+    try{
+      var data = JSON.parse(el.textContent), today = isoDate(new Date()), specials = [], keys = {};
+      var hhmm = function(m){ return pad(Math.floor(m / 60)) + ':' + pad(m % 60); };
+      TANCAT.forEach(function(k){ keys[k] = []; });
+      Object.keys(ESPECIAL).forEach(function(k){ keys[k] = ESPECIAL[k]; });
+      Object.keys(NADAL.recollida).forEach(function(k){ keys[k] = NADAL.recollida[k]; });
+      Object.keys(keys).sort().forEach(function(k){
+        if(k < today) return;
+        if(!keys[k].length){ specials.push({ '@type':'OpeningHoursSpecification', validFrom:k, validThrough:k, opens:'00:00', closes:'00:00' }); return; }
+        keys[k].forEach(function(r){ specials.push({ '@type':'OpeningHoursSpecification', validFrom:k, validThrough:k, opens:hhmm(r[0]), closes:hhmm(r[1]) }); });
+      });
+      if(specials.length) data.specialOpeningHoursSpecification = specials;
+      el.textContent = JSON.stringify(data);
+    }catch(e){}
+  }
+  updateStructuredData();
 
   var secNav = document.getElementById('sectionNav');
   if(secNav){
@@ -1653,14 +1741,24 @@
   function renderChips(t){
     var c = document.getElementById('nadalChips');
     c.innerHTML = '';
-    t.nadalProducts.forEach(function(n){
+    (NADAL.productes[curLang] || NADAL.productes.ca || []).forEach(function(n){
       var b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.textContent = '+ ' + n;
       b.addEventListener('click', function(){ addToOrder(n, '', true); });
       c.appendChild(b);
     });
     var dl = document.getElementById('nadalDeadline'), lim = parseIso(NADAL.limit);
-    dl.hidden = !lim;
-    if(lim) dl.textContent = t.nadalDeadline + ' ' + shortDate(lim);
+    dl.hidden = !lim && nadalOpen();
+    if(!nadalOpen()) dl.textContent = t.nadalClosed;
+    else if(lim) dl.textContent = t.nadalDeadline + ' ' + shortDate(lim);
+    document.getElementById('bannerLimit').textContent = lim && nadalOpen() ? t.bannerLimit + ' ' + shortDate(lim) + '.' : '';
+    var list = document.getElementById('nadalPickupList'), days = nadalDays();
+    list.innerHTML = '';
+    days.forEach(function(k){
+      var d = parseIso(k), li = document.createElement('li');
+      li.textContent = t.days[d.getDay()] + ' ' + shortDate(d) + ': ' + fmtRanges(NADAL.recollida[k]);
+      list.appendChild(li);
+    });
+    document.getElementById('nadalPickupEmpty').hidden = days.length > 0;
   }
 
   function afterLang(lang, t){
@@ -1671,7 +1769,7 @@
     renderChips(t);
     renderSpecialHours(t);
     renderBoard();
-    if(form) fillTimes();
+    if(form){ if(nadalMode()) renderNadalDays(); fillTimes(); }
   }
 
   document.addEventListener('click', function(ev){
@@ -1748,9 +1846,9 @@
     var radioBtnEl = document.getElementById('radioBtn');
     if(radioBtnEl){ radioBtnEl.setAttribute('aria-label', t.radioBtnLabel); radioBtnEl.title = t.radioBtnLabel; }
 
-    setHTML('promoText', t.promoText);
+    setHTML('promoText', t.promoText.replace(/\{num\}/g, LOTERIA.numero));
     var promoBtn = document.getElementById('promoBtn');
-    if(promoBtn){ promoBtn.textContent = t.promoBtnLabel; promoBtn.href = t.promoWaLink; }
+    if(promoBtn){ promoBtn.textContent = t.promoBtnLabel; promoBtn.href = t.promoWaLink.replace(/\{num\}|%7Bnum%7D/g, LOTERIA.numero); }
     setText('footBrand', t.footBrand);
 
     ['navOrderBtn','heroOrderBtn'].forEach(function(id){
