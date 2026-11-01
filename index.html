@@ -203,7 +203,7 @@
   }
 
   /* ---------- Story ---------- */
-  .story{ padding:clamp(56px,8vw,96px) 0; }
+  .story{ padding:clamp(56px,8vw,96px) 0; border-top:1px solid var(--line); }
   .story-grid{
     display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:start;
   }
@@ -619,8 +619,8 @@
       <a href="#opinions" data-sec="opinions" data-t="navOpinions">Opinions</a>
       <a href="#cuina" data-sec="cuina" data-t="navCuina">Idees per cuinar</a>
       <a href="#professionals" data-sec="professionals" data-t="navPro">Professionals</a>
-      <a href="#visitans" data-sec="visitans" id="navHorario">Horari i ubicació</a>
       <a href="#historia" data-sec="historia com-ho-fem radio" data-t="navQuiSom">Qui som</a>
+      <a href="#visitans" data-sec="visitans" id="navHorario">Horari i ubicació</a>
     </div>
   </nav>
 </header>
@@ -925,59 +925,6 @@
     </div>
   </section>
 
-  <section class="contact" id="visitans">
-    <div class="wrap contact-grid">
-      <div>
-        <p class="eyebrow on-dark" id="contactEyebrow">Visita'ns</p>
-        <h2 id="contactH2">Horari i ubicació</h2>
-        <p class="contact-lead" id="contactLead">Som al bell mig de Castelldefels. Si prefereixes passar directament per la peixateria, aquí tens el nostre horari i com arribar-hi.</p>
-
-        <div class="infoblock">
-          <div class="label" id="labelDireccion">Adreça</div>
-          <a class="value" href="https://www.google.com/maps/search/?api=1&query=Carrer%20de%20la%20Llibertat%2010%2C%2008860%20Castelldefels" target="_blank" rel="noopener">Carrer de la Llibertat, 10 · 08860 Castelldefels &nbsp;↗</a>
-          <a class="value reviews-link" id="reviewsLink" href="https://share.google/4iYkjqqurM3KNHHqT" target="_blank" rel="noopener">Veure ressenyes a Google &nbsp;↗</a>
-        </div>
-
-        <div class="infoblock">
-          <div class="label" id="labelTelefono">Telèfon / WhatsApp</div>
-          <a class="value" href="tel:+34699088213">+34 699 08 82 13</a>
-        </div>
-
-        <div class="infoblock">
-          <div class="label">Instagram</div>
-          <a class="value ig-link" href="https://www.instagram.com/mulhacenpeixeters1954/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>@mulhacenpeixeters1954 &nbsp;↗</a>
-        </div>
-
-        <div class="infoblock">
-          <div class="label" id="labelReparto">Repartiment a domicili</div>
-          <div class="value" id="valueReparto">Fem lliurament a domicili a Castelldefels, concertant l'horari amb tu per WhatsApp. <strong>Gratuït a partir de 50 € de compra</strong>; per a imports inferiors, el lliurament costa 10 €.</div>
-        </div>
-
-        <div class="infoblock">
-          <div class="label" id="labelHorario">Horari</div>
-          <table class="hours">
-            <tr><td class="day" id="hoursDay1">De dimarts a divendres</td><td class="time" id="hoursTime1">8:30–14:00 i 17:00–20:00</td></tr>
-            <tr><td class="day" id="hoursDay2">Dissabte</td><td class="time" id="hoursTime2">8:30–14:00</td></tr>
-            <tr><td class="day" id="hoursDay3">Diumenge i dilluns</td><td class="time" id="hoursTime3">Tancat</td></tr>
-            <tr><td class="day" data-t="hoursDay4">Festius</td><td class="time" data-t="hoursTime3">Tancat</td></tr>
-          </table>
-          <p class="value" id="hoursSpecial" style="margin-top:14px;font-size:14.5px;line-height:1.6;color:var(--gold-light)" hidden></p>
-        </div>
-      </div>
-
-      <div class="whatsapp-card">
-        <svg class="wa-icon" viewBox="0 0 24 24" fill="#D9B98F"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.32A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18a7.94 7.94 0 0 1-4.06-1.11l-.29-.17-3.02.79.8-2.94-.19-.3A7.96 7.96 0 1 1 12 20Zm4.36-5.97c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/></svg>
-        <h3 id="waCardTitle">Escriu-nos i prepara la teva comanda</h3>
-        <p id="waCardBody">Explica'ns quin peix o marisc necessites i com el vols preparat. Et confirmem la disponibilitat i quedem per WhatsApp si el reculls a la botiga o te'l portem a casa, i a quina hora.</p>
-        <a class="btn btn-outline-dark" id="waCardBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20Mulhac%C3%A9n." target="_blank" rel="noopener">Obrir el xat de WhatsApp</a>
-      </div>
-
-      <div class="map-embed">
-        <iframe src="https://maps.google.com/maps?q=Carrer%20de%20la%20Llibertat%2010%2C%2008860%20Castelldefels&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peixateria Mulhacén · Carrer de la Llibertat, 10, Castelldefels"></iframe>
-      </div>
-    </div>
-  </section>
-
   <section class="story" id="historia">
     <div class="wrap story-grid">
       <div class="story-quote" id="storyQuote">
@@ -1068,6 +1015,60 @@
       </div>
     </div>
   </section>
+
+  <section class="contact" id="visitans">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="eyebrow on-dark" id="contactEyebrow">Visita'ns</p>
+        <h2 id="contactH2">Horari i ubicació</h2>
+        <p class="contact-lead" id="contactLead">Som al bell mig de Castelldefels. Si prefereixes passar directament per la peixateria, aquí tens el nostre horari i com arribar-hi.</p>
+
+        <div class="infoblock">
+          <div class="label" id="labelDireccion">Adreça</div>
+          <a class="value" href="https://www.google.com/maps/search/?api=1&query=Carrer%20de%20la%20Llibertat%2010%2C%2008860%20Castelldefels" target="_blank" rel="noopener">Carrer de la Llibertat, 10 · 08860 Castelldefels &nbsp;↗</a>
+          <a class="value reviews-link" id="reviewsLink" href="https://share.google/4iYkjqqurM3KNHHqT" target="_blank" rel="noopener">Veure ressenyes a Google &nbsp;↗</a>
+        </div>
+
+        <div class="infoblock">
+          <div class="label" id="labelTelefono">Telèfon / WhatsApp</div>
+          <a class="value" href="tel:+34699088213">+34 699 08 82 13</a>
+        </div>
+
+        <div class="infoblock">
+          <div class="label">Instagram</div>
+          <a class="value ig-link" href="https://www.instagram.com/mulhacenpeixeters1954/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>@mulhacenpeixeters1954 &nbsp;↗</a>
+        </div>
+
+        <div class="infoblock">
+          <div class="label" id="labelReparto">Repartiment a domicili</div>
+          <div class="value" id="valueReparto">Fem lliurament a domicili a Castelldefels, concertant l'horari amb tu per WhatsApp. <strong>Gratuït a partir de 50 € de compra</strong>; per a imports inferiors, el lliurament costa 10 €.</div>
+        </div>
+
+        <div class="infoblock">
+          <div class="label" id="labelHorario">Horari</div>
+          <table class="hours">
+            <tr><td class="day" id="hoursDay1">De dimarts a divendres</td><td class="time" id="hoursTime1">8:30–14:00 i 17:00–20:00</td></tr>
+            <tr><td class="day" id="hoursDay2">Dissabte</td><td class="time" id="hoursTime2">8:30–14:00</td></tr>
+            <tr><td class="day" id="hoursDay3">Diumenge i dilluns</td><td class="time" id="hoursTime3">Tancat</td></tr>
+            <tr><td class="day" data-t="hoursDay4">Festius</td><td class="time" data-t="hoursTime3">Tancat</td></tr>
+          </table>
+          <p class="value" id="hoursSpecial" style="margin-top:14px;font-size:14.5px;line-height:1.6;color:var(--gold-light)" hidden></p>
+        </div>
+      </div>
+
+      <div class="whatsapp-card">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="#D9B98F"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.32A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18a7.94 7.94 0 0 1-4.06-1.11l-.29-.17-3.02.79.8-2.94-.19-.3A7.96 7.96 0 1 1 12 20Zm4.36-5.97c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/></svg>
+        <h3 id="waCardTitle">Escriu-nos i prepara la teva comanda</h3>
+        <p id="waCardBody">Explica'ns quin peix o marisc necessites i com el vols preparat. Et confirmem la disponibilitat i quedem per WhatsApp si el reculls a la botiga o te'l portem a casa, i a quina hora.</p>
+        <a class="btn btn-outline-dark" id="waCardBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20Mulhac%C3%A9n." target="_blank" rel="noopener">Obrir el xat de WhatsApp</a>
+      </div>
+
+      <div class="map-embed">
+        <iframe src="https://maps.google.com/maps?q=Carrer%20de%20la%20Llibertat%2010%2C%2008860%20Castelldefels&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peixateria Mulhacén · Carrer de la Llibertat, 10, Castelldefels"></iframe>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
