@@ -885,8 +885,9 @@
       <div class="features-head">
         <p class="eyebrow" data-t="cuinaEyebrow">Idees per cuinar</p>
         <h2 data-t="cuinaH2">No saps què fer avui? Te'l deixem a punt</h2>
+        <p class="lead" id="cuinaDaily" data-t="cuinaDaily" style="margin-top:12px;font-size:15.5px;line-height:1.65;color:var(--ink-soft)" hidden>Cada matí, idees noves amb el peix del dia.</p>
       </div>
-      <div class="recipes">
+      <div class="recipes" id="cuinaRecipes">
         <div class="recipe">
           <span class="tag" data-t="r1Tag">Cru · 10 min</span>
           <h3 data-t="r1Title">Tàrtar de ventresca de tonyina</h3>
@@ -1191,7 +1192,7 @@
       cap0:"El taulell, cada matí", capVideo:"Un passeig pel taulell", videoBadge:"Vídeo", videoAria:"Reproduir o aturar el vídeo del taulell",
       cap1:"Escamarlans i llobarro", cap2:"Salmó i tonyina vermella", cap3:"Rèmol i gamba vermella", cap4:"Calamars i llobarro", cap5:"Seitons", cap6:"Cua de rap i musclos",
       galNote:"Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.",
-      lbClose:"Tancar", lbPrev:"Foto anterior", lbNext:"Foto següent", todayPhotos:"Fotos d'avui", photosOf:"Fotos del",
+      lbClose:"Tancar", lbPrev:"Foto anterior", lbNext:"Foto següent", cuinaDaily:"Cada matí, idees noves amb el peix del dia.", todayPhotos:"Fotos d'avui", photosOf:"Fotos del",
       rnEyebrow:"Receptes de Nadal", rnH2:"Idees per a la taula de les festes", rnLead:"Plats clàssics i fàcils perquè el producte llueixi. Toca el botó i ho afegim al teu encàrrec de Nadal.",
       n1Tag:"Entrant · 10 min", n1Title:"Llagostins bullits", n1Body:"Aigua amb molta sal (uns 60 g per litre). Quan bulli, tira-hi els llagostins i, quan torni a arrencar el bull, compta 1-2 minuts segons la mida. Passa'ls a aigua amb gel i sal perquè quedin ferms.", n1Btn:"Encarregar llagostins →", n1Prod:"Llagostins per bullir",
       n2Tag:"Forn · 45 min", n2Title:"Besuc al forn", n2Body:"Fes un llit de patata i ceba a rodanxes i enforna'l 20 minuts. Posa-hi el besuc a sobre amb uns talls de llimona i 20-25 minuts més a 180 °C. Acaba'l amb un sofregit d'all, bitxo i un raig de vinagre.", n2Btn:"Encarregar besuc per al forn →", n2Prod:"Besuc",
@@ -1250,7 +1251,7 @@
       cap0:"El mostrador, cada mañana", capVideo:"Un paseo por el mostrador", videoBadge:"Vídeo", videoAria:"Reproducir o pausar el vídeo del mostrador",
       cap1:"Cigalas y lubina", cap2:"Salmón y atún rojo", cap3:"Rodaballo y gamba roja", cap4:"Calamares y lubina", cap5:"Boquerones", cap6:"Cola de rape y mejillones",
       galNote:"Fotos reales de la tienda. Los precios de los carteles son los del día de la foto.",
-      lbClose:"Cerrar", lbPrev:"Foto anterior", lbNext:"Foto siguiente", todayPhotos:"Fotos de hoy", photosOf:"Fotos del",
+      lbClose:"Cerrar", lbPrev:"Foto anterior", lbNext:"Foto siguiente", cuinaDaily:"Cada mañana, ideas nuevas con el pescado del día.", todayPhotos:"Fotos de hoy", photosOf:"Fotos del",
       rnEyebrow:"Recetas de Navidad", rnH2:"Ideas para la mesa de las fiestas", rnLead:"Platos clásicos y fáciles para que el producto luzca. Toca el botón y lo añadimos a tu encargo de Navidad.",
       n1Tag:"Entrante · 10 min", n1Title:"Langostinos cocidos", n1Body:"Agua con mucha sal (unos 60 g por litro). Cuando hierva, echa los langostinos y, cuando vuelva a romper el hervor, cuenta 1-2 minutos según el tamaño. Pásalos a agua con hielo y sal para que queden firmes.", n1Btn:"Encargar langostinos →", n1Prod:"Langostinos para cocer",
       n2Tag:"Horno · 45 min", n2Title:"Besugo al horno", n2Body:"Haz una cama de patata y cebolla en rodajas y hornéala 20 minutos. Pon el besugo encima con unos cortes de limón y 20-25 minutos más a 180 °C. Termínalo con un refrito de ajo, guindilla y un chorrito de vinagre.", n2Btn:"Encargar besugo para horno →", n2Prod:"Besugo",
@@ -1341,7 +1342,7 @@
       cap0:"Our counter, every morning", capVideo:"A stroll along our counter", videoBadge:"Video", videoAria:"Play or pause the counter video",
       cap1:"Langoustines and sea bass", cap2:"Salmon and bluefin tuna", cap3:"Turbot and red prawns", cap4:"Squid and sea bass", cap5:"Fresh anchovies", cap6:"Monkfish tail and mussels",
       galNote:"Real photos from the shop. Prices on the labels are from the day the photo was taken.",
-      lbClose:"Close", lbPrev:"Previous photo", lbNext:"Next photo", todayPhotos:"Today's photos", photosOf:"Photos from",
+      lbClose:"Close", lbPrev:"Previous photo", lbNext:"Next photo", cuinaDaily:"Fresh ideas every morning, using today's catch.", todayPhotos:"Today's photos", photosOf:"Photos from",
       rnEyebrow:"Christmas recipes", rnH2:"Ideas for your holiday table", rnLead:"Classic, easy dishes that let the produce shine. Tap the button and we'll add it to your Christmas order.",
       n1Tag:"Starter · 10 min", n1Title:"Boiled prawns", n1Body:"Very salty water (about 60 g per litre). When it boils, add the prawns and, once it comes back to the boil, count 1-2 minutes depending on size. Move them to iced salted water so they stay firm.", n1Btn:"Order prawns →", n1Prod:"Prawns for boiling",
       n2Tag:"Oven · 45 min", n2Title:"Baked sea bream", n2Body:"Make a bed of sliced potato and onion and bake it for 20 minutes. Lay the bream on top with a few lemon slices and give it 20-25 more minutes at 180 °C. Finish with garlic and chilli fried in oil with a dash of vinegar.", n2Btn:"Order bream for the oven →", n2Prod:"Sea bream (besugo)",
@@ -1867,6 +1868,7 @@
     renderSpecialHours(t);
     renderBoard();
     renderTodayPhotos();
+    renderDailyRecipes();
     if(form){ if(nadalMode()) renderNadalDays(); fillTimes(); }
   }
 
@@ -1912,6 +1914,34 @@
       todayPhotos = { data:parseIso(j.data), fotos:j.fotos.filter(function(f){ return f && f.petita && f.gran; }) };
       renderTodayPhotos();
       keepHashTarget();
+    }).catch(function(){});
+  }
+
+  var dailyRecipes = [];
+  function renderDailyRecipes(){
+    if(!dailyRecipes.length) return;
+    var box = document.getElementById('cuinaRecipes');
+    box.innerHTML = '';
+    dailyRecipes.forEach(function(r){
+      var t = r[curLang] || r.ca;
+      var card = document.createElement('div'); card.className = 'recipe';
+      var tag = document.createElement('span'); tag.className = 'tag'; tag.textContent = t.tag;
+      var h = document.createElement('h3'); h.textContent = t.title;
+      var p = document.createElement('p'); p.textContent = t.body;
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'link-btn'; b.textContent = t.btn;
+      b.addEventListener('click', function(){ addToOrder((r[curLang] || r.ca).prod, PREPS.indexOf(r.prep) >= 0 ? r.prep : ''); track('recepta-dia'); });
+      card.appendChild(tag); card.appendChild(h); card.appendChild(p); card.appendChild(b);
+      box.appendChild(card);
+    });
+    document.getElementById('cuinaDaily').hidden = false;
+  }
+  if(window.fetch){
+    fetch('receptes/avui.json?v=' + Date.now(), { cache:'no-store' }).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
+      var ok = function(x){ return x && typeof x.tag === 'string' && typeof x.title === 'string' && typeof x.body === 'string' && typeof x.btn === 'string' && typeof x.prod === 'string'; };
+      var list = (j && j.receptes || []).filter(function(r){ return ok(r.ca) && ok(r.es) && ok(r.en); });
+      if(list.length < 3) return;
+      dailyRecipes = list.slice(0, 5);
+      renderDailyRecipes();
     }).catch(function(){});
   }
 
