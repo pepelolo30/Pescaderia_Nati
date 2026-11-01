@@ -398,7 +398,8 @@
     background:linear-gradient(to top, rgba(44,29,20,0.88), rgba(44,29,20,0));
     font-family:"Playfair Display", Georgia, serif; font-style:italic; font-size:clamp(20px,2.6vw,30px); color:var(--paper);
   }
-  .gallery{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .shop-gallery{ margin-top:clamp(40px,6vw,64px); margin-bottom:clamp(24px,4vw,40px); }
+  .gallery{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; grid-auto-flow:dense; }
   .tile{
     position:relative; margin:0; border-radius:4px; overflow:hidden; background:var(--marine);
     aspect-ratio:4 / 5; cursor:zoom-in; border:none; padding:0; display:block; width:100%; font:inherit;
@@ -615,7 +616,6 @@
       <a href="#avui" data-sec="avui" data-t="navAvui">Avui tenim</a>
       <a href="#nadal" data-sec="nadal receptes-nadal" id="navNadal" data-t="navNadal">Nadal</a>
       <a href="#encarrec" data-sec="encarrec" data-t="navEncarrec">Encàrrec</a>
-      <a href="#taulell" data-sec="taulell" data-t="navTaulell">El taulell</a>
       <a href="#opinions" data-sec="opinions" data-t="navOpinions">Opinions</a>
       <a href="#cuina" data-sec="cuina" data-t="navCuina">Idees per cuinar</a>
       <a href="#professionals" data-sec="professionals" data-t="navPro">Professionals</a>
@@ -814,35 +814,6 @@
     </div>
   </section>
 
-  <section class="section" id="taulell">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow" data-t="galEyebrow">El nostre taulell</p>
-        <h2 data-t="galH2">Producte de llotja, tal com el veuràs a la botiga</h2>
-        <p class="lead" data-t="galLead">Res d'imatges de catàleg: aquest és el peix i el marisc que preparem cada matí al carrer de la Llibertat.</p>
-      </div>
-      <figure class="gallery-banner">
-        <img src="img/taulell-1600.webp" srcset="img/taulell-900.webp 900w, img/taulell-1600.webp 1600w" sizes="(max-width:1120px) 100vw, 1008px" width="1600" height="800" loading="lazy" decoding="async" alt="" data-t-alt="cap0">
-        <figcaption data-t="cap0">El taulell, cada matí</figcaption>
-      </figure>
-      <div class="gallery" id="gallery">
-        <div class="tile tile-video" id="videoTile" role="button" tabindex="0" data-t-aria="videoAria">
-          <video id="taulellVideo" src="video/taulell.mp4" poster="img/seitons-480.webp" muted loop playsinline preload="none"></video>
-          <span class="badge" data-t="videoBadge">Vídeo</span>
-          <span class="cap" data-t="capVideo">Un passeig pel taulell</span>
-        </div>
-        <button type="button" class="tile" data-full="img/llobarro-escamarlans-800.webp" data-cap="cap1"><img src="img/llobarro-escamarlans-480.webp" srcset="img/llobarro-escamarlans-480.webp 480w, img/llobarro-escamarlans-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap1"><span class="cap" data-t="cap1">Escamarlans i llobarro</span></button>
-        <button type="button" class="tile" data-full="img/salmo-800.webp" data-cap="cap2"><img src="img/salmo-480.webp" srcset="img/salmo-480.webp 480w, img/salmo-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap2"><span class="cap" data-t="cap2">Salmó i tonyina vermella</span></button>
-        <button type="button" class="tile" data-full="img/remol-gamba-800.webp" data-cap="cap3"><img src="img/remol-gamba-480.webp" srcset="img/remol-gamba-480.webp 480w, img/remol-gamba-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap3"><span class="cap" data-t="cap3">Rèmol i gamba vermella</span></button>
-        <button type="button" class="tile" data-full="img/calamars-800.webp" data-cap="cap4"><img src="img/calamars-480.webp" srcset="img/calamars-480.webp 480w, img/calamars-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap4"><span class="cap" data-t="cap4">Calamars i llobarro</span></button>
-        <button type="button" class="tile" data-full="img/seitons-800.webp" data-cap="cap5"><img src="img/seitons-480.webp" srcset="img/seitons-480.webp 480w, img/seitons-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap5"><span class="cap" data-t="cap5">Seitons</span></button>
-        <button type="button" class="tile" data-full="img/rap-musclos-800.webp" data-cap="cap6"><img src="img/rap-musclos-480.webp" srcset="img/rap-musclos-480.webp 480w, img/rap-musclos-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap6"><span class="cap" data-t="cap6">Cua de rap i musclos</span></button>
-      </div>
-      <p class="swipe-hint" data-t="swipeHint">Llisca per veure'n més →</p>
-      <p class="gallery-note" data-t="galNote">Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.</p>
-    </div>
-  </section>
-
   <dialog class="lightbox" id="lightbox">
     <figure>
       <img id="lbImg" src="" alt="">
@@ -1016,6 +987,28 @@
         <p id="storyP1">A la Peixateria Mulhacén sabem que el bon peix no s'improvisa. Des del <strong>1954</strong>, el nostre compromís ha estat el mateix: seleccionar minuciosament la millor captura del dia per portar a la teva taula un producte excepcional, amb el gust i la frescor que cada vegada costa més de trobar. Per a nosaltres, vendre peix no és només un ofici, és una passió per oferir-te el millor de la zona.</p>
       </div>
     </div>
+    <div class="wrap shop-gallery" id="botiga">
+      <div class="section-head">
+        <p class="eyebrow" data-t="galEyebrow">La botiga i l'equip</p>
+        <h2 data-t="galH2">Qui hi ha darrere del taulell</h2>
+        <p class="lead" data-t="galLead">Fotos reals de la botiga, del taulell i de la gent que t'atén cada dia al carrer de la Llibertat.</p>
+      </div>
+      <div class="gallery" id="gallery">
+        <div class="tile tile-video" id="videoTile" role="button" tabindex="0" data-t-aria="videoAria">
+          <video id="taulellVideo" src="video/taulell.mp4" poster="img/seitons-480.webp" muted loop playsinline preload="none"></video>
+          <span class="badge" data-t="videoBadge">Vídeo</span>
+          <span class="cap" data-t="capVideo">Un passeig pel taulell</span>
+        </div>
+        <button type="button" class="tile" data-full="img/llobarro-escamarlans-800.webp" data-cap="cap1"><img src="img/llobarro-escamarlans-480.webp" srcset="img/llobarro-escamarlans-480.webp 480w, img/llobarro-escamarlans-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap1"><span class="cap" data-t="cap1">Escamarlans i llobarro</span></button>
+        <button type="button" class="tile" data-full="img/salmo-800.webp" data-cap="cap2"><img src="img/salmo-480.webp" srcset="img/salmo-480.webp 480w, img/salmo-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap2"><span class="cap" data-t="cap2">Salmó i tonyina vermella</span></button>
+        <button type="button" class="tile" data-full="img/remol-gamba-800.webp" data-cap="cap3"><img src="img/remol-gamba-480.webp" srcset="img/remol-gamba-480.webp 480w, img/remol-gamba-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap3"><span class="cap" data-t="cap3">Rèmol i gamba vermella</span></button>
+        <button type="button" class="tile" data-full="img/calamars-800.webp" data-cap="cap4"><img src="img/calamars-480.webp" srcset="img/calamars-480.webp 480w, img/calamars-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap4"><span class="cap" data-t="cap4">Calamars i llobarro</span></button>
+        <button type="button" class="tile" data-full="img/seitons-800.webp" data-cap="cap5"><img src="img/seitons-480.webp" srcset="img/seitons-480.webp 480w, img/seitons-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap5"><span class="cap" data-t="cap5">Seitons</span></button>
+        <button type="button" class="tile" data-full="img/rap-musclos-800.webp" data-cap="cap6"><img src="img/rap-musclos-480.webp" srcset="img/rap-musclos-480.webp 480w, img/rap-musclos-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap6"><span class="cap" data-t="cap6">Cua de rap i musclos</span></button>
+      </div>
+      <p class="swipe-hint" data-t="swipeHint">Llisca per veure'n més →</p>
+      <p class="gallery-note" data-t="galNote">Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.</p>
+    </div>
     <div class="wrap">
       <details class="more" id="com-ho-fem">
         <summary data-t="storyMore">Llegir més sobre nosaltres</summary>
@@ -1187,9 +1180,9 @@
       nadalStep2:"T'ho confirmem per WhatsApp amb la disponibilitat.",
       nadalStep3:"Passes a recollir-ho a l'hora acordada, ja preparat.",
       nadalBtn:"Fer l'encàrrec de Nadal", nadalDeadline:"Encàrrecs fins al", nadalFlag:"És un encàrrec de Nadal",
-      galEyebrow:"El nostre taulell", galH2:"Producte de llotja, tal com el veuràs a la botiga",
-      galLead:"Res d'imatges de catàleg: aquest és el peix i el marisc que preparem cada matí al carrer de la Llibertat.",
-      cap0:"El taulell, cada matí", capVideo:"Un passeig pel taulell", videoBadge:"Vídeo", videoAria:"Reproduir o aturar el vídeo del taulell",
+      galEyebrow:"La botiga i l'equip", galH2:"Qui hi ha darrere del taulell",
+      galLead:"Fotos reals de la botiga, del taulell i de la gent que t'atén cada dia al carrer de la Llibertat.",
+      cap0:"El taulell, cada matí", capVideo:"Un passeig pel taulell", videoBadge:"Vídeo", videoAria:"Reproduir o aturar el vídeo",
       cap1:"Escamarlans i llobarro", cap2:"Salmó i tonyina vermella", cap3:"Rèmol i gamba vermella", cap4:"Calamars i llobarro", cap5:"Seitons", cap6:"Cua de rap i musclos",
       galNote:"Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.",
       lbClose:"Tancar", lbPrev:"Foto anterior", lbNext:"Foto següent", cuinaDaily:"Cada matí, idees noves amb el peix del dia.", todayPhotos:"Fotos d'avui", photosOf:"Fotos del",
@@ -1246,9 +1239,9 @@
       nadalStep2:"Te lo confirmamos por WhatsApp con la disponibilidad.",
       nadalStep3:"Pasas a recogerlo a la hora acordada, ya preparado.",
       nadalBtn:"Hacer el encargo de Navidad", nadalDeadline:"Encargos hasta el", nadalFlag:"Es un encargo de Navidad",
-      galEyebrow:"Nuestro mostrador", galH2:"Producto de lonja, tal y como lo verás en la tienda",
-      galLead:"Nada de imágenes de catálogo: este es el pescado y el marisco que preparamos cada mañana en la calle Llibertat.",
-      cap0:"El mostrador, cada mañana", capVideo:"Un paseo por el mostrador", videoBadge:"Vídeo", videoAria:"Reproducir o pausar el vídeo del mostrador",
+      galEyebrow:"La tienda y el equipo", galH2:"Quién hay detrás del mostrador",
+      galLead:"Fotos reales de la tienda, del mostrador y de la gente que te atiende cada día en la calle Llibertat.",
+      cap0:"El mostrador, cada mañana", capVideo:"Un paseo por el mostrador", videoBadge:"Vídeo", videoAria:"Reproducir o pausar el vídeo",
       cap1:"Cigalas y lubina", cap2:"Salmón y atún rojo", cap3:"Rodaballo y gamba roja", cap4:"Calamares y lubina", cap5:"Boquerones", cap6:"Cola de rape y mejillones",
       galNote:"Fotos reales de la tienda. Los precios de los carteles son los del día de la foto.",
       lbClose:"Cerrar", lbPrev:"Foto anterior", lbNext:"Foto siguiente", cuinaDaily:"Cada mañana, ideas nuevas con el pescado del día.", todayPhotos:"Fotos de hoy", photosOf:"Fotos del",
@@ -1337,9 +1330,9 @@
       nadalStep2:"We confirm availability on WhatsApp.",
       nadalStep3:"Pick it up at the agreed time, ready to go.",
       nadalBtn:"Place my Christmas order", nadalDeadline:"Orders until", nadalFlag:"This is a Christmas order",
-      galEyebrow:"Our counter", galH2:"Fresh from the fish market, just as you'll see it in the shop",
-      galLead:"No stock photos: this is the fish and seafood we prepare every morning on Carrer de la Llibertat.",
-      cap0:"Our counter, every morning", capVideo:"A stroll along our counter", videoBadge:"Video", videoAria:"Play or pause the counter video",
+      galEyebrow:"The shop and the team", galH2:"Who's behind the counter",
+      galLead:"Real photos of the shop, the counter and the people who serve you every day on Carrer de la Llibertat.",
+      cap0:"Our counter, every morning", capVideo:"A stroll along our counter", videoBadge:"Video", videoAria:"Play or pause the video",
       cap1:"Langoustines and sea bass", cap2:"Salmon and bluefin tuna", cap3:"Turbot and red prawns", cap4:"Squid and sea bass", cap5:"Fresh anchovies", cap6:"Monkfish tail and mussels",
       galNote:"Real photos from the shop. Prices on the labels are from the day the photo was taken.",
       lbClose:"Close", lbPrev:"Previous photo", lbNext:"Next photo", cuinaDaily:"Fresh ideas every morning, using today's catch.", todayPhotos:"Today's photos", photosOf:"Photos from",
@@ -1408,19 +1401,29 @@
   }
 
   var lb = document.getElementById('lightbox');
-  var tiles = Array.prototype.slice.call(document.querySelectorAll('#gallery button.tile'));
-  var lbIndex = 0;
+  var gallery = document.getElementById('gallery');
+  var lbItems = [], lbIndex = 0;
+  function capOf(tile){ return T[curLang][tile.getAttribute('data-cap')] || ''; }
   function showLb(i){
-    lbIndex = (i + tiles.length) % tiles.length;
-    var tile = tiles[lbIndex];
+    if(!lbItems.length || lb.classList.contains('single')) return;
+    lbIndex = (i + lbItems.length) % lbItems.length;
+    var tile = lbItems[lbIndex];
     document.getElementById('lbImg').src = tile.getAttribute('data-full');
-    document.getElementById('lbImg').alt = T[curLang][tile.getAttribute('data-cap')];
-    document.getElementById('lbCap').textContent = T[curLang][tile.getAttribute('data-cap')];
+    document.getElementById('lbImg').alt = capOf(tile);
+    document.getElementById('lbCap').textContent = capOf(tile);
+  }
+  if(gallery){
+    gallery.addEventListener('click', function(ev){
+      var tile = ev.target.closest ? ev.target.closest('button.tile') : null;
+      if(!tile || !gallery.contains(tile)) return;
+      track('galeria/' + (tile.getAttribute('data-track') || tile.getAttribute('data-cap')));
+      if(!lb || !lb.showModal){ window.open(tile.getAttribute('data-full'), '_blank'); return; }
+      lbItems = Array.prototype.slice.call(gallery.querySelectorAll('button.tile'));
+      showLb(lbItems.indexOf(tile));
+      lb.showModal();
+    });
   }
   if(lb && lb.showModal){
-    tiles.forEach(function(tile, i){
-      tile.addEventListener('click', function(){ showLb(i); lb.showModal(); track('galeria/' + tile.getAttribute('data-cap')); });
-    });
     document.getElementById('lbClose').addEventListener('click', function(){ lb.close(); });
     lb.addEventListener('close', function(){ lb.classList.remove('single'); });
     document.getElementById('lbPrev').addEventListener('click', function(){ showLb(lbIndex - 1); });
@@ -1438,26 +1441,54 @@
       if(Math.abs(dx) > 50) showLb(lbIndex + (dx < 0 ? 1 : -1));
       touchX = null;
     });
-  } else {
-    tiles.forEach(function(tile){ tile.addEventListener('click', function(){ window.open(tile.getAttribute('data-full'), '_blank'); }); });
   }
 
-  var vid = document.getElementById('taulellVideo');
-  var vidTile = document.getElementById('videoTile');
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var vidPaused = reduceMotion;
-  function playVid(){ if(vid.paused){ var p = vid.play(); if(p && p.catch) p.catch(function(){}); } }
-  if(vid && vidTile){
+  function setupVideo(tile){
+    var vid = tile.querySelector('video');
+    if(!vid) return;
+    var paused = reduceMotion;
+    function play(){ if(vid.paused){ var p = vid.play(); if(p && p.catch) p.catch(function(){}); } }
     if('IntersectionObserver' in window){
       new IntersectionObserver(function(entries){
-        entries.forEach(function(e){ if(e.isIntersecting && !vidPaused) playVid(); else if(!e.isIntersecting) vid.pause(); });
-      }, { threshold:0.4 }).observe(vidTile);
+        entries.forEach(function(e){ if(e.isIntersecting && !paused) play(); else if(!e.isIntersecting) vid.pause(); });
+      }, { threshold:0.4 }).observe(tile);
     }
-    function toggleVid(){
-      if(vid.paused){ vidPaused = false; playVid(); track('galeria/video'); } else { vidPaused = true; vid.pause(); }
+    function toggle(){
+      if(vid.paused){ paused = false; play(); track('galeria/video'); } else { paused = true; vid.pause(); }
     }
-    vidTile.addEventListener('click', toggleVid);
-    vidTile.addEventListener('keydown', function(ev){ if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); toggleVid(); } });
+    tile.addEventListener('click', toggle);
+    tile.addEventListener('keydown', function(ev){ if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); toggle(); } });
+  }
+  if(gallery) Array.prototype.forEach.call(gallery.querySelectorAll('.tile-video'), setupVideo);
+
+  if(window.fetch && gallery){
+    fetch('botiga/fotos.json?v=' + Date.now(), { cache:'no-store' }).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
+      if(!j || !j.items || !j.items.length) return;
+      var first = gallery.firstChild;
+      j.items.forEach(function(it){
+        var el;
+        if(it && it.tipus === 'video' && it.video){
+          el = document.createElement('div'); el.className = 'tile tile-video'; el.setAttribute('role', 'button'); el.tabIndex = 0;
+          el.setAttribute('data-t-aria', 'videoAria');
+          var v = document.createElement('video'); v.src = it.video; if(it.poster) v.poster = it.poster;
+          v.muted = true; v.loop = true; v.preload = 'none'; v.setAttribute('playsinline', ''); v.setAttribute('muted', '');
+          var badge = document.createElement('span'); badge.className = 'badge'; badge.setAttribute('data-t', 'videoBadge');
+          el.appendChild(v); el.appendChild(badge);
+          gallery.insertBefore(el, first);
+          setupVideo(el);
+        } else if(it && it.petita && it.gran){
+          el = document.createElement('button'); el.type = 'button'; el.className = 'tile';
+          el.setAttribute('data-full', it.gran); el.setAttribute('data-cap', 'galEyebrow'); el.setAttribute('data-track', 'botiga');
+          var img = document.createElement('img'); img.src = it.petita; img.loading = 'lazy'; img.decoding = 'async';
+          img.width = 480; img.height = 600; img.setAttribute('data-t-alt', 'galEyebrow');
+          el.appendChild(img);
+          gallery.insertBefore(el, first);
+        }
+      });
+      translateIn(gallery, T[curLang]);
+      keepHashTarget();
+    }).catch(function(){});
   }
 
   function pad(n){ return (n<10?'0':'')+n; }
