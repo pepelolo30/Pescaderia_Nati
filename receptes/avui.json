@@ -1,0 +1,102 @@
+{
+ "data": "2026-11-01",
+ "font": "receptari",
+ "receptes": [
+  {
+   "prep": "forn",
+   "ca": {
+    "tag": "Forn · 45 min",
+    "title": "Llobarro al forn amb patates",
+    "body": "Enforna patata i ceba a làmines 25 minuts. Posa-hi el llobarro amb all, julivert i un raig de vi blanc, i 15 minuts més a 190 °C.",
+    "btn": "Encarregar llobarro →",
+    "prod": "Llobarro per al forn"
+   },
+   "es": {
+    "tag": "Horno · 45 min",
+    "title": "Lubina al horno con patatas",
+    "body": "Hornea patata y cebolla en láminas 25 minutos. Pon encima la lubina con ajo, perejil y un chorrito de vino blanco, y 15 minutos más a 190 °C.",
+    "btn": "Encargar lubina →",
+    "prod": "Lubina para horno"
+   },
+   "en": {
+    "tag": "Oven · 45 min",
+    "title": "Baked sea bass with potatoes",
+    "body": "Bake sliced potato and onion for 25 minutes. Lay the sea bass on top with garlic, parsley and white wine, and 15 more minutes at 190 °C.",
+    "btn": "Order sea bass →",
+    "prod": "Sea bass for the oven"
+   }
+  },
+  {
+   "prep": "planxa",
+   "ca": {
+    "tag": "Planxa · 8 min",
+    "title": "Escamarlans a la planxa",
+    "body": "Obre'ls per la meitat, posa-hi un fil d'oli i sal, i a la planxa ben calenta 2 minuts per la carn i 1 per la closca.",
+    "btn": "Encarregar escamarlans →",
+    "prod": "Escamarlans"
+   },
+   "es": {
+    "tag": "Plancha · 8 min",
+    "title": "Cigalas a la plancha",
+    "body": "Ábrelas por la mitad, un hilo de aceite y sal, y a la plancha bien caliente 2 minutos por la carne y 1 por el caparazón.",
+    "btn": "Encargar cigalas →",
+    "prod": "Cigalas"
+   },
+   "en": {
+    "tag": "Grill · 8 min",
+    "title": "Grilled langoustines",
+    "body": "Split them in half, add a drizzle of oil and salt, and grill on a very hot griddle 2 minutes flesh side and 1 on the shell.",
+    "btn": "Order langoustines →",
+    "prod": "Langoustines"
+   }
+  },
+  {
+   "prep": "net",
+   "ca": {
+    "tag": "Fideuà · 40 min",
+    "title": "Fideuà",
+    "body": "Daura els fideus en oli, sofregeix-hi el peix i el marisc, afegeix fumet calent i deixa-ho 10 minuts. Uns minuts de forn i allioli.",
+    "btn": "Encarregar per a fideuà →",
+    "prod": "Peix i marisc per a fideuà"
+   },
+   "es": {
+    "tag": "Fideuá · 40 min",
+    "title": "Fideuá",
+    "body": "Dora los fideos en aceite, sofríe el pescado y el marisco, añade fumet caliente y deja 10 minutos. Unos minutos de horno y alioli.",
+    "btn": "Encargar para fideuá →",
+    "prod": "Pescado y marisco para fideuá"
+   },
+   "en": {
+    "tag": "Noodles · 40 min",
+    "title": "Seafood fideuà",
+    "body": "Toast the thin noodles in oil, fry the fish and seafood, add hot stock and cook 10 minutes. A few minutes in the oven and aioli.",
+    "btn": "Order for fideuà →",
+    "prod": "Fish and seafood for fideuà"
+   }
+  },
+  {
+   "prep": "filets",
+   "ca": {
+    "tag": "Marinat · 1 dia",
+    "title": "Seitons en vinagre",
+    "body": "Congela'ls 5 dies abans per seguretat. Deixa'ls en vinagre i sal 8 hores, escorre'ls i cobreix-los d'oli amb all i julivert.",
+    "btn": "Encarregar seitons →",
+    "prod": "Seitons a filets"
+   },
+   "es": {
+    "tag": "Marinado · 1 día",
+    "title": "Boquerones en vinagre",
+    "body": "Congélalos 5 días antes por seguridad. Déjalos en vinagre y sal 8 horas, escúrrelos y cúbrelos de aceite con ajo y perejil.",
+    "btn": "Encargar boquerones →",
+    "prod": "Boquerones en filetes"
+   },
+   "en": {
+    "tag": "Marinated · 1 day",
+    "title": "Anchovies in vinegar",
+    "body": "Freeze them for 5 days first for safety. Leave in vinegar and salt for 8 hours, drain and cover with oil, garlic and parsley.",
+    "btn": "Order anchovies →",
+    "prod": "Anchovy fillets"
+   }
+  }
+ ]
+}
