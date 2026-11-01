@@ -1,101 +1,101 @@
 {
  "data": "2026-11-01",
- "font": "receptari",
+ "font": "ia",
  "receptes": [
-  {
-   "prep": "",
-   "ca": {
-    "tag": "Cassola · 10 min",
-    "title": "Gambes a l'all",
-    "body": "Pela-les i posa-les en oli calent amb làmines d'all i un bitxo. Quan canviïn de color, julivert i a taula, amb pa per sucar.",
-    "btn": "Encarregar gambes →",
-    "prod": "Gambes per pelar"
-   },
-   "es": {
-    "tag": "Cazuela · 10 min",
-    "title": "Gambas al ajillo",
-    "body": "Pélalas y ponlas en aceite caliente con láminas de ajo y una guindilla. Cuando cambien de color, perejil y a la mesa, con pan para mojar.",
-    "btn": "Encargar gambas →",
-    "prod": "Gambas para pelar"
-   },
-   "en": {
-    "tag": "Pan · 10 min",
-    "title": "Garlic prawns",
-    "body": "Peel them and add to hot oil with sliced garlic and a chilli. When they change colour, add parsley and serve with bread.",
-    "btn": "Order prawns →",
-    "prod": "Prawns to peel"
-   }
-  },
   {
    "prep": "net",
    "ca": {
-    "tag": "Fregit · 20 min",
-    "title": "Calamars a la romana",
-    "body": "Talla'ls a anelles, passa'ls per farina i ou batut i fregeix-los en oli ben calent fins que siguin daurats. Servits amb llimona.",
-    "btn": "Encarregar calamars →",
-    "prod": "Calamars nets"
+    "tag": "Paella · 35 min",
+    "title": "Escamarlans amb arrossejat",
+    "body": "Sofreix un bon all i tomàquet ratllat en una cassola baixa. Afegeix l'arròs, aboca brou de peix calent i disposa els crustacis a sobre durant els últims minuts de cocció.",
+    "btn": "Encarregar escamarlans →",
+    "prod": "Escamarlans"
    },
    "es": {
-    "tag": "Frito · 20 min",
-    "title": "Calamares a la romana",
-    "body": "Córtalos en anillas, pásalos por harina y huevo batido y fríelos en aceite bien caliente hasta dorarlos. Con limón.",
-    "btn": "Encargar calamares →",
-    "prod": "Calamares limpios"
+    "tag": "Arroz · 35 min",
+    "title": "Escamarlanes con arroz",
+    "body": "Sofríe ajo picado y tomate rallado en una cazuela baja. Añade el arroz, vierte caldo de pescado caliente y coloca los crustáceos encima durante los últimos minutos de cocción.",
+    "btn": "Encargar cigalas →",
+    "prod": "Cigalas"
    },
    "en": {
-    "tag": "Fried · 20 min",
-    "title": "Fried calamari rings",
-    "body": "Cut into rings, dip in flour and beaten egg and fry in very hot oil until golden. Serve with lemon.",
-    "btn": "Order squid →",
-    "prod": "Cleaned squid"
+    "tag": "Rice · 35 min",
+    "title": "Rice with langoustines",
+    "body": "Sauté minced garlic and grated tomato in a shallow casserole dish. Add the rice, pour in hot fish broth, and arrange the crustaceans on top for the final minutes of cooking.",
+    "btn": "Order langoustines →",
+    "prod": "Langoustines"
    }
   },
   {
-   "prep": "sopa",
+   "prep": "cru",
    "ca": {
-    "tag": "Sopa · 50 min",
-    "title": "Sopa de peix",
-    "body": "Fes un fumet amb peix de roca, cola'l i torna-hi a posar trossets de peix net i una mica d'arròs. Acaba amb julivert i un raig de llimona.",
-    "btn": "Encarregar per a sopa →",
-    "prod": "Peix per a sopa"
+    "tag": "Marinada · 20 min",
+    "title": "Seitons en vinagre casolans",
+    "body": "Recorda congelar el peix prèviament per seguretat alimentària. Neteja bé els lloms, cobreix-los amb vinagre i aigua durant hores i després amaneix amb all, julivert i oli d'oliva.",
+    "btn": "Encarregar seitons →",
+    "prod": "Seitons"
    },
    "es": {
-    "tag": "Sopa · 50 min",
-    "title": "Sopa de pescado",
-    "body": "Haz un fumet con pescado de roca, cuélalo y vuelve a añadir trocitos de pescado limpio y un poco de arroz. Termina con perejil y limón.",
-    "btn": "Encargar para sopa →",
-    "prod": "Pescado para sopa"
+    "tag": "Marinado · 20 min",
+    "title": "Boquerones en vinagre caseros",
+    "body": "Recuerda congelar el pescado previamente por seguridad alimentaria. Limpia bien los lomos, cúbrelos con vinagre y agua durante horas y después alinea con ajo, perejil y aceite de oliva.",
+    "btn": "Encargar boquerones →",
+    "prod": "Boquerones"
    },
    "en": {
-    "tag": "Soup · 50 min",
-    "title": "Fish soup",
-    "body": "Make a rockfish stock, strain it and add bite-size pieces of clean fish and a little rice. Finish with parsley and lemon.",
-    "btn": "Order for soup →",
-    "prod": "Fish for soup"
+    "tag": "Cured · 20 min",
+    "title": "Homemade marinated anchovies",
+    "body": "Remember to freeze the fish beforehand for food safety. Clean the fillets well, cover them with vinegar and water for hours, and then dress with garlic, parsley, and olive oil.",
+    "btn": "Order anchovies →",
+    "prod": "Anchovies"
    }
   },
   {
    "prep": "filets",
    "ca": {
-    "tag": "Forn · 20 min",
-    "title": "Salmó en papillot",
-    "body": "Posa el filet sobre paper de forn amb verdures a tires, oli i una branca d'anet. Tanca el paquet i forn a 200 °C 12 minuts.",
+    "tag": "Paella · 20 min",
+    "title": "Salmó amb salsa de taronja",
+    "body": "Marca els filets de salmó per la banda de la pell en una paella calenta amb un rajolí d'oli. Retira el peix i redueix suc de taronja fresc amb un pessic de sucre i mantega a la mateixa paella.",
     "btn": "Encarregar salmó →",
-    "prod": "Salmó a filets"
+    "prod": "Salmó"
    },
    "es": {
-    "tag": "Horno · 20 min",
-    "title": "Salmón en papillote",
-    "body": "Pon el filete sobre papel de horno con verduras en tiras, aceite y una rama de eneldo. Cierra el paquete y horno a 200 °C 12 minutos.",
+    "tag": "Sartén · 20 min",
+    "title": "Salmón con salsa de naranja",
+    "body": "Marca los filetes de salmón por el lado de la piel en una sartén caliente con un chorrito de aceite. Retira el pescado y reduce zumo de naranja fresco con una pizca de azúcar y mantequilla en la misma sartén.",
     "btn": "Encargar salmón →",
-    "prod": "Salmón en filetes"
+    "prod": "Salmón"
    },
    "en": {
-    "tag": "Oven · 20 min",
-    "title": "Salmon en papillote",
-    "body": "Place the fillet on baking paper with vegetable strips, olive oil and dill. Seal the parcel and bake at 200 °C for 12 minutes.",
+    "tag": "Pan · 20 min",
+    "title": "Salmon with orange sauce",
+    "body": "Sear the salmon fillets skin-side down in a hot pan with a drizzle of oil. Remove the fish and reduce fresh orange juice with a pinch of sugar and butter in the same pan.",
     "btn": "Order salmon →",
-    "prod": "Salmon fillets"
+    "prod": "Salmon"
+   }
+  },
+  {
+   "prep": "net",
+   "ca": {
+    "tag": "Cassola · 15 min",
+    "title": "Musclos a la marinera",
+    "body": "Dorava ceba i all picats amb una culleradeta de pebre vermell en una cassola ampla. Incorpora els musclos nets amb un raig de vi blanc, tapa i espera que s'obrin amb el vapor.",
+    "btn": "Encarregar musclos →",
+    "prod": "Musclos"
+   },
+   "es": {
+    "tag": "Cazuela · 15 min",
+    "title": "Mejillones a la marinera",
+    "body": "Dora cebolla y ajo picados con una cucharadita de pimentón en una cazuela ancha. Incorpora los mejillones limpios con un chorro de vino blanco, tapa y espera a que se abran con el vapor.",
+    "btn": "Encargar mejillones →",
+    "prod": "Mejillones"
+   },
+   "en": {
+    "tag": "Pot · 15 min",
+    "title": "Mussels marinara style",
+    "body": "Sauté chopped onion and garlic with a teaspoon of paprika in a wide pot. Add the clean mussels with a splash of white wine, cover, and wait for them to open with the steam.",
+    "btn": "Order mussels →",
+    "prod": "Mussels"
    }
   }
  ]
