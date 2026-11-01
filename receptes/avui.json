@@ -5,97 +5,97 @@
   {
    "prep": "net",
    "ca": {
-    "tag": "Paella · 35 min",
-    "title": "Escamarlans amb arrossejat",
-    "body": "Sofreix un bon all i tomàquet ratllat en una cassola baixa. Afegeix l'arròs, aboca brou de peix calent i disposa els crustacis a sobre durant els últims minuts de cocció.",
-    "btn": "Encarregar escamarlans →",
-    "prod": "Escamarlans"
-   },
-   "es": {
-    "tag": "Arroz · 35 min",
-    "title": "Escamarlanes con arroz",
-    "body": "Sofríe ajo picado y tomate rallado en una cazuela baja. Añade el arroz, vierte caldo de pescado caliente y coloca los crustáceos encima durante los últimos minutos de cocción.",
-    "btn": "Encargar cigalas →",
-    "prod": "Cigalas"
-   },
-   "en": {
-    "tag": "Rice · 35 min",
-    "title": "Rice with langoustines",
-    "body": "Sauté minced garlic and grated tomato in a shallow casserole dish. Add the rice, pour in hot fish broth, and arrange the crustaceans on top for the final minutes of cooking.",
-    "btn": "Order langoustines →",
-    "prod": "Langoustines"
-   }
-  },
-  {
-   "prep": "cru",
-   "ca": {
-    "tag": "Marinada · 20 min",
-    "title": "Seitons en vinagre casolans",
-    "body": "Recorda congelar el peix prèviament per seguretat alimentària. Neteja bé els lloms, cobreix-los amb vinagre i aigua durant hores i després amaneix amb all, julivert i oli d'oliva.",
+    "tag": "Fregit · 15 min",
+    "title": "Seitons arrebossats amb llimona",
+    "body": "Enfarina els seitons nets i flegeix-los en oli ben calent durant un minut. Treu-los a un paper absorbent i serveix-los immediatament amb un rajolí de llimona fresca.",
     "btn": "Encarregar seitons →",
     "prod": "Seitons"
    },
    "es": {
-    "tag": "Marinado · 20 min",
-    "title": "Boquerones en vinagre caseros",
-    "body": "Recuerda congelar el pescado previamente por seguridad alimentaria. Limpia bien los lomos, cúbrelos con vinagre y agua durante horas y después alinea con ajo, perejil y aceite de oliva.",
+    "tag": "Frito · 15 min",
+    "title": "Boquerones rebozados con limón",
+    "body": "Enharina los boquerones limpios y fríelos en aceite muy caliente durante un minuto. Sácalos a un papel absorbente y sírvelos de inmediato con un chorrito de limón fresco.",
     "btn": "Encargar boquerones →",
     "prod": "Boquerones"
    },
    "en": {
-    "tag": "Cured · 20 min",
-    "title": "Homemade marinated anchovies",
-    "body": "Remember to freeze the fish beforehand for food safety. Clean the fillets well, cover them with vinegar and water for hours, and then dress with garlic, parsley, and olive oil.",
+    "tag": "Fried · 15 min",
+    "title": "Crispy fried anchovies with lemon",
+    "body": "Coat the cleaned anchovies in flour and fry them in very hot oil for one minute. Drain on paper towels and serve immediately with a squeeze of fresh lemon juice.",
     "btn": "Order anchovies →",
     "prod": "Anchovies"
    }
   },
   {
-   "prep": "filets",
+   "prep": "rodanxes",
    "ca": {
-    "tag": "Paella · 20 min",
-    "title": "Salmó amb salsa de taronja",
-    "body": "Marca els filets de salmó per la banda de la pell en una paella calenta amb un rajolí d'oli. Retira el peix i redueix suc de taronja fresc amb un pessic de sucre i mantega a la mateixa paella.",
-    "btn": "Encarregar salmó →",
-    "prod": "Salmó"
+    "tag": "Guisat · 35 min",
+    "title": "Suquet de rap amb patates",
+    "body": "Enrosseix les rodanxes de rap i reserva-les. Fes un sofregit de ceba i tomàquet, afegeix-hi patates esqueixades, cobreix amb aigua i cuina el peix els últims deu minuts.",
+    "btn": "Encarregar rap →",
+    "prod": "Rap"
    },
    "es": {
-    "tag": "Sartén · 20 min",
-    "title": "Salmón con salsa de naranja",
-    "body": "Marca los filetes de salmón por el lado de la piel en una sartén caliente con un chorrito de aceite. Retira el pescado y reduce zumo de naranja fresco con una pizca de azúcar y mantequilla en la misma sartén.",
-    "btn": "Encargar salmón →",
-    "prod": "Salmón"
+    "tag": "Guiso · 35 min",
+    "title": "Suquet de rape con patatas",
+    "body": "Dora las rodajas de rape y resérvalas. Haz un sofrito de cebolla y tomate, añade patatas chasqueadas, cubre con agua y cocina el pescado los últimos diez minutos.",
+    "btn": "Encargar rape →",
+    "prod": "Rape"
    },
    "en": {
-    "tag": "Pan · 20 min",
-    "title": "Salmon with orange sauce",
-    "body": "Sear the salmon fillets skin-side down in a hot pan with a drizzle of oil. Remove the fish and reduce fresh orange juice with a pinch of sugar and butter in the same pan.",
-    "btn": "Order salmon →",
-    "prod": "Salmon"
+    "tag": "Stew · 35 min",
+    "title": "Monkfish stew with potatoes",
+    "body": "Sear the monkfish slices and set aside. Make an onion and tomato base, add diced potatoes, cover with water and simmer the fish for the final ten minutes.",
+    "btn": "Order monkfish →",
+    "prod": "Monkfish"
    }
   },
   {
-   "prep": "net",
+   "prep": "planxa",
    "ca": {
-    "tag": "Cassola · 15 min",
-    "title": "Musclos a la marinera",
-    "body": "Dorava ceba i all picats amb una culleradeta de pebre vermell en una cassola ampla. Incorpora els musclos nets amb un raig de vi blanc, tapa i espera que s'obrin amb el vapor.",
-    "btn": "Encarregar musclos →",
-    "prod": "Musclos"
+    "tag": "Planxa · 20 min",
+    "title": "Calamars a la planxa amb picada",
+    "body": "Marca els calamars a la planxa ben calenta dos minuts per costat. Prepara una picada d'all, julivert i oli d'oliva, i aboca-la pel damunt just abans de servir.",
+    "btn": "Encarregar calamars →",
+    "prod": "Calamars"
    },
    "es": {
-    "tag": "Cazuela · 15 min",
-    "title": "Mejillones a la marinera",
-    "body": "Dora cebolla y ajo picados con una cucharadita de pimentón en una cazuela ancha. Incorpora los mejillones limpios con un chorro de vino blanco, tapa y espera a que se abran con el vapor.",
-    "btn": "Encargar mejillones →",
-    "prod": "Mejillones"
+    "tag": "Plancha · 20 min",
+    "title": "Calamares a la plancha con majado",
+    "body": "Marca los calamares en la plancha muy caliente dos minutos por lado. Prepara un majado de ajo, perejil y aceite de oliva, y viértelo por encima justo antes de servir.",
+    "btn": "Encargar calamares →",
+    "prod": "Calamares"
    },
    "en": {
-    "tag": "Pot · 15 min",
-    "title": "Mussels marinara style",
-    "body": "Sauté chopped onion and garlic with a teaspoon of paprika in a wide pot. Add the clean mussels with a splash of white wine, cover, and wait for them to open with the steam.",
-    "btn": "Order mussels →",
-    "prod": "Mussels"
+    "tag": "Grilled · 20 min",
+    "title": "Grilled squid with garlic and parsley",
+    "body": "Sear the squid on a very hot griddle for two minutes per side. Mix chopped garlic, parsley, and olive oil, then spoon it over the squid right before serving.",
+    "btn": "Order squid →",
+    "prod": "Squid"
+   }
+  },
+  {
+   "prep": "cru",
+   "ca": {
+    "tag": "Marinat · 15 min",
+    "title": "Tartar de gamba vermella",
+    "body": "Utilitza la gamba prèviament congelada, pela-la i pica-la a zarangolls petits. Barreja-la amb oli d'oliva verge, un toc de sal en escates i una mica de meitat de llima.",
+    "btn": "Encarregar gamba vermella →",
+    "prod": "Gamba"
+   },
+   "es": {
+    "tag": "Marinado · 15 min",
+    "title": "Tartar de gamba roja",
+    "body": "Utiliza la gamba previamente congelada, pélala y pícala en dados pequeños. Mézclala con aceite de oliva virgen, un toque de sal en escamas y un poco de ralladura de lima.",
+    "btn": "Encargar gamba roja →",
+    "prod": "Gamba"
+   },
+   "en": {
+    "tag": "Marinated · 15 min",
+    "title": "Red shrimp tartare",
+    "body": "Use previously frozen shrimp, peel them, and dice them finely. Toss with virgin olive oil, a pinch of flaky sea salt, and a little fresh lime zest.",
+    "btn": "Order red shrimp →",
+    "prod": "Shrimp"
    }
   }
  ]
