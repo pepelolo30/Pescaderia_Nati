@@ -1184,7 +1184,7 @@
       perk1:"Ho trobaràs net, a filets o a rodanxes, a punt per cuinar.",
       perk2:"Recollida sense esperes, fins i tot divendres i vigílies de festa.",
       perk3:"O te'l portem a casa, a Castelldefels: <strong>gratis a partir de 50 €</strong>.",
-      fItems:"Què vols?", fAddItem:"+ Afegir un altre producte", phProduct:"Producte", phQty:"Quantitat", delItem:"Treure",
+      fItems:"Què vols?", fAddItem:"+ Afegir un altre producte", phProduct:"Escriu o tria un producte", phQty:"Quantitat", delItem:"Treure",
       fMode:"Com el vols rebre?", fPickup:"Recollir a la botiga", fDelivery:"A domicili (Castelldefels)",
       fDate:"Dia", fTime:"Hora", fDateHint:"Obrim de dimarts a dissabte. Diumenge, dilluns i festius, tancat.",
       fClosedDay:"Aquest dia tanquem (diumenge, dilluns o festiu). Tria un altre dia.", fSpecial:"Horari especial:", specialTitle:"Horaris especials", hoursDay4:"Festius", fNoSlots:"Per avui ja no queden hores. Tria un altre dia.",
@@ -1194,7 +1194,7 @@
       errItems:"Afegeix almenys un producte.", errDate:"Tria un dia i una hora en què siguem oberts.", errAddr:"Escriu l'adreça de lliurament.", errName:"Escriu el teu nom.",
       prep_:"Preparació…", prep_net:"Net", prep_filets:"A filets", prep_rodanxes:"A rodanxes", prep_sencer:"Sencer",
       prep_forn:"Per al forn", prep_sal:"Per fer a la sal (amb escates)", prep_planxa:"Per a la planxa", prep_cru:"Per menjar cru (tàrtar)", prep_sopa:"Per a sopa o fumet",
-      products:["Lluç","Llobarro","Orada","Rap","Turbot","Lenguado","Salmó","Tonyina","Ventresca de tonyina","Bacallà","Sardines","Seitons","Calamars","Sípia","Pop","Llagostins","Gambes","Escamarlans","Musclos","Cloïsses","Navalles"],
+      products:["Lluç","Llobarro","Orada","Rap","Turbot","Llenguado","Salmó","Tonyina","Ventresca de tonyina","Bacallà","Sardines","Seitons","Calamars","Sípia","Pop","Llagostins","Gambes","Escamarlans","Musclos","Cloïsses","Navalles"],
       days:["diumenge","dilluns","dimarts","dimecres","dijous","divendres","dissabte"],
       msgHello:"Hola! Voldria fer un encàrrec:", msgHelloNadal:"Hola! Voldria fer un encàrrec de Nadal:",
       msgPickup:"Recollida a la botiga:", msgDelivery:"Lliurament a domicili:", msgAt:"a les", msgAround:"cap a les",
@@ -1243,7 +1243,7 @@
       perk1:"Lo encontrarás limpio, en filetes o en rodajas, listo para cocinar.",
       perk2:"Recogida sin esperas, incluso los viernes y vísperas de festivo.",
       perk3:"O te lo llevamos a casa, en Castelldefels: <strong>gratis a partir de 50 €</strong>.",
-      fItems:"¿Qué quieres?", fAddItem:"+ Añadir otro producto", phProduct:"Producto", phQty:"Cantidad", delItem:"Quitar",
+      fItems:"¿Qué quieres?", fAddItem:"+ Añadir otro producto", phProduct:"Escribe o elige un producto", phQty:"Cantidad", delItem:"Quitar",
       fMode:"¿Cómo lo quieres recibir?", fPickup:"Recoger en tienda", fDelivery:"A domicilio (Castelldefels)",
       fDate:"Día", fTime:"Hora", fDateHint:"Abrimos de martes a sábado. Domingo, lunes y festivos, cerrado.",
       fClosedDay:"Ese día cerramos (domingo, lunes o festivo). Elige otro día.", fSpecial:"Horario especial:", specialTitle:"Horarios especiales", hoursDay4:"Festivos", fNoSlots:"Para hoy ya no quedan horas. Elige otro día.",
@@ -1334,7 +1334,7 @@
       perk1:"Cleaned, filleted or in steaks, ready to cook.",
       perk2:"No waiting at pick-up, even on Fridays and before holidays.",
       perk3:"Or we'll deliver it to your home in Castelldefels: <strong>free over €50</strong>.",
-      fItems:"What would you like?", fAddItem:"+ Add another product", phProduct:"Product", phQty:"Quantity", delItem:"Remove",
+      fItems:"What would you like?", fAddItem:"+ Add another product", phProduct:"Type or choose a product", phQty:"Quantity", delItem:"Remove",
       fMode:"How do you want it?", fPickup:"Pick up at the shop", fDelivery:"Home delivery (Castelldefels)",
       fDate:"Day", fTime:"Time", fDateHint:"Open Tuesday to Saturday. Closed Sundays, Mondays and public holidays.",
       fClosedDay:"We're closed that day (Sunday, Monday or public holiday). Please choose another day.", fSpecial:"Special hours:", specialTitle:"Special opening hours", hoursDay4:"Public holidays", fNoSlots:"No times left today. Please choose another day.",
@@ -1764,6 +1764,26 @@
 
   var board = { date:null, items:[] };
 
+  function normName(s){
+    return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  }
+  function fillProductList(t){
+    var dl = document.getElementById('productList'), seen = {}, skip = {}, out = [];
+    board.items.forEach(function(it){
+      var n = normName(it.name);
+      if(!n || seen[n]) return;
+      seen[n] = true; out.push(it.name);
+      T.ca.products.forEach(function(p, i){ if((' ' + n + ' ').indexOf(' ' + normName(p) + ' ') >= 0) skip[i] = true; });
+    });
+    t.products.forEach(function(p, i){
+      var n = normName(p);
+      if(skip[i] || seen[n]) return;
+      seen[n] = true; out.push(p);
+    });
+    dl.innerHTML = '';
+    out.forEach(function(p){ var o = document.createElement('option'); o.value = p; dl.appendChild(o); });
+  }
+
   function renderBoard(){
     var t = T[curLang], list = document.getElementById('boardList'), dEl = document.getElementById('boardDate');
     list.innerHTML = '';
@@ -1842,6 +1862,7 @@
       var fromTxt = boardFromTxt(res[1]);
       board = fromSheet && fromSheet.items.length ? fromSheet : fromTxt;
       renderBoard();
+      fillProductList(T[curLang]);
       keepHashTarget();
     });
   }
@@ -1883,8 +1904,7 @@
   function afterLang(lang, t){
     curLang = lang;
     translateIn(document, t);
-    var dl = document.getElementById('productList');
-    dl.innerHTML = t.products.map(function(p){ return '<option value="'+p+'">'; }).join('');
+    fillProductList(t);
     renderChips(t);
     renderSpecialHours(t);
     renderBoard();
