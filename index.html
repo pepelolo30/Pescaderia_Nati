@@ -346,6 +346,22 @@
   .order-perks{ list-style:none; margin:22px 0 0; padding:0; }
   .order-perks li{ position:relative; font-size:15px; line-height:1.55; color:var(--ink-soft); padding:7px 0 7px 22px; }
   .order-perks li::before{ content:"✓"; position:absolute; left:0; top:7px; color:var(--gold-deep); font-weight:800; }
+  .order-sub{ margin:30px 0 10px; font-size:12.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-deep); }
+  .lots{ display:grid; gap:10px; }
+  .lot{ border:1px solid var(--line); border-radius:4px; background:#fff; padding:14px 16px; }
+  .lot h3{ font-family:"Playfair Display", Georgia, serif; font-size:18px; font-weight:600; color:var(--ink); }
+  .lot p{ margin-top:4px; font-size:14.5px; line-height:1.5; color:var(--ink-soft); }
+  .lot .link-btn{ margin-top:6px; }
+  .lots-note{ margin-top:8px; font-size:13px; line-height:1.5; color:var(--ink-soft); }
+  .extras{ display:flex; flex-wrap:wrap; gap:8px; }
+  .extra{
+    font:inherit; font-size:14px; padding:7px 12px; border-radius:20px; cursor:pointer;
+    border:1px solid rgba(43,26,16,0.25); background:#fff; color:var(--ink);
+  }
+  .extra:hover{ border-color:var(--gold-deep); color:var(--gold-deep); }
+  .extra::before{ content:"+ "; color:var(--gold-deep); font-weight:700; }
+  .check-line{ display:flex; align-items:center; gap:8px; margin-top:12px; font-size:14.5px; cursor:pointer; }
+  .check-line input{ accent-color:var(--gold-deep); width:18px; height:18px; }
   .order-form{
     background:var(--paper); border:1px solid var(--line); border-radius:4px;
     padding:clamp(20px,3vw,30px); display:flex; flex-direction:column; gap:18px;
@@ -544,14 +560,14 @@
     .contact-grid{ grid-template-columns:1fr; gap:40px; }
     .gallery-banner{ aspect-ratio:3 / 2; }
 
-    .gallery, .quotes, .recipes{
+    .gallery, .quotes, .recipes, .lots{
       display:flex; overflow-x:auto; gap:12px; scroll-snap-type:x mandatory; scrollbar-width:none;
       margin-left:calc(-1 * clamp(20px,5vw,56px)); margin-right:calc(-1 * clamp(20px,5vw,56px));
       padding:2px clamp(20px,5vw,56px) 6px; scroll-padding-left:clamp(20px,5vw,56px);
       background:transparent; border:none; -webkit-overflow-scrolling:touch;
     }
-    .gallery::-webkit-scrollbar, .quotes::-webkit-scrollbar, .recipes::-webkit-scrollbar{ display:none; }
-    .gallery > *, .quotes > *, .recipes > *{ flex:0 0 min(78%, 340px); scroll-snap-align:start; }
+    .gallery::-webkit-scrollbar, .quotes::-webkit-scrollbar, .recipes::-webkit-scrollbar, .lots::-webkit-scrollbar{ display:none; }
+    .gallery > *, .quotes > *, .recipes > *, .lots > *{ flex:0 0 min(78%, 340px); scroll-snap-align:start; }
     .gallery > .tile-video{ grid-row:auto; aspect-ratio:4 / 5; }
     .recipe{ border:1px solid var(--line); border-radius:4px; }
     p.swipe-hint{ display:block; }
@@ -764,6 +780,32 @@
           <li data-t="perk2">Recollida sense esperes, fins i tot divendres i vigílies de festa.</li>
           <li data-t="perk3">O te'l portem a casa, a Castelldefels: <strong>gratis a partir de 50 €</strong>.</li>
         </ul>
+        <p class="order-sub" data-t="lotsTitle">Lots a punt d'encarregar</p>
+        <div class="lots">
+          <div class="lot">
+            <h3 data-t="lot1T">Lot familiar setmanal</h3>
+            <p data-t="lot1B">Uns 3 kg de peix i marisc del dia, net i envasat al buit, a punt per congelar.</p>
+            <button type="button" class="link-btn" data-lot="lot1" data-t="lotAdd">Afegir a l'encàrrec →</button>
+          </div>
+          <div class="lot">
+            <h3 data-t="lot2T">Lot sense espines</h3>
+            <p data-t="lot2B">Filets de peix blanc i salmó sense espines. Ideal per als nens.</p>
+            <button type="button" class="link-btn" data-lot="lot2" data-prep="filets" data-t="lotAdd">Afegir a l'encàrrec →</button>
+          </div>
+          <div class="lot">
+            <h3 data-t="lot3T">Lot per a paella</h3>
+            <p data-t="lot3B">Sípia, gamba, musclos i fumet per a 4 persones.</p>
+            <button type="button" class="link-btn" data-lot="lot3" data-t="lotAdd">Afegir a l'encàrrec →</button>
+          </div>
+        </div>
+        <p class="lots-note" data-t="lotsNote">El contingut i el preu depenen del peix del dia: t'ho confirmem per WhatsApp.</p>
+        <p class="order-sub" data-t="extrasTitle">Per completar la compra</p>
+        <div class="extras">
+          <button type="button" class="extra" data-x="x1" data-t="x1">Fumet de peix</button>
+          <button type="button" class="extra" data-x="x2" data-t="x2">Anxoves</button>
+          <button type="button" class="extra" data-x="x3" data-t="x3">Conserves</button>
+          <button type="button" class="extra" data-x="x4" data-t="x4">Postres congelades</button>
+        </div>
       </div>
       <form class="order-form" id="orderForm" novalidate>
         <div class="nadal-flag" id="nadalFlagWrap" hidden>
@@ -774,6 +816,7 @@
           <div id="itemRows"></div>
           <button type="button" class="link-btn" id="addItem" data-t="fAddItem">+ Afegir un altre producte</button>
           <datalist id="productList"></datalist>
+          <label class="check-line"><input type="checkbox" id="fVacuum"> <span data-t="fVacuum">Envasat al buit (ideal per congelar)</span></label>
         </fieldset>
         <fieldset>
           <legend data-t="fMode">Com el vols rebre?</legend>
@@ -1181,7 +1224,7 @@
       n3Tag:"Principal · 40 min", n3Title:"Lluç farcit", n3Body:"Farceix el lluç obert en llibre amb gambes, xampinyons i una mica de pa ratllat. Tanca'l, rega'l amb vi blanc i forn a 180 °C uns 20-25 minuts. Te'l deixem obert i sense espina.", n3Btn:"Encarregar lluç per farcir →", n3Prod:"Lluç obert en llibre i sense espina, per farcir",
       n4Tag:"Tapa · 5 min", n4Title:"Navalles a la planxa", n4Body:"Renta-les bé, planxa molt calenta i fora quan s'obrin (1-2 minuts). Un raig d'oli amb all i julivert picats i a taula.", n4Btn:"Encarregar navalles →", n4Prod:"Navalles",      orderEyebrow:"Encàrrec", orderH2:"<span style=\"white-space:nowrap\">Encarrega-ho</span> i no facis cua",
       orderLead:"Digues què vols, com t'ho preparem i quan passaràs. T'enviarem la confirmació per WhatsApp.",
-      perk1:"Ho trobaràs net, a filets o a rodanxes, a punt per cuinar.",
+      perk1:"Ho trobaràs net, a filets o a rodanxes, a punt per cuinar, i si vols, envasat al buit.",
       perk2:"Recollida sense esperes, fins i tot divendres i vigílies de festa.",
       perk3:"O te'l portem a casa, a Castelldefels: <strong>gratis a partir de 50 €</strong>.",
       fItems:"Què vols?", fAddItem:"+ Afegir un altre producte", phProduct:"Escriu o tria un producte", phQty:"Quantitat", delItem:"Treure",
@@ -1194,8 +1237,15 @@
       errItems:"Afegeix almenys un producte.", errDate:"Tria un dia i una hora en què siguem oberts.", errAddr:"Escriu l'adreça de lliurament.", errName:"Escriu el teu nom.",
       prep_:"Preparació…", prep_net:"Net", prep_filets:"A filets", prep_rodanxes:"A rodanxes", prep_sencer:"Sencer",
       prep_forn:"Per al forn", prep_sal:"Per fer a la sal (amb escates)", prep_planxa:"Per a la planxa", prep_cru:"Per menjar cru (tàrtar)", prep_sopa:"Per a sopa o fumet",
-      products:["Lluç","Llobarro","Orada","Rap","Turbot","Llenguado","Salmó","Tonyina","Ventresca de tonyina","Bacallà","Sardines","Seitons","Calamars","Sípia","Pop","Llagostins","Gambes","Escamarlans","Musclos","Cloïsses","Navalles"],
+      products:["Lluç","Llobarro","Orada","Rap","Turbot","Llenguado","Salmó","Tonyina","Ventresca de tonyina","Bacallà","Sardines","Seitons","Calamars","Sípia","Pop","Llagostins","Gambes","Escamarlans","Musclos","Cloïsses","Navalles","Fumet de peix","Anxoves","Conserves","Postres congelades"],
       days:["diumenge","dilluns","dimarts","dimecres","dijous","divendres","dissabte"],
+      lotsTitle:"Lots a punt d'encarregar", lotAdd:"Afegir a l'encàrrec →",
+      lot1T:"Lot familiar setmanal", lot1B:"Uns 3 kg de peix i marisc del dia, net i envasat al buit, a punt per congelar.",
+      lot2T:"Lot sense espines", lot2B:"Filets de peix blanc i salmó sense espines. Ideal per als nens.",
+      lot3T:"Lot per a paella", lot3B:"Sípia, gamba, musclos i fumet per a 4 persones.",
+      lotsNote:"El contingut i el preu depenen del peix del dia: t'ho confirmem per WhatsApp.",
+      extrasTitle:"Per completar la compra", x1:"Fumet de peix", x2:"Anxoves", x3:"Conserves", x4:"Postres congelades",
+      fVacuum:"Envasat al buit (ideal per congelar)", msgVacuum:"Envasat al buit, si us plau.",
       msgHello:"Hola! Voldria fer un encàrrec:", msgHelloNadal:"Hola! Voldria fer un encàrrec de Nadal:",
       msgPickup:"Recollida a la botiga:", msgDelivery:"Lliurament a domicili:", msgAt:"a les", msgAround:"cap a les",
       msgAddr:"Adreça:", msgName:"Nom:", msgNotes:"Observacions:",
@@ -1240,7 +1290,7 @@
       n3Tag:"Principal · 40 min", n3Title:"Merluza rellena", n3Body:"Rellena la merluza abierta en libro con gambas, champiñones y un poco de pan rallado. Ciérrala, riégala con vino blanco y al horno a 180 °C unos 20-25 minutos. Te la dejamos abierta y sin espina.", n3Btn:"Encargar merluza para rellenar →", n3Prod:"Merluza abierta en libro y sin espina, para rellenar",
       n4Tag:"Tapa · 5 min", n4Title:"Navajas a la plancha", n4Body:"Lávalas bien, plancha muy caliente y fuera en cuanto se abran (1-2 minutos). Un chorrito de aceite con ajo y perejil picados y a la mesa.", n4Btn:"Encargar navajas →", n4Prod:"Navajas",      orderEyebrow:"Encargo", orderH2:"Encárgalo y no hagas cola",
       orderLead:"Dinos qué quieres, cómo te lo preparamos y cuándo pasarás. Te enviaremos la confirmación por WhatsApp.",
-      perk1:"Lo encontrarás limpio, en filetes o en rodajas, listo para cocinar.",
+      perk1:"Lo encontrarás limpio, en filetes o en rodajas, listo para cocinar y, si quieres, envasado al vacío.",
       perk2:"Recogida sin esperas, incluso los viernes y vísperas de festivo.",
       perk3:"O te lo llevamos a casa, en Castelldefels: <strong>gratis a partir de 50 €</strong>.",
       fItems:"¿Qué quieres?", fAddItem:"+ Añadir otro producto", phProduct:"Escribe o elige un producto", phQty:"Cantidad", delItem:"Quitar",
@@ -1253,8 +1303,15 @@
       errItems:"Añade al menos un producto.", errDate:"Elige un día y una hora en que estemos abiertos.", errAddr:"Escribe la dirección de entrega.", errName:"Escribe tu nombre.",
       prep_:"Preparación…", prep_net:"Limpio", prep_filets:"En filetes", prep_rodanxes:"En rodajas", prep_sencer:"Entero",
       prep_forn:"Para horno", prep_sal:"Para hacer a la sal (con escamas)", prep_planxa:"Para plancha", prep_cru:"Para comer crudo (tartar)", prep_sopa:"Para sopa o fumet",
-      products:["Merluza","Lubina","Dorada","Rape","Rodaballo","Lenguado","Salmón","Atún","Ventresca de atún","Bacalao","Sardinas","Boquerones","Calamares","Sepia","Pulpo","Langostinos","Gambas","Cigalas","Mejillones","Almejas","Navajas"],
+      products:["Merluza","Lubina","Dorada","Rape","Rodaballo","Lenguado","Salmón","Atún","Ventresca de atún","Bacalao","Sardinas","Boquerones","Calamares","Sepia","Pulpo","Langostinos","Gambas","Cigalas","Mejillones","Almejas","Navajas","Fumet de pescado","Anchoas","Conservas","Postres congelados"],
       days:["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],
+      lotsTitle:"Lotes listos para encargar", lotAdd:"Añadir al encargo →",
+      lot1T:"Lote familiar semanal", lot1B:"Unos 3 kg de pescado y marisco del día, limpio y envasado al vacío, listo para congelar.",
+      lot2T:"Lote sin espinas", lot2B:"Filetes de pescado blanco y salmón sin espinas. Ideal para los niños.",
+      lot3T:"Lote para paella", lot3B:"Sepia, gamba, mejillones y fumet para 4 personas.",
+      lotsNote:"El contenido y el precio dependen del pescado del día: te lo confirmamos por WhatsApp.",
+      extrasTitle:"Para completar la compra", x1:"Fumet de pescado", x2:"Anchoas", x3:"Conservas", x4:"Postres congelados",
+      fVacuum:"Envasado al vacío (ideal para congelar)", msgVacuum:"Envasado al vacío, por favor.",
       msgHello:"¡Hola! Quería hacer un encargo:", msgHelloNadal:"¡Hola! Quería hacer un encargo de Navidad:",
       msgPickup:"Recogida en tienda:", msgDelivery:"Entrega a domicilio:", msgAt:"a las", msgAround:"hacia las",
       msgAddr:"Dirección:", msgName:"Nombre:", msgNotes:"Observaciones:",
@@ -1331,7 +1388,7 @@
       n3Tag:"Main · 40 min", n3Title:"Stuffed hake", n3Body:"Fill a butterflied hake with prawns, mushrooms and a few breadcrumbs. Close it, splash with white wine and bake at 180 °C for 20-25 minutes. We'll butterfly and bone it for you.", n3Btn:"Order hake for stuffing →", n3Prod:"Hake, butterflied and boned, for stuffing",
       n4Tag:"Tapa · 5 min", n4Title:"Grilled razor clams", n4Body:"Rinse them well, use a very hot griddle and take them off as soon as they open (1-2 minutes). Drizzle with oil, chopped garlic and parsley and serve.", n4Btn:"Order razor clams →", n4Prod:"Razor clams",      orderEyebrow:"Order ahead", orderH2:"Order ahead, skip the queue",
       orderLead:"Tell us what you want, how to prepare it and when you'll come by. We'll confirm on WhatsApp.",
-      perk1:"Cleaned, filleted or in steaks, ready to cook.",
+      perk1:"Cleaned, filleted or in steaks, ready to cook, and vacuum-packed if you like.",
       perk2:"No waiting at pick-up, even on Fridays and before holidays.",
       perk3:"Or we'll deliver it to your home in Castelldefels: <strong>free over €50</strong>.",
       fItems:"What would you like?", fAddItem:"+ Add another product", phProduct:"Type or choose a product", phQty:"Quantity", delItem:"Remove",
@@ -1344,8 +1401,15 @@
       errItems:"Add at least one product.", errDate:"Choose a day and time when we're open.", errAddr:"Enter the delivery address.", errName:"Enter your name.",
       prep_:"Preparation…", prep_net:"Cleaned", prep_filets:"Filleted", prep_rodanxes:"In steaks", prep_sencer:"Whole",
       prep_forn:"For the oven", prep_sal:"For salt-baking (scales on)", prep_planxa:"For the grill", prep_cru:"To eat raw (tartare)", prep_sopa:"For soup or stock",
-      products:["Hake","Sea bass","Gilt-head bream","Monkfish","Turbot","Sole","Salmon","Tuna","Tuna belly","Cod","Sardines","Anchovies","Squid","Cuttlefish","Octopus","Prawns","Red prawns","Langoustines","Mussels","Clams","Razor clams"],
+      products:["Hake","Sea bass","Gilt-head bream","Monkfish","Turbot","Sole","Salmon","Tuna","Tuna belly","Cod","Sardines","Anchovies","Squid","Cuttlefish","Octopus","Prawns","Red prawns","Langoustines","Mussels","Clams","Razor clams","Fish stock","Anchovies","Tinned fish","Frozen desserts"],
       days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      lotsTitle:"Ready-to-order boxes", lotAdd:"Add to order →",
+      lot1T:"Weekly family box", lot1B:"About 3 kg of the day's fish and seafood, cleaned and vacuum-packed, ready to freeze.",
+      lot2T:"Boneless box", lot2B:"Boneless white fish and salmon fillets. Great for kids.",
+      lot3T:"Paella box", lot3B:"Cuttlefish, prawns, mussels and fish stock for 4 people.",
+      lotsNote:"Contents and price depend on the day's catch: we'll confirm on WhatsApp.",
+      extrasTitle:"To complete your order", x1:"Fish stock", x2:"Anchovies", x3:"Tinned fish", x4:"Frozen desserts",
+      fVacuum:"Vacuum-packed (ideal for freezing)", msgVacuum:"Vacuum-packed, please.",
       msgHello:"Hi! I'd like to place an order:", msgHelloNadal:"Hi! I'd like to place a Christmas order:",
       msgPickup:"Pick-up at the shop:", msgDelivery:"Home delivery:", msgAt:"at", msgAround:"around",
       msgAddr:"Address:", msgName:"Name:", msgNotes:"Notes:",
@@ -1564,6 +1628,16 @@
     track('afegir/' + name);
   }
 
+  Array.prototype.forEach.call(document.querySelectorAll('[data-lot]'), function(b){
+    b.addEventListener('click', function(){
+      addToOrder(T[curLang][b.getAttribute('data-lot') + 'T'], b.getAttribute('data-prep') || '');
+      if(b.getAttribute('data-lot') === 'lot1') document.getElementById('fVacuum').checked = true;
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-x]'), function(b){
+    b.addEventListener('click', function(){ addToOrder(T[curLang][b.getAttribute('data-x')], ''); });
+  });
+
   function fillTimes(){
     var t = T[curLang], d = parseIso(dateEl.value), prev = timeEl.value;
     timeEl.innerHTML = '';
@@ -1621,6 +1695,7 @@
       var p = row.querySelector('.item-prep').value;
       lines.push('• ' + (q ? q + ' ' : '') + n + (p ? ' – ' + t['prep_'+p].toLowerCase() : ''));
     });
+    if(document.getElementById('fVacuum').checked) lines.push(t.msgVacuum);
     var d = parseIso(dateEl.value);
     var when = t.days[d.getDay()] + ' ' + shortDate(d);
     lines.push('');
