@@ -3,99 +3,99 @@
  "font": "ia",
  "receptes": [
   {
-   "prep": "net",
+   "prep": "forn",
    "ca": {
-    "tag": "Fregit · 15 min",
-    "title": "Seitons arrebossats amb llimona",
-    "body": "Enfarina els seitons nets i flegeix-los en oli ben calent durant un minut. Treu-los a un paper absorbent i serveix-los immediatament amb un rajolí de llimona fresca.",
-    "btn": "Encarregar seitons →",
-    "prod": "Seitons"
+    "tag": "Forn · 25 min",
+    "title": "Llobarro al forn amb patates i ceba",
+    "body": "Posa una base de patates tallades primes i ceba al forn durant deu minuts. Afegeix el llobarro obert, un raig d'oli i enforna-ho dotze minuts més a cent vuitanta graus.",
+    "btn": "Encarregar llobarro →",
+    "prod": "Llobarro"
    },
    "es": {
-    "tag": "Frito · 15 min",
-    "title": "Boquerones rebozados con limón",
-    "body": "Enharina los boquerones limpios y fríelos en aceite muy caliente durante un minuto. Sácalos a un papel absorbente y sírvelos de inmediato con un chorrito de limón fresco.",
-    "btn": "Encargar boquerones →",
-    "prod": "Boquerones"
+    "tag": "Horno · 25 min",
+    "title": "Lubina al horno con patatas y cebolla",
+    "body": "Pon una base de patatas finas y cebolla al horno durante diez minutos. Añade la lubina abierta, un chorro de aceite y hornea doce minutos más a ciento ochenta grados.",
+    "btn": "Encargar lubina →",
+    "prod": "Lubina"
    },
    "en": {
-    "tag": "Fried · 15 min",
-    "title": "Crispy fried anchovies with lemon",
-    "body": "Coat the cleaned anchovies in flour and fry them in very hot oil for one minute. Drain on paper towels and serve immediately with a squeeze of fresh lemon juice.",
-    "btn": "Order anchovies →",
-    "prod": "Anchovies"
+    "tag": "Oven · 25 min",
+    "title": "Baked sea bass with potatoes and onion",
+    "body": "Place a base of thin potatoes and onion in the oven for ten minutes. Add the opened sea bass, a drizzle of oil, and bake for twelve more minutes at one hundred eighty degrees.",
+    "btn": "Order sea bass →",
+    "prod": "Sea bass"
    }
   },
   {
-   "prep": "rodanxes",
+   "prep": "net",
    "ca": {
-    "tag": "Guisat · 35 min",
-    "title": "Suquet de rap amb patates",
-    "body": "Enrosseix les rodanxes de rap i reserva-les. Fes un sofregit de ceba i tomàquet, afegeix-hi patates esqueixades, cobreix amb aigua i cuina el peix els últims deu minuts.",
-    "btn": "Encarregar rap →",
-    "prod": "Rap"
+    "tag": "Vapor · 10 min",
+    "title": "Musclos al vapor amb llimona i pebre",
+    "body": "Neteja bé les closques i posa els musclos en una cassola tapada amb un raig de vi blanc. Cuina'ls a foc viu tres minuts fins que s'obrin i serveix-los amb llimona i pebre negre.",
+    "btn": "Encarregar musclos →",
+    "prod": "Musclos"
    },
    "es": {
-    "tag": "Guiso · 35 min",
-    "title": "Suquet de rape con patatas",
-    "body": "Dora las rodajas de rape y resérvalas. Haz un sofrito de cebolla y tomate, añade patatas chasqueadas, cubre con agua y cocina el pescado los últimos diez minutos.",
-    "btn": "Encargar rape →",
-    "prod": "Rape"
+    "tag": "Vapor · 10 min",
+    "title": "Mejillones al vapor con limón y pimienta",
+    "body": "Limpia bien las conchas y pon los mejillones en una cazuela tapada con un chorro de vino blanco. Cocínalos a fuego vivo tres minutos hasta que se abran y sírvelos con limón y pimienta negra.",
+    "btn": "Encargar mejillones →",
+    "prod": "Mejillones"
    },
    "en": {
-    "tag": "Stew · 35 min",
-    "title": "Monkfish stew with potatoes",
-    "body": "Sear the monkfish slices and set aside. Make an onion and tomato base, add diced potatoes, cover with water and simmer the fish for the final ten minutes.",
-    "btn": "Order monkfish →",
-    "prod": "Monkfish"
+    "tag": "Steam · 10 min",
+    "title": "Steamed mussels with lemon and pepper",
+    "body": "Clean the shells well and place the mussels in a covered pot with a splash of white wine. Cook over high heat for three minutes until they open and serve with lemon and black pepper.",
+    "btn": "Order mussels →",
+    "prod": "Mussels"
    }
   },
   {
    "prep": "planxa",
    "ca": {
-    "tag": "Planxa · 20 min",
-    "title": "Calamars a la planxa amb picada",
-    "body": "Marca els calamars a la planxa ben calenta dos minuts per costat. Prepara una picada d'all, julivert i oli d'oliva, i aboca-la pel damunt just abans de servir.",
-    "btn": "Encarregar calamars →",
-    "prod": "Calamars"
+    "tag": "Planxa · 5 min",
+    "title": "Escamarlans a la planxa amb sal de flor",
+    "body": "Escalfa la planxa al màxim amb un fil d'oli i disposa els escamarlans sense amuntegar-los. Enrosseix-los un minut per banda, afegeix-hi sal de flor i serveix-los immediatament.",
+    "btn": "Encarregar escamarlans →",
+    "prod": "Escamarlans"
    },
    "es": {
-    "tag": "Plancha · 20 min",
-    "title": "Calamares a la plancha con majado",
-    "body": "Marca los calamares en la plancha muy caliente dos minutos por lado. Prepara un majado de ajo, perejil y aceite de oliva, y viértelo por encima justo antes de servir.",
-    "btn": "Encargar calamares →",
-    "prod": "Calamares"
+    "tag": "Plancha · 5 min",
+    "title": "Cigalas a la plancha con flor de sal",
+    "body": "Calienta la plancha al máximo con un hilo de aceite y dispón las cigalas sin amontonarlas. Dóralas un minuto por lado, añade flor de sal y sírvelas inmediatamente.",
+    "btn": "Encargar cigalas →",
+    "prod": "Cigalas"
    },
    "en": {
-    "tag": "Grilled · 20 min",
-    "title": "Grilled squid with garlic and parsley",
-    "body": "Sear the squid on a very hot griddle for two minutes per side. Mix chopped garlic, parsley, and olive oil, then spoon it over the squid right before serving.",
-    "btn": "Order squid →",
-    "prod": "Squid"
+    "tag": "Grill · 5 min",
+    "title": "Grilled langoustines with sea salt",
+    "body": "Heat the grill to maximum with a drizzle of oil and arrange the langoustines without crowding. Brown them for one minute per side, add sea salt, and serve immediately.",
+    "btn": "Order langoustines →",
+    "prod": "Langoustines"
    }
   },
   {
-   "prep": "cru",
+   "prep": "rodanxes",
    "ca": {
-    "tag": "Marinat · 15 min",
-    "title": "Tartar de gamba vermella",
-    "body": "Utilitza la gamba prèviament congelada, pela-la i pica-la a zarangolls petits. Barreja-la amb oli d'oliva verge, un toc de sal en escates i una mica de meitat de llima.",
-    "btn": "Encarregar gamba vermella →",
-    "prod": "Gamba"
+    "tag": "Guisat · 20 min",
+    "title": "Salmó guisat amb guisants i menta",
+    "body": "Sofregeix una ceba tendra, afegeix-hi guisants, una mica de brou de peix i deixa-ho coure deu minuts. Incorpora les rodanxes de salmó al final i cuina-ho tres minuts per banda.",
+    "btn": "Encarregar salmó →",
+    "prod": "Salmó"
    },
    "es": {
-    "tag": "Marinado · 15 min",
-    "title": "Tartar de gamba roja",
-    "body": "Utiliza la gamba previamente congelada, pélala y pícala en dados pequeños. Mézclala con aceite de oliva virgen, un toque de sal en escamas y un poco de ralladura de lima.",
-    "btn": "Encargar gamba roja →",
-    "prod": "Gamba"
+    "tag": "Guiso · 20 min",
+    "title": "Salmón guisado con guisantes y menta",
+    "body": "Sofríe una cebolleta, añade guisantes, un poco de caldo de pescado y deja cocer diez minutos. Incorpora las rodajas de salmón al final y cocínalo tres minutos por lado.",
+    "btn": "Encargar salmón →",
+    "prod": "Salmón"
    },
    "en": {
-    "tag": "Marinated · 15 min",
-    "title": "Red shrimp tartare",
-    "body": "Use previously frozen shrimp, peel them, and dice them finely. Toss with virgin olive oil, a pinch of flaky sea salt, and a little fresh lime zest.",
-    "btn": "Order red shrimp →",
-    "prod": "Shrimp"
+    "tag": "Stew · 20 min",
+    "title": "Stewed salmon with peas and mint",
+    "body": "Sauté a spring onion, add peas, a little fish stock, and simmer for ten minutes. Stir in the salmon slices at the end and cook for three minutes per side.",
+    "btn": "Order salmon →",
+    "prod": "Salmon"
    }
   }
  ]
