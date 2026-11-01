@@ -2,12 +2,12 @@
 # Aquest arxiu el genera el publicador del servidor a partir de Fotos_Pescaderia/AAAAMMDD/pissarra.txt
 # Una línia per producte:   Nom | preu | nota   (el preu i la nota són opcionals)
 
-data: 2026-10-31
-Llobarro | | Ideal a la sal o al forn
-Escamarlans | | Per a la planxa o un arròs
-Gamba vermella | | A la planxa, amb sal grossa
-Seitons | | Nets, per fregir o en vinagre
-Calamars | | A la romana o a la planxa
-Cua de rap | | Per a suquet o al forn
-Salmó | | A filets o a rodanxes
-Musclos | | Nets i a punt per al vapor
+data: 2026-11-01
+Llobarro | 19,90€ | Ideal a la sal o al forn
+Escamarlans | 20,50€ | Per a la planxa o un arròs
+Gamba vermella | 15,10€ | A la planxa, amb sal grossa
+Seitons | 21,50€ | Nets, per fregir o en vinagre
+Calamars | 22,00€ | A la romana o a la planxa
+Cua de rap | 45,95€ | Per a suquet o al forn
+Salmó | 36,50€ | A filets o a rodanxes
+Musclos | 10,50€ | Nets i a punt per al vapor
