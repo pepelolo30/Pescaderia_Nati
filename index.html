@@ -934,25 +934,13 @@
         <p id="storyP1">A la Peixateria Mulhacén sabem que el bon peix no s'improvisa. Des del <strong>1954</strong>, el nostre compromís ha estat el mateix: seleccionar minuciosament la millor captura del dia per portar a la teva taula un producte excepcional, amb el gust i la frescor que cada vegada costa més de trobar. Per a nosaltres, vendre peix no és només un ofici, és una passió per oferir-te el millor de la zona.</p>
       </div>
     </div>
-    <div class="wrap shop-gallery" id="botiga">
+    <div class="wrap shop-gallery" id="botiga" hidden>
       <div class="section-head">
         <p class="eyebrow" data-t="galEyebrow">La botiga i l'equip</p>
         <h2 data-t="galH2">Qui hi ha darrere del taulell</h2>
         <p class="lead" data-t="galLead">Fotos reals de la botiga, del taulell i de la gent que t'atén cada dia al carrer de la Llibertat.</p>
       </div>
-      <div class="gallery" id="gallery">
-        <div class="tile tile-video" id="videoTile" role="button" tabindex="0" data-t-aria="videoAria">
-          <video id="taulellVideo" src="video/taulell.mp4" poster="img/seitons-480.webp" muted loop playsinline preload="none"></video>
-          <span class="badge" data-t="videoBadge">Vídeo</span>
-          <span class="cap" data-t="capVideo">Un passeig pel taulell</span>
-        </div>
-        <button type="button" class="tile" data-full="img/llobarro-escamarlans-800.webp" data-cap="cap1"><img src="img/llobarro-escamarlans-480.webp" srcset="img/llobarro-escamarlans-480.webp 480w, img/llobarro-escamarlans-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap1"><span class="cap" data-t="cap1">Escamarlans i llobarro</span></button>
-        <button type="button" class="tile" data-full="img/salmo-800.webp" data-cap="cap2"><img src="img/salmo-480.webp" srcset="img/salmo-480.webp 480w, img/salmo-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap2"><span class="cap" data-t="cap2">Salmó i tonyina vermella</span></button>
-        <button type="button" class="tile" data-full="img/remol-gamba-800.webp" data-cap="cap3"><img src="img/remol-gamba-480.webp" srcset="img/remol-gamba-480.webp 480w, img/remol-gamba-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap3"><span class="cap" data-t="cap3">Rèmol i gamba vermella</span></button>
-        <button type="button" class="tile" data-full="img/calamars-800.webp" data-cap="cap4"><img src="img/calamars-480.webp" srcset="img/calamars-480.webp 480w, img/calamars-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap4"><span class="cap" data-t="cap4">Calamars i llobarro</span></button>
-        <button type="button" class="tile" data-full="img/seitons-800.webp" data-cap="cap5"><img src="img/seitons-480.webp" srcset="img/seitons-480.webp 480w, img/seitons-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap5"><span class="cap" data-t="cap5">Seitons</span></button>
-        <button type="button" class="tile" data-full="img/rap-musclos-800.webp" data-cap="cap6"><img src="img/rap-musclos-480.webp" srcset="img/rap-musclos-480.webp 480w, img/rap-musclos-800.webp 800w" sizes="(max-width:860px) 50vw, 25vw" width="480" height="600" loading="lazy" decoding="async" alt="" data-t-alt="cap6"><span class="cap" data-t="cap6">Cua de rap i musclos</span></button>
-      </div>
+      <div class="gallery" id="gallery"></div>
       <p class="swipe-hint" data-t="swipeHint">Llisca per veure'n més →</p>
       <p class="gallery-note" data-t="galNote">Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.</p>
     </div>
@@ -1488,6 +1476,7 @@
         }
       });
       translateIn(gallery, T[curLang]);
+      document.getElementById('botiga').hidden = !gallery.children.length;
       keepHashTarget();
     }).catch(function(){});
   }
