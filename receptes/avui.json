@@ -1,101 +1,101 @@
 {
  "data": "2026-11-01",
- "font": "receptari",
+ "font": "ia",
  "receptes": [
   {
-   "prep": "forn",
+   "prep": "net",
    "ca": {
-    "tag": "Forn · 45 min",
-    "title": "Llobarro al forn amb patates",
-    "body": "Enforna patata i ceba a làmines 25 minuts. Posa-hi el llobarro amb all, julivert i un raig de vi blanc, i 15 minuts més a 190 °C.",
-    "btn": "Encarregar llobarro →",
-    "prod": "Llobarro per al forn"
+    "tag": "Vapor · 10 min",
+    "title": "Musclos al vapor amb vi blanc i llorer",
+    "body": "Posa els musclos en una cassola amb un raig de vi blanc i una fulla de llorer. Tapa-ho a foc viu uns 5 minuts fins que s'obrin i serveix amb llimona fresca.",
+    "btn": "Encarregar musclos →",
+    "prod": "Musclos de roca"
    },
    "es": {
-    "tag": "Horno · 45 min",
-    "title": "Lubina al horno con patatas",
-    "body": "Hornea patata y cebolla en láminas 25 minutos. Pon encima la lubina con ajo, perejil y un chorrito de vino blanco, y 15 minutos más a 190 °C.",
-    "btn": "Encargar lubina →",
-    "prod": "Lubina para horno"
+    "tag": "Vapor · 10 min",
+    "title": "Mejillones al vapor con vino blanco y laurel",
+    "body": "Pon los mejillones en una cazuela con un chorro de vino blanco y laurel. Tapa a fuego vivo unos 5 minutos hasta que se abran y sirve con limón fresco.",
+    "btn": "Encargar mejillones →",
+    "prod": "Mejillones de roca"
    },
    "en": {
-    "tag": "Oven · 45 min",
-    "title": "Baked sea bass with potatoes",
-    "body": "Bake sliced potato and onion for 25 minutes. Lay the sea bass on top with garlic, parsley and white wine, and 15 more minutes at 190 °C.",
-    "btn": "Order sea bass →",
-    "prod": "Sea bass for the oven"
-   }
-  },
-  {
-   "prep": "planxa",
-   "ca": {
-    "tag": "Planxa · 8 min",
-    "title": "Escamarlans a la planxa",
-    "body": "Obre'ls per la meitat, posa-hi un fil d'oli i sal, i a la planxa ben calenta 2 minuts per la carn i 1 per la closca.",
-    "btn": "Encarregar escamarlans →",
-    "prod": "Escamarlans"
-   },
-   "es": {
-    "tag": "Plancha · 8 min",
-    "title": "Cigalas a la plancha",
-    "body": "Ábrelas por la mitad, un hilo de aceite y sal, y a la plancha bien caliente 2 minutos por la carne y 1 por el caparazón.",
-    "btn": "Encargar cigalas →",
-    "prod": "Cigalas"
-   },
-   "en": {
-    "tag": "Grill · 8 min",
-    "title": "Grilled langoustines",
-    "body": "Split them in half, add a drizzle of oil and salt, and grill on a very hot griddle 2 minutes flesh side and 1 on the shell.",
-    "btn": "Order langoustines →",
-    "prod": "Langoustines"
+    "tag": "Steam · 10 min",
+    "title": "Steamed mussels with white wine and bay leaf",
+    "body": "Place the mussels in a pot with a splash of white wine and a bay leaf. Cover over high heat for 5 minutes until opened and serve with fresh lemon wedges.",
+    "btn": "Order mussels →",
+    "prod": "Fresh rock mussels"
    }
   },
   {
    "prep": "net",
    "ca": {
-    "tag": "Fideuà · 40 min",
-    "title": "Fideuà",
-    "body": "Daura els fideus en oli, sofregeix-hi el peix i el marisc, afegeix fumet calent i deixa-ho 10 minuts. Uns minuts de forn i allioli.",
-    "btn": "Encarregar per a fideuà →",
-    "prod": "Peix i marisc per a fideuà"
+    "tag": "Guisat · 35 min",
+    "title": "Calamars encebats tradicionals",
+    "body": "Enrossiu molta ceba tallada fina a foc lent durant 20 minuts fins que quedi caramel·litzada. Afegiu-hi els calamars a rodanxes i deixeu-los coure 15 minuts més.",
+    "btn": "Encarregar calamars →",
+    "prod": "Calamars de platja"
    },
    "es": {
-    "tag": "Fideuá · 40 min",
-    "title": "Fideuá",
-    "body": "Dora los fideos en aceite, sofríe el pescado y el marisco, añade fumet caliente y deja 10 minutos. Unos minutos de horno y alioli.",
-    "btn": "Encargar para fideuá →",
-    "prod": "Pescado y marisco para fideuá"
+    "tag": "Guiso · 35 min",
+    "title": "Calamares encebollados tradicionales",
+    "body": "Pocha abundante cebolla en juliana a fuego lento durante 20 minutos hasta que caramelice. Añade los calamares cortados en anillas y cocina a fuego suave 15 minutos más.",
+    "btn": "Encargar calamares →",
+    "prod": "Calamares de playa"
    },
    "en": {
-    "tag": "Noodles · 40 min",
-    "title": "Seafood fideuà",
-    "body": "Toast the thin noodles in oil, fry the fish and seafood, add hot stock and cook 10 minutes. A few minutes in the oven and aioli.",
-    "btn": "Order for fideuà →",
-    "prod": "Fish and seafood for fideuà"
+    "tag": "Stew · 35 min",
+    "title": "Traditional squid with caramelized onions",
+    "body": "Slowly cook sliced onions over low heat for 20 minutes until deeply caramelized. Add the squid rings and simmer gently covered for another 15 minutes.",
+    "btn": "Order squid →",
+    "prod": "Local fresh squid"
    }
   },
   {
-   "prep": "filets",
+   "prep": "rodanxes",
    "ca": {
-    "tag": "Marinat · 1 dia",
-    "title": "Seitons en vinagre",
-    "body": "Congela'ls 5 dies abans per seguretat. Deixa'ls en vinagre i sal 8 hores, escorre'ls i cobreix-los d'oli amb all i julivert.",
-    "btn": "Encarregar seitons →",
-    "prod": "Seitons a filets"
+    "tag": "Guisat · 25 min",
+    "title": "Cua de rap en salsa verda",
+    "body": "Sofregiu all picat amb una mica de farina, julivert i un got de vi blanc fins a lligar la salsa. Incorporeu les rodanxes de rap i deixeu-les coure 8 minuts a foc suau.",
+    "btn": "Encarregar rap →",
+    "prod": "Cua de rap"
    },
    "es": {
-    "tag": "Marinado · 1 día",
-    "title": "Boquerones en vinagre",
-    "body": "Congélalos 5 días antes por seguridad. Déjalos en vinagre y sal 8 horas, escúrrelos y cúbrelos de aceite con ajo y perejil.",
-    "btn": "Encargar boquerones →",
-    "prod": "Boquerones en filetes"
+    "tag": "Guiso · 25 min",
+    "title": "Cola de rape en salsa verde",
+    "body": "Dora ajo picado con una pizca de harina, perejil y vino blanco hasta ligar la salsa. Incorpora las rodajas de rape y cocina tapado a fuego suave durante 8 minutos.",
+    "btn": "Encargar rape →",
+    "prod": "Cola de rape"
    },
    "en": {
-    "tag": "Marinated · 1 day",
-    "title": "Anchovies in vinegar",
-    "body": "Freeze them for 5 days first for safety. Leave in vinegar and salt for 8 hours, drain and cover with oil, garlic and parsley.",
-    "btn": "Order anchovies →",
-    "prod": "Anchovy fillets"
+    "tag": "Stew · 25 min",
+    "title": "Monkfish tail in green parsley sauce",
+    "body": "Gently saute minced garlic with flour, fresh parsley, and white wine until thickened. Add the monkfish slices and simmer covered over low heat for 8 minutes.",
+    "btn": "Order monkfish →",
+    "prod": "Monkfish tail"
+   }
+  },
+  {
+   "prep": "sal",
+   "ca": {
+    "tag": "Forn · 25 min",
+    "title": "Llobarro a la sal sucós",
+    "body": "Cobriu la peça sencera amb sal gruixuda humitejada en una safata de forn. Enforneu a 200 °C durant 25 minuts, trenqueu la crosta i serviu els lloms nets.",
+    "btn": "Encarregar llobarro →",
+    "prod": "Llobarro salvatge"
+   },
+   "es": {
+    "tag": "Horno · 25 min",
+    "title": "Lubina a la sal jugosa",
+    "body": "Cubre la pieza entera con sal gruesa humedecida sobre una bandeja de horno. Hornea a 200 °C durante 25 minutos, rompe la costra y sirve los lomos limpios.",
+    "btn": "Encargar lubina →",
+    "prod": "Lubina salvaje"
+   },
+   "en": {
+    "tag": "Oven · 25 min",
+    "title": "Juicy salt-crusted sea bass",
+    "body": "Completely cover the whole fish with damp coarse salt on a baking tray. Bake at 200 °C for 25 minutes, carefully crack the crust, and serve the clean fillets.",
+    "btn": "Order sea bass →",
+    "prod": "Wild sea bass"
    }
   }
  ]
