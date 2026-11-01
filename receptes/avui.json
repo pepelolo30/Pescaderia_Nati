@@ -1,101 +1,101 @@
 {
  "data": "2026-11-01",
- "font": "ia",
+ "font": "receptari",
  "receptes": [
-  {
-   "prep": "net",
-   "ca": {
-    "tag": "Vapor · 10 min",
-    "title": "Musclos al vapor amb vi blanc i llorer",
-    "body": "Posa els musclos en una cassola amb un raig de vi blanc i una fulla de llorer. Tapa-ho a foc viu uns 5 minuts fins que s'obrin i serveix amb llimona fresca.",
-    "btn": "Encarregar musclos →",
-    "prod": "Musclos de roca"
-   },
-   "es": {
-    "tag": "Vapor · 10 min",
-    "title": "Mejillones al vapor con vino blanco y laurel",
-    "body": "Pon los mejillones en una cazuela con un chorro de vino blanco y laurel. Tapa a fuego vivo unos 5 minutos hasta que se abran y sirve con limón fresco.",
-    "btn": "Encargar mejillones →",
-    "prod": "Mejillones de roca"
-   },
-   "en": {
-    "tag": "Steam · 10 min",
-    "title": "Steamed mussels with white wine and bay leaf",
-    "body": "Place the mussels in a pot with a splash of white wine and a bay leaf. Cover over high heat for 5 minutes until opened and serve with fresh lemon wedges.",
-    "btn": "Order mussels →",
-    "prod": "Fresh rock mussels"
-   }
-  },
-  {
-   "prep": "net",
-   "ca": {
-    "tag": "Guisat · 35 min",
-    "title": "Calamars encebats tradicionals",
-    "body": "Enrossiu molta ceba tallada fina a foc lent durant 20 minuts fins que quedi caramel·litzada. Afegiu-hi els calamars a rodanxes i deixeu-los coure 15 minuts més.",
-    "btn": "Encarregar calamars →",
-    "prod": "Calamars de platja"
-   },
-   "es": {
-    "tag": "Guiso · 35 min",
-    "title": "Calamares encebollados tradicionales",
-    "body": "Pocha abundante cebolla en juliana a fuego lento durante 20 minutos hasta que caramelice. Añade los calamares cortados en anillas y cocina a fuego suave 15 minutos más.",
-    "btn": "Encargar calamares →",
-    "prod": "Calamares de playa"
-   },
-   "en": {
-    "tag": "Stew · 35 min",
-    "title": "Traditional squid with caramelized onions",
-    "body": "Slowly cook sliced onions over low heat for 20 minutes until deeply caramelized. Add the squid rings and simmer gently covered for another 15 minutes.",
-    "btn": "Order squid →",
-    "prod": "Local fresh squid"
-   }
-  },
-  {
-   "prep": "rodanxes",
-   "ca": {
-    "tag": "Guisat · 25 min",
-    "title": "Cua de rap en salsa verda",
-    "body": "Sofregiu all picat amb una mica de farina, julivert i un got de vi blanc fins a lligar la salsa. Incorporeu les rodanxes de rap i deixeu-les coure 8 minuts a foc suau.",
-    "btn": "Encarregar rap →",
-    "prod": "Cua de rap"
-   },
-   "es": {
-    "tag": "Guiso · 25 min",
-    "title": "Cola de rape en salsa verde",
-    "body": "Dora ajo picado con una pizca de harina, perejil y vino blanco hasta ligar la salsa. Incorpora las rodajas de rape y cocina tapado a fuego suave durante 8 minutos.",
-    "btn": "Encargar rape →",
-    "prod": "Cola de rape"
-   },
-   "en": {
-    "tag": "Stew · 25 min",
-    "title": "Monkfish tail in green parsley sauce",
-    "body": "Gently saute minced garlic with flour, fresh parsley, and white wine until thickened. Add the monkfish slices and simmer covered over low heat for 8 minutes.",
-    "btn": "Order monkfish →",
-    "prod": "Monkfish tail"
-   }
-  },
   {
    "prep": "sal",
    "ca": {
-    "tag": "Forn · 25 min",
-    "title": "Llobarro a la sal sucós",
-    "body": "Cobriu la peça sencera amb sal gruixuda humitejada en una safata de forn. Enforneu a 200 °C durant 25 minuts, trenqueu la crosta i serviu els lloms nets.",
-    "btn": "Encarregar llobarro →",
-    "prod": "Llobarro salvatge"
+    "tag": "Forn · 30 min",
+    "title": "Orada o llobarro a la sal",
+    "body": "Cobreix la peça sencera amb sal grossa humida i forn ben calent uns 20 minuts. Te la deixem buidada però amb les escates.",
+    "btn": "Encarregar per a la sal →",
+    "prod": "Orada o llobarro"
    },
    "es": {
-    "tag": "Horno · 25 min",
-    "title": "Lubina a la sal jugosa",
-    "body": "Cubre la pieza entera con sal gruesa humedecida sobre una bandeja de horno. Hornea a 200 °C durante 25 minutos, rompe la costra y sirve los lomos limpios.",
-    "btn": "Encargar lubina →",
-    "prod": "Lubina salvaje"
+    "tag": "Horno · 30 min",
+    "title": "Dorada o lubina a la sal",
+    "body": "Cubre la pieza entera con sal gruesa húmeda y horno bien caliente unos 20 minutos. Te la dejamos vaciada pero con las escamas.",
+    "btn": "Encargar para la sal →",
+    "prod": "Dorada o lubina"
    },
    "en": {
-    "tag": "Oven · 25 min",
-    "title": "Juicy salt-crusted sea bass",
-    "body": "Completely cover the whole fish with damp coarse salt on a baking tray. Bake at 200 °C for 25 minutes, carefully crack the crust, and serve the clean fillets.",
-    "btn": "Order sea bass →",
-    "prod": "Wild sea bass"
+    "tag": "Oven · 30 min",
+    "title": "Salt-baked bream or sea bass",
+    "body": "Cover the whole fish in damp coarse salt and bake in a very hot oven for about 20 minutes. We gut it but keep the scales on.",
+    "btn": "Order for salt-baking →",
+    "prod": "Bream or sea bass"
+   }
+  },
+  {
+   "prep": "planxa",
+   "ca": {
+    "tag": "Planxa · 5 min",
+    "title": "Gambes a la planxa",
+    "body": "Planxa molt calenta amb sal grossa. Un minut i mig per costat i a taula. No les rentis: el sabor és al cap.",
+    "btn": "Encarregar gambes →",
+    "prod": "Gambes"
+   },
+   "es": {
+    "tag": "Plancha · 5 min",
+    "title": "Gambas a la plancha",
+    "body": "Plancha muy caliente con sal gruesa. Minuto y medio por lado y a la mesa. No las laves: el sabor está en la cabeza.",
+    "btn": "Encargar gambas →",
+    "prod": "Gambas"
+   },
+   "en": {
+    "tag": "Grill · 5 min",
+    "title": "Grilled red prawns",
+    "body": "Very hot griddle with coarse salt. A minute and a half per side and serve. Don't rinse them: the flavour is in the head.",
+    "btn": "Order prawns →",
+    "prod": "Red prawns"
+   }
+  },
+  {
+   "prep": "net",
+   "ca": {
+    "tag": "Fregit · 15 min",
+    "title": "Peix petit fregit",
+    "body": "Enfarina'l, sacseja l'excés i fregeix-lo en oli ben calent en poques quantitats. Sal al final i un raig de llimona.",
+    "btn": "Encarregar-lo net →",
+    "prod": "Peix petit per fregir"
+   },
+   "es": {
+    "tag": "Frito · 15 min",
+    "title": "Pescadito frito",
+    "body": "Enharínalo, sacude el exceso y fríelo en aceite bien caliente en tandas pequeñas. Sal al final y un chorrito de limón.",
+    "btn": "Encargarlo limpio →",
+    "prod": "Pescadito para freír"
+   },
+   "en": {
+    "tag": "Fried · 15 min",
+    "title": "Fried small fish",
+    "body": "Dust in flour, shake off the excess and fry in very hot oil in small batches. Salt at the end and a squeeze of lemon.",
+    "btn": "Order it cleaned →",
+    "prod": "Small fish for frying"
+   }
+  },
+  {
+   "prep": "net",
+   "ca": {
+    "tag": "Cassola · 50 min",
+    "title": "Calamars farcits",
+    "body": "Farceix els tubs amb les potes picades, ceba, ou dur i pa ratllat. Tanca'ls amb un escuradents i cou-los en salsa de tomàquet 30 minuts.",
+    "btn": "Encarregar calamars →",
+    "prod": "Calamars nets per farcir"
+   },
+   "es": {
+    "tag": "Cazuela · 50 min",
+    "title": "Calamares rellenos",
+    "body": "Rellena los tubos con las patas picadas, cebolla, huevo duro y pan rallado. Ciérralos con un palillo y cuécelos en salsa de tomate 30 minutos.",
+    "btn": "Encargar calamares →",
+    "prod": "Calamares limpios para rellenar"
+   },
+   "en": {
+    "tag": "Stew · 50 min",
+    "title": "Stuffed squid",
+    "body": "Fill the tubes with chopped tentacles, onion, boiled egg and breadcrumbs. Close with a toothpick and simmer in tomato sauce for 30 minutes.",
+    "btn": "Order squid →",
+    "prod": "Cleaned squid for stuffing"
    }
   }
  ]
