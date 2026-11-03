@@ -1,0 +1,56 @@
+{
+ "textos": {
+  "Calamars grans": {
+   "es": "Calamares grandes",
+   "en": "Large squid"
+  },
+  "Lluç": {
+   "es": "Merluza",
+   "en": "Hake"
+  },
+  "Maira mitjana": {
+   "es": "Bacaladilla mediana",
+   "en": "Medium blue whiting"
+  },
+  "Gamba petita": {
+   "es": "Gamba pequeña",
+   "en": "Small prawn"
+  },
+  "Gamba gran": {
+   "es": "Gamba grande",
+   "en": "Large prawn"
+  },
+  "Sípia petita": {
+   "es": "Sepia pequeña",
+   "en": "Small cuttlefish"
+  },
+  "Llobarro gran": {
+   "es": "Lubina grande",
+   "en": "Large sea bass"
+  },
+  "Gall gran": {
+   "es": "Gallo grande",
+   "en": "Large megrim"
+  },
+  "Llenguado": {
+   "es": "Lenguado",
+   "en": "Sole"
+  },
+  "Escamarlans mitjans": {
+   "es": "Cigalas medianas",
+   "en": "Medium langoustines"
+  },
+  "Volanta": {
+   "es": "Volanta",
+   "en": "Volanta"
+  },
+  "Llobarro real": {
+   "es": "Lubina real",
+   "en": "Wild sea bass"
+  },
+  "Seitons": {
+   "es": "Boquerones",
+   "en": "Anchovies"
+  }
+ }
+}
