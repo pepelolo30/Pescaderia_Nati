@@ -333,6 +333,7 @@
     padding:12px 0; border-top:1px dashed rgba(250,246,236,0.18);
   }
   .board-item:first-child{ border-top:none; }
+  .board-item > div:first-child{ flex:1; min-width:0; overflow-wrap:anywhere; }
   .board-name{ font-family:"Playfair Display", Georgia, serif; font-size:18px; }
   .board-note{ display:block; font-size:13px; color:rgba(250,246,236,0.62); margin-top:2px; }
   .board-right{ display:flex; align-items:center; gap:14px; flex:none; }
@@ -579,7 +580,8 @@
     .item-row{ grid-template-columns:1fr 1fr auto; }
     .item-row .item-name{ grid-column:1 / -1; }
     .two-col{ grid-template-columns:1fr; }
-    .board-item{ flex-wrap:wrap; }
+    .board-item, .board-right{ gap:10px; }
+    .board-name{ font-size:17px; }
     .section{ padding:44px 0; }
     .story{ padding:44px 0; }
     .features{ padding-bottom:44px; }
