@@ -1841,15 +1841,20 @@
 
   var board = { date:null, items:[] };
 
+  var boardTr = {};
+  function trBoard(s){
+    var x = boardTr[s];
+    return (curLang !== 'ca' && x && typeof x[curLang] === 'string' && x[curLang]) || s;
+  }
   function normName(s){
     return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
   }
   function fillProductList(t){
     var dl = document.getElementById('productList'), seen = {}, skip = {}, out = [];
     board.items.forEach(function(it){
-      var n = normName(it.name);
-      if(!n || seen[n]) return;
-      seen[n] = true; out.push(it.name);
+      var n = normName(it.name), nom = trBoard(it.name), nt = normName(nom);
+      if(!n || seen[n] || seen[nt]) return;
+      seen[n] = true; seen[nt] = true; out.push(nom);
       T.ca.products.forEach(function(p, i){ if((' ' + n + ' ').indexOf(' ' + normName(p) + ' ') >= 0) skip[i] = true; });
     });
     t.products.forEach(function(p, i){
@@ -1870,13 +1875,13 @@
     board.items.forEach(function(it){
       var li = document.createElement('li'); li.className = 'board-item';
       var left = document.createElement('div');
-      var nm = document.createElement('span'); nm.className = 'board-name'; nm.textContent = it.name; left.appendChild(nm);
-      if(it.note){ var nt = document.createElement('span'); nt.className = 'board-note'; nt.textContent = it.note; left.appendChild(nt); }
+      var nm = document.createElement('span'); nm.className = 'board-name'; nm.textContent = trBoard(it.name); left.appendChild(nm);
+      if(it.note){ var nt = document.createElement('span'); nt.className = 'board-note'; nt.textContent = trBoard(it.note); left.appendChild(nt); }
       var right = document.createElement('div'); right.className = 'board-right';
       if(it.price){ var pr = document.createElement('span'); pr.className = 'board-price'; pr.textContent = it.price; right.appendChild(pr); }
       var b = document.createElement('button'); b.type = 'button'; b.className = 'btn btn-gold btn-sm'; b.style.border = 'none'; b.style.cursor = 'pointer';
       b.textContent = t.avuiWant;
-      b.addEventListener('click', function(){ addToOrder(it.name, ''); });
+      b.addEventListener('click', function(){ addToOrder(trBoard(it.name), ''); });
       right.appendChild(b);
       li.appendChild(left); li.appendChild(right); list.appendChild(li);
     });
@@ -1934,7 +1939,8 @@
   function loadBoard(){
     if(!window.fetch) return;
     var sheetUrl = SHEET_ID ? 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:csv&headers=1&v=' + Date.now() : '';
-    Promise.all([ sheetUrl ? getText(sheetUrl) : Promise.resolve(''), getText('avui.txt?v=' + Date.now()) ]).then(function(res){
+    Promise.all([ sheetUrl ? getText(sheetUrl) : Promise.resolve(''), getText('avui.txt?v=' + Date.now()), getText('avui-traduccions.json?v=' + Date.now()) ]).then(function(res){
+      try{ var tr = JSON.parse(res[2] || '{}'); boardTr = tr && typeof tr.textos === 'object' && tr.textos ? tr.textos : {}; }catch(e){ boardTr = {}; }
       var fromSheet = res[0] && res[0].charAt(0) !== '<' ? boardFromSheet(res[0]) : null;
       var fromTxt = boardFromTxt(res[1]);
       board = fromSheet && fromSheet.items.length ? fromSheet : fromTxt;
