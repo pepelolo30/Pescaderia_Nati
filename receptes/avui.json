@@ -1,101 +1,101 @@
 {
- "data": "2026-11-02",
+ "data": "2026-11-03",
  "font": "receptari",
  "receptes": [
   {
-   "prep": "",
+   "prep": "forn",
    "ca": {
-    "tag": "Cassola · 10 min",
-    "title": "Gambes a l'all",
-    "body": "Pela-les i posa-les en oli calent amb làmines d'all i un bitxo. Quan canviïn de color, julivert i a taula, amb pa per sucar.",
-    "btn": "Encarregar gambes →",
-    "prod": "Gambes per pelar"
+    "tag": "Forn · 30 min",
+    "title": "Rèmol al forn",
+    "body": "Posa el rèmol sobre un llit de ceba i tomàquet, amb oli i vi blanc. Forn a 200 °C uns 20 minuts, fins que l'espina se separi fàcilment.",
+    "btn": "Encarregar rèmol →",
+    "prod": "Rèmol per al forn"
    },
    "es": {
-    "tag": "Cazuela · 10 min",
-    "title": "Gambas al ajillo",
-    "body": "Pélalas y ponlas en aceite caliente con láminas de ajo y una guindilla. Cuando cambien de color, perejil y a la mesa, con pan para mojar.",
-    "btn": "Encargar gambas →",
-    "prod": "Gambas para pelar"
+    "tag": "Horno · 30 min",
+    "title": "Rodaballo al horno",
+    "body": "Pon el rodaballo sobre una cama de cebolla y tomate, con aceite y vino blanco. Horno a 200 °C unos 20 minutos, hasta que la espina se separe fácil.",
+    "btn": "Encargar rodaballo →",
+    "prod": "Rodaballo para horno"
    },
    "en": {
-    "tag": "Pan · 10 min",
-    "title": "Garlic prawns",
-    "body": "Peel them and add to hot oil with sliced garlic and a chilli. When they change colour, add parsley and serve with bread.",
-    "btn": "Order prawns →",
-    "prod": "Prawns to peel"
+    "tag": "Oven · 30 min",
+    "title": "Baked turbot",
+    "body": "Lay the turbot on onion and tomato with olive oil and white wine. Bake at 200 °C for about 20 minutes, until the bone lifts away easily.",
+    "btn": "Order turbot →",
+    "prod": "Turbot for the oven"
+   }
+  },
+  {
+   "prep": "forn",
+   "ca": {
+    "tag": "Forn · 45 min",
+    "title": "Besuc al forn",
+    "body": "Fes un llit de patata i ceba i enforna'l 20 minuts. Posa-hi el besuc amb llimona i 20 minuts més a 180 °C. Acaba'l amb un sofregit d'all i vinagre.",
+    "btn": "Encarregar besuc →",
+    "prod": "Besuc per al forn"
+   },
+   "es": {
+    "tag": "Horno · 45 min",
+    "title": "Besugo al horno",
+    "body": "Haz una cama de patata y cebolla y hornéala 20 minutos. Pon el besugo con limón y 20 minutos más a 180 °C. Termínalo con un refrito de ajo y vinagre.",
+    "btn": "Encargar besugo →",
+    "prod": "Besugo para horno"
+   },
+   "en": {
+    "tag": "Oven · 45 min",
+    "title": "Baked sea bream",
+    "body": "Bake a bed of potato and onion for 20 minutes. Add the bream with lemon and bake 20 more at 180 °C. Finish with garlic fried in oil and a dash of vinegar.",
+    "btn": "Order sea bream →",
+    "prod": "Sea bream for the oven"
+   }
+  },
+  {
+   "prep": "forn",
+   "ca": {
+    "tag": "Forn · 45 min",
+    "title": "Llobarro al forn amb patates",
+    "body": "Enforna patata i ceba a làmines 25 minuts. Posa-hi el llobarro amb all, julivert i un raig de vi blanc, i 15 minuts més a 190 °C.",
+    "btn": "Encarregar llobarro →",
+    "prod": "Llobarro per al forn"
+   },
+   "es": {
+    "tag": "Horno · 45 min",
+    "title": "Lubina al horno con patatas",
+    "body": "Hornea patata y cebolla en láminas 25 minutos. Pon encima la lubina con ajo, perejil y un chorrito de vino blanco, y 15 minutos más a 190 °C.",
+    "btn": "Encargar lubina →",
+    "prod": "Lubina para horno"
+   },
+   "en": {
+    "tag": "Oven · 45 min",
+    "title": "Baked sea bass with potatoes",
+    "body": "Bake sliced potato and onion for 25 minutes. Lay the sea bass on top with garlic, parsley and white wine, and 15 more minutes at 190 °C.",
+    "btn": "Order sea bass →",
+    "prod": "Sea bass for the oven"
    }
   },
   {
    "prep": "net",
    "ca": {
-    "tag": "Paella · 15 min",
-    "title": "Llenguado a la mantega",
-    "body": "Enfarina'l lleugerament i daura'l en mantega 3 minuts per costat. Afegeix suc de llimona i julivert a la mantega i rega-hi el peix.",
-    "btn": "Encarregar llenguado →",
-    "prod": "Llenguado net"
+    "tag": "Planxa · 10 min",
+    "title": "Sardines a la planxa",
+    "body": "Planxa molt calenta amb un fil d'oli i sal grossa. 2 o 3 minuts per costat i acaba amb all i julivert picats.",
+    "btn": "Encarregar sardines →",
+    "prod": "Sardines netes"
    },
    "es": {
-    "tag": "Sartén · 15 min",
-    "title": "Lenguado a la mantequilla",
-    "body": "Enharínalo ligeramente y dóralo en mantequilla 3 minutos por lado. Añade zumo de limón y perejil a la mantequilla y riega el pescado.",
-    "btn": "Encargar lenguado →",
-    "prod": "Lenguado limpio"
+    "tag": "Plancha · 10 min",
+    "title": "Sardinas a la plancha",
+    "body": "Plancha muy caliente con un hilo de aceite y sal gruesa. 2 o 3 minutos por lado y termina con ajo y perejil picados.",
+    "btn": "Encargar sardinas →",
+    "prod": "Sardinas limpias"
    },
    "en": {
-    "tag": "Pan · 15 min",
-    "title": "Sole meunière",
-    "body": "Dust lightly in flour and brown in butter for 3 minutes per side. Add lemon juice and parsley to the butter and spoon it over the fish.",
-    "btn": "Order sole →",
-    "prod": "Cleaned sole"
-   }
-  },
-  {
-   "prep": "filets",
-   "ca": {
-    "tag": "Fregit · 15 min",
-    "title": "Lluç arrebossat",
-    "body": "Passa els filets per farina i ou batut i fregeix-los en oli calent fins que siguin daurats. Sense espines, ideal per als nens.",
-    "btn": "Encarregar lluç →",
-    "prod": "Lluç a filets"
-   },
-   "es": {
-    "tag": "Frito · 15 min",
-    "title": "Merluza rebozada",
-    "body": "Pasa los filetes por harina y huevo batido y fríelos en aceite caliente hasta dorarlos. Sin espinas, ideal para los niños.",
-    "btn": "Encargar merluza →",
-    "prod": "Merluza en filetes"
-   },
-   "en": {
-    "tag": "Fried · 15 min",
-    "title": "Battered hake",
-    "body": "Dip the fillets in flour and beaten egg and fry in hot oil until golden. Boneless, great for children.",
-    "btn": "Order hake →",
-    "prod": "Hake fillets"
-   }
-  },
-  {
-   "prep": "net",
-   "ca": {
-    "tag": "Vapor · 8 min",
-    "title": "Musclos al vapor amb llimona",
-    "body": "En una olla tapada amb un dit d'aigua, una fulla de llorer i pell de llimona. Quan s'obrin, fora del foc i un raig de llimona.",
-    "btn": "Encarregar musclos →",
-    "prod": "Musclos nets"
-   },
-   "es": {
-    "tag": "Vapor · 8 min",
-    "title": "Mejillones al vapor con limón",
-    "body": "En una olla tapada con un dedo de agua, una hoja de laurel y piel de limón. Cuando se abran, fuera del fuego y un chorrito de limón.",
-    "btn": "Encargar mejillones →",
-    "prod": "Mejillones limpios"
-   },
-   "en": {
-    "tag": "Steamed · 8 min",
-    "title": "Steamed mussels with lemon",
-    "body": "In a covered pot with a little water, a bay leaf and lemon zest. Once they open, take off the heat and add lemon juice.",
-    "btn": "Order mussels →",
-    "prod": "Cleaned mussels"
+    "tag": "Grill · 10 min",
+    "title": "Grilled sardines",
+    "body": "Very hot griddle with a drizzle of oil and coarse salt. 2 or 3 minutes per side, finished with chopped garlic and parsley.",
+    "btn": "Order sardines →",
+    "prod": "Cleaned sardines"
    }
   }
  ]
