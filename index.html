@@ -2056,7 +2056,7 @@
       var ok = function(x){ return x && typeof x.tag === 'string' && typeof x.title === 'string' && typeof x.body === 'string' && typeof x.btn === 'string' && typeof x.prod === 'string'; };
       var list = (j && j.receptes || []).filter(function(r){ return ok(r.ca) && ok(r.es) && ok(r.en); });
       if(list.length < 3) return;
-      dailyRecipes = list.slice(0, 5);
+      dailyRecipes = list.slice(0, 8);
       renderDailyRecipes();
     }).catch(function(){});
   }
