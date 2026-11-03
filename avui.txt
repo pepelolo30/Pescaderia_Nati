@@ -3,16 +3,16 @@
 # Una línia per producte:   Nom | preu | nota   (el preu i la nota són opcionals)
 
 data: 2026-11-03
-Calamars grans | 62,90 €/kg |
-Lluç | 21,90 €/kg |
-Maira mitjana | 12,90 €/kg |
-Gamba petita | 44,90 €/kg |
-Gamba gran | 108,90 €/kg |
-Sípia petita | 28,90 €/kg |
-Llobarro gran | 16,90 €/kg |
-Gall gran | 29,90 €/kg |
-Llenguado | 55,90 €/kg |
-Escamarlans mitjans | 65,90 €/kg |
-Volanta | 15,90 €/kg |
-Llobarro real | 24,90 €/kg |
-Seitons | 9,90 €/kg |
+Salmó gran | 26,90 €/kg |
+Llobarro gran | 24,90 €/kg |
+Orada | 18,90 €/kg |
+Llobarro real | 29,90 €/kg |
+Turbot | 33,90 €/kg |
+Gall | 29,90 €/kg |
+Tonyina gran | 42,90 €/kg |
+Gamba petita | 39,90 €/kg |
+Calamars grans | 49,90 €/kg |
+Sípia petita | 29,90 €/kg |
+Lluç | 26,90 €/kg |
+Escamarlans mitjans | 69,00 €/kg |
+Maira mitjana | 18,90 €/kg |

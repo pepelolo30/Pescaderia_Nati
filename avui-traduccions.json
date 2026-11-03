@@ -1,56 +1,56 @@
 {
  "textos": {
-  "Calamars grans": {
-   "es": "Calamares grandes",
-   "en": "Large squid"
-  },
-  "Lluç": {
-   "es": "Merluza",
-   "en": "Hake"
-  },
-  "Maira mitjana": {
-   "es": "Bacaladilla mediana",
-   "en": "Medium blue whiting"
-  },
-  "Gamba petita": {
-   "es": "Gamba pequeña",
-   "en": "Small prawn"
-  },
-  "Gamba gran": {
-   "es": "Gamba grande",
-   "en": "Large prawn"
-  },
-  "Sípia petita": {
-   "es": "Sepia pequeña",
-   "en": "Small cuttlefish"
+  "Salmó gran": {
+   "es": "Salmón grande",
+   "en": "Large salmon"
   },
   "Llobarro gran": {
    "es": "Lubina grande",
    "en": "Large sea bass"
   },
-  "Gall gran": {
-   "es": "Gallo grande",
-   "en": "Large megrim"
-  },
-  "Llenguado": {
-   "es": "Lenguado",
-   "en": "Sole"
-  },
-  "Escamarlans mitjans": {
-   "es": "Cigalas medianas",
-   "en": "Medium langoustines"
-  },
-  "Volanta": {
-   "es": "Volanta",
-   "en": "Volanta"
+  "Orada": {
+   "es": "Dorada",
+   "en": "Sea bream"
   },
   "Llobarro real": {
    "es": "Lubina real",
    "en": "Sea bass (real)"
   },
-  "Seitons": {
-   "es": "Boquerones",
-   "en": "Anchovies"
+  "Turbot": {
+   "es": "Rodaballo",
+   "en": "Turbot"
+  },
+  "Gall": {
+   "es": "Gallo",
+   "en": "Megrim"
+  },
+  "Tonyina gran": {
+   "es": "Atún grande",
+   "en": "Large tuna"
+  },
+  "Gamba petita": {
+   "es": "Gamba pequeña",
+   "en": "Small prawn"
+  },
+  "Calamars grans": {
+   "es": "Calamares grandes",
+   "en": "Large squid"
+  },
+  "Sípia petita": {
+   "es": "Sepia pequeña",
+   "en": "Small cuttlefish"
+  },
+  "Lluç": {
+   "es": "Merluza",
+   "en": "Hake"
+  },
+  "Escamarlans mitjans": {
+   "es": "Cigalas medianas",
+   "en": "Medium langoustines"
+  },
+  "Maira mitjana": {
+   "es": "Bacaladilla mediana",
+   "en": "Medium blue whiting"
   }
  }
 }
