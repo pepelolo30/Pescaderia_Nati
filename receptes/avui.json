@@ -1,101 +1,101 @@
 {
  "data": "2026-11-03",
- "font": "receptari",
+ "font": "ia",
  "receptes": [
-  {
-   "prep": "forn",
-   "ca": {
-    "tag": "Forn · 30 min",
-    "title": "Rèmol al forn",
-    "body": "Posa el rèmol sobre un llit de ceba i tomàquet, amb oli i vi blanc. Forn a 200 °C uns 20 minuts, fins que l'espina se separi fàcilment.",
-    "btn": "Encarregar rèmol →",
-    "prod": "Rèmol per al forn"
-   },
-   "es": {
-    "tag": "Horno · 30 min",
-    "title": "Rodaballo al horno",
-    "body": "Pon el rodaballo sobre una cama de cebolla y tomate, con aceite y vino blanco. Horno a 200 °C unos 20 minutos, hasta que la espina se separe fácil.",
-    "btn": "Encargar rodaballo →",
-    "prod": "Rodaballo para horno"
-   },
-   "en": {
-    "tag": "Oven · 30 min",
-    "title": "Baked turbot",
-    "body": "Lay the turbot on onion and tomato with olive oil and white wine. Bake at 200 °C for about 20 minutes, until the bone lifts away easily.",
-    "btn": "Order turbot →",
-    "prod": "Turbot for the oven"
-   }
-  },
-  {
-   "prep": "forn",
-   "ca": {
-    "tag": "Forn · 45 min",
-    "title": "Besuc al forn",
-    "body": "Fes un llit de patata i ceba i enforna'l 20 minuts. Posa-hi el besuc amb llimona i 20 minuts més a 180 °C. Acaba'l amb un sofregit d'all i vinagre.",
-    "btn": "Encarregar besuc →",
-    "prod": "Besuc per al forn"
-   },
-   "es": {
-    "tag": "Horno · 45 min",
-    "title": "Besugo al horno",
-    "body": "Haz una cama de patata y cebolla y hornéala 20 minutos. Pon el besugo con limón y 20 minutos más a 180 °C. Termínalo con un refrito de ajo y vinagre.",
-    "btn": "Encargar besugo →",
-    "prod": "Besugo para horno"
-   },
-   "en": {
-    "tag": "Oven · 45 min",
-    "title": "Baked sea bream",
-    "body": "Bake a bed of potato and onion for 20 minutes. Add the bream with lemon and bake 20 more at 180 °C. Finish with garlic fried in oil and a dash of vinegar.",
-    "btn": "Order sea bream →",
-    "prod": "Sea bream for the oven"
-   }
-  },
-  {
-   "prep": "forn",
-   "ca": {
-    "tag": "Forn · 45 min",
-    "title": "Llobarro al forn amb patates",
-    "body": "Enforna patata i ceba a làmines 25 minuts. Posa-hi el llobarro amb all, julivert i un raig de vi blanc, i 15 minuts més a 190 °C.",
-    "btn": "Encarregar llobarro →",
-    "prod": "Llobarro per al forn"
-   },
-   "es": {
-    "tag": "Horno · 45 min",
-    "title": "Lubina al horno con patatas",
-    "body": "Hornea patata y cebolla en láminas 25 minutos. Pon encima la lubina con ajo, perejil y un chorrito de vino blanco, y 15 minutos más a 190 °C.",
-    "btn": "Encargar lubina →",
-    "prod": "Lubina para horno"
-   },
-   "en": {
-    "tag": "Oven · 45 min",
-    "title": "Baked sea bass with potatoes",
-    "body": "Bake sliced potato and onion for 25 minutes. Lay the sea bass on top with garlic, parsley and white wine, and 15 more minutes at 190 °C.",
-    "btn": "Order sea bass →",
-    "prod": "Sea bass for the oven"
-   }
-  },
   {
    "prep": "net",
    "ca": {
+    "tag": "Guisat · 25 min",
+    "title": "Calamars en salsa",
+    "body": "Talla els calamars a anelles i enrosseix-los en una cassola amb oli d'oliva. Afegeix ceba picada, tomàquet ratllat i un raig de vi blanc fins que quedin tendres.",
+    "btn": "Encarregar calamar →",
+    "prod": "Calamar"
+   },
+   "es": {
+    "tag": "Guisado · 25 min",
+    "title": "Calamares en salsa",
+    "body": "Corta los calamares en anillas y dóralos en una cazuela con aceite de oliva. Añade cebolla picada, tomate rallado y un chorro de vino blanco hasta que queden tiernos.",
+    "btn": "Encargar calamar →",
+    "prod": "Calamar"
+   },
+   "en": {
+    "tag": "Stew · 25 min",
+    "title": "Squid in sauce",
+    "body": "Cut the squid into rings and brown them in a pot with olive oil. Add chopped onion, grated tomato, and a splash of white wine until tender.",
+    "btn": "Order squid →",
+    "prod": "Squid"
+   }
+  },
+  {
+   "prep": "cru",
+   "ca": {
+    "tag": "Marinats · 15 min",
+    "title": "Seitons casolans en vinagre",
+    "body": "Neteja els seitons, retira l'espina i congela'ls cinc dies abans de consumir-los. Descongela, cobreix-los amb vinagre de poma durant dues hores i amaneix-los amb oli, all i julivert.",
+    "btn": "Encarregar seitons →",
+    "prod": "Seitons"
+   },
+   "es": {
+    "tag": "Marinados · 15 min",
+    "title": "Boquerones caseros en vinagre",
+    "body": "Limpia los boquerones, retira la espina y congélalos cinco días antes de consumirlos. Descongela, cúbrelos con vinagre de manzana dos horas y aliña con aceite, ajo y perejil.",
+    "btn": "Encargar boquerones →",
+    "prod": "Boquerones"
+   },
+   "en": {
+    "tag": "Marinated · 15 min",
+    "title": "Homemade pickled anchovies",
+    "body": "Clean the anchovies, remove the bone, and freeze them five days before eating. Thaw, cover with apple cider vinegar for two hours, and dress with oil, garlic, and parsley.",
+    "btn": "Order anchovies →",
+    "prod": "Anchovies"
+   }
+  },
+  {
+   "prep": "planxa",
+   "ca": {
     "tag": "Planxa · 10 min",
-    "title": "Sardines a la planxa",
-    "body": "Planxa molt calenta amb un fil d'oli i sal grossa. 2 o 3 minuts per costat i acaba amb all i julivert picats.",
-    "btn": "Encarregar sardines →",
-    "prod": "Sardines netes"
+    "title": "Sípia amb all i julivert",
+    "body": "Escalfa la planxa al màxim i cou la sípia durant dos minuts per cada costat sense moure'la. Serveix-la immediatament amb una picada d'all, julivert picat i oli d'oliva.",
+    "btn": "Encarregar sípia →",
+    "prod": "Sípia"
    },
    "es": {
     "tag": "Plancha · 10 min",
-    "title": "Sardinas a la plancha",
-    "body": "Plancha muy caliente con un hilo de aceite y sal gruesa. 2 o 3 minutos por lado y termina con ajo y perejil picados.",
-    "btn": "Encargar sardinas →",
-    "prod": "Sardinas limpias"
+    "title": "Sepia con ajo y perejil",
+    "body": "Calienta la plancha al máximo y cocina la sepia dos minutos por cada lado sin moverla. Sírvela inmediatamente con un majado de ajo, perejil picado y aceite de oliva.",
+    "btn": "Encargar sepia →",
+    "prod": "Sepia"
    },
    "en": {
     "tag": "Grill · 10 min",
-    "title": "Grilled sardines",
-    "body": "Very hot griddle with a drizzle of oil and coarse salt. 2 or 3 minutes per side, finished with chopped garlic and parsley.",
-    "btn": "Order sardines →",
-    "prod": "Cleaned sardines"
+    "title": "Grilled cuttlefish with garlic",
+    "body": "Heat the grill to high and cook the cuttlefish for two minutes per side without moving it. Serve immediately topped with minced garlic, chopped parsley, and olive oil.",
+    "btn": "Order cuttlefish →",
+    "prod": "Cuttlefish"
+   }
+  },
+  {
+   "prep": "sencer",
+   "ca": {
+    "tag": "Guisat · 20 min",
+    "title": "Maira en suquet ràpid",
+    "body": "Enrosseix un gra d'all i una mica de pebre vermell en una cassola baixa. Afegeix la maira amb un pols de farina i un mica de brou de peix, i cou-ho tot junt deu minuts.",
+    "btn": "Encarregar maira →",
+    "prod": "Maira"
+   },
+   "es": {
+    "tag": "Guisado · 20 min",
+    "title": "Badaladilla en guiso rápido",
+    "body": "Dora un diente de ajo y un poco de pimentón en una cazuela baja. Añade la bacaladilla con una pizca de harina y un poco de caldo de pescado, y cocina todo diez minutos.",
+    "btn": "Encargar bacaladilla →",
+    "prod": "Bacaladilla"
+   },
+   "en": {
+    "tag": "Stew · 20 min",
+    "title": "Quick blue whiting stew",
+    "body": "Brown a garlic clove and a pinch of paprika in a shallow pot. Add the blue whiting with a dusting of flour and a bit of fish stock, and simmer for ten minutes.",
+    "btn": "Order blue whiting →",
+    "prod": "Blue whiting"
    }
   }
  ]
