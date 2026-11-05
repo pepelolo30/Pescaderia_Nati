@@ -2,17 +2,12 @@
 # Aquest arxiu el genera el publicador del servidor a partir de Fotos_Pescaderia/AAAAMMDD/pissarra.txt
 # Una línia per producte:   Nom | preu | nota   (el preu i la nota són opcionals)
 
-data: 2026-11-03
-Salmó gran | 26,90 €/kg |
-Llobarro gran | 24,90 €/kg |
-Orada | 18,90 €/kg |
-Llobarro real | 29,90 €/kg |
-Turbot | 33,90 €/kg |
-Gall | 29,90 €/kg |
-Tonyina gran | 42,90 €/kg |
-Gamba petita | 39,90 €/kg |
-Calamars grans | 49,90 €/kg |
-Sípia petita | 29,90 €/kg |
-Lluç | 26,90 €/kg |
-Escamarlans mitjans | 69,00 €/kg |
-Maira mitjana | 18,90 €/kg |
+data: 2026-11-05
+Salmó | 26,90 €/kg |
+Calamars grans | 49,00 €/kg |
+Gamba petita | 49,00 €/kg |
+Cua petita | 32,90 €/kg |
+Seitons | 9,90 €/kg |
+Bacallà 1/2 | 19,90 €/kg |
+Llenguado gran | 39,90 €/kg |
+Maira mitjana | 16,90 €/kg |

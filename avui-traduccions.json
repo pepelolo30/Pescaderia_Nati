@@ -1,52 +1,32 @@
 {
  "textos": {
-  "Salmó gran": {
-   "es": "Salmón grande",
-   "en": "Large salmon"
-  },
-  "Llobarro gran": {
-   "es": "Lubina grande",
-   "en": "Large sea bass"
-  },
-  "Orada": {
-   "es": "Dorada",
-   "en": "Sea bream"
-  },
-  "Llobarro real": {
-   "es": "Lubina real",
-   "en": "Sea bass (real)"
-  },
-  "Turbot": {
-   "es": "Rodaballo",
-   "en": "Turbot"
-  },
-  "Gall": {
-   "es": "Gallo",
-   "en": "Megrim"
-  },
-  "Tonyina gran": {
-   "es": "Atún grande",
-   "en": "Large tuna"
-  },
-  "Gamba petita": {
-   "es": "Gamba pequeña",
-   "en": "Small prawn"
+  "Salmó": {
+   "es": "Salmón",
+   "en": "Salmon"
   },
   "Calamars grans": {
    "es": "Calamares grandes",
    "en": "Large squid"
   },
-  "Sípia petita": {
-   "es": "Sepia pequeña",
-   "en": "Small cuttlefish"
+  "Gamba petita": {
+   "es": "Gamba pequeña",
+   "en": "Small prawn"
   },
-  "Lluç": {
-   "es": "Merluza",
-   "en": "Hake"
+  "Cua petita": {
+   "es": "Cola pequeña",
+   "en": "Small tail"
   },
-  "Escamarlans mitjans": {
-   "es": "Cigalas medianas",
-   "en": "Medium langoustines"
+  "Seitons": {
+   "es": "Boquerones",
+   "en": "Anchovies"
+  },
+  "Bacallà 1/2": {
+   "es": "Bacalao 1/2",
+   "en": "Cod 1/2"
+  },
+  "Llenguado gran": {
+   "es": "Lenguado grande",
+   "en": "Large sole"
   },
   "Maira mitjana": {
    "es": "Bacaladilla mediana",
