@@ -443,7 +443,7 @@
   }
   .lightbox::backdrop{ background:rgba(16,30,33,0.92); }
   .lightbox figure{ margin:0; }
-  .lightbox img{ max-width:100%; max-height:80vh; margin:0 auto; border-radius:4px; }
+  .lightbox img{ max-width:100%; max-height:80vh; margin:0 auto; border-radius:4px; touch-action:pan-y; user-select:none; -webkit-user-drag:none; }
   .lightbox figcaption{ text-align:center; color:var(--paper); font-family:"Playfair Display", Georgia, serif; font-size:18px; margin-top:12px; }
   .lb-btn{
     position:fixed; width:46px; height:46px; border-radius:50%; border:1px solid var(--line-on-dark);
@@ -632,10 +632,10 @@
   <nav class="sections" id="sectionNav" data-t-aria="navSections">
     <div class="sections-inner">
       <a href="#avui" data-sec="avui" data-t="navAvui">Avui tenim</a>
+      <a href="#cuina" data-sec="cuina" data-t="navCuina">Idees per cuinar</a>
       <a href="#nadal" data-sec="nadal receptes-nadal" id="navNadal" data-t="navNadal">Nadal</a>
       <a href="#encarrec" data-sec="encarrec" data-t="navEncarrec">Encàrrec</a>
       <a href="#opinions" data-sec="opinions" data-t="navOpinions">Opinions</a>
-      <a href="#cuina" data-sec="cuina" data-t="navCuina">Idees per cuinar</a>
       <a href="#professionals" data-sec="professionals" data-t="navPro">Professionals</a>
       <a href="#historia" data-sec="historia com-ho-fem radio" data-t="navQuiSom">Qui som</a>
       <a href="#visitans" data-sec="visitans" id="navHorario">Horari i ubicació</a>
@@ -697,6 +697,43 @@
         <div class="today-strip" id="todayStrip"></div>
       </div>
       <a class="canal-link" id="canalLink" href="#" target="_blank" rel="noopener" hidden><span aria-hidden="true">📣</span> <span data-t="canalText">Rep cada matí el gènere del dia: apunta't al nostre canal de WhatsApp</span> ↗</a>
+    </div>
+  </section>
+
+  <section class="features" id="cuina">
+    <div class="wrap">
+      <div class="features-head">
+        <p class="eyebrow" data-t="cuinaEyebrow">Idees per cuinar</p>
+        <h2 data-t="cuinaH2">No saps què fer avui? Te'l deixem a punt</h2>
+        <p class="lead" id="cuinaDaily" data-t="cuinaDaily" style="margin-top:12px;font-size:15.5px;line-height:1.65;color:var(--ink-soft)" hidden>Cada matí, idees noves amb el peix del dia.</p>
+      </div>
+      <div class="recipes" id="cuinaRecipes">
+        <div class="recipe">
+          <span class="tag" data-t="r1Tag">Cru · 10 min</span>
+          <h3 data-t="r1Title">Tàrtar de ventresca de tonyina</h3>
+          <p data-t="r1Body">Talla-la a daus, amaneix amb soja, oli, cibulet i una mica de llima. Demana-la apta per menjar crua.</p>
+          <button type="button" class="link-btn" data-order="r1" data-t="r1Btn">Encarregar-la per a tàrtar →</button>
+        </div>
+        <div class="recipe">
+          <span class="tag" data-t="r2Tag">Forn · 30 min</span>
+          <h3 data-t="r2Title">Orada o llobarro a la sal</h3>
+          <p data-t="r2Body">Cobreix la peça sencera amb sal grossa i forn ben calent. Te la deixem buidada però amb les escates, que la protegeixen.</p>
+          <button type="button" class="link-btn" data-order="r2" data-t="r2Btn">Encarregar-la per al forn →</button>
+        </div>
+        <div class="recipe">
+          <span class="tag" data-t="r3Tag">Fregit · 15 min</span>
+          <h3 data-t="r3Title">Peix petit fregit</h3>
+          <p data-t="r3Body">Seitons, sonsos o calamarsons: farina, oli ben calent i un raig de llimona. Te'ls deixem nets.</p>
+          <button type="button" class="link-btn" data-order="r3" data-t="r3Btn">Encarregar-lo net →</button>
+        </div>
+        <div class="recipe">
+          <span class="tag" data-t="r4Tag">Base · 40 min</span>
+          <h3 data-t="r4Title">Fumet casolà</h3>
+          <p data-t="r4Body">Amb caps i espines de peix de roca fas la base de l'arròs o la sopa. Demana'ns-les amb l'encàrrec.</p>
+          <button type="button" class="link-btn" data-order="r4" data-t="r4Btn">Afegir peix per a fumet →</button>
+        </div>
+      </div>
+      <p class="swipe-hint" data-t="swipeHint">Llisca per veure'n més →</p>
     </div>
   </section>
 
@@ -893,43 +930,6 @@
         <a class="btn btn-outline" id="reviewsAllBtn" href="https://share.google/4iYkjqqurM3KNHHqT" target="_blank" rel="noopener" data-t="opAll">Llegir-les totes a Google ↗</a>
         <a class="btn btn-gold" id="reviewsWriteBtn" href="https://share.google/4iYkjqqurM3KNHHqT" target="_blank" rel="noopener" data-t="opWrite">Deixa'ns la teva opinió</a>
       </div>
-    </div>
-  </section>
-
-  <section class="features" id="cuina">
-    <div class="wrap">
-      <div class="features-head">
-        <p class="eyebrow" data-t="cuinaEyebrow">Idees per cuinar</p>
-        <h2 data-t="cuinaH2">No saps què fer avui? Te'l deixem a punt</h2>
-        <p class="lead" id="cuinaDaily" data-t="cuinaDaily" style="margin-top:12px;font-size:15.5px;line-height:1.65;color:var(--ink-soft)" hidden>Cada matí, idees noves amb el peix del dia.</p>
-      </div>
-      <div class="recipes" id="cuinaRecipes">
-        <div class="recipe">
-          <span class="tag" data-t="r1Tag">Cru · 10 min</span>
-          <h3 data-t="r1Title">Tàrtar de ventresca de tonyina</h3>
-          <p data-t="r1Body">Talla-la a daus, amaneix amb soja, oli, cibulet i una mica de llima. Demana-la apta per menjar crua.</p>
-          <button type="button" class="link-btn" data-order="r1" data-t="r1Btn">Encarregar-la per a tàrtar →</button>
-        </div>
-        <div class="recipe">
-          <span class="tag" data-t="r2Tag">Forn · 30 min</span>
-          <h3 data-t="r2Title">Orada o llobarro a la sal</h3>
-          <p data-t="r2Body">Cobreix la peça sencera amb sal grossa i forn ben calent. Te la deixem buidada però amb les escates, que la protegeixen.</p>
-          <button type="button" class="link-btn" data-order="r2" data-t="r2Btn">Encarregar-la per al forn →</button>
-        </div>
-        <div class="recipe">
-          <span class="tag" data-t="r3Tag">Fregit · 15 min</span>
-          <h3 data-t="r3Title">Peix petit fregit</h3>
-          <p data-t="r3Body">Seitons, sonsos o calamarsons: farina, oli ben calent i un raig de llimona. Te'ls deixem nets.</p>
-          <button type="button" class="link-btn" data-order="r3" data-t="r3Btn">Encarregar-lo net →</button>
-        </div>
-        <div class="recipe">
-          <span class="tag" data-t="r4Tag">Base · 40 min</span>
-          <h3 data-t="r4Title">Fumet casolà</h3>
-          <p data-t="r4Body">Amb caps i espines de peix de roca fas la base de l'arròs o la sopa. Demana'ns-les amb l'encàrrec.</p>
-          <button type="button" class="link-btn" data-order="r4" data-t="r4Btn">Afegir peix per a fumet →</button>
-        </div>
-      </div>
-      <p class="swipe-hint" data-t="swipeHint">Llisca per veure'n més →</p>
     </div>
   </section>
 
@@ -1458,14 +1458,23 @@
   var lb = document.getElementById('lightbox');
   var gallery = document.getElementById('gallery');
   var lbItems = [], lbIndex = 0;
-  function capOf(tile){ return T[curLang][tile.getAttribute('data-cap')] || ''; }
   function showLb(i){
-    if(!lbItems.length || lb.classList.contains('single')) return;
+    if(!lbItems.length) return;
     lbIndex = (i + lbItems.length) % lbItems.length;
-    var tile = lbItems[lbIndex];
-    document.getElementById('lbImg').src = tile.getAttribute('data-full');
-    document.getElementById('lbImg').alt = capOf(tile);
-    document.getElementById('lbCap').textContent = capOf(tile);
+    var it = lbItems[lbIndex], img = document.getElementById('lbImg');
+    img.src = it.full;
+    img.alt = it.alt || it.cap;
+    document.getElementById('lbCap').textContent = it.cap;
+    if(lbItems.length > 1){
+      new Image().src = lbItems[(lbIndex + 1) % lbItems.length].full;
+      new Image().src = lbItems[(lbIndex - 1 + lbItems.length) % lbItems.length].full;
+    }
+  }
+  function openLb(items, i){
+    lbItems = items;
+    lb.classList.toggle('single', items.length < 2);
+    showLb(i);
+    lb.showModal();
   }
   if(gallery){
     gallery.addEventListener('click', function(ev){
@@ -1473,14 +1482,14 @@
       if(!tile || !gallery.contains(tile)) return;
       track('galeria/' + (tile.getAttribute('data-track') || tile.getAttribute('data-cap')));
       if(!lb || !lb.showModal){ window.open(tile.getAttribute('data-full'), '_blank'); return; }
-      lbItems = Array.prototype.slice.call(gallery.querySelectorAll('button.tile'));
-      showLb(lbItems.indexOf(tile));
-      lb.showModal();
+      var tiles = Array.prototype.slice.call(gallery.querySelectorAll('button.tile'));
+      openLb(tiles.map(function(x){
+        return { full:x.getAttribute('data-full'), cap:T[curLang][x.getAttribute('data-cap')] || '' };
+      }), tiles.indexOf(tile));
     });
   }
   if(lb && lb.showModal){
     document.getElementById('lbClose').addEventListener('click', function(){ lb.close(); });
-    lb.addEventListener('close', function(){ lb.classList.remove('single'); });
     document.getElementById('lbPrev').addEventListener('click', function(){ showLb(lbIndex - 1); });
     document.getElementById('lbNext').addEventListener('click', function(){ showLb(lbIndex + 1); });
     lb.addEventListener('click', function(ev){ if(ev.target === lb) lb.close(); });
@@ -1488,14 +1497,25 @@
       if(ev.key === 'ArrowLeft') showLb(lbIndex - 1);
       if(ev.key === 'ArrowRight') showLb(lbIndex + 1);
     });
-    var touchX = null;
-    lb.addEventListener('touchstart', function(ev){ touchX = ev.touches[0].clientX; }, { passive:true });
-    lb.addEventListener('touchend', function(ev){
-      if(touchX === null) return;
-      var dx = ev.changedTouches[0].clientX - touchX;
-      if(Math.abs(dx) > 50) showLb(lbIndex + (dx < 0 ? 1 : -1));
+    var touchX = null, touchY = null, lbImg = document.getElementById('lbImg');
+    lb.addEventListener('touchstart', function(ev){
+      if(ev.touches.length !== 1){ touchX = null; return; }
+      touchX = ev.touches[0].clientX; touchY = ev.touches[0].clientY;
+    }, { passive:true });
+    lb.addEventListener('touchmove', function(ev){
+      if(touchX === null || lbItems.length < 2 || ev.touches.length !== 1) return;
+      var dx = ev.touches[0].clientX - touchX, dy = ev.touches[0].clientY - touchY;
+      if(Math.abs(dx) > Math.abs(dy)) lbImg.style.transform = 'translateX(' + dx + 'px)';
+    }, { passive:true });
+    function endTouch(ev){
+      lbImg.style.transform = '';
+      if(touchX === null || !ev.changedTouches.length) return;
+      var dx = ev.changedTouches[0].clientX - touchX, dy = ev.changedTouches[0].clientY - touchY;
       touchX = null;
-    });
+      if(Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) showLb(lbIndex + (dx < 0 ? 1 : -1));
+    }
+    lb.addEventListener('touchend', endTouch);
+    lb.addEventListener('touchcancel', function(){ lbImg.style.transform = ''; touchX = null; });
   }
 
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -2021,13 +2041,12 @@
       var img = document.createElement('img'); img.src = f.petita; img.alt = t.todayPhotos + ' ' + (i + 1); img.loading = 'lazy'; img.decoding = 'async';
       b.appendChild(img);
       b.addEventListener('click', function(){
-        if(!lb || !lb.showModal){ window.open(f.gran, '_blank'); return; }
-        document.getElementById('lbImg').src = f.gran;
-        document.getElementById('lbImg').alt = img.alt;
-        document.getElementById('lbCap').textContent = document.getElementById('todayTitle').textContent;
-        lb.classList.add('single');
-        lb.showModal();
         track('fotos-avui');
+        if(!lb || !lb.showModal){ window.open(f.gran, '_blank'); return; }
+        var titol = document.getElementById('todayTitle').textContent;
+        openLb(todayPhotos.fotos.map(function(x, n){
+          return { full:x.gran, cap:titol, alt:T[curLang].todayPhotos + ' ' + (n + 1) };
+        }), i);
       });
       strip.appendChild(b);
     });
