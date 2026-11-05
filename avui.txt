@@ -6,7 +6,7 @@ data: 2026-11-05
 Salmó | 26,90 €/kg |
 Calamars grans | 49,00 €/kg |
 Gamba petita | 49,00 €/kg |
-Cua petita | 32,90 €/kg |
+Cua de rap petita | 32,90 €/kg |
 Seitons | 9,90 €/kg |
 Bacallà 1/2 | 19,90 €/kg |
 Llenguado gran | 39,90 €/kg |
