@@ -2,12 +2,15 @@
 # Aquest arxiu el genera el publicador del servidor a partir de Fotos_Pescaderia/AAAAMMDD/pissarra.txt
 # Una línia per producte:   Nom | preu | nota   (el preu i la nota són opcionals)
 
-data: 2026-11-05
+data: 2026-11-06
+Tonyina gran | 42,90 €/kg |
 Salmó | 26,90 €/kg |
-Calamars grans | 49,00 €/kg |
-Gamba petita | 49,00 €/kg |
-Cua de rap petita | 32,90 €/kg |
+Llobarro | 24,90 €/kg |
+Orada | 18,90 €/kg |
+Escamarlans grans | 69,90 €/kg |
+Sardina | 8,90 €/kg |
 Seitons | 9,90 €/kg |
-Bacallà 1/2 | 19,90 €/kg |
-Llenguado gran | 39,90 €/kg |
-Maira mitjana | 16,90 €/kg |
+Cua rubia | 34,90 €/kg |
+Cua de rap | 39,90 €/kg |
+Corvina | 10,90 €/kg |
+Palangre gran | 26,90 €/kg |

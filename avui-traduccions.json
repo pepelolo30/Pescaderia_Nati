@@ -1,36 +1,48 @@
 {
  "textos": {
+  "Tonyina gran": {
+   "es": "Atún grande",
+   "en": "Large tuna"
+  },
   "Salmó": {
    "es": "Salmón",
    "en": "Salmon"
   },
-  "Calamars grans": {
-   "es": "Calamares grandes",
-   "en": "Large squid"
+  "Llobarro": {
+   "es": "Lubina",
+   "en": "Sea bass"
   },
-  "Gamba petita": {
-   "es": "Gamba pequeña",
-   "en": "Small prawn"
+  "Orada": {
+   "es": "Dorada",
+   "en": "Sea bream"
   },
-  "Cua de rap petita": {
-   "es": "Cola de rape pequeña",
-   "en": "Small monkfish tail"
+  "Escamarlans grans": {
+   "es": "Cigalas grandes",
+   "en": "Large langoustines"
+  },
+  "Sardina": {
+   "es": "Sardina",
+   "en": "Sardine"
   },
   "Seitons": {
    "es": "Boquerones",
    "en": "Anchovies"
   },
-  "Bacallà 1/2": {
-   "es": "Bacalao 1/2",
-   "en": "Cod 1/2"
+  "Cua rubia": {
+   "es": "Cua rubia",
+   "en": "Cua rubia"
   },
-  "Llenguado gran": {
-   "es": "Lenguado grande",
-   "en": "Large sole"
+  "Cua de rap": {
+   "es": "Cola de rape",
+   "en": "Monkfish tail"
   },
-  "Maira mitjana": {
-   "es": "Bacaladilla mediana",
-   "en": "Medium blue whiting"
+  "Corvina": {
+   "es": "Corvina",
+   "en": "Meagre"
+  },
+  "Palangre gran": {
+   "es": "Palangre grande",
+   "en": "Large palangre"
   }
  }
 }
