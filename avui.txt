@@ -3,16 +3,14 @@
 # Una línia per producte:   Nom | preu | nota   (el preu i la nota són opcionals)
 
 data: 2026-11-07
-🧾 He leído esto del albarán (11 productos): |  |
 Gall | 29,90 €/kg |
 Cua de rap petita rubia | 34,90 €/kg |
 Volanta | 26,90 €/kg |
 Salmó | 26,90 €/kg |
 Sípia petita | 30,00 €/kg |
 Calamars grans | 39,90 €/kg |
-Gamba gran | 11,00 €/kg |
+Gamba gran | 110,00 €/kg |
 Llobarro real | 32,90 €/kg |
 Escamarlans mitjans | 69,90 €/kg |
 Sardina | 8,90 €/kg |
 Seitons | 11,90 €/kg |
-Revisa los precios. Si algo está mal, pulsa Cancelar, copia la lista, corrígela y mándamela como mensaje de texto. |  |

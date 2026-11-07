@@ -1,9 +1,5 @@
 {
  "textos": {
-  "🧾 He leído esto del albarán (11 productos):": {
-   "es": "🧾 He leído esto del albarán (11 productos):",
-   "en": "🧾 I read this from the delivery note (11 products):"
-  },
   "Gall": {
    "es": "Gallo",
    "en": "Megrim"
@@ -47,10 +43,6 @@
   "Seitons": {
    "es": "Boquerones",
    "en": "Anchovies"
-  },
-  "Revisa los precios. Si algo está mal, pulsa Cancelar, copia la lista, corrígela y mándamela como mensaje de texto.": {
-   "es": "Revisa los precios. Si algo está mal, pulsa Cancelar, copia la lista, corrígela y mándamela como mensaje de texto.",
-   "en": "Check the prices. If something is wrong, press Cancel, copy the list, correct it, and send it to me as a text message."
   }
  }
 }
