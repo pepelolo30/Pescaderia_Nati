@@ -3,97 +3,97 @@
  "font": "ia",
  "receptes": [
   {
-   "prep": "filets",
+   "prep": "planxa",
    "ca": {
-    "tag": "Arrebossat · 15 min",
-    "title": "Gall arrebossat molt cruixent",
-    "body": "Demana el gall en filets nets sense pell. Passa'ls per farina i ou batut, i fregeix-los en oli ben calent fins que daurin.",
+    "tag": "Planxa · 10 min",
+    "title": "Gall a la planxa amb all i julivert",
+    "body": "Posa el peix a la planxa ben calenta amb un rajolí d'oli un minut per costat. Afegeix-hi sal en escates i un picat d'all i julivert fresc just abans de servir.",
     "btn": "Encarregar gall →",
     "prod": "Gall"
    },
    "es": {
-    "tag": "Rebozado · 15 min",
-    "title": "Gallo rebozado muy crujiente",
-    "body": "Pide el gallo en filetes limpios sin piel. Pásalos por harina y huevo batido, y fríelos en abundante aceite bien caliente hasta que se doren.",
+    "tag": "Plancha · 10 min",
+    "title": "Gallo a la plancha con ajo y perejil",
+    "body": "Pon el pescado en la plancha muy caliente con un chorrito de aceite un minuto por lado. Sazona con sal en escamas y un picado de ajo y perejil fresco justo antes de servir.",
     "btn": "Encargar gallo →",
     "prod": "Gallo"
    },
    "en": {
-    "tag": "Crispy fried · 15 min",
-    "title": "Crispy battered megrim sole",
-    "body": "Ask for skinned megrim sole fillets. Coat them in flour and beaten egg, then fry in hot oil until golden.",
+    "tag": "Griddle · 10 min",
+    "title": "Pan-seared megrim sole with garlic and parsley",
+    "body": "Place the fish on a very hot griddle with a drizzle of oil for one minute per side. Season with sea salt flakes and chopped garlic and fresh parsley right before serving.",
     "btn": "Order megrim sole →",
     "prod": "Megrim sole"
    }
   },
   {
-   "prep": "planxa",
+   "prep": "sopa",
    "ca": {
-    "tag": "Graella · 12 min",
-    "title": "Cua de rap a la graella amb alls",
-    "body": "Marca la cua de rap oberta a la graella ben calenta amb un fil d'oli. Un cop daurada, afegeix all laminat i julivert picat.",
+    "tag": "Guisat · 35 min",
+    "title": "Cua de rap petita a la marinera",
+    "body": "Fes un sofregit de ceba i tomàquet, afegeix el rap a trossos i cobreix amb fumet de peix. Deixa coure a foc lent durant deu minuts i serveix amb un toc de julivert.",
     "btn": "Encarregar rap →",
-    "prod": "Cua de rap"
+    "prod": "Rap"
    },
    "es": {
-    "tag": "Plancha · 12 min",
-    "title": "Rape a la plancha con ajos",
-    "body": "Marca la cola de rape abierta en la plancha muy caliente con un hilo de aceite. Cuando se dore por ambos lados, añade ajo laminado y perejil.",
+    "tag": "Guiso · 35 min",
+    "title": "Rape a la marinera",
+    "body": "Haz un sofrito de cebolla y tomate, añade el rape a trozos y cubre con caldo de pescado. Deja cocer a fuego lento durante diez minutos y sirve con un toque de perejil.",
     "btn": "Encargar rape →",
-    "prod": "Cola de rape"
+    "prod": "Rape"
    },
    "en": {
-    "tag": "Grilled · 12 min",
-    "title": "Grilled monkfish tail with garlic",
-    "body": "Sear the butterflied monkfish tail on a very hot griddle with a drizzle of oil. Once browned, top with sliced garlic and chopped parsley.",
+    "tag": "Stew · 35 min",
+    "title": "Small monkfish tail sailor style",
+    "body": "Sauté onion and tomato, add the monkfish chunks and cover with fish stock. Simmer gently for ten minutes and serve with a touch of fresh parsley.",
     "btn": "Order monkfish →",
-    "prod": "Monkfish tail"
+    "prod": "Monkfish"
    }
   },
   {
-   "prep": "sopa",
+   "prep": "net",
    "ca": {
-    "tag": "Cassola · 35 min",
-    "title": "Suquet de volanta amb patates",
-    "body": "Fes un sofregit de ceba i tomàquet, afegeix patates trencades i cobreix amb brou. Quan la patata sigui tova, posa-hi la volanta cinc minuts.",
+    "tag": "Fregit · 15 min",
+    "title": "Volanta enfarinada i fregida",
+    "body": "Neteja el peix, passa'l per farina de blat i espolsa'n l'excés amb cura. Fregeix en abundant oli d'oliva ben calent fins que quedi daurat i cruixent.",
     "btn": "Encarregar volanta →",
     "prod": "Volanta"
    },
    "es": {
-    "tag": "Guiso · 35 min",
-    "title": "Suquet de volanta con patatas",
-    "body": "Haz un sofrito de cebolla y tomate, añade patatas chascadas y cubre con caldo. Cuando la patata esté tierna, incorpora la volanta y cocina.",
+    "tag": "Frito · 15 min",
+    "title": "Volanta enharinada y frita",
+    "body": "Limpia el pescado, pásalo por harina de trigo y sacude el exceso con cuidado. Fríe en abundante aceite de oliva muy caliente hasta que quede dorado y crujiente.",
     "btn": "Encargar volanta →",
     "prod": "Volanta"
    },
    "en": {
-    "tag": "Stew · 35 min",
-    "title": "Volanta stew with potatoes",
-    "body": "Sauté onion and tomato, add cubed potatoes, and cover with stock. When the potatoes are tender, add the volanta and simmer for five minutes.",
+    "tag": "Fried · 15 min",
+    "title": "Crispy fried volanta",
+    "body": "Clean the fish, coat it lightly in wheat flour and shake off any excess. Fry in plenty of hot olive oil until golden and crispy.",
     "btn": "Order volanta →",
     "prod": "Volanta"
    }
   },
   {
-   "prep": "rodanxes",
+   "prep": "cru",
    "ca": {
-    "tag": "Forn · 20 min",
-    "title": "Salmó al forn amb mel i mostassa",
-    "body": "Barreja una cullerada de mel amb mostassa i pinta les rodanxes de salmó. Enforna a 180 graus durant dotze minuts fins que quedi melós.",
+    "tag": "Cru · 15 min",
+    "title": "Tartar de salmó amb alvocat",
+    "body": "Utilitza el salmó prèviament congelat, talla'l a daus petits i barreja'l amb alvocat, salsa de soja i un raig de llimona. Deixa reposar cinc minuts a la nevera abans de servir.",
     "btn": "Encarregar salmó →",
     "prod": "Salmó"
    },
    "es": {
-    "tag": "Horno · 20 min",
-    "title": "Salmón al horno con miel y mostaza",
-    "body": "Mezcla una cucharada de miel con mostaza y pinta las rodajas de salmón. Hornea a 180 grados durante doce minutos hasta que quede jugoso.",
+    "tag": "Crudo · 15 min",
+    "title": "Tartar de salmón con aguacate",
+    "body": "Usa el salmón previamente congelado, córtalo en dados pequeños y mézclalo con aguacate, salsa de soja y limón. Deja reposar cinco minutos en la nevera antes de servir.",
     "btn": "Encargar salmón →",
     "prod": "Salmón"
    },
    "en": {
-    "tag": "Baked · 20 min",
-    "title": "Honey mustard baked salmon",
-    "body": "Mix a spoonful of honey with mustard and brush over the salmon steaks. Bake at 180°C for twelve minutes until tender and juicy.",
+    "tag": "Raw · 15 min",
+    "title": "Salmon tartare with avocado",
+    "body": "Use previously frozen salmon, dice it finely and mix with avocado, soy sauce, and lemon juice. Let it rest for five minutes in the fridge before serving.",
     "btn": "Order salmon →",
     "prod": "Salmon"
    }
@@ -101,23 +101,23 @@
   {
    "prep": "net",
    "ca": {
-    "tag": "Cassola · 30 min",
-    "title": "Sípia petita guisada amb ceba",
-    "body": "Ofega molta ceba a foc lent fins que quedi melosa. Afegeix la sípia petita neta i un raig de vi blanc, i deixa reduir fins que estigui tendra.",
+    "tag": "Fregit · 20 min",
+    "title": "Sípia petita arrebossada",
+    "body": "Talla la sípia neta a tires, passa-la per farina i fregeix-la en oli ben calent fins que estigui daurada. Escórre-la sobre paper absorbent i afegeix-hi un toc de sal.",
     "btn": "Encarregar sípia →",
     "prod": "Sípia"
    },
    "es": {
-    "tag": "Guiso · 30 min",
-    "title": "Sepia pequeña estofada con cebolla",
-    "body": "Pocha mucha cebolla a fuego lento hasta que se caramelice. Añade la sepia pequeña limpia y un chorro de vino blanco, reduciendo hasta que esté tierna.",
+    "tag": "Frito · 20 min",
+    "title": "Sepia enharinada",
+    "body": "Corta la sepia limpia en tiras, pásala por harina y fríela en abundante aceite muy caliente hasta que se dore. Escúrrela en papel absorbente y ponle un toque de sal.",
     "btn": "Encargar sepia →",
     "prod": "Sepia"
    },
    "en": {
-    "tag": "Stew · 30 min",
-    "title": "Braised cuttlefish with onions",
-    "body": "Slowly sweat plenty of onions until caramelized. Add the cleaned small cuttlefish and a splash of white wine, simmering until tender.",
+    "tag": "Fried · 20 min",
+    "title": "Crispy fried baby cuttlefish",
+    "body": "Cut the clean cuttlefish into strips, coat in flour, and fry in hot oil until golden brown. Drain on paper towels and season with a pinch of salt.",
     "btn": "Order cuttlefish →",
     "prod": "Cuttlefish"
    }
@@ -125,73 +125,73 @@
   {
    "prep": "planxa",
    "ca": {
-    "tag": "Graella · 10 min",
-    "title": "Calamars grans a la graella",
-    "body": "Marca el calamar sencer a la graella ben calenta dos minuts per banda. Serveix amb un oli d'all, julivert i un toc de llimona.",
-    "btn": "Encarregar calamars →",
-    "prod": "Calamar"
+    "tag": "Planxa · 8 min",
+    "title": "Gamba gran a la planxa amb sal gruixuda",
+    "body": "Escalfa la planxa al màxim i cou les gambes dos minuts per costat amb un fil d'oli. Escampa sal gruixuda pel damunt i serveix immediatament ben calentes.",
+    "btn": "Encarregar gamba →",
+    "prod": "Gamba"
    },
    "es": {
-    "tag": "Plancha · 10 min",
-    "title": "Calamares grandes a la plancha",
-    "body": "Marca el calamar entero en la plancha muy caliente dos minutos por lado. Sirve inmediatamente con un majado de ajo, perejil y unas gotas de limón.",
-    "btn": "Encargar calamares →",
-    "prod": "Calamar"
+    "tag": "Plancha · 8 min",
+    "title": "Gamba grande a la plancha con sal gruesa",
+    "body": "Calienta la plancha al máximo y cocina las gambas dos minutos por lado con un hilo de aceite. Espolvorea sal gruesa por encima y sirve inmediatamente bien calientes.",
+    "btn": "Encargar gamba →",
+    "prod": "Gamba"
    },
    "en": {
-    "tag": "Grilled · 10 min",
-    "title": "Grilled squid with garlic oil",
-    "body": "Sear the whole squid on a smoking hot griddle for two minutes per side. Serve right away topped with minced garlic, parsley, and lemon.",
-    "btn": "Order squid →",
-    "prod": "Squid"
+    "tag": "Griddle · 8 min",
+    "title": "Grilled large prawns with coarse salt",
+    "body": "Heat the griddle to maximum temperature and cook the prawns for two minutes per side with oil. Sprinkle coarse salt on top and serve hot immediately.",
+    "btn": "Order prawns →",
+    "prod": "Prawn"
    }
   },
   {
-   "prep": "sencer",
+   "prep": "sal",
    "ca": {
-    "tag": "Cassola · 25 min",
-    "title": "Arròs caldós amb escamarlans",
-    "body": "Sofregeix un all i tomàquet, afegeix l'arròs i cobreix amb brou de peix. Incorpora els escamarlans els darrers quatre minuts de cocció.",
-    "btn": "Encarregar escamarlans →",
-    "prod": "Escamarlans"
+    "tag": "Forn · 30 min",
+    "title": "Llobarro real a la sal",
+    "body": "Cobreix el llobarro sencer amb una capa gruixuda de sal humida i enforna a dos-cents graus durant vint minuts. Trenca la crosta de sal amb cura abans de servir el peix.",
+    "btn": "Encarregar llobarro →",
+    "prod": "Llobarro"
    },
    "es": {
-    "tag": "Guiso · 25 min",
-    "title": "Arroz caldoso con cigalas",
-    "body": "Sofríe ajo y tomate, añade el arroz y cubre con caldo de pescado. Incorpora las cigalas durante los últimos cuatro minutos de cocción.",
-    "btn": "Encargar cigalas →",
-    "prod": "Cigalas"
+    "tag": "Horno · 30 min",
+    "title": "Lubina a la sal",
+    "body": "Cubre la lubina entera con una capa gruesa de sal húmeda y hornea a doscientos grados durante veinte minutos. Rompe la costra de sal con cuidado antes de servir.",
+    "btn": "Encargar lubina →",
+    "prod": "Lubina"
    },
    "en": {
-    "tag": "Rice dish · 25 min",
-    "title": "Soupy rice with langoustines",
-    "body": "Sauté garlic and tomato, stir in the rice, and pour in fish stock. Add the langoustines for the last four minutes of simmering.",
-    "btn": "Order langoustines →",
-    "prod": "Langoustines"
+    "tag": "Oven · 30 min",
+    "title": "Salt-baked sea bass",
+    "body": "Cover the whole sea bass completely with a thick layer of damp salt and bake at two hundred degrees for twenty minutes. Break the salt crust carefully before serving.",
+    "btn": "Order sea bass →",
+    "prod": "Sea bass"
    }
   },
   {
-   "prep": "cru",
+   "prep": "net",
    "ca": {
-    "tag": "Marinat · 10 min",
-    "title": "Seitons marinats amb oli i pebre",
-    "body": "Congela prèviament els seitons nets. Un cop descongelats, amaneix-los amb oli d'oliva verge, all picat, sal en escates i pebre vermell.",
-    "btn": "Encarregar seitons →",
-    "prod": "Seitons"
+    "tag": "Forn · 15 min",
+    "title": "Sardines al forn amb all i julivert",
+    "body": "Col·loca les sardines netes en una safata de forn, afegeix all picat, julivert i un raig d'oli. Enforna a dos-cents graus durant deu minuts fins que estiguin fetes.",
+    "btn": "Encarregar sardina →",
+    "prod": "Sardina"
    },
    "es": {
-    "tag": "Marinado · 10 min",
-    "title": "Boquerones marinados en aceite y pimentón",
-    "body": "Congela previamente los boquerones limpios. Tras descongelarlos, alíñalos con aceite de oliva virgen, ajo picado, sal en escamas y pimentón.",
-    "btn": "Encargar boquerones →",
-    "prod": "Boquerones"
+    "tag": "Horno · 15 min",
+    "title": "Sardinas al horno con ajo y perejil",
+    "body": "Coloca las sardinas limpias en una bandeja de horno, añade ajo picado, perejil y un chorrito de aceite. Hornea a doscientos grados durante diez minutos hasta que estén listas.",
+    "btn": "Encargar sardina →",
+    "prod": "Sardina"
    },
    "en": {
-    "tag": "Marinated · 10 min",
-    "title": "Marinated anchovies with paprika",
-    "body": "Freeze the cleaned anchovies beforehand. Once thawed, dress them with virgin olive oil, minced garlic, sea salt flakes, and paprika.",
-    "btn": "Order anchovies →",
-    "prod": "Anchovies"
+    "tag": "Oven · 15 min",
+    "title": "Baked sardines with garlic and parsley",
+    "body": "Arrange the cleaned sardines on a baking tray, top with minced garlic, parsley, and olive oil. Bake at two hundred degrees for ten minutes until fully cooked.",
+    "btn": "Order sardines →",
+    "prod": "Sardine"
    }
   }
  ]
