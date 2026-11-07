@@ -1,24 +1,44 @@
 {
  "textos": {
-  "Tonyina gran": {
-   "es": "Atún grande",
-   "en": "Large tuna"
+  "🧾 He leído esto del albarán (11 productos):": {
+   "es": "🧾 He leído esto del albarán (11 productos):",
+   "en": "🧾 I read this from the delivery note (11 products):"
+  },
+  "Gall": {
+   "es": "Gallo",
+   "en": "Megrim"
+  },
+  "Cua de rap petita rubia": {
+   "es": "Cola de rape pequeña rubia",
+   "en": "Small monkfish tail (rubia)"
+  },
+  "Volanta": {
+   "es": "Volanta",
+   "en": "Volanta"
   },
   "Salmó": {
    "es": "Salmón",
    "en": "Salmon"
   },
-  "Llobarro": {
-   "es": "Lubina",
-   "en": "Sea bass"
+  "Sípia petita": {
+   "es": "Sepia pequeña",
+   "en": "Small cuttlefish"
   },
-  "Orada": {
-   "es": "Dorada",
-   "en": "Sea bream"
+  "Calamars grans": {
+   "es": "Calamares grandes",
+   "en": "Large squid"
   },
-  "Escamarlans grans": {
-   "es": "Cigalas grandes",
-   "en": "Large langoustines"
+  "Gamba gran": {
+   "es": "Gamba grande",
+   "en": "Large prawn"
+  },
+  "Llobarro real": {
+   "es": "Lubina real",
+   "en": "Sea bass (real)"
+  },
+  "Escamarlans mitjans": {
+   "es": "Cigalas medianas",
+   "en": "Medium langoustines"
   },
   "Sardina": {
    "es": "Sardina",
@@ -28,21 +48,9 @@
    "es": "Boquerones",
    "en": "Anchovies"
   },
-  "Cua rubia": {
-   "es": "Cua rubia",
-   "en": "Cua rubia"
-  },
-  "Cua de rap": {
-   "es": "Cola de rape",
-   "en": "Monkfish tail"
-  },
-  "Corvina": {
-   "es": "Corvina",
-   "en": "Meagre"
-  },
-  "Palangre gran": {
-   "es": "Palangre grande",
-   "en": "Large palangre"
+  "Revisa los precios. Si algo está mal, pulsa Cancelar, copia la lista, corrígela y mándamela como mensaje de texto.": {
+   "es": "Revisa los precios. Si algo está mal, pulsa Cancelar, copia la lista, corrígela y mándamela como mensaje de texto.",
+   "en": "Check the prices. If something is wrong, press Cancel, copy the list, correct it, and send it to me as a text message."
   }
  }
 }
