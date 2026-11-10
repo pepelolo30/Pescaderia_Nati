@@ -280,10 +280,6 @@
   .radio-card-text h3{ font-family:"Playfair Display", Georgia, serif; font-weight:500; font-size:18px; color:var(--paper); margin:0 0 4px; }
   .radio-card-text p{ font-size:13.5px; line-height:1.5; color:rgba(250,246,236,0.72); margin:0; }
   .radio-card audio{ height:36px; max-width:280px; width:100%; }
-  .radio-entrevista{ margin-top:14px; }
-  .radio-entrevista .radio-card-text{ flex:1 1 220px; }
-  .radio-entrevista video{ flex:1 1 340px; max-width:560px; width:100%; height:auto; aspect-ratio:5 / 3; border-radius:4px; background:#000; display:block; }
-  .radio-card-text p.radio-credit{ margin-top:10px; font-size:12px; color:rgba(250,246,236,0.55); }
 
   /* ---------- Footer ---------- */
   footer{ background:var(--marine); border-top:1px solid rgba(250,246,236,0.12); }
@@ -1050,14 +1046,6 @@
           El teu navegador no admet la reproducció d'àudio.
         </audio>
       </div>
-      <div class="radio-card radio-entrevista">
-        <div class="radio-card-text">
-          <h3 data-t="radioIntTitle">Ens han entrevistat a la ràdio</h3>
-          <p data-t="radioIntBody">Vam ser al programa #MandameOtraEle de Ràdio Desvern 107.2. Mira l'entrevista sencera.</p>
-          <p class="radio-credit" data-t="radioIntCredit">Vídeo: Ràdio Desvern 107.2 · LlobregatBib</p>
-        </div>
-        <video id="entrevistaVideo" controls preload="none" playsinline width="800" height="480" poster="img/entrevista-radio-desvern.webp" src="video/entrevista-radio-desvern.mp4" data-t-aria="radioIntAria"></video>
-      </div>
     </div>
   </section>
 
@@ -1253,8 +1241,6 @@
       prep_forn:"Per al forn", prep_sal:"Per fer a la sal (amb escates)", prep_planxa:"Per a la planxa", prep_cru:"Per menjar cru (tàrtar)", prep_sopa:"Per a sopa o fumet",
       products:["Lluç","Llobarro","Orada","Rap","Turbot","Llenguado","Salmó","Tonyina","Ventresca de tonyina","Bacallà","Sardines","Seitons","Calamars","Sípia","Pop","Llagostins","Gambes","Escamarlans","Musclos","Cloïsses","Navalles","Fumet de peix","Anxoves","Conserves","Postres congelades"],
       days:["diumenge","dilluns","dimarts","dimecres","dijous","divendres","dissabte"],
-      radioIntTitle:"Ens han entrevistat a la ràdio", radioIntBody:"Vam ser al programa #MandameOtraEle de Ràdio Desvern 107.2. Mira l'entrevista sencera.",
-      radioIntCredit:"Vídeo: Ràdio Desvern 107.2 · LlobregatBib", radioIntAria:"Vídeo de l'entrevista a Ràdio Desvern",
       lotsTitle:"Lots a punt d'encarregar", lotAdd:"Afegir a l'encàrrec →",
       lot1T:"Lot familiar setmanal", lot1B:"Uns 3 kg de peix i marisc del dia, net i envasat al buit, a punt per congelar.",
       lot2T:"Lot sense espines", lot2B:"Filets de peix blanc i salmó sense espines. Ideal per als nens.",
@@ -1321,8 +1307,6 @@
       prep_forn:"Para horno", prep_sal:"Para hacer a la sal (con escamas)", prep_planxa:"Para plancha", prep_cru:"Para comer crudo (tartar)", prep_sopa:"Para sopa o fumet",
       products:["Merluza","Lubina","Dorada","Rape","Rodaballo","Lenguado","Salmón","Atún","Ventresca de atún","Bacalao","Sardinas","Boquerones","Calamares","Sepia","Pulpo","Langostinos","Gambas","Cigalas","Mejillones","Almejas","Navajas","Fumet de pescado","Anchoas","Conservas","Postres congelados"],
       days:["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],
-      radioIntTitle:"Nos han entrevistado en la radio", radioIntBody:"Estuvimos en el programa #MandameOtraEle de Ràdio Desvern 107.2. Mira la entrevista completa.",
-      radioIntCredit:"Vídeo: Ràdio Desvern 107.2 · LlobregatBib", radioIntAria:"Vídeo de la entrevista en Ràdio Desvern",
       lotsTitle:"Lotes listos para encargar", lotAdd:"Añadir al encargo →",
       lot1T:"Lote familiar semanal", lot1B:"Unos 3 kg de pescado y marisco del día, limpio y envasado al vacío, listo para congelar.",
       lot2T:"Lote sin espinas", lot2B:"Filetes de pescado blanco y salmón sin espinas. Ideal para los niños.",
@@ -1421,8 +1405,6 @@
       prep_forn:"For the oven", prep_sal:"For salt-baking (scales on)", prep_planxa:"For the grill", prep_cru:"To eat raw (tartare)", prep_sopa:"For soup or stock",
       products:["Hake","Sea bass","Gilt-head bream","Monkfish","Turbot","Sole","Salmon","Tuna","Tuna belly","Cod","Sardines","Anchovies","Squid","Cuttlefish","Octopus","Prawns","Red prawns","Langoustines","Mussels","Clams","Razor clams","Fish stock","Anchovies","Tinned fish","Frozen desserts"],
       days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-      radioIntTitle:"We were interviewed on the radio", radioIntBody:"We were on #MandameOtraEle on Ràdio Desvern 107.2. Watch the full interview.",
-      radioIntCredit:"Video: Ràdio Desvern 107.2 · LlobregatBib", radioIntAria:"Video of the interview on Ràdio Desvern",
       lotsTitle:"Ready-to-order boxes", lotAdd:"Add to order →",
       lot1T:"Weekly family box", lot1B:"About 3 kg of the day's fish and seafood, cleaned and vacuum-packed, ready to freeze.",
       lot2T:"Boneless box", lot2B:"Boneless white fish and salmon fillets. Great for kids.",
@@ -1534,11 +1516,6 @@
     }
     lb.addEventListener('touchend', endTouch);
     lb.addEventListener('touchcancel', function(){ lbImg.style.transform = ''; touchX = null; });
-  }
-
-  var entrevista = document.getElementById('entrevistaVideo');
-  if(entrevista){
-    entrevista.addEventListener('play', function(){ if(!entrevista.dataset.vist){ entrevista.dataset.vist = '1'; track('entrevista-radio'); } });
   }
 
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
