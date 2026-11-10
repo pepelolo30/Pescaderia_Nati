@@ -1,48 +1,56 @@
 {
  "textos": {
-  "Gallo": {
-   "es": "Gallo",
-   "en": "Megrim"
-  },
-  "Cua de rap petita rubia": {
-   "es": "Cola de rape pequeña rubia",
-   "en": "Small monkfish tail (rubia)"
-  },
-  "Volanta": {
-   "es": "Volanta",
-   "en": "Volanta"
-  },
   "Salmó": {
    "es": "Salmón",
    "en": "Salmon"
   },
-  "Sípia petita": {
-   "es": "Sepia pequeña",
-   "en": "Small cuttlefish"
+  "Espada gran": {
+   "es": "Pez espada grande",
+   "en": "Large swordfish"
+  },
+  "Atun": {
+   "es": "Atún",
+   "en": "Tuna"
+  },
+  "Cua de rap": {
+   "es": "Cola de rape",
+   "en": "Monkfish tail"
+  },
+  "Escamarlans grans": {
+   "es": "Cigalas grandes",
+   "en": "Large langoustines"
+  },
+  "Lluç": {
+   "es": "Merluza",
+   "en": "Hake"
+  },
+  "Gamba petita": {
+   "es": "Gamba pequeña",
+   "en": "Small prawn"
   },
   "Calamars grans": {
    "es": "Calamares grandes",
    "en": "Large squid"
   },
-  "Gamba gran": {
-   "es": "Gamba grande",
-   "en": "Large prawn"
+  "Llenguado gran": {
+   "es": "Lenguado grande",
+   "en": "Large sole"
   },
-  "Llobarro real": {
-   "es": "Lubina real",
-   "en": "Sea bass (real)"
+  "Cua petita": {
+   "es": "Cola pequeña",
+   "en": "Small tail"
   },
-  "Escamarlans mitjans": {
-   "es": "Cigalas medianas",
-   "en": "Medium langoustines"
+  "Remols": {
+   "es": "Rémoles",
+   "en": "Brill"
   },
-  "Sardina": {
-   "es": "Sardina",
-   "en": "Sardine"
+  "Llobarro gran": {
+   "es": "Lubina grande",
+   "en": "Large sea bass"
   },
-  "Seitons": {
-   "es": "Boquerones",
-   "en": "Anchovies"
+  "Orada": {
+   "es": "Dorada",
+   "en": "Sea bream"
   }
  }
 }
