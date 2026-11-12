@@ -1,197 +1,197 @@
 {
  "data": "2026-11-12",
- "font": "receptari",
+ "font": "ia",
  "receptes": [
   {
-   "prep": "net",
+   "prep": "cru",
    "ca": {
-    "tag": "Fregit · 20 min",
-    "title": "Calamars a la romana",
-    "body": "Talla'ls a anelles, passa'ls per farina i ou batut i fregeix-los en oli ben calent fins que siguin daurats. Servits amb llimona.",
-    "btn": "Encarregar calamars →",
-    "prod": "Calamars nets"
+    "tag": "Tartar · 15 min",
+    "title": "Tartar de tonyina amb alvocat",
+    "body": "Pica la tonyina prèviament congelada a daus petits i barreja-la amb un rajolí de salsa de soja i oli d'oliva. Serveix-la sobre una base d'alvocat tallat a daus i un toc de sèsam.",
+    "btn": "Encarregar tonyina →",
+    "prod": "Tonyina"
    },
    "es": {
-    "tag": "Frito · 20 min",
-    "title": "Calamares a la romana",
-    "body": "Córtalos en anillas, pásalos por harina y huevo batido y fríelos en aceite bien caliente hasta dorarlos. Con limón.",
-    "btn": "Encargar calamares →",
-    "prod": "Calamares limpios"
+    "tag": "Tartar · 15 min",
+    "title": "Tartar de atún con aguacate",
+    "body": "Pica el atún previamente congelado en dados pequeños y mézclalo con un chorrito de salsa de soja y aceite de oliva. Sírvelo sobre una base de aguacate cortado en dados y un toque de sésamo.",
+    "btn": "Encargar atún →",
+    "prod": "Atún"
    },
    "en": {
-    "tag": "Fried · 20 min",
-    "title": "Fried calamari rings",
-    "body": "Cut into rings, dip in flour and beaten egg and fry in very hot oil until golden. Serve with lemon.",
-    "btn": "Order squid →",
-    "prod": "Cleaned squid"
-   }
-  },
-  {
-   "prep": "rodanxes",
-   "ca": {
-    "tag": "Cassola · 40 min",
-    "title": "Suquet de rap",
-    "body": "Sofregeix all i tomàquet, afegeix patata a rodanxes i fumet, i quan sigui gairebé cuita posa-hi el rap 8 minuts. Acaba amb una picada d'ametlla.",
-    "btn": "Encarregar rap →",
-    "prod": "Rap a rodanxes"
-   },
-   "es": {
-    "tag": "Cazuela · 40 min",
-    "title": "Suquet de rape",
-    "body": "Sofríe ajo y tomate, añade patata en rodajas y fumet, y cuando esté casi hecha pon el rape 8 minutos. Termina con un majado de almendra.",
-    "btn": "Encargar rape →",
-    "prod": "Rape en rodajas"
-   },
-   "en": {
-    "tag": "Stew · 40 min",
-    "title": "Catalan monkfish stew",
-    "body": "Fry garlic and tomato, add sliced potato and fish stock, and when almost done add the monkfish for 8 minutes. Finish with crushed almonds.",
-    "btn": "Order monkfish →",
-    "prod": "Monkfish in steaks"
-   }
-  },
-  {
-   "prep": "net",
-   "ca": {
-    "tag": "Planxa · 10 min",
-    "title": "Sardines a la planxa",
-    "body": "Planxa molt calenta amb un fil d'oli i sal grossa. 2 o 3 minuts per costat i acaba amb all i julivert picats.",
-    "btn": "Encarregar sardines →",
-    "prod": "Sardines netes"
-   },
-   "es": {
-    "tag": "Plancha · 10 min",
-    "title": "Sardinas a la plancha",
-    "body": "Plancha muy caliente con un hilo de aceite y sal gruesa. 2 o 3 minutos por lado y termina con ajo y perejil picados.",
-    "btn": "Encargar sardinas →",
-    "prod": "Sardinas limpias"
-   },
-   "en": {
-    "tag": "Grill · 10 min",
-    "title": "Grilled sardines",
-    "body": "Very hot griddle with a drizzle of oil and coarse salt. 2 or 3 minutes per side, finished with chopped garlic and parsley.",
-    "btn": "Order sardines →",
-    "prod": "Cleaned sardines"
+    "tag": "Tartare · 15 min",
+    "title": "Tuna tartare with avocado",
+    "body": "Dice the previously frozen tuna into small cubes and mix with a splash of soy sauce and olive oil. Serve over a bed of diced avocado and a touch of sesame seeds.",
+    "btn": "Order tuna →",
+    "prod": "Tuna"
    }
   },
   {
    "prep": "planxa",
    "ca": {
-    "tag": "Planxa · 5 min",
-    "title": "Gambes a la planxa",
-    "body": "Planxa molt calenta amb sal grossa. Un minut i mig per costat i a taula. No les rentis: el sabor és al cap.",
-    "btn": "Encarregar gambes →",
-    "prod": "Gambes"
+    "tag": "Planxa · 12 min",
+    "title": "Llobarro a la planxa amb all i julivert",
+    "body": "Escalfa bé la planxa amb un rajolí d'oli i cuina el llobarro primer per la part de la pell. Afegeix un picat d'all i julivert fresc al final de la cocció.",
+    "btn": "Encarregar llobarro →",
+    "prod": "Llobarro"
    },
    "es": {
-    "tag": "Plancha · 5 min",
-    "title": "Gambas a la plancha",
-    "body": "Plancha muy caliente con sal gruesa. Minuto y medio por lado y a la mesa. No las laves: el sabor está en la cabeza.",
-    "btn": "Encargar gambas →",
-    "prod": "Gambas"
+    "tag": "Plancha · 12 min",
+    "title": "Lubina a la plancha con ajo y perejil",
+    "body": "Calienta bien la plancha con un chorrito de aceite y cocina la lubina primero por el lado de la piel. Añade un picado de ajo y perejil fresco al final de la cocción.",
+    "btn": "Encargar lubina →",
+    "prod": "Lubina"
    },
    "en": {
-    "tag": "Grill · 5 min",
-    "title": "Grilled red prawns",
-    "body": "Very hot griddle with coarse salt. A minute and a half per side and serve. Don't rinse them: the flavour is in the head.",
-    "btn": "Order prawns →",
-    "prod": "Red prawns"
-   }
-  },
-  {
-   "prep": "rodanxes",
-   "ca": {
-    "tag": "Planxa · 8 min",
-    "title": "Tonyina a la planxa",
-    "body": "Talls gruixuts, planxa molt calenta i només 1 minut per costat perquè quedi rosada per dins. Sal en escates i un raig d'oli.",
-    "btn": "Encarregar tonyina →",
-    "prod": "Tonyina a rodanxes"
-   },
-   "es": {
-    "tag": "Plancha · 8 min",
-    "title": "Atún a la plancha",
-    "body": "Rodajas gruesas, plancha muy caliente y solo 1 minuto por lado para que quede rosado por dentro. Sal en escamas y un chorrito de aceite.",
-    "btn": "Encargar atún →",
-    "prod": "Atún en rodajas"
-   },
-   "en": {
-    "tag": "Grill · 8 min",
-    "title": "Seared tuna steak",
-    "body": "Thick steaks, very hot griddle and just 1 minute per side so it stays pink inside. Flaky salt and a drizzle of oil.",
-    "btn": "Order tuna →",
-    "prod": "Tuna steaks"
-   }
-  },
-  {
-   "prep": "forn",
-   "ca": {
-    "tag": "Forn · 45 min",
-    "title": "Besuc al forn",
-    "body": "Fes un llit de patata i ceba i enforna'l 20 minuts. Posa-hi el besuc amb llimona i 20 minuts més a 180 °C. Acaba'l amb un sofregit d'all i vinagre.",
-    "btn": "Encarregar besuc →",
-    "prod": "Besuc per al forn"
-   },
-   "es": {
-    "tag": "Horno · 45 min",
-    "title": "Besugo al horno",
-    "body": "Haz una cama de patata y cebolla y hornéala 20 minutos. Pon el besugo con limón y 20 minutos más a 180 °C. Termínalo con un refrito de ajo y vinagre.",
-    "btn": "Encargar besugo →",
-    "prod": "Besugo para horno"
-   },
-   "en": {
-    "tag": "Oven · 45 min",
-    "title": "Baked sea bream",
-    "body": "Bake a bed of potato and onion for 20 minutes. Add the bream with lemon and bake 20 more at 180 °C. Finish with garlic fried in oil and a dash of vinegar.",
-    "btn": "Order sea bream →",
-    "prod": "Sea bream for the oven"
-   }
-  },
-  {
-   "prep": "net",
-   "ca": {
-    "tag": "Vapor · 8 min",
-    "title": "Musclos al vapor amb llimona",
-    "body": "En una olla tapada amb un dit d'aigua, una fulla de llorer i pell de llimona. Quan s'obrin, fora del foc i un raig de llimona.",
-    "btn": "Encarregar musclos →",
-    "prod": "Musclos nets"
-   },
-   "es": {
-    "tag": "Vapor · 8 min",
-    "title": "Mejillones al vapor con limón",
-    "body": "En una olla tapada con un dedo de agua, una hoja de laurel y piel de limón. Cuando se abran, fuera del fuego y un chorrito de limón.",
-    "btn": "Encargar mejillones →",
-    "prod": "Mejillones limpios"
-   },
-   "en": {
-    "tag": "Steamed · 8 min",
-    "title": "Steamed mussels with lemon",
-    "body": "In a covered pot with a little water, a bay leaf and lemon zest. Once they open, take off the heat and add lemon juice.",
-    "btn": "Order mussels →",
-    "prod": "Cleaned mussels"
+    "tag": "Grilled · 12 min",
+    "title": "Grilled sea bass with garlic and parsley",
+    "body": "Heat the griddle with a drizzle of oil and cook the sea bass skin-side down first. Add minced garlic and fresh parsley just before finishing.",
+    "btn": "Order sea bass →",
+    "prod": "Sea bass"
    }
   },
   {
    "prep": "filets",
    "ca": {
+    "tag": "Paella · 10 min",
+    "title": "Filets d'orada a la donostiarra",
+    "body": "Daura els filets d'orada a la paella per banda i banda. En la mateixa paella, enrosseix alls a làmines amb un bitxo i aboca un rajolí de vinagre sobre el peix.",
+    "btn": "Encarregar orada →",
+    "prod": "Orada"
+   },
+   "es": {
+    "tag": "Sartén · 10 min",
+    "title": "Filetes de dorada a la donostiarra",
+    "body": "Dora los filetes de dorada en la sartén por ambos lados. En la misma sartén, dora ajos en láminas con una guindilla y vierte un chorrito de vinagre sobre el pescado.",
+    "btn": "Encargar dorada →",
+    "prod": "Dorada"
+   },
+   "en": {
+    "tag": "Pan-seared · 10 min",
+    "title": "Sea bream fillets Donostia-style",
+    "body": "Sear the sea bream fillets in a skillet on both sides. In the same pan, brown sliced garlic with a chilli pepper and pour a splash of vinegar over the fish.",
+    "btn": "Order sea bream →",
+    "prod": "Sea bream"
+   }
+  },
+  {
+   "prep": "rodanxes",
+   "ca": {
     "tag": "Forn · 25 min",
-    "title": "Bacallà a la llauna",
-    "body": "Enfarina els talls, daura'ls i posa'ls en una safata. Sofregeix all i pebre vermell, afegeix vi blanc, rega el bacallà i forn 10 minuts.",
-    "btn": "Encarregar bacallà →",
-    "prod": "Bacallà a talls"
+    "title": "Turbot al forn amb verduretes",
+    "body": "Col·loca el turbot en una font de forn sobre un llit de ceba i pebrot a tires. Afegeix un rajolí de vi blanc i cou-lo a 180 °C durant 25 minuts.",
+    "btn": "Encarregar turbot →",
+    "prod": "Turbot"
    },
    "es": {
     "tag": "Horno · 25 min",
-    "title": "Bacalao a la llauna",
-    "body": "Enharina los trozos, dóralos y ponlos en una bandeja. Sofríe ajo y pimentón, añade vino blanco, riega el bacalao y horno 10 minutos.",
-    "btn": "Encargar bacalao →",
-    "prod": "Bacalao en trozos"
+    "title": "Rodaballo al horno con verduritas",
+    "body": "Coloca el rodaballo en una fuente de horno sobre una cama de cebolla y pimiento en tiras. Añade un chorrito de vino blanco y hornéalo a 180 °C durante 25 minutos.",
+    "btn": "Encargar rodaballo →",
+    "prod": "Rodaballo"
    },
    "en": {
     "tag": "Oven · 25 min",
-    "title": "Catalan-style baked cod",
-    "body": "Flour the pieces, brown them and place in a tray. Fry garlic and paprika, add white wine, pour over the cod and bake 10 minutes.",
-    "btn": "Order cod →",
-    "prod": "Cod pieces"
+    "title": "Baked turbot with vegetables",
+    "body": "Place the turbot in a baking dish over a bed of sliced onion and bell pepper. Add a splash of white wine and bake at 180 °C for 25 minutes.",
+    "btn": "Order turbot →",
+    "prod": "Turbot"
+   }
+  },
+  {
+   "prep": "filets",
+   "ca": {
+    "tag": "Arrebossat · 10 min",
+    "title": "Gall arrebossat a l'estil tradicional",
+    "body": "Passa els filets de gall net per farina i ou batut amb una mica de sal. Fregeix-los en abundant oli d'oliva molt calent fins que quedin daurats i cruixents.",
+    "btn": "Encarregar gall →",
+    "prod": "Gall"
+   },
+   "es": {
+    "tag": "Rebozado · 10 min",
+    "title": "Gallo rebozado al estilo tradicional",
+    "body": "Pasa los filetes de gallo limpio por harina y huevo batido con una pizca de sal. Fríelos en abundante aceite de oliva muy caliente hasta que queden dorados y crujientes.",
+    "btn": "Encargar gallo →",
+    "prod": "Gallo"
+   },
+   "en": {
+    "tag": "Fried · 10 min",
+    "title": "Traditional battered megrim sole",
+    "body": "Coat the cleaned megrim sole fillets in flour and beaten egg with a pinch of salt. Fry in plenty of hot olive oil until golden and crispy.",
+    "btn": "Order megrim sole →",
+    "prod": "Megrim sole"
+   }
+  },
+  {
+   "prep": "sopa",
+   "ca": {
+    "tag": "Guisat · 20 min",
+    "title": "Sopa de peix amb volanta",
+    "body": "Prepara un sofregit de ceba, tomàquet i all, i afegeix-hi aigua o fumet de peix. Incorpora la volanta trossejada i deixa-ho bullir a foc lent durant 15 minuts.",
+    "btn": "Encarregar volanta →",
+    "prod": "Volanta"
+   },
+   "es": {
+    "tag": "Guiso · 20 min",
+    "title": "Sopa de pescado con volanta",
+    "body": "Prepara un sofrito de cebolla, tomate y ajo, y añade agua o caldo de pescado. Incorpora la volanta troceada y déjala hervir a fuego lento durante 15 minutos.",
+    "btn": "Encargar volanta →",
+    "prod": "Volanta"
+   },
+   "en": {
+    "tag": "Stew · 20 min",
+    "title": "Fish soup with hake",
+    "body": "Prepare a base of sautéed onion, tomato, and garlic, then add water or fish stock. Add the chopped fish and simmer gently for 15 minutes.",
+    "btn": "Order hake →",
+    "prod": "Hake"
+   }
+  },
+  {
+   "prep": "net",
+   "ca": {
+    "tag": "Guisat · 25 min",
+    "title": "Escamarlans petits en salsa verda",
+    "body": "Sofregeix all picat en una paella, afegeix una mica de farina i aboca vi blanc amb julivert. Incorpora els escamarlans petits i cou-los tapats durant 5 minuts.",
+    "btn": "Encarregar escamarlans →",
+    "prod": "Escamarlans"
+   },
+   "es": {
+    "tag": "Guiso · 25 min",
+    "title": "Cigalitas en salsa verde",
+    "body": "Sofríe ajo picado en una sartén, añade un poco de harina y vierte vino blanco con perejil. Incorpora las cigalitas y cocínalas tapadas durante 5 minutos.",
+    "btn": "Encargar cigalas →",
+    "prod": "Cigalas"
+   },
+   "en": {
+    "tag": "Stew · 25 min",
+    "title": "Small langoustines in green sauce",
+    "body": "Sauté minced garlic in a pan, stir in a little flour, and pour white wine with parsley. Add the small langoustines and cook covered for 5 minutes.",
+    "btn": "Order langoustines →",
+    "prod": "Langoustines"
+   }
+  },
+  {
+   "prep": "net",
+   "ca": {
+    "tag": "Guisat · 30 min",
+    "title": "Sípia petita estofada amb pèsols",
+    "body": "Daura la sípia petita en una cassola amb oli d'oliva i reserva-la. Fes un sofregit de ceba i tomàquet, torna a afegir la sípia, cobreix amb aigua i afegeix pèsols al final.",
+    "btn": "Encarregar sípia →",
+    "prod": "Sípia"
+   },
+   "es": {
+    "tag": "Guiso · 30 min",
+    "title": "Sepia pequeña estofada con guisantes",
+    "body": "Dora la sepia pequeña en una cazuela con aceite de oliva y resérvala. Haz un sofrito de cebolla y tomate, reincorpora la sepia, cubre con agua y añade guisantes al final.",
+    "btn": "Encargar sepia →",
+    "prod": "Sepia"
+   },
+   "en": {
+    "tag": "Stew · 30 min",
+    "title": "Small cuttlefish stewed with peas",
+    "body": "Brown the small cuttlefish in a casserole dish with olive oil and set aside. Make an onion and tomato sauce, return the cuttlefish, cover with water, and add peas near the end.",
+    "btn": "Order cuttlefish →",
+    "prod": "Cuttlefish"
    }
   }
  ]
