@@ -2,17 +2,16 @@
 # Aquest arxiu el genera el publicador del servidor a partir de Fotos_Pescaderia/AAAAMMDD/pissarra.txt
 # Una línia per producte:   Nom | preu | nota   (el preu i la nota són opcionals)
 
-data: 2026-11-12
-Tonyina gran | 42,00 €/kg |
-Llobarro | 24,90 €/kg |
+data: 2026-11-13
+Salmó | 21,90 €/kg |
 Orada | 18,90 €/kg |
-Turbot | 33,90 €/kg |
-Llobarro real | 36,90 €/kg |
-Gall | 29,90 €/kg |
-Volanta | 28,90 €/kg |
-Cua de rap | 39,90 €/kg |
-Gamba petita | 45,90 €/kg |
-Lluç | 29,90 €/kg |
-Calamars grans | 39,90 €/kg |
-Escamarlans petits | 45,90 €/kg |
-Sípia petita | 30,00 €/kg |
+Cua de rap | 29,90 €/kg |
+Palangre gran | 29,90 €/kg |
+Llangosta | 89,00 €/kg |
+Cua de rap petita | 32,90 €/kg |
+Rèmol | 27,90 €/kg |
+Sardina | 9,90 €/kg |
+Gamba petita | 39,90 €/kg |
+Llenguado gran | 55,00 €/kg |
+Sípia petita | 29,90 €/kg |
+Seitons | 10,90 €/kg |

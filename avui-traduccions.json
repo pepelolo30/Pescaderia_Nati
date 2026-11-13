@@ -1,56 +1,52 @@
 {
  "textos": {
-  "Tonyina gran": {
-   "es": "Atún grande",
-   "en": "Large tuna"
-  },
-  "Llobarro": {
-   "es": "Lubina",
-   "en": "Sea bass"
+  "Salmó": {
+   "es": "Salmón",
+   "en": "Salmon"
   },
   "Orada": {
    "es": "Dorada",
    "en": "Sea bream"
   },
-  "Turbot": {
-   "es": "Rodaballo",
-   "en": "Turbot"
-  },
-  "Llobarro real": {
-   "es": "Lubina real",
-   "en": "Sea bass (real)"
-  },
-  "Gall": {
-   "es": "Gallo",
-   "en": "Megrim"
-  },
-  "Volanta": {
-   "es": "Volanta",
-   "en": "Volanta"
-  },
   "Cua de rap": {
    "es": "Cola de rape",
    "en": "Monkfish tail"
+  },
+  "Palangre gran": {
+   "es": "Palangre grande",
+   "en": "Large palangre"
+  },
+  "Llangosta": {
+   "es": "Langosta",
+   "en": "Lobster"
+  },
+  "Cua de rap petita": {
+   "es": "Cola de rape pequeña",
+   "en": "Small monkfish tail"
+  },
+  "Rèmol": {
+   "es": "Rodaballo",
+   "en": "Turbot"
+  },
+  "Sardina": {
+   "es": "Sardina",
+   "en": "Sardine"
   },
   "Gamba petita": {
    "es": "Gamba pequeña",
    "en": "Small prawn"
   },
-  "Lluç": {
-   "es": "Merluza",
-   "en": "Hake"
-  },
-  "Calamars grans": {
-   "es": "Calamares grandes",
-   "en": "Large squid"
-  },
-  "Escamarlans petits": {
-   "es": "Cigalas pequeñas",
-   "en": "Small langoustines"
+  "Llenguado gran": {
+   "es": "Lenguado grande",
+   "en": "Large sole"
   },
   "Sípia petita": {
    "es": "Sepia pequeña",
    "en": "Small cuttlefish"
+  },
+  "Seitons": {
+   "es": "Boquerones",
+   "en": "Anchovies"
   }
  }
 }
