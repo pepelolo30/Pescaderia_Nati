@@ -1,197 +1,197 @@
 {
- "data": "2026-11-13",
- "font": "ia",
+ "data": "2026-11-14",
+ "font": "receptari",
  "receptes": [
   {
-   "prep": "planxa",
+   "prep": "rodanxes",
    "ca": {
-    "tag": "Planxa · 15 min",
-    "title": "Salmó a la planxa amb salsa de mostassa i mel",
-    "body": "Marca els filets de salmó a la planxa ben calenta dos minuts per cada costat. Barreja mostassa amb mel, aboca-ho a la paella i deixa que redueixi un minut abans de servir.",
-    "btn": "Encarregar salmó →",
-    "prod": "Salmó"
+    "tag": "Cassola · 40 min",
+    "title": "Suquet de rap",
+    "body": "Sofregeix all i tomàquet, afegeix patata a rodanxes i fumet, i quan sigui gairebé cuita posa-hi el rap 8 minuts. Acaba amb una picada d'ametlla.",
+    "btn": "Encarregar rap →",
+    "prod": "Rap a rodanxes"
    },
    "es": {
-    "tag": "Plancha · 15 min",
-    "title": "Salmón a la plancha con salsa de mostaza y miel",
-    "body": "Marca los filetes de salmón en la plancha muy caliente dos minutos por lado. Mezcla mostaza con miel, viértelo en la sartén y deja que reduzca un minuto antes de servir.",
-    "btn": "Encargar salmón →",
-    "prod": "Salmón"
+    "tag": "Cazuela · 40 min",
+    "title": "Suquet de rape",
+    "body": "Sofríe ajo y tomate, añade patata en rodajas y fumet, y cuando esté casi hecha pon el rape 8 minutos. Termina con un majado de almendra.",
+    "btn": "Encargar rape →",
+    "prod": "Rape en rodajas"
    },
    "en": {
-    "tag": "Grill · 15 min",
-    "title": "Pan-seared salmon with honey mustard sauce",
-    "body": "Sear the salmon fillets on a very hot grill for two minutes per side. Mix mustard with honey, pour it into the pan and let it reduce for a minute before serving.",
-    "btn": "Order salmon →",
-    "prod": "Salmon"
+    "tag": "Stew · 40 min",
+    "title": "Catalan monkfish stew",
+    "body": "Fry garlic and tomato, add sliced potato and fish stock, and when almost done add the monkfish for 8 minutes. Finish with crushed almonds.",
+    "btn": "Order monkfish →",
+    "prod": "Monkfish in steaks"
    }
   },
   {
-   "prep": "forn",
+   "prep": "sal",
    "ca": {
     "tag": "Forn · 30 min",
-    "title": "Orada al forn amb patates i ceba",
-    "body": "Talla patates i ceba finetes i enforna-les a 180°C durant vint minuts. Posa l'orada a sobre, afegeix un raig de vi blanc i cou-ho deu minuts més.",
-    "btn": "Encarregar orada →",
-    "prod": "Orada"
+    "title": "Orada o llobarro a la sal",
+    "body": "Cobreix la peça sencera amb sal grossa humida i forn ben calent uns 20 minuts. Te la deixem buidada però amb les escates.",
+    "btn": "Encarregar per a la sal →",
+    "prod": "Orada o llobarro"
    },
    "es": {
     "tag": "Horno · 30 min",
-    "title": "Dorada al horno con patatas y cebolla",
-    "body": "Corta patatas y cebolla finas y hornéalas a 180°C durante veinte minutos. Pon la dorada encima, añade un chorro de vino blanco y cocina diez minutos más.",
-    "btn": "Encargar dorada →",
-    "prod": "Dorada"
+    "title": "Dorada o lubina a la sal",
+    "body": "Cubre la pieza entera con sal gruesa húmeda y horno bien caliente unos 20 minutos. Te la dejamos vaciada pero con las escamas.",
+    "btn": "Encargar para la sal →",
+    "prod": "Dorada o lubina"
    },
    "en": {
     "tag": "Oven · 30 min",
-    "title": "Baked sea bream with potatoes and onions",
-    "body": "Slice potatoes and onions thinly and bake at 180°C for twenty minutes. Place the sea bream on top, add a splash of white wine and cook for ten more minutes.",
-    "btn": "Order sea bream →",
-    "prod": "Sea bream"
-   }
-  },
-  {
-   "prep": "cru",
-   "ca": {
-    "tag": "Marinat · 10 min",
-    "title": "Ceviche de rèmol amb llimona i coriandre",
-    "body": "Congela el rèmol prèviament i talla'l a daus petits una vegada descongelat. Marina el peix amb suc de llimona, ceba vermella i coriandre durant deu minuts.",
-    "btn": "Encarregar rèmol →",
-    "prod": "Rèmol"
-   },
-   "es": {
-    "tag": "Marinado · 10 min",
-    "title": "Ceviche de rodaballo con lima y cilantro",
-    "body": "Congela el rodaballo previamente y córtalo en dados pequeños una vez descongelado. Marina el pescado con zumo de lima, cebolla morada y cilantro durante diez minutos.",
-    "btn": "Encargar rodaballo →",
-    "prod": "Rodaballo"
-   },
-   "en": {
-    "tag": "Marinated · 10 min",
-    "title": "Turbot ceviche with lime and cilantro",
-    "body": "Freeze the turbot beforehand and cut it into small cubes once thawed. Marinate the fish with lime juice, red onion and cilantro for ten minutes.",
-    "btn": "Order turbot →",
-    "prod": "Turbot"
+    "title": "Salt-baked bream or sea bass",
+    "body": "Cover the whole fish in damp coarse salt and bake in a very hot oven for about 20 minutes. We gut it but keep the scales on.",
+    "btn": "Order for salt-baking →",
+    "prod": "Bream or sea bass"
    }
   },
   {
    "prep": "net",
    "ca": {
-    "tag": "Fregit · 10 min",
-    "title": "Sardines arrebossades amb farina de blat de moro",
-    "body": "Neteja les sardines treient l'espina central i passa-les per farina de blat de moro. Fregeix-les en oli d'oliva ben calent fins que quedin cruixents.",
-    "btn": "Encarregar sardines →",
-    "prod": "Sardines"
+    "tag": "Planxa · 15 min",
+    "title": "Sípia a la planxa amb allioli",
+    "body": "Talla-la a tires, marca-la a la planxa ben calenta 3 o 4 minuts i amaneix-la amb all i julivert. Una mica d'allioli al costat.",
+    "btn": "Encarregar sípia →",
+    "prod": "Sípia neta"
    },
    "es": {
-    "tag": "Frito · 10 min",
-    "title": "Sardinas rebozadas con harina de maíz",
-    "body": "Limpia las sardinas retirando la espina central y pásalas por harina de maíz. Fríelas en aceite de oliva bien caliente hasta que queden crujientes.",
-    "btn": "Encargar sardinas →",
-    "prod": "Sardinas"
+    "tag": "Plancha · 15 min",
+    "title": "Sepia a la plancha con alioli",
+    "body": "Córtala en tiras, márcala en la plancha bien caliente 3 o 4 minutos y alíñala con ajo y perejil. Un poco de alioli al lado.",
+    "btn": "Encargar sepia →",
+    "prod": "Sepia limpia"
    },
    "en": {
-    "tag": "Fried · 10 min",
-    "title": "Fried sardines with cornmeal crust",
-    "body": "Clean the sardines by removing the spine and coat them in cornmeal. Fry in hot olive oil until golden and crispy.",
-    "btn": "Order sardines →",
-    "prod": "Sardines"
+    "tag": "Grill · 15 min",
+    "title": "Grilled cuttlefish with aioli",
+    "body": "Cut into strips, sear on a very hot griddle for 3 or 4 minutes and dress with garlic and parsley. Serve with aioli.",
+    "btn": "Order cuttlefish →",
+    "prod": "Cleaned cuttlefish"
    }
   },
   {
-   "prep": "rodanxes",
+   "prep": "net",
    "ca": {
-    "tag": "Guisat · 35 min",
-    "title": "Guisat de cua de rap amb rossinyols",
-    "body": "Sofregeix ceba i tomàquet, afegeix els rossinyols i daura les rodanxes de rap. Aboca una mica de brou de peix i cou-ho tot junt durant quinze minuts.",
-    "btn": "Encarregar rap →",
-    "prod": "Rap"
+    "tag": "Vapor · 8 min",
+    "title": "Musclos al vapor amb llimona",
+    "body": "En una olla tapada amb un dit d'aigua, una fulla de llorer i pell de llimona. Quan s'obrin, fora del foc i un raig de llimona.",
+    "btn": "Encarregar musclos →",
+    "prod": "Musclos nets"
    },
    "es": {
-    "tag": "Guiso · 35 min",
-    "title": "Guiso de cola de rape con rebozuelos",
-    "body": "Sofríe cebolla y tomate, añade los rebozuelos y dora las rodajas de rape. Vierte un poco de caldo de pescado y cocina todo junto durante quince minutos.",
-    "btn": "Encargar rape →",
-    "prod": "Rape"
+    "tag": "Vapor · 8 min",
+    "title": "Mejillones al vapor con limón",
+    "body": "En una olla tapada con un dedo de agua, una hoja de laurel y piel de limón. Cuando se abran, fuera del fuego y un chorrito de limón.",
+    "btn": "Encargar mejillones →",
+    "prod": "Mejillones limpios"
    },
    "en": {
-    "tag": "Stew · 35 min",
-    "title": "Monkfish tail stew with chanterelles",
-    "body": "Sauté onion and tomato, add the chanterelles and brown the monkfish slices. Pour in a bit of fish stock and simmer everything together for fifteen minutes.",
-    "btn": "Order monkfish →",
-    "prod": "Monkfish"
+    "tag": "Steamed · 8 min",
+    "title": "Steamed mussels with lemon",
+    "body": "In a covered pot with a little water, a bay leaf and lemon zest. Once they open, take off the heat and add lemon juice.",
+    "btn": "Order mussels →",
+    "prod": "Cleaned mussels"
    }
   },
   {
    "prep": "sopa",
    "ca": {
-    "tag": "Sopa · 25 min",
-    "title": "Arròs caldós amb gamba petita",
-    "body": "Prepara un sofregit base amb all, ceba i tomàquet, i afegeix-hi l'arròs. Aboca el fumet, cou dotze minuts i afegeix la gamba petita l'últim minut.",
-    "btn": "Encarregar gambes →",
-    "prod": "Gamba"
+    "tag": "Base · 40 min",
+    "title": "Fumet casolà",
+    "body": "Sofregeix ceba i tomàquet, afegeix caps i espines de peix de roca, cobreix d'aigua i bull 25 minuts. Cola'l i ja tens base per a arròs o sopa.",
+    "btn": "Encarregar peix de roca →",
+    "prod": "Peix de roca per a fumet"
    },
    "es": {
-    "tag": "Sopa · 25 min",
-    "title": "Arroz caldoso con gamba pequeña",
-    "body": "Prepara un sofrito base con ajo, cebolla y tomate, y añade el arroz. Vierte el caldo, cocina doce minutos y añade la gamba pequeña el último minuto.",
-    "btn": "Encargar gambas →",
-    "prod": "Gamba"
+    "tag": "Base · 40 min",
+    "title": "Fumet casero",
+    "body": "Sofríe cebolla y tomate, añade cabezas y espinas de pescado de roca, cubre de agua y cuece 25 minutos. Cuélalo y tienes base para arroz o sopa.",
+    "btn": "Encargar pescado de roca →",
+    "prod": "Pescado de roca para fumet"
    },
    "en": {
-    "tag": "Soup · 25 min",
-    "title": "Rice soup with small prawns",
-    "body": "Prepare a base sauté with garlic, onion and tomato, then add the rice. Pour in the fish broth, cook for twelve minutes and add the small prawns for the final minute.",
-    "btn": "Order prawns →",
-    "prod": "Prawns"
-   }
-  },
-  {
-   "prep": "planxa",
-   "ca": {
-    "tag": "Planxa · 12 min",
-    "title": "Sípia petita a la planxa amb salsa verda",
-    "body": "Posa la sípia petita a la planxa molt calenta amb un raig d'oli fins que quedi daurada. Condimenta amb una picada d'all, julivert i un toc de suc de llimona.",
-    "btn": "Encarregar sípia →",
-    "prod": "Sípia"
-   },
-   "es": {
-    "tag": "Plancha · 12 min",
-    "title": "Sepia pequeña a la plancha con salsa verde",
-    "body": "Pon la sepia pequeña en la plancha muy caliente con un chorro de aceite hasta que se dore. Sazona con un majado de ajo, perejil y un toque de zumo de limón.",
-    "btn": "Encargar sepia →",
-    "prod": "Sepia"
-   },
-   "en": {
-    "tag": "Grill · 12 min",
-    "title": "Grilled small cuttlefish with garlic and parsley",
-    "body": "Place the small cuttlefish on a very hot grill with a splash of oil until golden. Season with minced garlic, parsley and a squeeze of lemon juice.",
-    "btn": "Order cuttlefish →",
-    "prod": "Cuttlefish"
+    "tag": "Base · 40 min",
+    "title": "Homemade fish stock",
+    "body": "Fry onion and tomato, add rockfish heads and bones, cover with water and simmer 25 minutes. Strain it for rice or soup.",
+    "btn": "Order rockfish →",
+    "prod": "Rockfish for stock"
    }
   },
   {
    "prep": "net",
    "ca": {
-    "tag": "Fregit · 8 min",
-    "title": "Seitons fregits a l'estil andalús",
-    "body": "Neteja els seitons, eixuga'ls ben bé i passa'ls per farina especial per a fregits. Fregeix-los en abundant oli calent durant dos minuts i escórre'ls en paper absorbent.",
-    "btn": "Encarregar seitons →",
-    "prod": "Seitons"
+    "tag": "Planxa · 10 min",
+    "title": "Sardines a la planxa",
+    "body": "Planxa molt calenta amb un fil d'oli i sal grossa. 2 o 3 minuts per costat i acaba amb all i julivert picats.",
+    "btn": "Encarregar sardines →",
+    "prod": "Sardines netes"
    },
    "es": {
-    "tag": "Frito · 8 min",
-    "title": "Boquerones fritos al estilo andaluz",
-    "body": "Limpia los boquerones, sécalos bien y pásalos por harina especial para frituras. Fríelos en abundante aceite caliente durante dos minutos y escúrrelos en papel absorbente.",
-    "btn": "Encargar boquerones →",
-    "prod": "Boquerones"
+    "tag": "Plancha · 10 min",
+    "title": "Sardinas a la plancha",
+    "body": "Plancha muy caliente con un hilo de aceite y sal gruesa. 2 o 3 minutos por lado y termina con ajo y perejil picados.",
+    "btn": "Encargar sardinas →",
+    "prod": "Sardinas limpias"
    },
    "en": {
-    "tag": "Fried · 8 min",
-    "title": "Andalusian-style fried anchovies",
-    "body": "Clean the anchovies, dry them thoroughly and coat them in frying flour. Fry in abundant hot oil for two minutes and drain on paper towels.",
-    "btn": "Order anchovies →",
-    "prod": "Anchovies"
+    "tag": "Grill · 10 min",
+    "title": "Grilled sardines",
+    "body": "Very hot griddle with a drizzle of oil and coarse salt. 2 or 3 minutes per side, finished with chopped garlic and parsley.",
+    "btn": "Order sardines →",
+    "prod": "Cleaned sardines"
+   }
+  },
+  {
+   "prep": "net",
+   "ca": {
+    "tag": "Fregit · 15 min",
+    "title": "Molls fregits",
+    "body": "Enfarina'ls sencers i nets, i fregeix-los en oli ben calent 3 minuts per costat. Amb una amanida de tomàquet són un àpat.",
+    "btn": "Encarregar molls →",
+    "prod": "Molls nets"
+   },
+   "es": {
+    "tag": "Frito · 15 min",
+    "title": "Salmonetes fritos",
+    "body": "Enharínalos enteros y limpios, y fríelos en aceite bien caliente 3 minutos por lado. Con una ensalada de tomate son una comida.",
+    "btn": "Encargar salmonetes →",
+    "prod": "Salmonetes limpios"
+   },
+   "en": {
+    "tag": "Fried · 15 min",
+    "title": "Fried red mullet",
+    "body": "Flour them whole and cleaned, and fry in very hot oil for 3 minutes per side. With a tomato salad they make a meal.",
+    "btn": "Order red mullet →",
+    "prod": "Cleaned red mullet"
+   }
+  },
+  {
+   "prep": "",
+   "ca": {
+    "tag": "Entrant · 10 min",
+    "title": "Llagostins bullits",
+    "body": "Aigua amb molta sal; quan bulli, tira-hi els llagostins i compta 1 o 2 minuts des que torni a bullir. Passa'ls a aigua amb gel.",
+    "btn": "Encarregar llagostins →",
+    "prod": "Llagostins"
+   },
+   "es": {
+    "tag": "Entrante · 10 min",
+    "title": "Langostinos cocidos",
+    "body": "Agua con mucha sal; cuando hierva, echa los langostinos y cuenta 1 o 2 minutos desde que vuelva a hervir. Pásalos a agua con hielo.",
+    "btn": "Encargar langostinos →",
+    "prod": "Langostinos"
+   },
+   "en": {
+    "tag": "Starter · 10 min",
+    "title": "Boiled prawns",
+    "body": "Very salty water; when it boils add the prawns and count 1 or 2 minutes once it returns to the boil. Move them to iced water.",
+    "btn": "Order prawns →",
+    "prod": "Prawns"
    }
   }
  ]
