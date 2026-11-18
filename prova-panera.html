@@ -435,6 +435,11 @@
     background:rgba(44,29,20,0.75); color:var(--paper); font-size:12px; font-weight:700; letter-spacing:0.08em;
     text-transform:uppercase; padding:5px 9px; border-radius:20px;
   }
+  .tile-date{
+    position:absolute; right:10px; bottom:10px; z-index:1; pointer-events:none;
+    background:rgba(44,29,20,0.72); color:var(--paper); font-size:12px; font-weight:700; letter-spacing:0.02em;
+    padding:4px 8px; border-radius:20px;
+  }
   .tile-video .badge::before{ content:""; width:7px; height:7px; border-radius:50%; background:#D9534F; }
   .gallery-note{ margin-top:14px; font-size:13px; color:var(--ink-soft); }
 
@@ -1606,7 +1611,8 @@
       if(!lb || !lb.showModal){ window.open(tile.getAttribute('data-full'), '_blank'); return; }
       var tiles = Array.prototype.slice.call(gallery.querySelectorAll('button.tile'));
       openLb(tiles.map(function(x){
-        return { full:x.getAttribute('data-full'), cap:T[curLang][x.getAttribute('data-cap')] || '' };
+        var cap = T[curLang][x.getAttribute('data-cap')] || '', d = x.getAttribute('data-date');
+        return { full:x.getAttribute('data-full'), cap:d ? (cap ? cap + ' · ' + d : d) : cap };
       }), tiles.indexOf(tile));
     });
   }
@@ -1663,6 +1669,13 @@
     fetch('botiga/fotos.json?v=' + Date.now(), { cache:'no-store' }).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
       if(!j || !j.items || !j.items.length) return;
       var first = gallery.firstChild;
+      function dataTile(el, it){
+        var d = it && it.data ? parseIso(it.data) : null;
+        if(!d) return;
+        var txt = pad(d.getDate()) + '/' + pad(d.getMonth() + 1) + '/' + d.getFullYear();
+        var sp = document.createElement('span'); sp.className = 'tile-date'; sp.textContent = txt;
+        el.setAttribute('data-date', txt); el.appendChild(sp);
+      }
       j.items.forEach(function(it){
         var el;
         if(it && it.tipus === 'video' && it.video){
@@ -1671,7 +1684,7 @@
           var v = document.createElement('video'); v.src = it.video; if(it.poster) v.poster = it.poster;
           v.muted = true; v.loop = true; v.preload = 'none'; v.setAttribute('playsinline', ''); v.setAttribute('muted', '');
           var badge = document.createElement('span'); badge.className = 'badge'; badge.setAttribute('data-t', 'videoBadge');
-          el.appendChild(v); el.appendChild(badge);
+          el.appendChild(v); el.appendChild(badge); dataTile(el, it);
           gallery.insertBefore(el, first);
           setupVideo(el);
         } else if(it && it.petita && it.gran){
@@ -1679,7 +1692,7 @@
           el.setAttribute('data-full', it.gran); el.setAttribute('data-cap', 'galEyebrow'); el.setAttribute('data-track', 'botiga');
           var img = document.createElement('img'); img.src = it.petita; img.loading = 'lazy'; img.decoding = 'async';
           img.width = 480; img.height = 600; img.setAttribute('data-t-alt', 'galEyebrow');
-          el.appendChild(img);
+          el.appendChild(img); dataTile(el, it);
           gallery.insertBefore(el, first);
         }
       });
@@ -1924,15 +1937,16 @@
   (function(){
     var P = CFG.panera || {};
     var avui = isoDate(new Date());
-    if(!P.foto || (P.des && avui < P.des) || (P.fins && avui > P.fins)) return;
+    var limit = P.fins ? Date.parse(P.fins) : NaN;
+    if(!P.foto || (P.des && avui < P.des) || (!isNaN(limit) && Date.now() >= limit)) return;
     var teaser = document.getElementById('panTeaser'), mini = document.getElementById('panMini');
     var dlg = document.getElementById('panDlg'), img = document.getElementById('panImg');
     var musicBtn = document.getElementById('panMusic'), snow = document.getElementById('panSnow');
     var CLAU = 'mulhacen-panera-vist';
     var musicaOn = true, audio = null;
 
-    function vistAvui(){ if(/[?&]panera/.test(location.search)) return false; try{ return localStorage.getItem(CLAU) === avui; }catch(e){ return false; } }
-    function marcaVist(){ try{ localStorage.setItem(CLAU, avui); }catch(e){} }
+    function vistAvui(){ if(/[?&]panera/.test(location.search)) return false; try{ return sessionStorage.getItem(CLAU) === avui; }catch(e){ return false; } }
+    function marcaVist(){ try{ sessionStorage.setItem(CLAU, avui); }catch(e){} }
     function mostraMini(){ teaser.classList.remove('show'); teaser.hidden = true; mini.hidden = false; }
 
     var JB = [[4,1],[4,1],[4,2],[4,1],[4,1],[4,2],[4,1],[7,1],[0,1.5],[2,0.5],[4,4],
@@ -2038,6 +2052,9 @@
       if(musicaOn) engegaMusica(); else paraMusica();
     });
 
+    if(!isNaN(limit) && limit - Date.now() < 2147483647){
+      setTimeout(function(){ tanca(); teaser.hidden = true; mini.hidden = true; }, limit - Date.now());
+    }
     if(vistAvui()){ mini.hidden = false; return; }
     teaser.hidden = false;
     setTimeout(function(){ teaser.classList.add('show'); }, 1200);
@@ -2441,7 +2458,6 @@
   try{
     var saved = localStorage.getItem('ladorada-lang');
     if(saved === 'ca' || saved === 'es' || saved === 'en') startLang = saved;
-    else if(/^en/i.test(navigator.language || '')) startLang = 'en';
   }catch(e){}
 
   applyLang(startLang);
