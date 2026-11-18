@@ -297,6 +297,23 @@
     color:var(--gold-light); text-decoration:none;
   }
   .foot-ig:hover{ color:var(--paper); }
+  .foot-legal{ background:none; border:0; padding:0; font:inherit; color:inherit; text-decoration:underline; text-underline-offset:2px; cursor:pointer; }
+  .foot-legal:hover{ color:var(--paper); }
+  .legal-dlg{
+    border:0; padding:0; width:min(720px, calc(100% - 24px)); max-height:calc(100% - 24px); border-radius:14px;
+    overflow:hidden auto; background:var(--paper); color:var(--ink); box-shadow:0 30px 80px rgba(0,0,0,0.45);
+  }
+  .legal-dlg::backdrop{ background:rgba(20,12,8,0.72); }
+  .legal-in{ padding:34px clamp(20px,5vw,44px) 28px; }
+  .legal-in h2{ font-family:"Playfair Display", Georgia, serif; font-size:clamp(24px,3vw,30px); margin:0 40px 18px 0; }
+  .legal-in h3{ font-size:15.5px; margin:20px 0 6px; color:var(--gold); }
+  .legal-in p{ font-size:15px; line-height:1.6; margin:0 0 8px; }
+  .legal-in a{ color:var(--gold); }
+  .legal-x{
+    position:sticky; top:12px; float:right; margin:12px 12px 0 0; width:36px; height:36px; border-radius:50%; border:0; padding:0;
+    background:rgba(43,26,16,0.08); color:var(--ink); font-size:22px; line-height:36px; cursor:pointer;
+  }
+  .legal-x:hover{ background:rgba(43,26,16,0.16); }
   footer .wrap{ padding-right:max(clamp(20px,5vw,56px), 92px); }
 
   /* ---------- Floating WhatsApp ---------- */
@@ -1201,9 +1218,17 @@
       <span id="footBrand">Peixateria Mulhacén · Castelldefels · Des del 1954</span>
     </div>
     <a class="foot-ig" href="https://www.instagram.com/mulhacenpeixeters1954/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>@mulhacenpeixeters1954</a>
-    <div class="fineprint">Carrer de la Llibertat, 10 · 699 08 82 13</div>
+    <div class="fineprint">Carrer de la Llibertat, 10 · 699 08 82 13 · <button type="button" class="foot-legal" id="legalOpen" data-t="legalLink">Avís legal i privacitat</button></div>
   </div>
 </footer>
+
+<dialog class="legal-dlg" id="legalDlg" aria-labelledby="legalTitle">
+  <button type="button" class="legal-x" id="legalX" data-t-aria="panClose" aria-label="Tanca">×</button>
+  <div class="legal-in">
+    <h2 id="legalTitle" data-t="legalTitle">Avís legal i privacitat</h2>
+    <div data-t="legalBody"></div>
+  </div>
+</dialog>
 
 <div class="pan-teaser" id="panTeaser" hidden>
   <span class="pan-lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
@@ -1367,6 +1392,7 @@
       panP1:"Aquest Nadal, a més del millor peix, a la Peixateria Mulhacén repartim il·lusió: el <strong>22 de desembre</strong>, el mateix dia que canten El Gordo, <strong>sortegem aquesta panera plena de delícies</strong> entre els nostres clients.",
       panP2:"Si tens cap dubte, pregunta'ns a la botiga. Que la sort (i el bon peix) t'acompanyin! 🍀🐟",
       panOk:"Som-hi! 🎉", panMusicOff:"🔇 Apaga la música", panMusicOn:"🔊 Posa la música",
+      legalLink:"Avís legal i privacitat", legalTitle:"Avís legal i privacitat", legalBody:"<h3>Qui som</h3><p>Aquest web és de la Peixateria Mulhacén, que porta <strong>Natividad Pérez Taulats</strong>, autònoma, amb NIF <strong>47615668X</strong>. Adreça: Carrer de la Llibertat, 10, 08860 Castelldefels (Barcelona). Telèfon i WhatsApp: 699 08 82 13.</p><h3>Les teves dades</h3><p>El formulari d'encàrrec no envia res a cap servidor: prepara un missatge que envies tu mateix per WhatsApp. Les dades que ens hi facilitis (nom, telèfon, adreça i comanda) només les fem servir per preparar i lliurar l'encàrrec i atendre't, perquè ens ho demanes tu. No les cedim a ningú i les guardem el temps necessari per a la comanda i per complir les obligacions legals. WhatsApp és un servei de Meta amb les seves pròpies condicions.</p><p>El teu navegador recorda el nom, l'adreça i l'idioma que tries perquè no els hagis de tornar a escriure. Es queden al teu dispositiu i els pots esborrar quan vulguis.</p><h3>Galetes i estadístiques</h3><p>No fem servir galetes pròpies. Comptem les visites amb GoatCounter, que no fa servir galetes ni sap qui ets. El mapa és de Google Maps, i Google hi pot posar les seves galetes.</p><h3>Els teus drets</h3><p>Pots demanar-nos veure, corregir o esborrar les teves dades, o oposar-te que les fem servir, per WhatsApp o a la botiga. Si creus que no les tractem bé, pots reclamar a l'<a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener\">Agència Espanyola de Protecció de Dades</a>.</p><h3>Fotos i textos</h3><p>Les fotos i els textos d'aquest web són de la Peixateria Mulhacén. Si els vols fer servir, demana'ns-ho.</p>",
       lotsTitle:"Lots a punt d'encarregar", lotAdd:"Afegir a l'encàrrec →",
       lot1T:"Lot familiar setmanal", lot1B:"Uns 3 kg de peix i marisc del dia, net i envasat al buit, a punt per congelar.",
       lot2T:"Lot sense espines", lot2B:"Filets de peix blanc i salmó sense espines. Ideal per als nens.",
@@ -1439,6 +1465,7 @@
       panP1:"Esta Navidad, además del mejor pescado, en la Peixateria Mulhacén repartimos ilusión: el <strong>22 de diciembre</strong>, el mismo día que cantan El Gordo, <strong>sorteamos esta cesta llena de delicias</strong> entre nuestros clientes.",
       panP2:"Si tienes cualquier duda, pregúntanos en la tienda. ¡Que la suerte (y el buen pescado) te acompañen! 🍀🐟",
       panOk:"¡Vamos allá! 🎉", panMusicOff:"🔇 Apagar la música", panMusicOn:"🔊 Poner la música",
+      legalLink:"Aviso legal y privacidad", legalTitle:"Aviso legal y privacidad", legalBody:"<h3>Quiénes somos</h3><p>Esta web es de la Peixateria Mulhacén, que lleva <strong>Natividad Pérez Taulats</strong>, autónoma, con NIF <strong>47615668X</strong>. Dirección: Carrer de la Llibertat, 10, 08860 Castelldefels (Barcelona). Teléfono y WhatsApp: 699 08 82 13.</p><h3>Tus datos</h3><p>El formulario de encargo no envía nada a ningún servidor: prepara un mensaje que mandas tú por WhatsApp. Los datos que nos des (nombre, teléfono, dirección y pedido) solo los usamos para preparar y entregar el encargo y atenderte, porque nos lo pides tú. No los cedemos a nadie y los guardamos el tiempo necesario para el pedido y para cumplir las obligaciones legales. WhatsApp es un servicio de Meta con sus propias condiciones.</p><p>Tu navegador recuerda el nombre, la dirección y el idioma que elijas para que no tengas que volver a escribirlos. Se quedan en tu dispositivo y puedes borrarlos cuando quieras.</p><h3>Cookies y estadísticas</h3><p>No usamos cookies propias. Contamos las visitas con GoatCounter, que no usa cookies ni sabe quién eres. El mapa es de Google Maps, y Google puede poner sus cookies.</p><h3>Tus derechos</h3><p>Puedes pedirnos ver, corregir o borrar tus datos, u oponerte a que los usemos, por WhatsApp o en la tienda. Si crees que no los tratamos bien, puedes reclamar a la <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener\">Agencia Española de Protección de Datos</a>.</p><h3>Fotos y textos</h3><p>Las fotos y los textos de esta web son de la Peixateria Mulhacén. Si quieres usarlos, pídenoslo.</p>",
       lotsTitle:"Lotes listos para encargar", lotAdd:"Añadir al encargo →",
       lot1T:"Lote familiar semanal", lot1B:"Unos 3 kg de pescado y marisco del día, limpio y envasado al vacío, listo para congelar.",
       lot2T:"Lote sin espinas", lot2B:"Filetes de pescado blanco y salmón sin espinas. Ideal para los niños.",
@@ -1543,6 +1570,7 @@
       panP1:"This Christmas we're sharing more than the best fish: on <strong>22 December</strong>, the day of El Gordo, Spain's big Christmas lottery draw, <strong>we're raffling this hamper full of treats</strong> among our customers.",
       panP2:"Any questions? Just ask us in the shop. May luck (and great fish) be with you! 🍀🐟",
       panOk:"Let's go! 🎉", panMusicOff:"🔇 Music off", panMusicOn:"🔊 Music on",
+      legalLink:"Legal notice and privacy", legalTitle:"Legal notice and privacy", legalBody:"<h3>Who we are</h3><p>This website belongs to Peixateria Mulhacén, run by <strong>Natividad Pérez Taulats</strong>, self-employed, tax ID (NIF) <strong>47615668X</strong>. Address: Carrer de la Llibertat, 10, 08860 Castelldefels (Barcelona), Spain. Phone and WhatsApp: +34 699 08 82 13.</p><h3>Your data</h3><p>The order form does not send anything to a server: it prepares a message that you send yourself on WhatsApp. We only use the details you give us (name, phone, address and order) to prepare and deliver your order and to help you, because you ask us to. We do not share them with anyone and keep them only as long as the order and the law require. WhatsApp is a Meta service with its own terms.</p><p>Your browser remembers your name, address and chosen language so you don't have to type them again. They stay on your device and you can delete them at any time.</p><h3>Cookies and statistics</h3><p>We don't use our own cookies. We count visits with GoatCounter, which uses no cookies and doesn't know who you are. The map is from Google Maps, and Google may set its own cookies.</p><h3>Your rights</h3><p>You can ask us to see, correct or delete your data, or object to its use, on WhatsApp or in the shop. If you think we are not handling it properly, you can complain to the Spanish Data Protection Agency (<a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener\">AEPD</a>).</p><h3>Photos and texts</h3><p>The photos and texts on this website belong to Peixateria Mulhacén. If you would like to use them, please ask us.</p>",
       lotsTitle:"Ready-to-order boxes", lotAdd:"Add to order →",
       lot1T:"Weekly family box", lot1B:"About 3 kg of the day's fish and seafood, cleaned and vacuum-packed, ready to freeze.",
       lot2T:"Boneless box", lot2B:"Boneless white fish and salmon fillets. Great for kids.",
@@ -1658,6 +1686,12 @@
     document.getElementById('lbPrev').addEventListener('click', function(){ showLb(lbIndex - 1); });
     document.getElementById('lbNext').addEventListener('click', function(){ showLb(lbIndex + 1); });
     lb.addEventListener('click', function(ev){ if(ev.target === lb) lb.close(); });
+    var legalDlg = document.getElementById('legalDlg');
+    document.getElementById('legalOpen').addEventListener('click', function(){
+      if(legalDlg.showModal){ legalDlg.showModal(); legalDlg.scrollTop = 0; track('avis-legal'); }
+    });
+    document.getElementById('legalX').addEventListener('click', function(){ legalDlg.close(); });
+    legalDlg.addEventListener('click', function(ev){ if(ev.target === legalDlg) legalDlg.close(); });
     lb.addEventListener('keydown', function(ev){
       if(ev.key === 'ArrowLeft') showLb(lbIndex - 1);
       if(ev.key === 'ArrowRight') showLb(lbIndex + 1);
