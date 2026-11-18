@@ -429,11 +429,16 @@
     background:linear-gradient(to top, rgba(44,29,20,0.85), rgba(44,29,20,0));
     font-family:"Playfair Display", Georgia, serif; font-size:16px; color:var(--paper);
   }
-  .tile-video{ grid-row:span 2; aspect-ratio:auto; cursor:pointer; }
+  .tile-video{ grid-row:span 2; aspect-ratio:auto; cursor:zoom-in; }
   .tile-video .badge{
     position:absolute; top:12px; left:12px; display:flex; align-items:center; gap:6px;
     background:rgba(44,29,20,0.75); color:var(--paper); font-size:12px; font-weight:700; letter-spacing:0.08em;
     text-transform:uppercase; padding:5px 9px; border-radius:20px;
+  }
+  .tile-date{
+    position:absolute; right:10px; bottom:10px; z-index:1; pointer-events:none;
+    background:rgba(44,29,20,0.72); color:var(--paper); font-size:12px; font-weight:700; letter-spacing:0.02em;
+    padding:4px 8px; border-radius:20px;
   }
   .tile-video .badge::before{ content:""; width:7px; height:7px; border-radius:50%; background:#D9534F; }
   .gallery-note{ margin-top:14px; font-size:13px; color:var(--ink-soft); }
@@ -443,7 +448,9 @@
   }
   .lightbox::backdrop{ background:rgba(16,30,33,0.92); }
   .lightbox figure{ margin:0; }
-  .lightbox img{ max-width:100%; max-height:80vh; margin:0 auto; border-radius:4px; touch-action:pan-y; user-select:none; -webkit-user-drag:none; }
+  .lightbox img, .lightbox video{ display:block; max-width:100%; max-height:80vh; margin:0 auto; border-radius:4px; touch-action:pan-y; user-select:none; -webkit-user-drag:none; }
+  .lightbox video{ background:#000; }
+  .lightbox [hidden]{ display:none !important; }
   .lightbox figcaption{ text-align:center; color:var(--paper); font-family:"Playfair Display", Georgia, serif; font-size:18px; margin-top:12px; }
   .lb-btn{
     position:fixed; width:46px; height:46px; border-radius:50%; border:1px solid var(--line-on-dark);
@@ -510,6 +517,89 @@
   }
   .loteria .promo-text{ font-size:14px; }
   .nadal-deadline{ margin-top:6px; font-weight:700; color:var(--gold-light); font-size:15px; }
+
+  /* ---------- Sorteig de la panera ---------- */
+  .pan-teaser{
+    position:fixed; left:16px; bottom:20px; z-index:60; width:calc(100% - 108px); max-width:350px;
+    border-radius:14px; background:linear-gradient(135deg,#C0262F 0%,#7E1219 100%); color:#FFF6E8;
+    box-shadow:0 12px 30px rgba(60,10,10,0.40), inset 0 0 0 2px rgba(217,185,143,0.7);
+    transform:translateY(170%); opacity:0; transition:transform .7s cubic-bezier(.2,1.35,.4,1), opacity .4s;
+  }
+  .pan-teaser.show{ transform:none; opacity:1; }
+  .pan-open{
+    display:flex; align-items:center; gap:12px; width:100%; padding:16px 40px 14px 14px; border:0; background:none;
+    color:inherit; font:inherit; text-align:left; cursor:pointer; border-radius:14px;
+  }
+  .pan-toca{
+    position:absolute; left:4px; bottom:-11px; z-index:1;
+    background:#FFD54A; color:#7E1219; font-size:12.5px; font-weight:800; letter-spacing:.02em;
+    padding:4px 9px; border-radius:999px; box-shadow:0 3px 8px rgba(60,10,10,0.35);
+    transform:rotate(-6deg); animation:panPols 1.6s ease-in-out infinite;
+  }
+  @keyframes panPols{ 0%,100%{ transform:rotate(-6deg) scale(1); } 50%{ transform:rotate(-6deg) scale(1.12); } }
+  .pan-open:focus-visible, .pan-mini:focus-visible{ outline:3px solid #F3D38F; outline-offset:2px; }
+  .pan-gift{ font-size:40px; line-height:1; flex:none; animation:panWiggle 2.6s ease-in-out infinite; transform-origin:50% 85%; }
+  .pan-open strong{ display:block; font-family:"Playfair Display", Georgia, serif; font-size:17.5px; line-height:1.2; color:#fff; }
+  .pan-open small{ display:block; margin-top:5px; font-size:12.5px; line-height:1.35; color:#F8DDAE; font-weight:600; }
+  .pan-lights{ position:absolute; left:12px; right:12px; top:-6px; height:12px; display:flex; justify-content:space-between; pointer-events:none; }
+  .pan-lights i{ width:9px; height:12px; border-radius:50% 50% 45% 45%; background:#FFD54A; box-shadow:0 0 9px #FFD54A; animation:panBlink 1.5s infinite; }
+  .pan-lights i:nth-child(3n+2){ background:#5CE07A; box-shadow:0 0 9px #5CE07A; animation-delay:.5s; }
+  .pan-lights i:nth-child(3n){ background:#7CC8FF; box-shadow:0 0 9px #7CC8FF; animation-delay:1s; }
+  .pan-x{
+    position:absolute; top:7px; right:7px; width:28px; height:28px; border-radius:50%; border:0; padding:0;
+    background:rgba(255,255,255,0.18); color:#fff; font-size:17px; line-height:28px; cursor:pointer;
+  }
+  .pan-x:hover{ background:rgba(255,255,255,0.3); }
+  .pan-mini{
+    position:fixed; left:16px; bottom:20px; z-index:60; width:58px; height:58px; border-radius:50%; padding:0;
+    border:2px solid #D9B98F; background:#B3202A; font-size:29px; line-height:1; cursor:pointer;
+    box-shadow:0 6px 18px rgba(60,10,10,0.38); animation:panWiggle 3.2s ease-in-out infinite;
+  }
+  .pan-dlg{
+    border:0; padding:0; width:min(900px, calc(100% - 24px)); max-height:calc(100% - 24px); border-radius:18px;
+    overflow:hidden auto; color:#F1E9DA; position:relative;
+    background:radial-gradient(circle at 15% 0%, #23664A 0%, #123828 55%, #0D2A1E 100%);
+    box-shadow:0 30px 80px rgba(0,0,0,0.55), inset 0 0 0 3px rgba(217,185,143,0.55);
+  }
+  .pan-dlg::backdrop{ background:rgba(24,8,8,0.80); }
+  .pan-dlg .pan-lights{ top:8px; left:24px; right:56px; }
+  .pan-snow{ position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:2; }
+  .pan-snow span{ position:absolute; top:-24px; color:#fff; opacity:.6; text-shadow:0 0 4px rgba(255,255,255,0.5); animation:panFall linear infinite; }
+  .pan-card{ position:relative; z-index:1; display:grid; grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr); gap:32px; align-items:center; padding:44px 36px 34px; }
+  .pan-photo{ margin:0; background:#fff; padding:10px 10px 16px; border-radius:6px; transform:rotate(-2.5deg); box-shadow:0 16px 34px rgba(0,0,0,0.45); }
+  .pan-photo img{ display:block; width:100%; height:auto; max-height:62vh; object-fit:contain; border-radius:3px; background:#eee; }
+  .pan-eyebrow{ display:inline-block; background:#C0262F; color:#fff; font-weight:800; font-size:12px; letter-spacing:.08em; text-transform:uppercase; padding:6px 10px; border-radius:4px; }
+  .pan-body h2{ font-family:"Playfair Display", Georgia, serif; color:#F3D38F; font-size:clamp(26px,3.4vw,36px); line-height:1.15; margin:14px 0 14px; }
+  .pan-body p{ font-size:16px; line-height:1.65; margin:0 0 12px; }
+  .pan-body strong{ color:#fff; }
+  .pan-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
+  .pan-actions button{ font:inherit; font-weight:700; font-size:14.5px; border-radius:999px; padding:11px 18px; cursor:pointer; }
+  .pan-ok{ background:#D9B98F; color:#2B1A10; border:0; }
+  .pan-ok:hover{ background:#F3D38F; }
+  .pan-music{ background:transparent; color:#F3D38F; border:1px solid rgba(243,211,143,0.6); }
+  .pan-music:hover{ background:rgba(243,211,143,0.12); }
+  .pan-music[aria-pressed="true"] .pan-m-on, .pan-music[aria-pressed="false"] .pan-m-off{ display:none; }
+  .pan-dlg-x{
+    position:absolute; top:12px; right:12px; z-index:3; width:36px; height:36px; border-radius:50%; border:0; padding:0;
+    background:rgba(255,255,255,0.14); color:#fff; font-size:22px; line-height:36px; cursor:pointer;
+  }
+  .pan-dlg-x:hover{ background:rgba(255,255,255,0.28); }
+  @keyframes panWiggle{ 0%,68%,100%{ transform:rotate(0); } 74%{ transform:rotate(-14deg); } 80%{ transform:rotate(11deg); } 86%{ transform:rotate(-7deg); } 92%{ transform:rotate(4deg); } }
+  @keyframes panBlink{ 0%,100%{ opacity:1; } 50%{ opacity:.3; } }
+  @keyframes panFall{ to{ transform:translate3d(var(--dx,0px), 1200px, 0) rotate(320deg); } }
+  @media (max-width:640px){
+    .pan-card{ grid-template-columns:1fr; gap:20px; padding:40px 18px 22px; }
+    .pan-photo{ max-width:240px; margin:0 auto; }
+    .pan-photo img{ max-height:34vh; }
+    .pan-body{ text-align:center; }
+    .pan-actions{ justify-content:center; }
+    .pan-body p{ font-size:15.5px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .pan-gift, .pan-mini, .pan-lights i, .pan-toca{ animation:none; }
+    .pan-teaser{ transition:none; }
+    .pan-snow{ display:none; }
+  }
 
   /* ---------- Opinions ---------- */
   .score{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:28px; }
@@ -899,6 +989,7 @@
   <dialog class="lightbox" id="lightbox">
     <figure>
       <img id="lbImg" src="" alt="">
+      <video id="lbVid" muted loop playsinline controls preload="auto" hidden></video>
       <figcaption id="lbCap"></figcaption>
     </figure>
     <button type="button" class="lb-btn lb-close" id="lbClose" data-t-aria="lbClose">×</button>
@@ -1114,6 +1205,35 @@
   </div>
 </footer>
 
+<div class="pan-teaser" id="panTeaser" hidden>
+  <span class="pan-lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+  <button type="button" class="pan-open" id="panOpen">
+    <span class="pan-gift" aria-hidden="true">🎁</span>
+    <span class="pan-toca" aria-hidden="true" data-t="panToca">👆 Toca'm!</span>
+    <span><strong data-t="panTeaserT">Sortegem una panera de Nadal! 🎄</strong><small data-t="panTeaserS">El 22 de desembre, per a tots els clients.</small></span>
+  </button>
+  <button type="button" class="pan-x" id="panTeaserX" data-t-aria="panHide">×</button>
+</div>
+<button type="button" class="pan-mini" id="panMini" data-t-aria="panMiniAria" hidden>🎁</button>
+<dialog class="pan-dlg" id="panDlg" aria-labelledby="panTitle">
+  <div class="pan-snow" id="panSnow" aria-hidden="true"></div>
+  <span class="pan-lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+  <button type="button" class="pan-dlg-x" id="panClose" data-t-aria="panClose">×</button>
+  <div class="pan-card">
+    <figure class="pan-photo"><img id="panImg" width="800" height="1033" alt="La panera de Nadal que sortegem" data-t-alt="panAlt"></figure>
+    <div class="pan-body">
+      <span class="pan-eyebrow" data-t="panEyebrow">Sorteig de Nadal · 22 de desembre</span>
+      <h2 id="panTitle" data-t="panTitle">Ho, ho, ho! Aquesta panera pot ser teva! 🎅</h2>
+      <p data-t="panP1"></p>
+      <p data-t="panP2"></p>
+      <div class="pan-actions">
+        <button type="button" class="pan-ok" id="panOk" data-t="panOk">Som-hi! 🎉</button>
+        <button type="button" class="pan-music" id="panMusic" aria-pressed="true"><span class="pan-m-off" data-t="panMusicOff">🔇 Apaga la música</span><span class="pan-m-on" data-t="panMusicOn">🔊 Posa la música</span></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
 <a class="wa-float" id="waFloatBtn" href="https://wa.me/34699088213?text=Hola%2C%20voldria%20fer%20una%20comanda%20a%20la%20Peixateria%20Mulhac%C3%A9n." target="_blank" rel="noopener" aria-label="Demanar per WhatsApp">
   <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.32A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18a7.94 7.94 0 0 1-4.06-1.11l-.29-.17-3.02.79.8-2.94-.19-.3A7.96 7.96 0 1 1 12 20Zm4.36-5.97c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/></svg>
 </a>
@@ -1216,7 +1336,7 @@
       nadalBtn:"Fer l'encàrrec de Nadal", nadalDeadline:"Encàrrecs fins al", nadalFlag:"És un encàrrec de Nadal",
       galEyebrow:"La botiga i l'equip", galH2:"Qui hi ha darrere del taulell",
       galLead:"Fotos reals de la botiga, del taulell i de la gent que t'atén cada dia al carrer de la Llibertat.",
-      cap0:"El taulell, cada matí", capVideo:"Un passeig pel taulell", videoBadge:"Vídeo", videoAria:"Reproduir o aturar el vídeo",
+      cap0:"El taulell, cada matí", capVideo:"Un passeig pel taulell", videoBadge:"Vídeo", videoAria:"Veure el vídeo en gran",
       cap1:"Escamarlans i llobarro", cap2:"Salmó i tonyina vermella", cap3:"Rèmol i gamba vermella", cap4:"Calamars i llobarro", cap5:"Seitons", cap6:"Cua de rap i musclos",
       galNote:"Fotos reals de la botiga. Els preus dels cartells són els del dia de la foto.",
       lbClose:"Tancar", lbPrev:"Foto anterior", lbNext:"Foto següent", cuinaDaily:"Cada matí, idees noves amb el peix del dia.", todayPhotos:"Fotos d'avui", photosOf:"Fotos del",
@@ -1241,6 +1361,12 @@
       prep_forn:"Per al forn", prep_sal:"Per fer a la sal (amb escates)", prep_planxa:"Per a la planxa", prep_cru:"Per menjar cru (tàrtar)", prep_sopa:"Per a sopa o fumet",
       products:["Lluç","Llobarro","Orada","Rap","Turbot","Llenguado","Salmó","Tonyina","Ventresca de tonyina","Bacallà","Sardines","Seitons","Calamars","Sípia","Pop","Llagostins","Gambes","Escamarlans","Musclos","Cloïsses","Navalles","Fumet de peix","Anxoves","Conserves","Postres congelades"],
       days:["diumenge","dilluns","dimarts","dimecres","dijous","divendres","dissabte"],
+      panTeaserT:"Sortegem una panera de Nadal! 🎄", panTeaserS:"El 22 de desembre, per a tots els clients.", panToca:"👆 Toca'm!",
+      panHide:"Amagar l'avís", panMiniAria:"Sorteig de la panera de Nadal", panClose:"Tancar", panAlt:"La panera de Nadal que sortegem",
+      panEyebrow:"Sorteig de Nadal · 22 de desembre", panTitle:"Ho, ho, ho! Aquesta panera pot ser teva! 🎅",
+      panP1:"Aquest Nadal, a més del millor peix, a la Peixateria Mulhacén repartim il·lusió: el <strong>22 de desembre</strong>, el mateix dia que canten El Gordo, <strong>sortegem aquesta panera plena de delícies</strong> entre els nostres clients.",
+      panP2:"Si tens cap dubte, pregunta'ns a la botiga. Que la sort (i el bon peix) t'acompanyin! 🍀🐟",
+      panOk:"Som-hi! 🎉", panMusicOff:"🔇 Apaga la música", panMusicOn:"🔊 Posa la música",
       lotsTitle:"Lots a punt d'encarregar", lotAdd:"Afegir a l'encàrrec →",
       lot1T:"Lot familiar setmanal", lot1B:"Uns 3 kg de peix i marisc del dia, net i envasat al buit, a punt per congelar.",
       lot2T:"Lot sense espines", lot2B:"Filets de peix blanc i salmó sense espines. Ideal per als nens.",
@@ -1282,7 +1408,7 @@
       nadalBtn:"Hacer el encargo de Navidad", nadalDeadline:"Encargos hasta el", nadalFlag:"Es un encargo de Navidad",
       galEyebrow:"La tienda y el equipo", galH2:"Quién hay detrás del mostrador",
       galLead:"Fotos reales de la tienda, del mostrador y de la gente que te atiende cada día en la calle Llibertat.",
-      cap0:"El mostrador, cada mañana", capVideo:"Un paseo por el mostrador", videoBadge:"Vídeo", videoAria:"Reproducir o pausar el vídeo",
+      cap0:"El mostrador, cada mañana", capVideo:"Un paseo por el mostrador", videoBadge:"Vídeo", videoAria:"Ver el vídeo en grande",
       cap1:"Cigalas y lubina", cap2:"Salmón y atún rojo", cap3:"Rodaballo y gamba roja", cap4:"Calamares y lubina", cap5:"Boquerones", cap6:"Cola de rape y mejillones",
       galNote:"Fotos reales de la tienda. Los precios de los carteles son los del día de la foto.",
       lbClose:"Cerrar", lbPrev:"Foto anterior", lbNext:"Foto siguiente", cuinaDaily:"Cada mañana, ideas nuevas con el pescado del día.", todayPhotos:"Fotos de hoy", photosOf:"Fotos del",
@@ -1307,6 +1433,12 @@
       prep_forn:"Para horno", prep_sal:"Para hacer a la sal (con escamas)", prep_planxa:"Para plancha", prep_cru:"Para comer crudo (tartar)", prep_sopa:"Para sopa o fumet",
       products:["Merluza","Lubina","Dorada","Rape","Rodaballo","Lenguado","Salmón","Atún","Ventresca de atún","Bacalao","Sardinas","Boquerones","Calamares","Sepia","Pulpo","Langostinos","Gambas","Cigalas","Mejillones","Almejas","Navajas","Fumet de pescado","Anchoas","Conservas","Postres congelados"],
       days:["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],
+      panTeaserT:"¡Sorteamos una cesta de Navidad! 🎄", panTeaserS:"El 22 de diciembre, para todos los clientes.", panToca:"👆 ¡Tócame!",
+      panHide:"Ocultar el aviso", panMiniAria:"Sorteo de la cesta de Navidad", panClose:"Cerrar", panAlt:"La cesta de Navidad que sorteamos",
+      panEyebrow:"Sorteo de Navidad · 22 de diciembre", panTitle:"¡Jo, jo, jo! ¡Esta cesta puede ser tuya! 🎅",
+      panP1:"Esta Navidad, además del mejor pescado, en la Peixateria Mulhacén repartimos ilusión: el <strong>22 de diciembre</strong>, el mismo día que cantan El Gordo, <strong>sorteamos esta cesta llena de delicias</strong> entre nuestros clientes.",
+      panP2:"Si tienes cualquier duda, pregúntanos en la tienda. ¡Que la suerte (y el buen pescado) te acompañen! 🍀🐟",
+      panOk:"¡Vamos allá! 🎉", panMusicOff:"🔇 Apagar la música", panMusicOn:"🔊 Poner la música",
       lotsTitle:"Lotes listos para encargar", lotAdd:"Añadir al encargo →",
       lot1T:"Lote familiar semanal", lot1B:"Unos 3 kg de pescado y marisco del día, limpio y envasado al vacío, listo para congelar.",
       lot2T:"Lote sin espinas", lot2B:"Filetes de pescado blanco y salmón sin espinas. Ideal para los niños.",
@@ -1380,7 +1512,7 @@
       nadalBtn:"Place my Christmas order", nadalDeadline:"Orders until", nadalFlag:"This is a Christmas order",
       galEyebrow:"The shop and the team", galH2:"Who's behind the counter",
       galLead:"Real photos of the shop, the counter and the people who serve you every day on Carrer de la Llibertat.",
-      cap0:"Our counter, every morning", capVideo:"A stroll along our counter", videoBadge:"Video", videoAria:"Play or pause the video",
+      cap0:"Our counter, every morning", capVideo:"A stroll along our counter", videoBadge:"Video", videoAria:"View the video full size",
       cap1:"Langoustines and sea bass", cap2:"Salmon and bluefin tuna", cap3:"Turbot and red prawns", cap4:"Squid and sea bass", cap5:"Fresh anchovies", cap6:"Monkfish tail and mussels",
       galNote:"Real photos from the shop. Prices on the labels are from the day the photo was taken.",
       lbClose:"Close", lbPrev:"Previous photo", lbNext:"Next photo", cuinaDaily:"Fresh ideas every morning, using today's catch.", todayPhotos:"Today's photos", photosOf:"Photos from",
@@ -1405,6 +1537,12 @@
       prep_forn:"For the oven", prep_sal:"For salt-baking (scales on)", prep_planxa:"For the grill", prep_cru:"To eat raw (tartare)", prep_sopa:"For soup or stock",
       products:["Hake","Sea bass","Gilt-head bream","Monkfish","Turbot","Sole","Salmon","Tuna","Tuna belly","Cod","Sardines","Anchovies","Squid","Cuttlefish","Octopus","Prawns","Red prawns","Langoustines","Mussels","Clams","Razor clams","Fish stock","Anchovies","Tinned fish","Frozen desserts"],
       days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      panTeaserT:"We're raffling a Christmas hamper! 🎄", panTeaserS:"22 December, for all our customers.", panToca:"👆 Tap me!",
+      panHide:"Hide this notice", panMiniAria:"Christmas hamper raffle", panClose:"Close", panAlt:"The Christmas hamper we're raffling",
+      panEyebrow:"Christmas raffle · 22 December", panTitle:"Ho, ho, ho! This hamper could be yours! 🎅",
+      panP1:"This Christmas we're sharing more than the best fish: on <strong>22 December</strong>, the day of El Gordo, Spain's big Christmas lottery draw, <strong>we're raffling this hamper full of treats</strong> among our customers.",
+      panP2:"Any questions? Just ask us in the shop. May luck (and great fish) be with you! 🍀🐟",
+      panOk:"Let's go! 🎉", panMusicOff:"🔇 Music off", panMusicOn:"🔊 Music on",
       lotsTitle:"Ready-to-order boxes", lotAdd:"Add to order →",
       lot1T:"Weekly family box", lot1B:"About 3 kg of the day's fish and seafood, cleaned and vacuum-packed, ready to freeze.",
       lot2T:"Boneless box", lot2B:"Boneless white fish and salmon fillets. Great for kids.",
@@ -1461,14 +1599,27 @@
   function showLb(i){
     if(!lbItems.length) return;
     lbIndex = (i + lbItems.length) % lbItems.length;
-    var it = lbItems[lbIndex], img = document.getElementById('lbImg');
-    img.src = it.full;
-    img.alt = it.alt || it.cap;
+    var it = lbItems[lbIndex], img = document.getElementById('lbImg'), vid = document.getElementById('lbVid');
+    if(it.video){
+      img.hidden = true; img.removeAttribute('src');
+      vid.hidden = false; vid.poster = it.poster || ''; vid.src = it.video;
+      var pv = vid.play(); if(pv && pv.catch) pv.catch(function(){});
+    } else {
+      aturaVideoLb();
+      img.hidden = false; img.src = it.full;
+      img.alt = it.alt || it.cap;
+    }
     document.getElementById('lbCap').textContent = it.cap;
     if(lbItems.length > 1){
-      new Image().src = lbItems[(lbIndex + 1) % lbItems.length].full;
-      new Image().src = lbItems[(lbIndex - 1 + lbItems.length) % lbItems.length].full;
+      [lbItems[(lbIndex + 1) % lbItems.length], lbItems[(lbIndex - 1 + lbItems.length) % lbItems.length]].forEach(function(x){
+        if(x.full) new Image().src = x.full; else if(x.poster) new Image().src = x.poster;
+      });
     }
+  }
+  function aturaVideoLb(){
+    var vid = document.getElementById('lbVid');
+    if(!vid || vid.hidden) return;
+    vid.pause(); vid.removeAttribute('src'); vid.load(); vid.hidden = true;
   }
   function openLb(items, i){
     lbItems = items;
@@ -1477,19 +1628,33 @@
     lb.showModal();
   }
   if(gallery){
-    gallery.addEventListener('click', function(ev){
-      var tile = ev.target.closest ? ev.target.closest('button.tile') : null;
-      if(!tile || !gallery.contains(tile)) return;
-      track('galeria/' + (tile.getAttribute('data-track') || tile.getAttribute('data-cap')));
-      if(!lb || !lb.showModal){ window.open(tile.getAttribute('data-full'), '_blank'); return; }
-      var tiles = Array.prototype.slice.call(gallery.querySelectorAll('button.tile'));
+    function obreTile(tile){
+      var esVideo = tile.classList.contains('tile-video');
+      track(esVideo ? 'galeria/video' : 'galeria/' + (tile.getAttribute('data-track') || tile.getAttribute('data-cap')));
+      if(!lb || !lb.showModal){ window.open(tile.getAttribute(esVideo ? 'data-video' : 'data-full'), '_blank'); return; }
+      var tiles = Array.prototype.slice.call(gallery.querySelectorAll('.tile')).filter(function(x){
+        return x.getAttribute('data-full') || x.getAttribute('data-video');
+      });
       openLb(tiles.map(function(x){
-        return { full:x.getAttribute('data-full'), cap:T[curLang][x.getAttribute('data-cap')] || '' };
+        var cap = T[curLang][x.getAttribute('data-cap') || 'galEyebrow'] || '', d = x.getAttribute('data-date');
+        cap = d ? (cap ? cap + ' · ' + d : d) : cap;
+        if(x.getAttribute('data-video')) return { video:x.getAttribute('data-video'), poster:x.getAttribute('data-poster'), cap:cap };
+        return { full:x.getAttribute('data-full'), cap:cap };
       }), tiles.indexOf(tile));
+    }
+    gallery.addEventListener('click', function(ev){
+      var tile = ev.target.closest ? ev.target.closest('.tile') : null;
+      if(!tile || !gallery.contains(tile) || !(tile.getAttribute('data-full') || tile.getAttribute('data-video'))) return;
+      obreTile(tile);
+    });
+    gallery.addEventListener('keydown', function(ev){
+      var tile = ev.target.closest ? ev.target.closest('.tile-video') : null;
+      if(tile && (ev.key === 'Enter' || ev.key === ' ')){ ev.preventDefault(); obreTile(tile); }
     });
   }
   if(lb && lb.showModal){
     document.getElementById('lbClose').addEventListener('click', function(){ lb.close(); });
+    lb.addEventListener('close', aturaVideoLb);
     document.getElementById('lbPrev').addEventListener('click', function(){ showLb(lbIndex - 1); });
     document.getElementById('lbNext').addEventListener('click', function(){ showLb(lbIndex + 1); });
     lb.addEventListener('click', function(ev){ if(ev.target === lb) lb.close(); });
@@ -1497,7 +1662,8 @@
       if(ev.key === 'ArrowLeft') showLb(lbIndex - 1);
       if(ev.key === 'ArrowRight') showLb(lbIndex + 1);
     });
-    var touchX = null, touchY = null, lbImg = document.getElementById('lbImg');
+    var touchX = null, touchY = null, lbImg = document.getElementById('lbImg'), lbVid = document.getElementById('lbVid');
+    function lbMedia(){ return lbVid.hidden ? lbImg : lbVid; }
     lb.addEventListener('touchstart', function(ev){
       if(ev.touches.length !== 1){ touchX = null; return; }
       touchX = ev.touches[0].clientX; touchY = ev.touches[0].clientY;
@@ -1505,17 +1671,17 @@
     lb.addEventListener('touchmove', function(ev){
       if(touchX === null || lbItems.length < 2 || ev.touches.length !== 1) return;
       var dx = ev.touches[0].clientX - touchX, dy = ev.touches[0].clientY - touchY;
-      if(Math.abs(dx) > Math.abs(dy)) lbImg.style.transform = 'translateX(' + dx + 'px)';
+      if(Math.abs(dx) > Math.abs(dy)) lbMedia().style.transform = 'translateX(' + dx + 'px)';
     }, { passive:true });
     function endTouch(ev){
-      lbImg.style.transform = '';
+      lbImg.style.transform = ''; lbVid.style.transform = '';
       if(touchX === null || !ev.changedTouches.length) return;
       var dx = ev.changedTouches[0].clientX - touchX, dy = ev.changedTouches[0].clientY - touchY;
       touchX = null;
       if(Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) showLb(lbIndex + (dx < 0 ? 1 : -1));
     }
     lb.addEventListener('touchend', endTouch);
-    lb.addEventListener('touchcancel', function(){ lbImg.style.transform = ''; touchX = null; });
+    lb.addEventListener('touchcancel', function(){ lbImg.style.transform = ''; lbVid.style.transform = ''; touchX = null; });
   }
 
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1529,11 +1695,6 @@
         entries.forEach(function(e){ if(e.isIntersecting && !paused) play(); else if(!e.isIntersecting) vid.pause(); });
       }, { threshold:0.4 }).observe(tile);
     }
-    function toggle(){
-      if(vid.paused){ paused = false; play(); track('galeria/video'); } else { paused = true; vid.pause(); }
-    }
-    tile.addEventListener('click', toggle);
-    tile.addEventListener('keydown', function(ev){ if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); toggle(); } });
   }
   if(gallery) Array.prototype.forEach.call(gallery.querySelectorAll('.tile-video'), setupVideo);
 
@@ -1541,15 +1702,23 @@
     fetch('botiga/fotos.json?v=' + Date.now(), { cache:'no-store' }).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
       if(!j || !j.items || !j.items.length) return;
       var first = gallery.firstChild;
+      function dataTile(el, it){
+        var d = it && it.data ? parseIso(it.data) : null;
+        if(!d) return;
+        var txt = pad(d.getDate()) + '/' + pad(d.getMonth() + 1) + '/' + d.getFullYear();
+        var sp = document.createElement('span'); sp.className = 'tile-date'; sp.textContent = txt;
+        el.setAttribute('data-date', txt); el.appendChild(sp);
+      }
       j.items.forEach(function(it){
         var el;
         if(it && it.tipus === 'video' && it.video){
           el = document.createElement('div'); el.className = 'tile tile-video'; el.setAttribute('role', 'button'); el.tabIndex = 0;
           el.setAttribute('data-t-aria', 'videoAria');
+          el.setAttribute('data-video', it.video); el.setAttribute('data-cap', 'galEyebrow'); if(it.poster) el.setAttribute('data-poster', it.poster);
           var v = document.createElement('video'); v.src = it.video; if(it.poster) v.poster = it.poster;
           v.muted = true; v.loop = true; v.preload = 'none'; v.setAttribute('playsinline', ''); v.setAttribute('muted', '');
           var badge = document.createElement('span'); badge.className = 'badge'; badge.setAttribute('data-t', 'videoBadge');
-          el.appendChild(v); el.appendChild(badge);
+          el.appendChild(v); el.appendChild(badge); dataTile(el, it);
           gallery.insertBefore(el, first);
           setupVideo(el);
         } else if(it && it.petita && it.gran){
@@ -1557,7 +1726,7 @@
           el.setAttribute('data-full', it.gran); el.setAttribute('data-cap', 'galEyebrow'); el.setAttribute('data-track', 'botiga');
           var img = document.createElement('img'); img.src = it.petita; img.loading = 'lazy'; img.decoding = 'async';
           img.width = 480; img.height = 600; img.setAttribute('data-t-alt', 'galEyebrow');
-          el.appendChild(img);
+          el.appendChild(img); dataTile(el, it);
           gallery.insertBefore(el, first);
         }
       });
@@ -1798,6 +1967,132 @@
   if(CFG.canalWhatsApp){ var cl = document.getElementById('canalLink'); cl.href = CFG.canalWhatsApp; cl.hidden = false; }
   document.getElementById('nadalBtn').hidden = !nadalOpen();
   document.getElementById('loteriaBox').hidden = !LOTERIA.numero || !LOTERIA.fins || isoDate(new Date()) > LOTERIA.fins;
+
+  (function(){
+    var P = CFG.panera || {};
+    var avui = isoDate(new Date());
+    var limit = P.fins ? Date.parse(P.fins) : NaN;
+    if(!P.foto || (P.des && avui < P.des) || (!isNaN(limit) && Date.now() >= limit)) return;
+    var teaser = document.getElementById('panTeaser'), mini = document.getElementById('panMini');
+    var dlg = document.getElementById('panDlg'), img = document.getElementById('panImg');
+    var musicBtn = document.getElementById('panMusic'), snow = document.getElementById('panSnow');
+    var CLAU = 'mulhacen-panera-vist';
+    var musicaOn = true, audio = null;
+
+    function vistAvui(){ if(/[?&]panera/.test(location.search)) return false; try{ return sessionStorage.getItem(CLAU) === avui; }catch(e){ return false; } }
+    function marcaVist(){ try{ sessionStorage.setItem(CLAU, avui); }catch(e){} }
+    function mostraMini(){ teaser.classList.remove('show'); teaser.hidden = true; mini.hidden = false; }
+
+    var JB = [[4,1],[4,1],[4,2],[4,1],[4,1],[4,2],[4,1],[7,1],[0,1.5],[2,0.5],[4,4],
+              [5,1],[5,1],[5,1.5],[5,0.5],[5,1],[4,1],[4,1],[4,0.5],[4,0.5],[4,1],[2,1],[2,1],[4,1],[2,2],[7,2],
+              [4,1],[4,1],[4,2],[4,1],[4,1],[4,2],[4,1],[7,1],[0,1.5],[2,0.5],[4,4],
+              [5,1],[5,1],[5,1.5],[5,0.5],[5,1],[4,1],[4,1],[4,0.5],[4,0.5],[7,1],[7,1],[5,1],[2,1],[0,4]];
+    var ACORDS = [0,0,0,0,5,0,2,7,0,0,0,0,5,0,7,0];
+    var BEAT = 0.3, C5 = 523.25;
+    function hz(base, semi){ return base * Math.pow(2, semi / 12); }
+
+    function creaAudio(){
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if(!AC) return null;
+      var ctx = new AC(), master = ctx.createGain(), comp = ctx.createDynamicsCompressor();
+      master.gain.value = 0.32; master.connect(comp); comp.connect(ctx.destination);
+      var len = Math.floor(ctx.sampleRate * 0.12), buf = ctx.createBuffer(1, len, ctx.sampleRate), d = buf.getChannelData(0);
+      for(var k = 0; k < len; k++) d[k] = (Math.random() * 2 - 1) * (1 - k / len);
+      return { ctx:ctx, master:master, soroll:buf, bucles:[], timer:null };
+    }
+    function nota(a, desti, t, f, dur, vol, tipus){
+      var parcials = tipus === 'campana' ? [[1,1],[2,0.32],[3.01,0.1]] : [[1,1]];
+      parcials.forEach(function(p){
+        var o = a.ctx.createOscillator(), g = a.ctx.createGain(), fi = t + Math.max(0.4, dur * 1.5) / (p[0] > 1 ? 1.8 : 1);
+        o.type = tipus === 'campana' ? 'sine' : 'triangle';
+        o.frequency.value = f * p[0];
+        g.gain.setValueAtTime(0.0001, t);
+        g.gain.exponentialRampToValueAtTime(vol * p[1], t + 0.012);
+        g.gain.exponentialRampToValueAtTime(0.0001, fi);
+        o.connect(g); g.connect(desti); o.start(t); o.stop(fi + 0.05);
+      });
+    }
+    function cascavell(a, desti, t, vol){
+      var s = a.ctx.createBufferSource(), f = a.ctx.createBiquadFilter(), g = a.ctx.createGain();
+      s.buffer = a.soroll; f.type = 'highpass'; f.frequency.value = 6500;
+      g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.11);
+      s.connect(f); f.connect(g); g.connect(desti); s.start(t); s.stop(t + 0.12);
+    }
+    function programaBucle(a, inici){
+      var bus = a.ctx.createGain(); bus.connect(a.master); a.bucles.push(bus);
+      var t = inici;
+      JB.forEach(function(n){ nota(a, bus, t, hz(C5, n[0]), n[1] * BEAT, 0.34, 'campana'); t += n[1] * BEAT; });
+      ACORDS.forEach(function(arrel, c){
+        var tc = inici + c * 4 * BEAT, baix = hz(130.81, arrel);
+        nota(a, bus, tc, baix, 1.6 * BEAT, 0.30, 'baix');
+        nota(a, bus, tc + 2 * BEAT, baix * 1.5, 1.6 * BEAT, 0.24, 'baix');
+        for(var b = 0; b < 8; b++) cascavell(a, bus, tc + b * BEAT / 2, b % 2 ? 0.05 : 0.11);
+      });
+      var dur = 64 * BEAT;
+      a.timer = setTimeout(function(){ programaBucle(a, inici + dur); }, Math.max(0, (inici + dur - a.ctx.currentTime - 1) * 1000));
+    }
+    function engegaMusica(){
+      if(!audio) audio = creaAudio();
+      if(!audio) return;
+      try{ audio.ctx.resume(); }catch(e){}
+      audio.master.gain.cancelScheduledValues(audio.ctx.currentTime);
+      audio.master.gain.setValueAtTime(0.32, audio.ctx.currentTime);
+      programaBucle(audio, audio.ctx.currentTime + 0.12);
+    }
+    function paraMusica(){
+      if(!audio) return;
+      clearTimeout(audio.timer);
+      audio.bucles.forEach(function(b){ try{ b.disconnect(); }catch(e){} });
+      audio.bucles = [];
+      var a = audio;
+      setTimeout(function(){ if(!a.bucles.length) try{ a.ctx.suspend(); }catch(e){} }, 300);
+    }
+    function nevada(){
+      if(snow.childElementCount || reduceMotion) return;
+      for(var k = 0; k < 26; k++){
+        var f = document.createElement('span');
+        f.textContent = k % 3 ? '❄' : '✦';
+        f.style.left = (Math.random() * 100) + '%';
+        f.style.fontSize = (10 + Math.random() * 12) + 'px';
+        f.style.animationDuration = (7 + Math.random() * 7) + 's';
+        f.style.animationDelay = (-Math.random() * 12) + 's';
+        f.style.setProperty('--dx', (Math.random() * 80 - 40) + 'px');
+        snow.appendChild(f);
+      }
+    }
+    function obre(){
+      track('panera');
+      marcaVist();
+      mostraMini();
+      if(!img.getAttribute('src')) img.src = P.foto;
+      if(!dlg.showModal){ window.open(P.foto, '_blank'); return; }
+      nevada();
+      dlg.showModal();
+      musicBtn.setAttribute('aria-pressed', musicaOn ? 'true' : 'false');
+      if(musicaOn) engegaMusica();
+    }
+    function tanca(){ if(dlg.open) dlg.close(); }
+
+    document.getElementById('panOpen').addEventListener('click', obre);
+    mini.addEventListener('click', obre);
+    document.getElementById('panTeaserX').addEventListener('click', function(){ marcaVist(); mostraMini(); });
+    document.getElementById('panClose').addEventListener('click', tanca);
+    document.getElementById('panOk').addEventListener('click', tanca);
+    dlg.addEventListener('click', function(e){ if(e.target === dlg) tanca(); });
+    dlg.addEventListener('close', paraMusica);
+    musicBtn.addEventListener('click', function(){
+      musicaOn = !musicaOn;
+      musicBtn.setAttribute('aria-pressed', musicaOn ? 'true' : 'false');
+      if(musicaOn) engegaMusica(); else paraMusica();
+    });
+
+    if(!isNaN(limit) && limit - Date.now() < 2147483647){
+      setTimeout(function(){ tanca(); teaser.hidden = true; mini.hidden = true; }, limit - Date.now());
+    }
+    if(vistAvui()){ mini.hidden = false; return; }
+    teaser.hidden = false;
+    setTimeout(function(){ teaser.classList.add('show'); }, 1200);
+  })();
   function startNadalOrder(){ if(nadalOpen()){ document.getElementById('nadalFlag').checked = true; applyNadalMode(); } }
   document.getElementById('nadalBtn').addEventListener('click', function(){ startNadalOrder(); track('nadal/boto'); });
   document.getElementById('bannerBtn').addEventListener('click', function(){ startNadalOrder(); track('nadal/banner'); });
@@ -2197,7 +2492,6 @@
   try{
     var saved = localStorage.getItem('ladorada-lang');
     if(saved === 'ca' || saved === 'es' || saved === 'en') startLang = saved;
-    else if(/^en/i.test(navigator.language || '')) startLang = 'en';
   }catch(e){}
 
   applyLang(startLang);
