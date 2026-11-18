@@ -530,6 +530,13 @@
     display:flex; align-items:center; gap:12px; width:100%; padding:16px 40px 14px 14px; border:0; background:none;
     color:inherit; font:inherit; text-align:left; cursor:pointer; border-radius:14px;
   }
+  .pan-toca{
+    position:absolute; left:4px; bottom:-11px; z-index:1;
+    background:#FFD54A; color:#7E1219; font-size:12.5px; font-weight:800; letter-spacing:.02em;
+    padding:4px 9px; border-radius:999px; box-shadow:0 3px 8px rgba(60,10,10,0.35);
+    transform:rotate(-6deg); animation:panPols 1.6s ease-in-out infinite;
+  }
+  @keyframes panPols{ 0%,100%{ transform:rotate(-6deg) scale(1); } 50%{ transform:rotate(-6deg) scale(1.12); } }
   .pan-open:focus-visible, .pan-mini:focus-visible{ outline:3px solid #F3D38F; outline-offset:2px; }
   .pan-gift{ font-size:40px; line-height:1; flex:none; animation:panWiggle 2.6s ease-in-out infinite; transform-origin:50% 85%; }
   .pan-open strong{ display:block; font-family:"Playfair Display", Georgia, serif; font-size:17.5px; line-height:1.2; color:#fff; }
@@ -589,7 +596,7 @@
     .pan-body p{ font-size:15.5px; }
   }
   @media (prefers-reduced-motion: reduce){
-    .pan-gift, .pan-mini, .pan-lights i{ animation:none; }
+    .pan-gift, .pan-mini, .pan-lights i, .pan-toca{ animation:none; }
     .pan-teaser{ transition:none; }
     .pan-snow{ display:none; }
   }
@@ -1202,7 +1209,8 @@
   <span class="pan-lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
   <button type="button" class="pan-open" id="panOpen">
     <span class="pan-gift" aria-hidden="true">🎁</span>
-    <span><strong data-t="panTeaserT">Sortegem una panera de Nadal! 🎄</strong><small data-t="panTeaserS">El 22 de desembre, per a tots els clients. Toca aquí!</small></span>
+    <span class="pan-toca" aria-hidden="true" data-t="panToca">👆 Toca'm!</span>
+    <span><strong data-t="panTeaserT">Sortegem una panera de Nadal! 🎄</strong><small data-t="panTeaserS">El 22 de desembre, per a tots els clients.</small></span>
   </button>
   <button type="button" class="pan-x" id="panTeaserX" data-t-aria="panHide">×</button>
 </div>
@@ -1353,7 +1361,7 @@
       prep_forn:"Per al forn", prep_sal:"Per fer a la sal (amb escates)", prep_planxa:"Per a la planxa", prep_cru:"Per menjar cru (tàrtar)", prep_sopa:"Per a sopa o fumet",
       products:["Lluç","Llobarro","Orada","Rap","Turbot","Llenguado","Salmó","Tonyina","Ventresca de tonyina","Bacallà","Sardines","Seitons","Calamars","Sípia","Pop","Llagostins","Gambes","Escamarlans","Musclos","Cloïsses","Navalles","Fumet de peix","Anxoves","Conserves","Postres congelades"],
       days:["diumenge","dilluns","dimarts","dimecres","dijous","divendres","dissabte"],
-      panTeaserT:"Sortegem una panera de Nadal! 🎄", panTeaserS:"El 22 de desembre, per a tots els clients. Toca aquí!",
+      panTeaserT:"Sortegem una panera de Nadal! 🎄", panTeaserS:"El 22 de desembre, per a tots els clients.", panToca:"👆 Toca'm!",
       panHide:"Amagar l'avís", panMiniAria:"Sorteig de la panera de Nadal", panClose:"Tancar", panAlt:"La panera de Nadal que sortegem",
       panEyebrow:"Sorteig de Nadal · 22 de desembre", panTitle:"Ho, ho, ho! Aquesta panera pot ser teva! 🎅",
       panP1:"Aquest Nadal, a més del millor peix, a la Peixateria Mulhacén repartim il·lusió: el <strong>22 de desembre</strong>, el mateix dia que canten El Gordo, <strong>sortegem aquesta panera plena de delícies</strong> entre els nostres clients.",
@@ -1425,7 +1433,7 @@
       prep_forn:"Para horno", prep_sal:"Para hacer a la sal (con escamas)", prep_planxa:"Para plancha", prep_cru:"Para comer crudo (tartar)", prep_sopa:"Para sopa o fumet",
       products:["Merluza","Lubina","Dorada","Rape","Rodaballo","Lenguado","Salmón","Atún","Ventresca de atún","Bacalao","Sardinas","Boquerones","Calamares","Sepia","Pulpo","Langostinos","Gambas","Cigalas","Mejillones","Almejas","Navajas","Fumet de pescado","Anchoas","Conservas","Postres congelados"],
       days:["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],
-      panTeaserT:"¡Sorteamos una cesta de Navidad! 🎄", panTeaserS:"El 22 de diciembre, para todos los clientes. ¡Toca aquí!",
+      panTeaserT:"¡Sorteamos una cesta de Navidad! 🎄", panTeaserS:"El 22 de diciembre, para todos los clientes.", panToca:"👆 ¡Tócame!",
       panHide:"Ocultar el aviso", panMiniAria:"Sorteo de la cesta de Navidad", panClose:"Cerrar", panAlt:"La cesta de Navidad que sorteamos",
       panEyebrow:"Sorteo de Navidad · 22 de diciembre", panTitle:"¡Jo, jo, jo! ¡Esta cesta puede ser tuya! 🎅",
       panP1:"Esta Navidad, además del mejor pescado, en la Peixateria Mulhacén repartimos ilusión: el <strong>22 de diciembre</strong>, el mismo día que cantan El Gordo, <strong>sorteamos esta cesta llena de delicias</strong> entre nuestros clientes.",
@@ -1529,7 +1537,7 @@
       prep_forn:"For the oven", prep_sal:"For salt-baking (scales on)", prep_planxa:"For the grill", prep_cru:"To eat raw (tartare)", prep_sopa:"For soup or stock",
       products:["Hake","Sea bass","Gilt-head bream","Monkfish","Turbot","Sole","Salmon","Tuna","Tuna belly","Cod","Sardines","Anchovies","Squid","Cuttlefish","Octopus","Prawns","Red prawns","Langoustines","Mussels","Clams","Razor clams","Fish stock","Anchovies","Tinned fish","Frozen desserts"],
       days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-      panTeaserT:"We're raffling a Christmas hamper! 🎄", panTeaserS:"22 December, for all our customers. Tap here!",
+      panTeaserT:"We're raffling a Christmas hamper! 🎄", panTeaserS:"22 December, for all our customers.", panToca:"👆 Tap me!",
       panHide:"Hide this notice", panMiniAria:"Christmas hamper raffle", panClose:"Close", panAlt:"The Christmas hamper we're raffling",
       panEyebrow:"Christmas raffle · 22 December", panTitle:"Ho, ho, ho! This hamper could be yours! 🎅",
       panP1:"This Christmas we're sharing more than the best fish: on <strong>22 December</strong>, the day of El Gordo, Spain's big Christmas lottery draw, <strong>we're raffling this hamper full of treats</strong> among our customers.",
