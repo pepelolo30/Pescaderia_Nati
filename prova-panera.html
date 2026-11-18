@@ -1931,7 +1931,7 @@
     var CLAU = 'mulhacen-panera-vist';
     var musicaOn = true, audio = null;
 
-    function vistAvui(){ try{ return localStorage.getItem(CLAU) === avui; }catch(e){ return false; } }
+    function vistAvui(){ if(/[?&]panera/.test(location.search)) return false; try{ return localStorage.getItem(CLAU) === avui; }catch(e){ return false; } }
     function marcaVist(){ try{ localStorage.setItem(CLAU, avui); }catch(e){} }
     function mostraMini(){ teaser.classList.remove('show'); teaser.hidden = true; mini.hidden = false; }
 
