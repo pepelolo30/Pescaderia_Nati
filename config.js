@@ -31,6 +31,8 @@ window.MULHACEN = {
 
   loteria: { numero: '55160', fins: '2026-12-22' },
 
+  panera: { foto: 'img/panera.webp', des: '2026-11-18', fins: '2026-12-22' },
+
   pissarraFullGoogle: '',
 
   canalWhatsApp: ''
