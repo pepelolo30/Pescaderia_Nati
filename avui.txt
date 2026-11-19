@@ -2,16 +2,11 @@
 # Aquest arxiu el genera el publicador del servidor a partir de Fotos_Pescaderia/AAAAMMDD/pissarra.txt
 # Una línia per producte:   Nom | preu | nota   (el preu i la nota són opcionals)
 
-data: 2026-11-13
-Salmó | 21,90 €/kg |
-Orada | 18,90 €/kg |
-Cua de rap | 29,90 €/kg |
-Palangre gran | 29,90 €/kg |
-Llangosta | 89,00 €/kg |
-Cua de rap petita | 32,90 €/kg |
-Rèmol | 27,90 €/kg |
-Sardina | 9,90 €/kg |
-Gamba petita | 39,90 €/kg |
-Llenguado gran | 55,00 €/kg |
-Sípia petita | 29,90 €/kg |
-Seitons | 10,90 €/kg |
+data: 2026-11-19
+Sardina | 9,90 € |
+Langostino cocido | 22,90 € |
+Cola de rape | 42,90 € |
+Salmonete | 16,90 € |
+Calamar | 39,90 € |
+Gamba grande | 90,00 € |
+Zamburinya | 22,90 € |

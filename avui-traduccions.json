@@ -1,52 +1,32 @@
 {
  "textos": {
-  "Salmó": {
-   "es": "Salmón",
-   "en": "Salmon"
-  },
-  "Orada": {
-   "es": "Dorada",
-   "en": "Sea bream"
-  },
-  "Cua de rap": {
-   "es": "Cola de rape",
-   "en": "Monkfish tail"
-  },
-  "Palangre gran": {
-   "es": "Palangre grande",
-   "en": "Large palangre"
-  },
-  "Llangosta": {
-   "es": "Langosta",
-   "en": "Lobster"
-  },
-  "Cua de rap petita": {
-   "es": "Cola de rape pequeña",
-   "en": "Small monkfish tail"
-  },
-  "Rèmol": {
-   "es": "Rodaballo",
-   "en": "Turbot"
-  },
   "Sardina": {
    "es": "Sardina",
    "en": "Sardine"
   },
-  "Gamba petita": {
-   "es": "Gamba pequeña",
-   "en": "Small prawn"
+  "Langostino cocido": {
+   "es": "Langostino cocido",
+   "en": "Cooked king prawn"
   },
-  "Llenguado gran": {
-   "es": "Lenguado grande",
-   "en": "Large sole"
+  "Cola de rape": {
+   "es": "Cola de rape",
+   "en": "Monkfish tail"
   },
-  "Sípia petita": {
-   "es": "Sepia pequeña",
-   "en": "Small cuttlefish"
+  "Salmonete": {
+   "es": "Salmonete",
+   "en": "Red mullet"
   },
-  "Seitons": {
-   "es": "Boquerones",
-   "en": "Anchovies"
+  "Calamar": {
+   "es": "Calamar",
+   "en": "Squid"
+  },
+  "Gamba grande": {
+   "es": "Gamba grande",
+   "en": "Large prawn"
+  },
+  "Zamburinya": {
+   "es": "Zamburiña",
+   "en": "Variegated scallop"
   }
  }
 }
