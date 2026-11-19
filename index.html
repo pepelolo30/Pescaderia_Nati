@@ -282,6 +282,9 @@
   .radio-card audio{ height:36px; max-width:280px; width:100%; }
 
   /* ---------- Footer ---------- */
+  .foot-banner{ background:var(--marine); padding:0 clamp(12px,3vw,40px) 26px; }
+  .foot-banner picture{ display:block; max-width:1200px; margin:0 auto; }
+  .foot-banner img{ display:block; width:100%; height:auto; border-radius:4px; box-shadow:0 10px 28px rgba(0,0,0,0.35); }
   footer{ background:var(--marine); border-top:1px solid rgba(250,246,236,0.12); }
   footer .wrap{
     padding:26px clamp(20px,5vw,56px);
@@ -1217,6 +1220,14 @@
   </section>
 
 </main>
+
+<div class="foot-banner">
+  <picture>
+    <source media="(max-width:640px)" srcset="img/franja-centre.webp" width="900" height="195">
+    <source srcset="img/franja.webp" type="image/webp">
+    <img src="img/franja.jpg" alt="Mulhacén · Peixaters des del 1954" width="2000" height="182" loading="lazy" decoding="async">
+  </picture>
+</div>
 
 <footer>
   <div class="wrap">
