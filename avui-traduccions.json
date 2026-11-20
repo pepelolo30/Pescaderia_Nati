@@ -1,32 +1,64 @@
 {
  "textos": {
-  "Sardina": {
-   "es": "Sardina",
-   "en": "Sardine"
+  "Salmó": {
+   "es": "Salmón",
+   "en": "Salmon"
   },
-  "Langostino cocido": {
-   "es": "Langostino cocido",
-   "en": "Cooked king prawn"
+  "Llenguado 2/3": {
+   "es": "Lenguado 2/3",
+   "en": "Sole 2/3"
   },
-  "Cola de rape": {
+  "Llobarro gran": {
+   "es": "Lubina grande",
+   "en": "Large sea bass"
+  },
+  "Orada": {
+   "es": "Dorada",
+   "en": "Sea bream"
+  },
+  "Gall +700": {
+   "es": "Gallo +700",
+   "en": "Megrim +700"
+  },
+  "Espasa gran": {
+   "es": "Pez espada grande",
+   "en": "Large swordfish"
+  },
+  "Gamba mitjana": {
+   "es": "Gamba mediana",
+   "en": "Medium prawn"
+  },
+  "Gamba petita": {
+   "es": "Gamba pequeña",
+   "en": "Small prawn"
+  },
+  "Sípia petita": {
+   "es": "Sepia pequeña",
+   "en": "Small cuttlefish"
+  },
+  "Lluç": {
+   "es": "Merluza",
+   "en": "Hake"
+  },
+  "Colita rubia": {
+   "es": "Colita rubia",
+   "en": "Colita rubia"
+  },
+  "Cua de rap": {
    "es": "Cola de rape",
    "en": "Monkfish tail"
   },
-  "Salmonete": {
-   "es": "Salmonete",
-   "en": "Red mullet"
+  "Llenguado 4/6": {
+   "es": "Lenguado 4/6",
+   "en": "Sole 4/6"
   },
-  "Calamar": {
-   "es": "Calamar",
-   "en": "Squid"
+  "Escamarlans mitjans": {
+   "es": "Cigalas medianas",
+   "en": "Medium langoustines"
   },
-  "Gamba grande": {
-   "es": "Gamba grande",
-   "en": "Large prawn"
-  },
-  "Zamburinya": {
-   "es": "Zamburiña",
-   "en": "Variegated scallop"
+  "Rap gran": {
+   "es": "Rape grande",
+   "en": "Large monkfish"
   }
  }
 }
