@@ -1202,6 +1202,7 @@
         <div class="infoblock">
           <div class="label" id="labelReparto">Repartiment a domicili</div>
           <div class="value" id="valueReparto">Fem lliurament a domicili a Castelldefels, concertant l'horari amb tu per WhatsApp. <strong>Gratuït a partir de 50 € de compra</strong>; per a imports inferiors, el lliurament costa 10 €.</div>
+          <a class="value reviews-link" id="domiciliMore" href="/peix-marisc-domicili-castelldefels/" data-t="domiciliMore">Com funciona el lliurament a domicili &nbsp;→</a>
         </div>
 
         <div class="infoblock">
@@ -1316,7 +1317,7 @@
       feat3Title:"Tracte expert", feat3Body:"Preparat al teu gust &mdash;net, a filets, a rodanxes o sencer&mdash; tal com ho faríem al taulell.",
       contactEyebrow:"Visita'ns", contactH2:"Horari i ubicació",
       contactLead:"Som al bell mig de Castelldefels. Si prefereixes passar directament per la peixateria, aquí tens el nostre horari i com arribar-hi.",
-      labelDireccion:"Adreça", labelTelefono:"WhatsApp", labelTelBotiga:"Telèfon de la botiga", reviewsLinkLabel:"Veure ressenyes a Google \u00a0↗",
+      labelDireccion:"Adreça", labelTelefono:"WhatsApp", labelTelBotiga:"Telèfon de la botiga", domiciliMore:"Com funciona el lliurament a domicili \u00a0→", domiciliMoreUrl:"/peix-marisc-domicili-castelldefels/", reviewsLinkLabel:"Veure ressenyes a Google \u00a0↗",
       labelReparto:"Repartiment a domicili", valueReparto:"Fem lliurament a domicili a Castelldefels, concertant l'horari amb tu per WhatsApp. <strong>Gratuït a partir de 50 € de compra</strong>; per a imports inferiors, el lliurament costa 10 €.",
       labelHorario:"Horari",
       hoursDay1:"De dimarts a divendres", hoursTime1:"8:30–14:00 i 17:00–20:00",
@@ -1350,7 +1351,7 @@
       feat3Title:"Trato experto", feat3Body:"Preparado a tu gusto &mdash;limpio, en filetes, en rodajas o entero&mdash; tal y como lo haríamos en el mostrador.",
       contactEyebrow:"Visítanos", contactH2:"Horario y ubicación",
       contactLead:"Estamos en pleno centro de Castelldefels. Si prefieres pasar directamente por la pescadería, aquí tienes nuestro horario y cómo llegar.",
-      labelDireccion:"Dirección", labelTelefono:"WhatsApp", labelTelBotiga:"Teléfono de la tienda", reviewsLinkLabel:"Ver reseñas en Google \u00a0↗",
+      labelDireccion:"Dirección", labelTelefono:"WhatsApp", labelTelBotiga:"Teléfono de la tienda", domiciliMore:"Cómo funciona la entrega a domicilio \u00a0→", domiciliMoreUrl:"/es/pescado-marisco-domicilio-castelldefels/", reviewsLinkLabel:"Ver reseñas en Google \u00a0↗",
       labelReparto:"Reparto a domicilio", valueReparto:"Hacemos entrega a domicilio en Castelldefels, concertando el horario contigo por WhatsApp. <strong>Gratis a partir de 50 € de compra</strong>; para importes inferiores, la entrega cuesta 10 €.",
       labelHorario:"Horario",
       hoursDay1:"De martes a viernes", hoursTime1:"8:30–14:00 y 17:00–20:00",
@@ -1536,7 +1537,7 @@
       feat3Title:"Expert preparation", feat3Body:"Prepared the way you like &mdash;cleaned, filleted, in steaks or whole&mdash; just as we would at the counter.",
       contactEyebrow:"Visit us", contactH2:"Hours & location",
       contactLead:"We're right in the centre of Castelldefels. If you'd rather drop by the shop, here are our opening hours and how to get here.",
-      labelDireccion:"Address", labelTelefono:"WhatsApp", labelTelBotiga:"Shop phone", reviewsLinkLabel:"See reviews on Google  ↗",
+      labelDireccion:"Address", labelTelefono:"WhatsApp", labelTelBotiga:"Shop phone", domiciliMore:"How home delivery works \u00a0→", domiciliMoreUrl:"/en/fish-seafood-delivery-castelldefels/", reviewsLinkLabel:"See reviews on Google  ↗",
       labelReparto:"Home delivery", valueReparto:"We deliver to homes in Castelldefels, agreeing the time with you on WhatsApp. <strong>Free on orders over €50</strong>; below that, delivery costs €10.",
       labelHorario:"Opening hours",
       hoursDay1:"Tuesday to Friday", hoursTime1:"8:30–14:00 & 17:00–20:00",
@@ -2483,6 +2484,8 @@
     if(t.pageTitle) document.title = t.pageTitle;
     var nadalMore = document.getElementById('nadalMore');
     if(nadalMore && t.nadalMoreUrl) nadalMore.href = t.nadalMoreUrl;
+    var domiciliMore = document.getElementById('domiciliMore');
+    if(domiciliMore && t.domiciliMoreUrl) domiciliMore.href = t.domiciliMoreUrl;
 
     setText('navHistoria', t.navHistoria);
     setText('navComo', t.navComo);

@@ -109,6 +109,8 @@ def tradueix(font, t, lang):
         atributs(per_id["waFloatBtn"], [("aria-label", t["waFloatLabel"]), ("href", t["waLink"])])
     if "nadalMore" in per_id and t.get("nadalMoreUrl"):
         atributs(per_id["nadalMore"], [("href", t["nadalMoreUrl"])])
+    if "domiciliMore" in per_id and t.get("domiciliMoreUrl"):
+        atributs(per_id["domiciliMore"], [("href", t["domiciliMoreUrl"])])
     if "radioBtn" in per_id:
         atributs(per_id["radioBtn"], [("aria-label", t["radioBtnLabel"]), ("title", t["radioBtnLabel"])])
     for ident, l in (("langCa", "ca"), ("langEs", "es"), ("langEn", "en")):
@@ -197,11 +199,11 @@ def main():
         pagina = capcalera(tradueix(font, T[lang], lang), T[lang], lang)
         if escriu(f"{lang}/index.html", pagina):
             canviats.append(f"{lang}/index.html")
-    pagines, _, nadal = landings.genera(ARREL, T)
+    pagines, grups_landings = landings.genera(ARREL, T)
     for ruta, html_pagina in pagines.items():
         if escriu(ruta, html_pagina):
             canviats.append(ruta)
-    grups = [[("ca", "/"), ("es", "/es/"), ("en", "/en/")], [(l, p["url"]) for l, p in nadal.items()]]
+    grups = [[("ca", "/"), ("es", "/es/"), ("en", "/en/")]] + grups_landings
     if escriu("sitemap.xml", sitemap(grups)):
         canviats.append("sitemap.xml")
     print("Generat: " + (", ".join(canviats) if canviats else "sense canvis"))

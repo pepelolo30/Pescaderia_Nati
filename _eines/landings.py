@@ -33,6 +33,7 @@ NADAL = {
         "waBtn": "Reservar per WhatsApp",
         "howTitle": "Com funciona",
         "deliveryTitle": "També a domicili",
+        "deliveryMore": "Més sobre el lliurament a domicili →",
         "hoursTitle": "Horari de les festes",
         "closed": "Tancat",
         "visitTitle": "On som",
@@ -53,6 +54,7 @@ NADAL = {
         "waBtn": "Reservar por WhatsApp",
         "howTitle": "Cómo funciona",
         "deliveryTitle": "También a domicilio",
+        "deliveryMore": "Más sobre la entrega a domicilio →",
         "hoursTitle": "Horario de las fiestas",
         "closed": "Cerrado",
         "visitTitle": "Dónde estamos",
@@ -73,6 +75,7 @@ NADAL = {
         "waBtn": "Reserve on WhatsApp",
         "howTitle": "How it works",
         "deliveryTitle": "Home delivery too",
+        "deliveryMore": "More about home delivery →",
         "hoursTitle": "Holiday opening hours",
         "closed": "Closed",
         "visitTitle": "Where we are",
@@ -152,6 +155,7 @@ ul.plain li,ol.steps li{margin:6px 0}
 .dark{background:var(--marine);color:#F2E8D8;border-top:0}
 .dark h2{color:#fff}
 .dark a{color:var(--gold-light)}
+.dark .btn-gold{color:#fff}
 footer{background:var(--marine);color:var(--gold-light);font-size:13px;padding:18px 0 28px}
 @media (max-width:760px){.hero,.grid2{grid-template-columns:1fr}.hero{gap:24px}.hero .img{order:-1}}
 """
@@ -187,6 +191,65 @@ def pagina_nadal(lang, T, cfg, pagines):
     receptes = "".join(
         f'<div class="recipe"><span class="tag">{e(t[f"n{i}Tag"])}</span><h3>{e(t[f"n{i}Title"])}</h3><p>{e(t[f"n{i}Body"])}</p></div>'
         for i in range(1, 5))
+    cos = f"""
+    <div class="hero">
+      <div>
+        <p class="eyebrow">{e(t["nadalEyebrow"])}</p>
+        <h1>{e(p["h1"])}</h1>
+        <p class="lead">{e(p["intro"])}</p>
+        <div class="ctas">
+          <a class="btn btn-gold" href="{wa}" target="_blank" rel="noopener">{e(p["waBtn"])}</a>
+          <a class="btn btn-line" href="{inici}#encarrec">{e(t["nadalBtn"])}</a>
+        </div>
+      </div>
+      <div class="img"><img src="/img/taulell-sense-preus.webp" width="1067" height="800" alt="{e(p["imgAlt"])}" fetchpriority="high"></div>
+    </div>
+  </div>
+  <section><div class="wrap">
+    <h2>{e(t["chipsTitle"])}</h2>
+    <ul class="chips">{"".join(f"<li>{e(x)}</li>" for x in productes)}</ul>
+    <p class="note">{e(t["nadalLead"])}</p>
+  </div></section>
+  <section><div class="wrap grid2">
+    <div>
+      <h2>{e(t["pickupTitle"])}</h2>
+      {rec}
+      {limit}
+    </div>
+    <div>
+      <h2>{e(p["howTitle"])}</h2>
+      <ol class="steps"><li>{e(t["nadalStep1"])}</li><li>{e(t["nadalStep2"])}</li><li>{e(t["nadalStep3"])}</li></ol>
+      <h2 style="margin-top:26px">{e(p["deliveryTitle"])}</h2>
+      <p>{t["valueReparto"]} <a href="{DOMICILI[lang]["url"]}">{e(p["deliveryMore"])}</a></p>
+    </div>
+  </div></section>
+  <section><div class="wrap">
+    <h2>{e(t["rnH2"])}</h2>
+    <p class="note" style="margin:0 0 18px">{e(t["rnLead"].split(". ")[0].rstrip(".") + ".")}</p>
+    <div class="recipes">{receptes}</div>
+  </div></section>
+  <section class="dark"><div class="wrap grid2">
+    <div>
+      <h2>{e(p["hoursTitle"])}</h2>
+      <ul class="plain">{hores_html}</ul>
+      {normal}
+    </div>
+    {on_som(p, wa)}
+  </div></section>"""
+    return marc(lang, p, pagines, t, cos)
+
+
+def on_som(p, wa):
+    return f"""<div>
+      <h2>{e(p["visitTitle"])}</h2>
+      <p><a href="https://www.google.com/maps/place/?q=place_id:ChIJHfs3fCyDpBIRCZyUIs1L600" target="_blank" rel="noopener">{e(p["address"])} ↗</a></p>
+      <p>WhatsApp: <a href="tel:+34699088213">699 08 82 13</a><br>{e(p["shopPhone"])}: <a href="tel:+34936652322">936 65 23 22</a></p>
+      <div class="ctas"><a class="btn btn-gold" href="{wa}" target="_blank" rel="noopener">{e(p["waBtn"])}</a></div>
+    </div>"""
+
+
+def marc(lang, p, pagines, t, cos):
+    inici = INICI[lang]
     actual = ' aria-current="page"'
     langs = "".join(
         f'<a href="{pagines[l]["url"]}" hreflang="{l}" lang="{l}"{actual if l == lang else ""}>{"CAT" if l == "ca" else l.upper()}</a>'
@@ -234,56 +297,7 @@ def pagina_nadal(lang, T, cfg, pagines):
 </div></header>
 <main>
   <div class="wrap">
-    <p class="crumbs"><a href="{inici}">{e(p["breadcrumb"])}</a> › {e(p["h1"])}</p>
-    <div class="hero">
-      <div>
-        <p class="eyebrow">{e(t["nadalEyebrow"])}</p>
-        <h1>{e(p["h1"])}</h1>
-        <p class="lead">{e(p["intro"])}</p>
-        <div class="ctas">
-          <a class="btn btn-gold" href="{wa}" target="_blank" rel="noopener">{e(p["waBtn"])}</a>
-          <a class="btn btn-line" href="{inici}#encarrec">{e(t["nadalBtn"])}</a>
-        </div>
-      </div>
-      <div class="img"><img src="/img/nadal-taulell.webp" width="1067" height="800" alt="{e(p["imgAlt"])}" fetchpriority="high"></div>
-    </div>
-  </div>
-  <section><div class="wrap">
-    <h2>{e(t["chipsTitle"])}</h2>
-    <ul class="chips">{"".join(f"<li>{e(x)}</li>" for x in productes)}</ul>
-    <p class="note">{e(t["nadalLead"])}</p>
-  </div></section>
-  <section><div class="wrap grid2">
-    <div>
-      <h2>{e(t["pickupTitle"])}</h2>
-      {rec}
-      {limit}
-    </div>
-    <div>
-      <h2>{e(p["howTitle"])}</h2>
-      <ol class="steps"><li>{e(t["nadalStep1"])}</li><li>{e(t["nadalStep2"])}</li><li>{e(t["nadalStep3"])}</li></ol>
-      <h2 style="margin-top:26px">{e(p["deliveryTitle"])}</h2>
-      <p>{t["valueReparto"]}</p>
-    </div>
-  </div></section>
-  <section><div class="wrap">
-    <h2>{e(t["rnH2"])}</h2>
-    <p class="note" style="margin:0 0 18px">{e(t["rnLead"].split(". ")[0].rstrip(".") + ".")}</p>
-    <div class="recipes">{receptes}</div>
-  </div></section>
-  <section class="dark"><div class="wrap grid2">
-    <div>
-      <h2>{e(p["hoursTitle"])}</h2>
-      <ul class="plain">{hores_html}</ul>
-      {normal}
-    </div>
-    <div>
-      <h2>{e(p["visitTitle"])}</h2>
-      <p><a href="https://www.google.com/maps/place/?q=place_id:ChIJHfs3fCyDpBIRCZyUIs1L600" target="_blank" rel="noopener">{e(p["address"])} ↗</a></p>
-      <p>WhatsApp: <a href="tel:+34699088213">699 08 82 13</a><br>{e(p["shopPhone"])}: <a href="tel:+34936652322">936 65 23 22</a></p>
-      <div class="ctas"><a class="btn btn-gold" href="{wa}" target="_blank" rel="noopener">{e(p["waBtn"])}</a></div>
-    </div>
-  </div></section>
+    <p class="crumbs"><a href="{inici}">{e(p["breadcrumb"])}</a> › {e(p["h1"])}</p>{cos}
 </main>
 <footer><div class="wrap">{e(t["footBrand"])} · <a href="{inici}" style="color:inherit">{e(p["home"])}</a></div></footer>
 </body>
@@ -291,9 +305,169 @@ def pagina_nadal(lang, T, cfg, pagines):
 """
 
 
+def pagina_domicili(lang, T, cfg, pagines):
+    p, t = pagines[lang], T[lang]
+    inici = INICI[lang]
+    wa = f"https://wa.me/{WA}?text={quote(p['wa'])}"
+    preps = [t[f"prep_{k}"] for k in ("net", "filets", "rodanxes", "sencer", "forn", "planxa", "sal", "cru", "sopa")]
+    normal = "".join(f"<li><strong>{e(t[f'hoursDay{i}'])}</strong>: {e(t[f'hoursTime{i}'])}</li>" for i in (1, 2, 3))
+    hoy = date.today().isoformat()
+    nadal = cfg.get("nadal", {})
+    enllac_nadal = ""
+    if nadal.get("mostrarFins", "") >= hoy:
+        enllac_nadal = f'<p class="note"><a href="{NADAL[lang]["url"]}">{e(p["nadalLink"])}</a></p>'
+    cos = f"""
+    <div class="hero">
+      <div>
+        <p class="eyebrow">{e(p["eyebrow"])}</p>
+        <h1>{e(p["h1"])}</h1>
+        <p class="lead">{e(p["intro"])}</p>
+        <div class="ctas">
+          <a class="btn btn-gold" href="{wa}" target="_blank" rel="noopener">{e(p["waBtn"])}</a>
+          <a class="btn btn-line" href="{inici}#encarrec">{e(p["formBtn"])}</a>
+        </div>
+      </div>
+      <div class="img"><img src="/img/taulell-sense-preus.webp" width="1067" height="800" alt="{e(p["imgAlt"])}" fetchpriority="high"></div>
+    </div>
+  </div>
+  <section><div class="wrap grid2">
+    <div>
+      <h2>{e(p["howTitle"])}</h2>
+      <ol class="steps">{"".join(f"<li>{e(x)}</li>" for x in p["steps"])}</ol>
+    </div>
+    <div>
+      <h2>{e(p["deliveryTitle"])}</h2>
+      <p>{t["valueReparto"]}</p>
+      {enllac_nadal}
+    </div>
+  </div></section>
+  <section><div class="wrap">
+    <h2>{e(p["prepTitle"])}</h2>
+    <ul class="chips">{"".join(f"<li>{e(x)}</li>" for x in preps)}</ul>
+    <p class="note">{e(t["perk1"])}</p>
+  </div></section>
+  <section><div class="wrap grid2">
+    <div>
+      <h2>{e(p["avuiTitle"])}</h2>
+      <p>{e(p["avuiText"])}</p>
+      <div class="ctas"><a class="btn btn-line" href="{inici}#avui">{e(p["avuiBtn"])}</a></div>
+    </div>
+    <div>
+      <h2>{e(p["whyTitle"])}</h2>
+      <p><strong>{e(t["feat1Title"])}.</strong> {e(t["feat1Body"])}</p>
+      <p><strong>{e(t["feat3Title"])}.</strong> {html.unescape(t["feat3Body"])}</p>
+    </div>
+  </div></section>
+  <section class="dark"><div class="wrap grid2">
+    <div>
+      <h2>{e(p["hoursTitle"])}</h2>
+      <ul class="plain">{normal}</ul>
+      <p class="note" style="color:inherit">{e(p["hoursNote"])}</p>
+    </div>
+    {on_som(p, wa)}
+  </div></section>"""
+    return marc(lang, p, pagines, t, cos)
+
+
+DOMICILI = {
+    "ca": {
+        "url": "/peix-marisc-domicili-castelldefels/",
+        "title": "Peix i marisc a domicili a Castelldefels · Peixateria Mulhacén",
+        "desc": "Peix i marisc de llotja a domicili a Castelldefels, net i a punt per cuinar. Encarrega per WhatsApp: lliurament gratuït a partir de 50 €. Des del 1954.",
+        "eyebrow": "A domicili a Castelldefels",
+        "h1": "Peix i marisc a domicili a Castelldefels",
+        "intro": "Triem cada matí el millor de la llotja i t'ho portem a casa, a Castelldefels, preparat tal com ho demanaries al taulell. Encarrega-ho per WhatsApp i acordem amb tu l'hora del lliurament. Gratuït a partir de 50 € de compra.",
+        "wa": "Hola, voldria fer un encàrrec a domicili.",
+        "waBtn": "Demanar per WhatsApp",
+        "formBtn": "Fer l'encàrrec al web",
+        "howTitle": "Com funciona",
+        "steps": ["Digues-nos què vols i com t'ho preparem, per WhatsApp o amb el formulari del web.",
+                  "Et confirmem el peix disponible i acordem l'hora del lliurament.",
+                  "T'ho portem a casa, a punt per cuinar."],
+        "deliveryTitle": "Lliurament a domicili",
+        "nadalLink": "Per Nadal, reserva el marisc amb temps →",
+        "prepTitle": "Com t'ho preparem",
+        "avuiTitle": "Què ha arribat avui",
+        "avuiText": "Cada matí publiquem al web la pissarra del dia, amb el que ha arribat de la llotja i les fotos del taulell.",
+        "avuiBtn": "Veure la pissarra d'avui",
+        "whyTitle": "Per què la Peixateria Mulhacén",
+        "hoursTitle": "Horari de la botiga",
+        "hoursNote": "L'hora del lliurament l'acordem amb tu per WhatsApp.",
+        "visitTitle": "On som",
+        "address": "Carrer de la Llibertat, 10 · 08860 Castelldefels",
+        "shopPhone": "Telèfon de la botiga",
+        "home": "Tornar a l'inici",
+        "breadcrumb": "Inici",
+        "imgAlt": "Ostres, gambes i peix fresc al taulell de la Peixateria Mulhacén",
+    },
+    "es": {
+        "url": "/es/pescado-marisco-domicilio-castelldefels/",
+        "title": "Pescado y marisco a domicilio en Castelldefels · Pescadería Mulhacén",
+        "desc": "Pescado y marisco de lonja a domicilio en Castelldefels, limpio y listo para cocinar. Encarga por WhatsApp: entrega gratis a partir de 50 €. Desde 1954.",
+        "eyebrow": "A domicilio en Castelldefels",
+        "h1": "Pescado y marisco a domicilio en Castelldefels",
+        "intro": "Elegimos cada mañana lo mejor de la lonja y te lo llevamos a casa, en Castelldefels, preparado como lo pedirías en el mostrador. Encárgalo por WhatsApp y acordamos contigo la hora de la entrega. Gratis a partir de 50 € de compra.",
+        "wa": "Hola, querría hacer un pedido a domicilio.",
+        "waBtn": "Pedir por WhatsApp",
+        "formBtn": "Hacer el encargo en la web",
+        "howTitle": "Cómo funciona",
+        "steps": ["Dinos qué quieres y cómo te lo preparamos, por WhatsApp o con el formulario de la web.",
+                  "Te confirmamos el pescado disponible y acordamos la hora de la entrega.",
+                  "Te lo llevamos a casa, listo para cocinar."],
+        "deliveryTitle": "Entrega a domicilio",
+        "nadalLink": "Para Navidad, reserva el marisco con tiempo →",
+        "prepTitle": "Cómo te lo preparamos",
+        "avuiTitle": "Qué ha llegado hoy",
+        "avuiText": "Cada mañana publicamos en la web la pizarra del día, con lo que ha llegado de la lonja y las fotos del mostrador.",
+        "avuiBtn": "Ver la pizarra de hoy",
+        "whyTitle": "Por qué la Pescadería Mulhacén",
+        "hoursTitle": "Horario de la tienda",
+        "hoursNote": "La hora de la entrega la acordamos contigo por WhatsApp.",
+        "visitTitle": "Dónde estamos",
+        "address": "Carrer de la Llibertat, 10 · 08860 Castelldefels",
+        "shopPhone": "Teléfono de la tienda",
+        "home": "Volver al inicio",
+        "breadcrumb": "Inicio",
+        "imgAlt": "Ostras, gambas y pescado fresco en el mostrador de la Pescadería Mulhacén",
+    },
+    "en": {
+        "url": "/en/fish-seafood-delivery-castelldefels/",
+        "title": "Fish and seafood delivery in Castelldefels · Mulhacén Fishmonger",
+        "desc": "Fresh fish and seafood delivered to your home in Castelldefels, cleaned and ready to cook. Order on WhatsApp: free delivery over €50. Since 1954.",
+        "eyebrow": "Home delivery in Castelldefels",
+        "h1": "Fish and seafood delivery in Castelldefels",
+        "intro": "Every morning we pick the best of the fish market and bring it to your home in Castelldefels, prepared just as you'd ask at the counter. Order on WhatsApp and we'll agree the delivery time with you. Free on orders over €50.",
+        "wa": "Hi, I'd like to order a home delivery.",
+        "waBtn": "Order on WhatsApp",
+        "formBtn": "Order on the website",
+        "howTitle": "How it works",
+        "steps": ["Tell us what you want and how to prepare it, on WhatsApp or with the order form on the website.",
+                  "We confirm what's available and agree the delivery time.",
+                  "We bring it to your door, ready to cook."],
+        "deliveryTitle": "Home delivery",
+        "nadalLink": "For Christmas, reserve your seafood in advance →",
+        "prepTitle": "How we prepare it",
+        "avuiTitle": "What came in today",
+        "avuiText": "Every morning we post the day's board on the website, with what came in from the fish market and photos of the counter.",
+        "avuiBtn": "See today's board",
+        "whyTitle": "Why Mulhacén Fishmonger",
+        "hoursTitle": "Shop opening hours",
+        "hoursNote": "We agree the delivery time with you on WhatsApp.",
+        "visitTitle": "Where we are",
+        "address": "Carrer de la Llibertat, 10 · 08860 Castelldefels",
+        "shopPhone": "Shop phone",
+        "home": "Back to home",
+        "breadcrumb": "Home",
+        "imgAlt": "Oysters, prawns and fresh fish on the counter at Mulhacén Fishmonger",
+    },
+}
+
+
 def genera(arrel, T):
     cfg = config(arrel)
-    sortida = {}
-    for lang, p in NADAL.items():
-        sortida[p["url"].strip("/") + "/index.html"] = pagina_nadal(lang, T, cfg, NADAL)
-    return sortida, [p["url"] for p in NADAL.values()], NADAL
+    sortida, grups = {}, []
+    for pagines, fn in ((NADAL, pagina_nadal), (DOMICILI, pagina_domicili)):
+        for lang, p in pagines.items():
+            sortida[p["url"].strip("/") + "/index.html"] = fn(lang, T, cfg, pagines)
+        grups.append([(l, p["url"]) for l, p in pagines.items()])
+    return sortida, grups
