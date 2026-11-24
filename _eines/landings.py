@@ -41,7 +41,7 @@ NADAL = {
         "home": "Tornar a l'inici",
         "breadcrumb": "Inici",
         "deadline": "Encàrrecs fins al {d}.",
-        "imgAlt": "Llagostins frescos al taulell de la Peixateria Mulhacén",
+        "imgAlt": "Ostres, gambes i peix fresc al taulell de la Peixateria Mulhacén",
     },
     "es": {
         "url": "/es/marisco-navidad-castelldefels/",
@@ -61,7 +61,7 @@ NADAL = {
         "home": "Volver al inicio",
         "breadcrumb": "Inicio",
         "deadline": "Encargos hasta el {d}.",
-        "imgAlt": "Langostinos frescos en el mostrador de la Pescadería Mulhacén",
+        "imgAlt": "Ostras, gambas y pescado fresco en el mostrador de la Pescadería Mulhacén",
     },
     "en": {
         "url": "/en/christmas-seafood-castelldefels/",
@@ -81,7 +81,7 @@ NADAL = {
         "home": "Back to home",
         "breadcrumb": "Home",
         "deadline": "Orders until {d}.",
-        "imgAlt": "Fresh prawns on the counter at Mulhacén Fishmonger",
+        "imgAlt": "Oysters, prawns and fresh fish on the counter at Mulhacén Fishmonger",
     },
 }
 
@@ -245,7 +245,7 @@ def pagina_nadal(lang, T, cfg, pagines):
           <a class="btn btn-line" href="{inici}#encarrec">{e(t["nadalBtn"])}</a>
         </div>
       </div>
-      <div class="img"><img src="/img/llagostins-800.webp" width="800" height="1000" alt="{e(p["imgAlt"])}" fetchpriority="high"></div>
+      <div class="img"><img src="/img/nadal-taulell.webp" width="1067" height="800" alt="{e(p["imgAlt"])}" fetchpriority="high"></div>
     </div>
   </div>
   <section><div class="wrap">
