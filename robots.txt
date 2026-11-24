@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /imprimir/
+
+Sitemap: https://mulhacen.cat/sitemap.xml
