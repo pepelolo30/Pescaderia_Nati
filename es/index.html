@@ -2610,28 +2610,6 @@
     f.addEventListener('focusin', function(e){ if(camp(e)) document.body.classList.add('escrivint'); });
     f.addEventListener('focusout', function(){ document.body.classList.remove('escrivint'); });
   })();
-  (function(){
-    var el = document.getElementById('ldStore'), c = window.MULHACEN || {};
-    if(!el) return;
-    try{
-      var ld = JSON.parse(el.textContent), avui = new Date(), fins = new Date(avui.getTime() + 60*864e5), esp = [];
-      function dia(d){ return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
-      var des = dia(avui), finsD = dia(fins);
-      (c.festius || []).forEach(function(d){
-        if(d < des || d > finsD) return;
-        var w = new Date(d + 'T12:00:00').getDay();
-        if(w >= 2 && w <= 6) esp.push({'@type':'OpeningHoursSpecification', validFrom:d, validThrough:d, opens:'00:00', closes:'00:00'});
-      });
-      Object.keys(c.horariEspecial || {}).forEach(function(d){
-        if(d < des || d > finsD) return;
-        (c.horariEspecial[d] || []).forEach(function(fr){
-          var p = fr.split('-');
-          esp.push({'@type':'OpeningHoursSpecification', validFrom:d, validThrough:d, opens:p[0], closes:p[1]});
-        });
-      });
-      if(esp.length){ ld.specialOpeningHoursSpecification = esp; el.textContent = JSON.stringify(ld); }
-    }catch(e){}
-  })();
 </script>
 
 </body></html>
