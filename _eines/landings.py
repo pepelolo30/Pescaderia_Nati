@@ -28,7 +28,7 @@ NADAL = {
         "title": "Marisc per Nadal a Castelldefels · Peixateria Mulhacén",
         "desc": "Reserva el marisc i el peix de Nadal a Castelldefels i recull-lo sense cues el 24 i el 31 de desembre. Llagostins, gambes, escamarlans i més, des del 1954.",
         "h1": "Marisc per Nadal a Castelldefels",
-        "intro": "A la Peixateria Mulhacén triem cada matí el millor de la llotja des del 1954. Per Nadal i Cap d'Any, reserva amb temps el marisc i el peix de les festes: t'ho preparem tal com ho vols i el recculls sense fer cua, o te'l portem a casa a Castelldefels.",
+        "intro": "A la Peixateria Mulhacén triem cada matí el millor de la llotja des del 1954. Per Nadal i Cap d'Any, reserva amb temps el marisc i el peix de les festes: t'ho preparem tal com ho vols i el reculls sense fer cua, o te'l portem a casa a Castelldefels.",
         "wa": "Hola, voldria fer un encàrrec de Nadal.",
         "waBtn": "Reservar per WhatsApp",
         "howTitle": "Com funciona",
