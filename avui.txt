@@ -2,19 +2,23 @@
 # Aquest arxiu el genera el publicador del servidor a partir de Fotos_Pescaderia/AAAAMMDD/pissarra.txt
 # Una línia per producte:   Nom | preu | nota   (el preu i la nota són opcionals)
 
-data: 2026-11-20
+data: 2026-11-24
+Maira | 16,90 €/kg |
+Gall | 39,90 €/kg |
 Salmó | 26,90 €/kg |
-Llenguado 2/3 | 45,00 €/kg |
-Llobarro gran | 29,90 €/kg |
+Seitons | 16,90 €/kg |
+Sardina | 9,90 €/kg |
+Bacallà | 19,90 €/kg |
+Tonyina gran | 39,90 €/kg |
+Gall 800+ | 29,90 €/kg |
+Palangre gran | 29,90 €/kg |
+Llobarro real | 29,90 €/kg |
+Llobarro | 24,90 €/kg |
 Orada | 18,90 €/kg |
-Gall +700 | 29,90 €/kg |
-Espasa gran | 36,90 €/kg |
-Gamba mitjana | 80,00 €/kg |
-Gamba petita | 45,00 €/kg |
-Sípia petita | 27,90 €/kg |
-Lluç | 26,90 €/kg |
 Cueta de rap | 36,90 €/kg |
-Cua de rap | 42,00 €/kg |
-Llenguado 4/6 | 59,00 €/kg |
-Escamarlans mitjans | 70,00 €/kg |
-Rap gran | 33,90 €/kg |
+Gamba petita | 39,90 €/kg |
+Escamarlans petits | 44,90 €/kg |
+Lluç | 29,90 €/kg |
+Llenguado gran | 49,00 €/kg |
+Calamars grans | 39,90 €/kg |
+Sípia petita | 30,00 €/kg |
