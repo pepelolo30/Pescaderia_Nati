@@ -327,7 +327,7 @@ def pagina_domicili(lang, T, cfg, pagines):
           <a class="btn btn-line" href="{inici}#encarrec">{e(p["formBtn"])}</a>
         </div>
       </div>
-      <div class="img"><img src="/img/taulell-sense-preus.webp" width="1067" height="800" alt="{e(p["imgAlt"])}" fetchpriority="high"></div>
+      <div class="img"><img src="/img/peix-variat.webp" width="960" height="720" alt="{e(p["imgAlt"])}" fetchpriority="high"></div>
     </div>
   </div>
   <section><div class="wrap grid2">
@@ -398,7 +398,7 @@ DOMICILI = {
         "shopPhone": "Telèfon de la botiga",
         "home": "Tornar a l'inici",
         "breadcrumb": "Inici",
-        "imgAlt": "Ostres, gambes i peix fresc al taulell de la Peixateria Mulhacén",
+        "imgAlt": "Lluç, salmó i peix de llotja sobre gel a la Peixateria Mulhacén",
     },
     "es": {
         "url": "/es/pescado-marisco-domicilio-castelldefels/",
@@ -428,7 +428,7 @@ DOMICILI = {
         "shopPhone": "Teléfono de la tienda",
         "home": "Volver al inicio",
         "breadcrumb": "Inicio",
-        "imgAlt": "Ostras, gambas y pescado fresco en el mostrador de la Pescadería Mulhacén",
+        "imgAlt": "Merluza, salmón y pescado de lonja sobre hielo en la Pescadería Mulhacén",
     },
     "en": {
         "url": "/en/fish-seafood-delivery-castelldefels/",
@@ -458,7 +458,7 @@ DOMICILI = {
         "shopPhone": "Shop phone",
         "home": "Back to home",
         "breadcrumb": "Home",
-        "imgAlt": "Oysters, prawns and fresh fish on the counter at Mulhacén Fishmonger",
+        "imgAlt": "Hake, salmon and fresh fish on ice at Mulhacén Fishmonger",
     },
 }
 
