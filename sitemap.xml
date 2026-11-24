@@ -21,4 +21,25 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://mulhacen.cat/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mulhacen.cat/"/>
   </url>
+  <url>
+    <loc>https://mulhacen.cat/marisc-nadal-castelldefels/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://mulhacen.cat/marisc-nadal-castelldefels/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mulhacen.cat/es/marisco-navidad-castelldefels/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mulhacen.cat/en/christmas-seafood-castelldefels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mulhacen.cat/marisc-nadal-castelldefels/"/>
+  </url>
+  <url>
+    <loc>https://mulhacen.cat/es/marisco-navidad-castelldefels/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://mulhacen.cat/marisc-nadal-castelldefels/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mulhacen.cat/es/marisco-navidad-castelldefels/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mulhacen.cat/en/christmas-seafood-castelldefels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mulhacen.cat/marisc-nadal-castelldefels/"/>
+  </url>
+  <url>
+    <loc>https://mulhacen.cat/en/christmas-seafood-castelldefels/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://mulhacen.cat/marisc-nadal-castelldefels/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mulhacen.cat/es/marisco-navidad-castelldefels/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mulhacen.cat/en/christmas-seafood-castelldefels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mulhacen.cat/marisc-nadal-castelldefels/"/>
+  </url>
 </urlset>

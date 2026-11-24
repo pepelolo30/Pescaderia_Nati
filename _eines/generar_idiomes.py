@@ -7,6 +7,9 @@ import subprocess
 import sys
 from html.parser import HTMLParser
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import landings  # noqa: E402
+
 ARREL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINI = "https://mulhacen.cat"
 IDIOMES = {"es": {"locale": "es_ES"}, "en": {"locale": "en_GB"}}
@@ -104,6 +107,8 @@ def tradueix(font, t, lang):
         atributs(per_id["waCardBtn"], [("href", t["waLink"])])
     if "waFloatBtn" in per_id:
         atributs(per_id["waFloatBtn"], [("aria-label", t["waFloatLabel"]), ("href", t["waLink"])])
+    if "nadalMore" in per_id and t.get("nadalMoreUrl"):
+        atributs(per_id["nadalMore"], [("href", t["nadalMoreUrl"])])
     if "radioBtn" in per_id:
         atributs(per_id["radioBtn"], [("aria-label", t["radioBtnLabel"]), ("title", t["radioBtnLabel"])])
     for ident, l in (("langCa", "ca"), ("langEs", "es"), ("langEn", "en")):
@@ -158,10 +163,12 @@ def capcalera(font, t, lang):
     return font
 
 
-def sitemap():
-    alt = "".join(f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="{DOMINI}{u}"/>'
-                  for l, u in (("ca", "/"), ("es", "/es/"), ("en", "/en/"), ("x-default", "/")))
-    urls = "".join(f"\n  <url>\n    <loc>{DOMINI}{u}</loc>{alt}\n  </url>" for u in ("/", "/es/", "/en/"))
+def sitemap(grups):
+    urls = ""
+    for grup in grups:
+        alt = "".join(f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="{DOMINI}{u}"/>' for l, u in grup)
+        alt += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{DOMINI}{grup[0][1]}"/>'
+        urls += "".join(f"\n  <url>\n    <loc>{DOMINI}{u}</loc>{alt}\n  </url>" for _, u in grup)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
             f"{urls}\n</urlset>\n")
@@ -190,7 +197,12 @@ def main():
         pagina = capcalera(tradueix(font, T[lang], lang), T[lang], lang)
         if escriu(f"{lang}/index.html", pagina):
             canviats.append(f"{lang}/index.html")
-    if escriu("sitemap.xml", sitemap()):
+    pagines, _, nadal = landings.genera(ARREL, T)
+    for ruta, html_pagina in pagines.items():
+        if escriu(ruta, html_pagina):
+            canviats.append(ruta)
+    grups = [[("ca", "/"), ("es", "/es/"), ("en", "/en/")], [(l, p["url"]) for l, p in nadal.items()]]
+    if escriu("sitemap.xml", sitemap(grups)):
         canviats.append("sitemap.xml")
     print("Generat: " + (", ".join(canviats) if canviats else "sense canvis"))
     return 0
