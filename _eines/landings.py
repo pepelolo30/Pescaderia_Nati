@@ -288,7 +288,7 @@ def marc(lang, p, pagines, t, cos):
 <link rel="stylesheet" href="{fonts}">
 <style>{CSS}</style>
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False, separators=(",", ":"))}</script>
-<script data-goatcounter="https://peixaterialadorada.goatcounter.com/count" async src="/js/count.js"></script>
+<script data-goatcounter="https://mulhacen.goatcounter.com/count" async src="/js/count.js"></script>
 </head>
 <body>
 <header><div class="wrap">
