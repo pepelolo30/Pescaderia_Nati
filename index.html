@@ -376,6 +376,15 @@
     color:var(--neon-txt);
     text-shadow:0 0 2px #fff, 0 0 6px var(--neon), 0 0 12px rgb(var(--neon-glow)), 0 0 22px rgb(var(--neon-glow)), 0 0 38px rgb(var(--neon-glow));
   }
+  @media (max-width:759px){
+    #avui .section-head{ position:relative; }
+    #avui .neon{ position:absolute; top:-14px; right:3px; padding:6px 14px 8px; }
+    #avui .neon-txt{ font-size:21px; }
+  }
+  @media (max-width:379px){
+    #avui .neon{ top:-24px; padding:5px 11px 7px; }
+    #avui .neon-txt{ font-size:18px; }
+  }
   @media (min-width:760px){
     #avui .section-head{ max-width:none; }
     #avui .section-head p.lead{ max-width:60ch; }
