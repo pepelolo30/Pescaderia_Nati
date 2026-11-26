@@ -2216,8 +2216,6 @@
     var limit = R.fins ? Date.parse(R.fins) : NaN, avui = isoDate(new Date());
     var forca = /[?&]reinauguracio/.test(location.search);
     if(!dlg || !dlg.showModal || !forca && ((R.des && avui < R.des) || isNaN(limit) || Date.now() >= limit)) return;
-    var CLAU = 'mulhacen-reinauguracio-vist';
-    try{ if(!forca && localStorage.getItem(CLAU) === avui) return; }catch(e){}
     if(R.dia && avui === R.dia){ var b = document.getElementById('riBadge'); b.removeAttribute('data-t'); b.textContent = (T[document.documentElement.lang] || T.ca).riBadgeAvui; }
     var conf = document.getElementById('riConfeti'), COLORS = ['#E04A3F','#F2B632','#2F8FD8','#3FAE6A','#D9B98F','#B05FD0'];
     if(!reduceMotion) for(var k = 0; k < 26; k++){
@@ -2232,7 +2230,6 @@
       conf.appendChild(c);
     }
     function tanca(){ if(dlg.open) dlg.close(); }
-    dlg.addEventListener('close', function(){ try{ localStorage.setItem(CLAU, avui); }catch(e){} });
     document.getElementById('riClose').addEventListener('click', tanca);
     document.getElementById('riOk').addEventListener('click', function(){ track('reinauguracio/ok'); tanca(); });
     document.getElementById('riCom').addEventListener('click', function(){ track('reinauguracio/com'); tanca(); });
