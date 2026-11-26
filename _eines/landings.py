@@ -374,7 +374,7 @@ DOMICILI = {
         "url": "/peix-marisc-domicili-castelldefels/",
         "title": "Peix i marisc a domicili a Castelldefels · Peixateria Mulhacén",
         "desc": "Peix i marisc de llotja a domicili a Castelldefels, net i a punt per cuinar. Encarrega per WhatsApp: lliurament gratuït a partir de 50 €. Des del 1954.",
-        "eyebrow": "A domicili a Castelldefels",
+        "eyebrow": "Peix a domicili a Castelldefels",
         "h1": "Peix i marisc a domicili a Castelldefels",
         "intro": "Triem cada matí el millor de la llotja i t'ho portem a casa, a Castelldefels, preparat tal com ho demanaries al taulell. Encarrega-ho per WhatsApp i acordem amb tu l'hora del lliurament. Gratuït a partir de 50 € de compra.",
         "wa": "Hola, voldria fer un encàrrec a domicili.",
