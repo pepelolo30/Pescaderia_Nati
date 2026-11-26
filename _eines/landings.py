@@ -264,7 +264,6 @@ def marc(lang, p, pagines, t, cos):
                 {"@type": "ListItem", "position": 2, "name": p["h1"], "item": DOMINI + p["url"]}]},
         ],
     }
-    fonts = "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Libre+Franklin:wght@400;600;700&display=swap"
     return f"""<!doctype html>
 <html lang="{lang}">
 <head>
@@ -284,8 +283,8 @@ def marc(lang, p, pagines, t, cos):
 <meta property="og:url" content="{DOMINI}{p["url"]}">
 <meta property="og:image" content="{DOMINI}/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="{fonts}">
+<link rel="preload" href="/fonts/playfair-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>{CSS}</style>
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False, separators=(",", ":"))}</script>
 <script data-goatcounter="https://mulhacen.goatcounter.com/count" async src="/js/count.js"></script>
