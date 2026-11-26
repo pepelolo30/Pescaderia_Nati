@@ -1,44 +1,24 @@
 {
  "textos": {
-  "Maira": {
-   "es": "Bacaladilla",
-   "en": "Blue whiting"
+  "Maira mitjana": {
+   "es": "Bacaladilla mediana",
+   "en": "Medium blue whiting"
   },
-  "Gall": {
-   "es": "Gallo",
-   "en": "Megrim"
+  "Escamarlans petits": {
+   "es": "Cigalas pequeñas",
+   "en": "Small langoustines"
   },
-  "Salmó": {
-   "es": "Salmón",
-   "en": "Salmon"
+  "Calamars grans": {
+   "es": "Calamares grandes",
+   "en": "Large squid"
   },
-  "Seitons": {
-   "es": "Boquerones",
-   "en": "Anchovies"
+  "Cua de rap": {
+   "es": "Cola de rape",
+   "en": "Monkfish tail"
   },
-  "Sardina": {
-   "es": "Sardina",
-   "en": "Sardine"
-  },
-  "Bacallà": {
-   "es": "Bacalao",
-   "en": "Cod"
-  },
-  "Tonyina gran": {
-   "es": "Atún grande",
-   "en": "Large tuna"
-  },
-  "Gall 800+": {
-   "es": "Gallo 800+",
-   "en": "Megrim 800+"
-  },
-  "Palangre gran": {
-   "es": "Palangre grande",
-   "en": "Large palangre"
-  },
-  "Llobarro real": {
-   "es": "Lubina real",
-   "en": "Sea bass (real)"
+  "Tonyina": {
+   "es": "Atún",
+   "en": "Tuna"
   },
   "Llobarro": {
    "es": "Lubina",
@@ -48,33 +28,41 @@
    "es": "Dorada",
    "en": "Sea bream"
   },
+  "Gall": {
+   "es": "Gallo",
+   "en": "Megrim"
+  },
+  "Volanta": {
+   "es": "Volanta",
+   "en": "Volanta"
+  },
+  "Sardina": {
+   "es": "Sardina",
+   "en": "Sardine"
+  },
+  "Seitons": {
+   "es": "Boquerones",
+   "en": "Anchovies"
+  },
   "Cueta de rap": {
    "es": "Colita de rape",
    "en": "Monkfish tail"
+  },
+  "Congre gran": {
+   "es": "Congrio grande",
+   "en": "Large conger eel"
   },
   "Gamba petita": {
    "es": "Gamba pequeña",
    "en": "Small prawn"
   },
-  "Escamarlans petits": {
-   "es": "Cigalas pequeñas",
-   "en": "Small langoustines"
+  "Llangostí gran": {
+   "es": "Langostino grande",
+   "en": "Large king prawn"
   },
-  "Lluç": {
-   "es": "Merluza",
-   "en": "Hake"
-  },
-  "Llenguado gran": {
-   "es": "Lenguado grande",
-   "en": "Large sole"
-  },
-  "Calamars grans": {
-   "es": "Calamares grandes",
-   "en": "Large squid"
-  },
-  "Sípia petita": {
-   "es": "Sepia pequeña",
-   "en": "Small cuttlefish"
+  "Xipiró": {
+   "es": "Chipirón",
+   "en": "Baby squid"
   }
  }
 }
