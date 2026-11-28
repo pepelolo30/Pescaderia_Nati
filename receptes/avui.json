@@ -1,197 +1,197 @@
 {
- "data": "2026-11-27",
+ "data": "2026-11-28",
  "font": "receptari",
  "receptes": [
   {
-   "prep": "sopa",
+   "prep": "planxa",
    "ca": {
-    "tag": "Sopa · 50 min",
-    "title": "Sopa de peix",
-    "body": "Fes un fumet amb peix de roca, cola'l i torna-hi a posar trossets de peix net i una mica d'arròs. Acaba amb julivert i un raig de llimona.",
-    "btn": "Encarregar per a sopa →",
-    "prod": "Peix per a sopa"
+    "tag": "Planxa · 8 min",
+    "title": "Escamarlans a la planxa",
+    "body": "Obre'ls per la meitat, posa-hi un fil d'oli i sal, i a la planxa ben calenta 2 minuts per la carn i 1 per la closca.",
+    "btn": "Encarregar escamarlans →",
+    "prod": "Escamarlans"
    },
    "es": {
-    "tag": "Sopa · 50 min",
-    "title": "Sopa de pescado",
-    "body": "Haz un fumet con pescado de roca, cuélalo y vuelve a añadir trocitos de pescado limpio y un poco de arroz. Termina con perejil y limón.",
-    "btn": "Encargar para sopa →",
-    "prod": "Pescado para sopa"
+    "tag": "Plancha · 8 min",
+    "title": "Cigalas a la plancha",
+    "body": "Ábrelas por la mitad, un hilo de aceite y sal, y a la plancha bien caliente 2 minutos por la carne y 1 por el caparazón.",
+    "btn": "Encargar cigalas →",
+    "prod": "Cigalas"
    },
    "en": {
-    "tag": "Soup · 50 min",
-    "title": "Fish soup",
-    "body": "Make a rockfish stock, strain it and add bite-size pieces of clean fish and a little rice. Finish with parsley and lemon.",
-    "btn": "Order for soup →",
-    "prod": "Fish for soup"
+    "tag": "Grill · 8 min",
+    "title": "Grilled langoustines",
+    "body": "Split them in half, add a drizzle of oil and salt, and grill on a very hot griddle 2 minutes flesh side and 1 on the shell.",
+    "btn": "Order langoustines →",
+    "prod": "Langoustines"
    }
   },
   {
-   "prep": "net",
+   "prep": "",
    "ca": {
-    "tag": "Fregit · 15 min",
-    "title": "Peix petit fregit",
-    "body": "Enfarina'l, sacseja l'excés i fregeix-lo en oli ben calent en poques quantitats. Sal al final i un raig de llimona.",
-    "btn": "Encarregar-lo net →",
-    "prod": "Peix petit per fregir"
+    "tag": "Cassola · 10 min",
+    "title": "Gambes a l'all",
+    "body": "Pela-les i posa-les en oli calent amb làmines d'all i un bitxo. Quan canviïn de color, julivert i a taula, amb pa per sucar.",
+    "btn": "Encarregar gambes →",
+    "prod": "Gambes per pelar"
    },
    "es": {
-    "tag": "Frito · 15 min",
-    "title": "Pescadito frito",
-    "body": "Enharínalo, sacude el exceso y fríelo en aceite bien caliente en tandas pequeñas. Sal al final y un chorrito de limón.",
-    "btn": "Encargarlo limpio →",
-    "prod": "Pescadito para freír"
+    "tag": "Cazuela · 10 min",
+    "title": "Gambas al ajillo",
+    "body": "Pélalas y ponlas en aceite caliente con láminas de ajo y una guindilla. Cuando cambien de color, perejil y a la mesa, con pan para mojar.",
+    "btn": "Encargar gambas →",
+    "prod": "Gambas para pelar"
    },
    "en": {
-    "tag": "Fried · 15 min",
-    "title": "Fried small fish",
-    "body": "Dust in flour, shake off the excess and fry in very hot oil in small batches. Salt at the end and a squeeze of lemon.",
-    "btn": "Order it cleaned →",
-    "prod": "Small fish for frying"
+    "tag": "Pan · 10 min",
+    "title": "Garlic prawns",
+    "body": "Peel them and add to hot oil with sliced garlic and a chilli. When they change colour, add parsley and serve with bread.",
+    "btn": "Order prawns →",
+    "prod": "Prawns to peel"
    }
   },
   {
-   "prep": "net",
+   "prep": "filets",
    "ca": {
-    "tag": "Vapor · 8 min",
-    "title": "Musclos al vapor amb llimona",
-    "body": "En una olla tapada amb un dit d'aigua, una fulla de llorer i pell de llimona. Quan s'obrin, fora del foc i un raig de llimona.",
-    "btn": "Encarregar musclos →",
-    "prod": "Musclos nets"
+    "tag": "Planxa · 10 min",
+    "title": "Salmó a la planxa amb cítrics",
+    "body": "Planxa ben calenta, primer per la pell 4 minuts i 2 per l'altra banda. Serveix-lo amb taronja, llima i una mica de fonoll.",
+    "btn": "Encarregar salmó →",
+    "prod": "Salmó a filets"
    },
    "es": {
-    "tag": "Vapor · 8 min",
-    "title": "Mejillones al vapor con limón",
-    "body": "En una olla tapada con un dedo de agua, una hoja de laurel y piel de limón. Cuando se abran, fuera del fuego y un chorrito de limón.",
-    "btn": "Encargar mejillones →",
-    "prod": "Mejillones limpios"
+    "tag": "Plancha · 10 min",
+    "title": "Salmón a la plancha con cítricos",
+    "body": "Plancha bien caliente, primero por la piel 4 minutos y 2 por el otro lado. Sírvelo con naranja, lima y un poco de hinojo.",
+    "btn": "Encargar salmón →",
+    "prod": "Salmón en filetes"
    },
    "en": {
-    "tag": "Steamed · 8 min",
-    "title": "Steamed mussels with lemon",
-    "body": "In a covered pot with a little water, a bay leaf and lemon zest. Once they open, take off the heat and add lemon juice.",
-    "btn": "Order mussels →",
-    "prod": "Cleaned mussels"
+    "tag": "Grill · 10 min",
+    "title": "Grilled salmon with citrus",
+    "body": "Very hot griddle, skin side first for 4 minutes and 2 on the other side. Serve with orange, lime and a little fennel.",
+    "btn": "Order salmon →",
+    "prod": "Salmon fillets"
    }
   },
   {
    "prep": "filets",
    "ca": {
     "tag": "Forn · 25 min",
-    "title": "Verat al forn amb tomàquet",
-    "body": "Posa els filets en una safata amb tomàquet a rodanxes, ceba, orenga i oli. Forn a 200 °C uns 12 minuts. Peix blau, saborós i econòmic.",
-    "btn": "Encarregar verat →",
-    "prod": "Verat a filets"
+    "title": "Bacallà a la llauna",
+    "body": "Enfarina els talls, daura'ls i posa'ls en una safata. Sofregeix all i pebre vermell, afegeix vi blanc, rega el bacallà i forn 10 minuts.",
+    "btn": "Encarregar bacallà →",
+    "prod": "Bacallà a talls"
    },
    "es": {
     "tag": "Horno · 25 min",
-    "title": "Caballa al horno con tomate",
-    "body": "Pon los filetes en una bandeja con tomate en rodajas, cebolla, orégano y aceite. Horno a 200 °C unos 12 minutos. Pescado azul, sabroso y económico.",
-    "btn": "Encargar caballa →",
-    "prod": "Caballa en filetes"
+    "title": "Bacalao a la llauna",
+    "body": "Enharina los trozos, dóralos y ponlos en una bandeja. Sofríe ajo y pimentón, añade vino blanco, riega el bacalao y horno 10 minutos.",
+    "btn": "Encargar bacalao →",
+    "prod": "Bacalao en trozos"
    },
    "en": {
     "tag": "Oven · 25 min",
-    "title": "Baked mackerel with tomato",
-    "body": "Place the fillets in a tray with sliced tomato, onion, oregano and olive oil. Bake at 200 °C for about 12 minutes. Tasty and affordable oily fish.",
-    "btn": "Order mackerel →",
-    "prod": "Mackerel fillets"
-   }
-  },
-  {
-   "prep": "net",
-   "ca": {
-    "tag": "Arròs · 45 min",
-    "title": "Arròs a la marinera",
-    "body": "Sofregeix la sípia a daus i les gambes, afegeix tomàquet, l'arròs i el doble de fumet calent. 18 minuts sense remenar i 5 de repòs.",
-    "btn": "Encarregar per a arròs →",
-    "prod": "Sípia i gambes per a arròs"
-   },
-   "es": {
-    "tag": "Arroz · 45 min",
-    "title": "Arroz a la marinera",
-    "body": "Sofríe la sepia en dados y las gambas, añade tomate, el arroz y el doble de fumet caliente. 18 minutos sin remover y 5 de reposo.",
-    "btn": "Encargar para arroz →",
-    "prod": "Sepia y gambas para arroz"
-   },
-   "en": {
-    "tag": "Rice · 45 min",
-    "title": "Seafood rice",
-    "body": "Fry diced cuttlefish and prawns, add tomato, the rice and twice its volume of hot stock. 18 minutes without stirring and 5 to rest.",
-    "btn": "Order for rice →",
-    "prod": "Cuttlefish and prawns for rice"
-   }
-  },
-  {
-   "prep": "net",
-   "ca": {
-    "tag": "Planxa · 10 min",
-    "title": "Sardines a la planxa",
-    "body": "Planxa molt calenta amb un fil d'oli i sal grossa. 2 o 3 minuts per costat i acaba amb all i julivert picats.",
-    "btn": "Encarregar sardines →",
-    "prod": "Sardines netes"
-   },
-   "es": {
-    "tag": "Plancha · 10 min",
-    "title": "Sardinas a la plancha",
-    "body": "Plancha muy caliente con un hilo de aceite y sal gruesa. 2 o 3 minutos por lado y termina con ajo y perejil picados.",
-    "btn": "Encargar sardinas →",
-    "prod": "Sardinas limpias"
-   },
-   "en": {
-    "tag": "Grill · 10 min",
-    "title": "Grilled sardines",
-    "body": "Very hot griddle with a drizzle of oil and coarse salt. 2 or 3 minutes per side, finished with chopped garlic and parsley.",
-    "btn": "Order sardines →",
-    "prod": "Cleaned sardines"
-   }
-  },
-  {
-   "prep": "net",
-   "ca": {
-    "tag": "Cassola · 50 min",
-    "title": "Calamars farcits",
-    "body": "Farceix els tubs amb les potes picades, ceba, ou dur i pa ratllat. Tanca'ls amb un escuradents i cou-los en salsa de tomàquet 30 minuts.",
-    "btn": "Encarregar calamars →",
-    "prod": "Calamars nets per farcir"
-   },
-   "es": {
-    "tag": "Cazuela · 50 min",
-    "title": "Calamares rellenos",
-    "body": "Rellena los tubos con las patas picadas, cebolla, huevo duro y pan rallado. Ciérralos con un palillo y cuécelos en salsa de tomate 30 minutos.",
-    "btn": "Encargar calamares →",
-    "prod": "Calamares limpios para rellenar"
-   },
-   "en": {
-    "tag": "Stew · 50 min",
-    "title": "Stuffed squid",
-    "body": "Fill the tubes with chopped tentacles, onion, boiled egg and breadcrumbs. Close with a toothpick and simmer in tomato sauce for 30 minutes.",
-    "btn": "Order squid →",
-    "prod": "Cleaned squid for stuffing"
+    "title": "Catalan-style baked cod",
+    "body": "Flour the pieces, brown them and place in a tray. Fry garlic and paprika, add white wine, pour over the cod and bake 10 minutes.",
+    "btn": "Order cod →",
+    "prod": "Cod pieces"
    }
   },
   {
    "prep": "",
    "ca": {
-    "tag": "Entrant · 10 min",
-    "title": "Llagostins bullits",
-    "body": "Aigua amb molta sal; quan bulli, tira-hi els llagostins i compta 1 o 2 minuts des que torni a bullir. Passa'ls a aigua amb gel.",
-    "btn": "Encarregar llagostins →",
-    "prod": "Llagostins"
+    "tag": "Bullit · 50 min",
+    "title": "Pop a la gallega",
+    "body": "Escalda'l tres cops en aigua bullint i cou-lo 40 minuts. Talla'l a rodanxes sobre patata bullida amb oli, sal grossa i pebre vermell.",
+    "btn": "Encarregar pop →",
+    "prod": "Pop"
    },
    "es": {
-    "tag": "Entrante · 10 min",
-    "title": "Langostinos cocidos",
-    "body": "Agua con mucha sal; cuando hierva, echa los langostinos y cuenta 1 o 2 minutos desde que vuelva a hervir. Pásalos a agua con hielo.",
-    "btn": "Encargar langostinos →",
-    "prod": "Langostinos"
+    "tag": "Cocido · 50 min",
+    "title": "Pulpo a la gallega",
+    "body": "Asústalo tres veces en agua hirviendo y cuécelo 40 minutos. Córtalo en rodajas sobre patata cocida con aceite, sal gruesa y pimentón.",
+    "btn": "Encargar pulpo →",
+    "prod": "Pulpo"
    },
    "en": {
-    "tag": "Starter · 10 min",
-    "title": "Boiled prawns",
-    "body": "Very salty water; when it boils add the prawns and count 1 or 2 minutes once it returns to the boil. Move them to iced water.",
-    "btn": "Order prawns →",
-    "prod": "Prawns"
+    "tag": "Boiled · 50 min",
+    "title": "Galician-style octopus",
+    "body": "Dip it three times in boiling water, then cook 40 minutes. Slice over boiled potato with olive oil, coarse salt and paprika.",
+    "btn": "Order octopus →",
+    "prod": "Octopus"
+   }
+  },
+  {
+   "prep": "net",
+   "ca": {
+    "tag": "Fideuà · 40 min",
+    "title": "Fideuà",
+    "body": "Daura els fideus en oli, sofregeix-hi el peix i el marisc, afegeix fumet calent i deixa-ho 10 minuts. Uns minuts de forn i allioli.",
+    "btn": "Encarregar per a fideuà →",
+    "prod": "Peix i marisc per a fideuà"
+   },
+   "es": {
+    "tag": "Fideuá · 40 min",
+    "title": "Fideuá",
+    "body": "Dora los fideos en aceite, sofríe el pescado y el marisco, añade fumet caliente y deja 10 minutos. Unos minutos de horno y alioli.",
+    "btn": "Encargar para fideuá →",
+    "prod": "Pescado y marisco para fideuá"
+   },
+   "en": {
+    "tag": "Noodles · 40 min",
+    "title": "Seafood fideuà",
+    "body": "Toast the thin noodles in oil, fry the fish and seafood, add hot stock and cook 10 minutes. A few minutes in the oven and aioli.",
+    "btn": "Order for fideuà →",
+    "prod": "Fish and seafood for fideuà"
+   }
+  },
+  {
+   "prep": "cru",
+   "ca": {
+    "tag": "Cru · 10 min",
+    "title": "Tàrtar de ventresca de tonyina",
+    "body": "Talla-la a daus i amaneix-la amb soja, oli, cibulet i una mica de llima. Demana-la apta per menjar crua (prèviament congelada).",
+    "btn": "Encarregar ventresca →",
+    "prod": "Ventresca de tonyina"
+   },
+   "es": {
+    "tag": "Crudo · 10 min",
+    "title": "Tartar de ventresca de atún",
+    "body": "Córtala en dados y alíñala con soja, aceite, cebollino y un poco de lima. Pídela apta para comer cruda (previamente congelada).",
+    "btn": "Encargar ventresca →",
+    "prod": "Ventresca de atún"
+   },
+   "en": {
+    "tag": "Raw · 10 min",
+    "title": "Tuna belly tartare",
+    "body": "Dice it and dress with soy, olive oil, chives and a little lime. Ask for it suitable to eat raw (previously frozen).",
+    "btn": "Order tuna belly →",
+    "prod": "Tuna belly"
+   }
+  },
+  {
+   "prep": "net",
+   "ca": {
+    "tag": "Fregit · 20 min",
+    "title": "Calamars a la romana",
+    "body": "Talla'ls a anelles, passa'ls per farina i ou batut i fregeix-los en oli ben calent fins que siguin daurats. Servits amb llimona.",
+    "btn": "Encarregar calamars →",
+    "prod": "Calamars nets"
+   },
+   "es": {
+    "tag": "Frito · 20 min",
+    "title": "Calamares a la romana",
+    "body": "Córtalos en anillas, pásalos por harina y huevo batido y fríelos en aceite bien caliente hasta dorarlos. Con limón.",
+    "btn": "Encargar calamares →",
+    "prod": "Calamares limpios"
+   },
+   "en": {
+    "tag": "Fried · 20 min",
+    "title": "Fried calamari rings",
+    "body": "Cut into rings, dip in flour and beaten egg and fry in very hot oil until golden. Serve with lemon.",
+    "btn": "Order squid →",
+    "prod": "Cleaned squid"
    }
   }
  ]
