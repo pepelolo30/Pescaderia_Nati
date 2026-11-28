@@ -1,68 +1,72 @@
 {
  "textos": {
-  "Maira mitjana": {
-   "es": "Bacaladilla mediana",
-   "en": "Medium blue whiting"
-  },
-  "Escamarlans petits": {
-   "es": "Cigalas pequeñas",
-   "en": "Small langoustines"
-  },
-  "Calamars grans": {
-   "es": "Calamares grandes",
-   "en": "Large squid"
-  },
-  "Cua de rap": {
-   "es": "Cola de rape",
-   "en": "Monkfish tail"
-  },
-  "Tonyina": {
-   "es": "Atún",
-   "en": "Tuna"
+  "Llenguado": {
+   "es": "Lenguado",
+   "en": "Sole"
   },
   "Llobarro": {
    "es": "Lubina",
    "en": "Sea bass"
   },
-  "Orada": {
-   "es": "Dorada",
-   "en": "Sea bream"
+  "Llobarro real": {
+   "es": "Lubina real",
+   "en": "Sea bass (real)"
   },
-  "Gall": {
-   "es": "Gallo",
-   "en": "Megrim"
+  "Turbot": {
+   "es": "Rodaballo",
+   "en": "Turbot"
   },
-  "Volanta": {
-   "es": "Volanta",
-   "en": "Volanta"
+  "Cueta de rap (1)": {
+   "es": "Colita de rape (1)",
+   "en": "Monkfish tail (1)"
   },
-  "Sardina": {
-   "es": "Sardina",
-   "en": "Sardine"
+  "Tonyina gran": {
+   "es": "Atún grande",
+   "en": "Large tuna"
   },
-  "Seitons": {
-   "es": "Boquerones",
-   "en": "Anchovies"
+  "Cua de rap (1)": {
+   "es": "Cola de rape (1)",
+   "en": "Monkfish tail (1)"
   },
-  "Cueta de rap": {
-   "es": "Colita de rape",
-   "en": "Monkfish tail"
+  "Cua de rap (2)": {
+   "es": "Cola de rape (2)",
+   "en": "Monkfish tail (2)"
   },
-  "Congre gran": {
-   "es": "Congrio grande",
-   "en": "Large conger eel"
+  "Calamars grans (1)": {
+   "es": "Calamares grandes (1)",
+   "en": "Large squids (1)"
+  },
+  "Escamarlans grans": {
+   "es": "Cigalas grandes",
+   "en": "Large langoustines"
   },
   "Gamba petita": {
    "es": "Gamba pequeña",
    "en": "Small prawn"
   },
-  "Llangostí gran": {
-   "es": "Langostino grande",
-   "en": "Large king prawn"
+  "Gamba gran": {
+   "es": "Gamba grande",
+   "en": "Large prawn"
   },
-  "Xipiró": {
-   "es": "Chipirón",
-   "en": "Baby squid"
+  "Sípia petita (1)": {
+   "es": "Sepia pequeña (1)",
+   "en": "Small cuttlefish (1)"
+  },
+  "Seitons": {
+   "es": "Boquerones",
+   "en": "Anchovies"
+  },
+  "Cueta de rap (2)": {
+   "es": "Colita de rape (2)",
+   "en": "Monkfish tail (2)"
+  },
+  "Calamars grans (2)": {
+   "es": "Calamares grandes (2)",
+   "en": "Large squids (2)"
+  },
+  "Sípia petita (2)": {
+   "es": "Sepia pequeña (2)",
+   "en": "Small cuttlefish (2)"
   }
  }
 }

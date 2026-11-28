@@ -2,20 +2,21 @@
 # Aquest arxiu el genera el publicador del servidor a partir de Fotos_Pescaderia/AAAAMMDD/pissarra.txt
 # Una línia per producte:   Nom | preu | nota   (el preu i la nota són opcionals)
 
-data: 2026-11-26
-Maira mitjana | 18,90 €/kg |
-Escamarlans petits | 49,90 €/kg |
-Calamars grans | 39,90 €/kg |
-Cua de rap | 36,90 €/kg |
-Tonyina | 39,90 €/kg |
-Llobarro | 24,90 €/kg |
-Orada | 18,90 €/kg |
-Gall | 27,90 €/kg |
-Volanta | 27,90 €/kg |
-Sardina | 9,90 €/kg |
-Seitons | 14,90 €/kg |
-Cueta de rap | 39,90 €/kg |
-Congre gran | 19,90 €/kg |
-Gamba petita | 59,00 €/kg |
-Llangostí gran | 69,90 €/kg |
-Xipiró | 39,90 €/kg |
+data: 2026-11-28
+Llenguado | 42,90 €/kg |
+Llobarro | 24,00 €/kg |
+Llobarro real | 29,90 €/kg |
+Turbot | 32,90 €/kg |
+Cueta de rap (1) | 36,90 €/kg |
+Tonyina gran | 39,90 €/kg |
+Cua de rap (1) | 42,90 €/kg |
+Cua de rap (2) | 26,00 €/kg |
+Calamars grans (1) | 29,90 €/kg |
+Escamarlans grans | 90,00 €/kg |
+Gamba petita | 45,00 €/kg |
+Gamba gran | 125,00 €/kg |
+Sípia petita (1) | 26,90 €/kg |
+Seitons | 11,90 €/kg |
+Cueta de rap (2) | 36,90 €/kg |
+Calamars grans (2) | 29,90 €/kg |
+Sípia petita (2) | 29,90 €/kg |
